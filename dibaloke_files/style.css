@@ -1083,3 +1083,9 @@ input:checked + .slider:before {
 .user-info small {
   color: #545d7a;
 }
+
+@media only screen and (max-width: 1026px) {
+  #research_highlights {
+    display: none;
+  }
+}
