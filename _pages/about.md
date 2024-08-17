@@ -12,3 +12,9 @@ I am a graduate student at [Marquette University](https://www.marquette.edu/), a
 I am interested in all topics in machine and deep learning with most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability.
 
 Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department of the Military Institute of Science and Technology (MIST).
+
+# My Blog
+I maintain several technical blogs where I write about topics in deep learning and machine learning.
+
+- [Main Blog](https://dibalokechanda.github.io/): My main blog where I cover all sorts of topic including deep learning architectures, Pytorch, statistics, machine learning, etc.
+- [Linear Algebra Blog](https://dibalokechanda.github.io/Linear-Algebra/): My Linear Algebra blog where I keep my lecture notes regarding linear algera.
