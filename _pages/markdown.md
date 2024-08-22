@@ -18,6 +18,9 @@ You can check out my [profile](https://mist.ac.bd/department/eece/facultyMembers
   - Electrical Drive and Instrumentation Laboratory
   - Electronic Devices and Circuits Sessional
   - Fundamentals of Electrical Engineering Laboratory
-  - Principle of Electrical Engineering Sessional 
+  - Principle of Electrical Engineering Sessional
+ 
+> I was also an instructor of the [Python Certification Course 2022](https://eece.gitbook.io/python-certification-course-2022) 
 
-
+### Teaching Assistant in the Computer Science Department, Marquette University 
+> I was a TA for the "Introduction to Software Development" for Fall 2023, Spring 2024, Fall 2024. 
