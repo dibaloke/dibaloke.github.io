@@ -15,7 +15,7 @@ Previously I was a lecturer in the Electrical, Electronic and Communication (EEC
 
 ------
 
-*I have a habit of curating courses in deep learning and related resources. Check out this GitHub repo for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this Github repo for that.*
+*I have a habit of curating courses in deep learning and related resources. Check out this [GitHub repo](https://github.com/dibaloke/DL-ML-Courses/tree/main) for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this Github repo for that.*
 
 ------
 # Technical Write-ups
