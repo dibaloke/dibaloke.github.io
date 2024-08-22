@@ -1,7 +1,7 @@
 ---
 title: "Experience"
 ---
-# Lecturer in the EECE Department, Military Insitute of Science of Technology 
+### Lecturer in the EECE Department, Military Insitute of Science of Technology 
 You can check out my [profile](https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371) here.
 - The courses I taught include:
   - Random Signal and Processes
