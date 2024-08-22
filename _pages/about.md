@@ -13,6 +13,8 @@ I am interested in all topics in machine and deep learning with most experience 
 
 Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department of the Military Institute of Science and Technology (MIST).
 
+*I have a habit of curating courses in deep learning and related resources. Check out this GitHub repo for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this Github repo for that.*
+
 # Technical Write-ups
 I maintain several technical blogs where I write about topics in deep learning and machine learning.
 
