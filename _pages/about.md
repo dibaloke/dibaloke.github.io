@@ -25,7 +25,7 @@ I maintain several technical blogs where I write about topics in deep learning a
 - [Linear Algebra Blog](https://dibalokechanda.github.io/Linear-Algebra/): My Linear Algebra blog where I keep my lecture notes regarding linear algera.
 
 # News 
-- [2024-08-17] My journal paper titled "[A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid](https://ieeexplore.ieee.org/document/10643407)" got accepted to [IEEE Transactions on Power Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59).
+- [2024-08-17] My journal paper titled "[A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid](https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/)" got accepted to [IEEE Transactions on Power Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=59).
 - [2024-07-30] My conference paper titled "A Graph Motif Adversarial Attack for Fault Detection in Power Distribution Systems" got accepted to the 2024 IEEE Global Communications Conference. 
 - [2024-03-01] My first journal paper titled "[DCENSnet: A new deep convolutional ensemble network for skin cancer classification](https://www.sciencedirect.com/science/article/pii/S1746809423011904)" got accepted to [Biomedical Signal Processing and Control](https://www.sciencedirect.com/journal/biomedical-signal-processing-and-control).
 - [2023-09-20] My conference paper titled "[Graph-based Multi-Task Learning for Fault Detection in Smart Grid](https://graph-based-mtl-fault-detection.github.io/)" got accepted to MLSP 2023.
