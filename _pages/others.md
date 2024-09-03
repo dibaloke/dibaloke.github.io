@@ -11,8 +11,8 @@ Following is a list of courses and projects/skills I gained during my Master's i
 
 | Course Name         | Learning/Project/Skills          |
 |------------------|----------------------|
-|MSSC 5650<br><b>Theory of Optimization</b>| This course inspired the following two blogs [Prerequisites for Convex Optimization 1](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization1-blog/) and [Prerequisites for Convex Optimization 2](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization2-blog/)|
-|COSC 6330<br><b>Advanced Machine Learning</b>| The project I did as a part of this course was later published in [MLSP 2023](https://graph-based-mtl-fault-detection.github.io/)| 
+|MSSC 5650<br><b>Theory of Optimization</b>| In this course I learned intermediate and advanced topics in unconstrained optimization. This course inspired the following two blogs [Prerequisites for Convex Optimization 1](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization1-blog/) and [Prerequisites for Convex Optimization 2](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization2-blog/)|
+|COSC 6330<br><b>Advanced Machine Learning</b>| This course focused on machine learning algorithms with an emphasis on mathematical rigor. For example, in this course I learned Mercer's theorem, reproducing kernel Hilbert space, etc which are needed to understand SVM.The project I did as a part of this course was later published in [MLSP 2023](https://graph-based-mtl-fault-detection.github.io/)| 
 | MSSC 6040 <br> <b>Applied Linear Algebra</b>| This course inspired me to create the [Linear Algebra](https://dibalokechanda.github.io/Linear-Algebra/) blog|
 | MSSC 5790<br><b>Bayesian Statistics</b>|This was a introductory course in Bayesian stats. This course helped me to include some new distributions to my [blog](https://dibalokechanda.github.io/posts/a-reference-guide-to-distributions-blog/) | 
 |COSC 6520 <b>Data Analytics</b>| I was introduced to R programming language in this course |
