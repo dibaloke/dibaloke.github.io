@@ -22,4 +22,11 @@ For a complete list of my publications check out my google scholar page.
 
 <b> DCENSnet: A new deep convolutional ensemble network for skin cancer classification </b>
 <br><b>Dibaloke Chanda</b>, Md Saif Hassan Onim, Hussain Nyeem, Tareque Bashar Ovi, Sauda Suara Naba
-<br>Biomedical Signal Processing and Control.
+<br>Biomedical Signal Processing and Control. [[paper link]](https://www.sciencedirect.com/science/article/pii/S1746809423011904)
+
+------
+<b> A Robust Webcam-based Eye Gaze Estimation System for Human-Computer Interaction </b>
+<br> Koushik Roy,<b>Dibaloke Chanda</b>
+<br>ICISET 2022. [[paper link]](https://ieeexplore.ieee.org/abstract/document/9775896)
+
+
