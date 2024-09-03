@@ -5,8 +5,16 @@ author_profile: true
 
 ---
 
+## Courses and Projects during my Master's in Data Science
+Following is a list of courses and projects/skills I gained during my Master's in Data Science.
+
+| Course Name         | Learning/Project/Skills          |
+|------------------|----------------------|
+|MSSC 5650 Theory of Optimization| Learned advanced optimization (unconstrained) techniques. Check out my [Prerequisites for Convex Optimization 1](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization1-blog/) and [Prerequisites for Convex Optimization 2](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization2-blog/) which I wrote by learnings from the course|
+
+
 ## Coursera Certifications
-As I come from a EECE background, I had no formal exposure to deep learning/machine learning/data science in my undergrad. I taught myself these topics by completing certification course offered through Coursera. See below a list of certifications I got in my undergrad:
+As I come from a EECE background, I had no formal exposure to deep learning/machine learning/data science in my undergrad. I taught myself these topics by completing certification course offered through Coursera. See below a list of certifications I got in during undergrad:
 
 | Title            | Certificate          |                             
 |------------------|----------------------|
