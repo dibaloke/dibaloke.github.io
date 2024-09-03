@@ -16,8 +16,8 @@ Following is a list of courses and projects/skills I gained during my Master's i
 | MSSC 6040 <br> <b>Applied Linear Algebra</b>| This course inspired me to create the [Linear Algebra](https://dibalokechanda.github.io/Linear-Algebra/) blog|
 | MSSC 5790<br><b>Bayesian Statistics</b>|This was a introductory course in Bayesian stats. This course helped me to include some new distributions to my [blog](https://dibalokechanda.github.io/posts/a-reference-guide-to-distributions-blog/) | 
 |COSC 6520 <b>Data Analytics</b>| I was introduced to R programming language in this course |
-| MSSC 6250<br><b>Statistical Machine Learning</b> | Checkout my final project write-up <a href="{{ site.baseurl }}/folder/MSSC_6250_Project_Dibaloke.pdf" target="_blank"> "Explainability of Machine Learning Models using Co-operative Game Theory"</a>| 
-| COSC 6820<br> <b> Data Ethics </b> | Checkout my final project write-up <a href="{{ site.baseurl }}/folder/Final_Paper_Data_Ethics_Dibaloke.pdf" target="_blank"> "Generative AI: Ethical Challenges and Prevention Strategies with Watermarking and Traceability"</a> for this course|
+| MSSC 6250<br><b>Statistical Machine Learning</b> | Checkout my final project write-up <a href="{{ site.baseurl }}/files/MSSC_6250_Project_Dibaloke.pdf" target="_blank"> "Explainability of Machine Learning Models using Co-operative Game Theory"</a>| 
+| COSC 6820<br> <b> Data Ethics </b> | Checkout my final project write-up <a href="{{ site.baseurl }}/files/Final_Paper_Data_Ethics_Dibaloke.pdf" target="_blank"> "Generative AI: Ethical Challenges and Prevention Strategies with Watermarking and Traceability"</a> for this course|
 
 
 
