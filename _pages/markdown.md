@@ -12,16 +12,16 @@ redirect_from:
 ### Lecturer in the <a href="https://mist.ac.bd/department/eece" target="_blank">EECE Department, Military Insitute of Science of Technology </a>  
 You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371" target="_blank">profile</a> here.
 - The courses I taught include:
-  - Random Signal and Processes
-  - Electrical Drives and Instrumentation
-  - Digital Signal Processing Laboratory
-  - Microwave Engineering Laboratory
-  - Numerical Techniques Laboratory
-  - Digital Communication Laboratory
-  - Electrical Drive and Instrumentation Laboratory
-  - Electronic Devices and Circuits Sessional
-  - Fundamentals of Electrical Engineering Laboratory
-  - Principle of Electrical Engineering Sessional
+  - Random Signal and Processes (EECE 441)
+  - Electrical Drives and Instrumentation (EECE 269)
+  - Digital Signal Processing Laboratory (EECE 312)
+  - Microwave Engineering Laboratory (EECE 434)
+  - Numerical Techniques Laboratory (EECE 212)
+  - Digital Communication Laboratory (EECE 438)
+  - Electrical Drive and Instrumentation Laboratory (EECE 270)
+  - Electronic Devices and Circuits Sessional (EECE 170)
+  - Fundamentals of Electrical Engineering Laboratory (EECE 272)
+  - Principle of Electrical Engineering Sessional (EECE 164)
  
 - I was also an instructor of the <a href="https://eece.gitbook.io/python-certification-course-2022" target="_blank">Python Certification Course 2022</a>  arranged by the EECE Department, MIST.
 
