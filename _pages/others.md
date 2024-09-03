@@ -11,9 +11,9 @@ Following is a list of courses and projects/skills I gained during my Master's i
 | Course Name         | Learning/Project/Skills          |
 |------------------|----------------------|
 |MSSC 5650 <br>Theory of Optimization| Check out my [Prerequisites for Convex Optimization 1](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization1-blog/) and [Prerequisites for Convex Optimization 2](https://dibalokechanda.github.io/posts/Prerequisites-for-Convex-Optimization2-blog/) which I wrote by learnings from the course|
-|COSC 6330 Advanced Machine Learning| The project I did as a part of this course was later published in [MLSP 2023](https://graph-based-mtl-fault-detection.github.io/)| 
-| MSSC 6040 Applied Linear Algebra| This course inspired me to create the [Linear Algebra] blog|
-| MSSC 5790 Bayesian Statistics|This was a introductory course in Bayesian stats. I was able to include some new distributions to my blog on [distrbutions](https://dibalokechanda.github.io/posts/a-reference-guide-to-distributions-blog/)  | 
+|COSC 6330 <br> Advanced Machine Learning| The project I did as a part of this course was later published in [MLSP 2023](https://graph-based-mtl-fault-detection.github.io/)| 
+| MSSC 6040 <br> Applied Linear Algebra| This course inspired me to create the [Linear Algebra] blog|
+| MSSC 5790 <br> Bayesian Statistics|This was a introductory course in Bayesian stats. I was able to include some new distributions to my blog on [distrbutions](https://dibalokechanda.github.io/posts/a-reference-guide-to-distributions-blog/)  | 
 
 
 ## Coursera Certifications
