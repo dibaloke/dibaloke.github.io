@@ -7,7 +7,7 @@ redirect_from:
   - /markdown.html
 ---
 ### Lecturer in the EECE Department, Military Insitute of Science of Technology 
-You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371" target="_blank">profile</a>here.
+You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371" target="_blank">profile </a> here.
 - The courses I taught include:
   - Random Signal and Processes
   - Electrical Drives and Instrumentation
