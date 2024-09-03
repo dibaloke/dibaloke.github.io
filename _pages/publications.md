@@ -16,7 +16,7 @@ For a complete list of my publications check out my google scholar page.
 ------
 <b> Graph-Based Multi-Task Learning For Fault Detection In Smart Grid </b>
 <br><b>Dibaloke Chanda</b>, Nasim Yahyasoltani
-<br>IEEE International Workshop on Machine Learning for Signal Processing (MLSP 2023).  [[project page]](https://graph-based-mtl-fault-detection.github.io/), [[Poster]](https://drive.google.com/file/d/1nfBjpoZ2eipo_oYeew5BV9r738I0bPx6/view)
+<br>MLSP 2023. [[project page]](https://graph-based-mtl-fault-detection.github.io/), [[Poster]](https://drive.google.com/file/d/1nfBjpoZ2eipo_oYeew5BV9r738I0bPx6/view)
 
 ------
 
