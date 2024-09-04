@@ -11,7 +11,7 @@ I am a graduate student at [Marquette University](https://www.marquette.edu/), a
 
 I am interested in all topics in machine and deep learning with most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
 
-Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department,[MIST](https://mist.ac.bd/).
+Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department, [MIST](https://mist.ac.bd/).
 
 ------
 
