@@ -9,7 +9,7 @@ redirect_from:
 
 I am a graduate student at [Marquette University](https://www.marquette.edu/), affiliated with the Machine Learning, Optimization and Data (MOD) lab.
 
-I am interested in all topics in machine and deep learning with most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
+I have a keen interest in exploring all areas within the machine and deep learning. However, I have most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
 
 Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department, [MIST](https://mist.ac.bd/).
 
