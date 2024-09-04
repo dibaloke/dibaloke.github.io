@@ -27,7 +27,7 @@ For a complete list of my publications check out my Google Scholar page.
 
 ------
 <b> A Robust Webcam-based Eye Gaze Estimation System for Human-Computer Interaction </b>
-<br> Koushik Roy,<b>Dibaloke Chanda</b>
+<br> Koushik Roy, <b>Dibaloke Chanda</b>
 <br>ICISET 2022. [[paper link]](https://ieeexplore.ieee.org/abstract/document/9775896)
 
 ------
