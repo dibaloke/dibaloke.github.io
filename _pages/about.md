@@ -11,11 +11,11 @@ I am a graduate student at [Marquette University](https://www.marquette.edu/), a
 
 I am interested in all topics in machine and deep learning with most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
 
-Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department of the [Military Institute of Science and Technology (MIST)](https://mist.ac.bd/).
+Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department,[MIST](https://mist.ac.bd/).
 
 ------
 
-*I have a habit of curating courses in deep learning and related resources. Check out this [GitHub repo](https://github.com/dibaloke/DL-ML-Courses/tree/main) for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this [Github repo](https://github.com/dibaloke/DL-ML-Blogs) for that. I also have a [repository](https://github.com/dibaloke/others) where I curate other interesting stuff I find about deep learning, stats and math which includes interactive websites and publicly available books and e-books.*
+I have a habit of curating courses in deep learning and related resources. Check out this [GitHub repo](https://github.com/dibaloke/DL-ML-Courses/tree/main) for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this [Github repo](https://github.com/dibaloke/DL-ML-Blogs) for that. I also have a [repository](https://github.com/dibaloke/others) where I curate other interesting stuff I find about deep learning, stats and math which includes interactive websites and publicly available books and e-books.
 
 ------
 # Technical Write-ups
