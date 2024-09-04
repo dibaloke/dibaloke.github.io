@@ -33,5 +33,5 @@ For a complete list of my publications check out my Google Scholar page.
 ------
 
 <b> A Transfer-Learning Based Ensemble Architecture for ECG Signal Classification </b>
-<br>Tareque Bashar Ovi, Sauda Suara Naba, <b> Dibaloke Chanda</b>, Md Saif Hassan Onim<b>Dibaloke Chanda</b>
+<br>Tareque Bashar Ovi, Sauda Suara Naba, <b> Dibaloke Chanda</b>, Md Saif Hassan Onim
 <br> IEEE tensymp 2022. [[paper link]](https://arxiv.org/abs/2207.00002)
