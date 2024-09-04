@@ -30,4 +30,4 @@ As I come from an EECE background, I had no formal exposure to deep learning/mac
 |Managing Machine Learning Projects with Google Cloud|[[Link]](https://www.coursera.org/account/accomplishments/verify/ZEVY2KYAGSTS?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)|
 |Understanding and Visualizing Data with Python|[[Link]](https://www.coursera.org/account/accomplishments/verify/AYSRSEVXSKKA?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)|
 |Inferential Statistical Analysis with Python|[[Link]](https://www.coursera.org/account/accomplishments/verify/J6MZBRSJTEGA?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course)|
-|Deep Learning Specializaton (includes 5 courses)| [[Link]](https://www.coursera.org/account/accomplishments/specialization/48VQNSFRW25A?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n)|
+|Deep Learning Specializaton (includes 5 courses)| [[Link]](https://coursera.org/share/5292e1d314ee6016f6fe335c0bcb7461)|
