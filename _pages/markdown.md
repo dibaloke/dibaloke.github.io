@@ -7,7 +7,7 @@ redirect_from:
   - /markdown.html
 ---
 ### Teaching Assistant in the  <a href="https://www.marquette.edu/computer-science/" target="_blank">Computer Science Department, Marquette University</a>
--  I was and am a TA for the "Introduction to Software Development" for Fall 2023, <a href="https://www.marquette.edu/computer-science/teaching-research-assistant-assignments.php" target="_blank">Spring 2024</a> and Fall 2024.
+-  TA for the "Introduction to Software Development" for Fall 2023, Spring 2024 and Fall 2024.
 
 ### Lecturer in the <a href="https://mist.ac.bd/department/eece" target="_blank">EECE Department, Military Insitute of Science of Technology </a>  
 You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371" target="_blank">profile</a> here.
@@ -27,4 +27,4 @@ You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/
 
 ### Senior Mentor (Android and IOS App Development) in <a href="https://innovationclub.mist.ac.bd/" target="_blank">MIST Innovation Club</a>
 - In my undergrad, I designed a course called <a href="https://eece.gitbook.io/mist-innovation-club-flutter-course-1" target="_blank">Intermediate Dart</a>
-  as part of introduction to Flutter framework. In the linked website, you will find recorded videos in my native language and code snippets.
+  as part of the introduction to the Flutter framework. On the linked website, you will find recorded videos in my native language and code snippets.
