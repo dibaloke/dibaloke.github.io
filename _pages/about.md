@@ -14,10 +14,6 @@ I am interested in all topics in machine and deep learning with most experience 
 Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department, [MIST](https://mist.ac.bd/).
 
 ------
-
-I have a habit of curating courses in deep learning and related resources. Check out this [GitHub repo](https://github.com/dibaloke/DL-ML-Courses/tree/main) for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this [Github repo](https://github.com/dibaloke/DL-ML-Blogs) for that. I also have a [repository](https://github.com/dibaloke/others) where I curate other interesting stuff I find about deep learning, stats and math which includes interactive websites and publicly available books and e-books.
-
-------
 # Technical Write-ups
 I maintain several technical blogs where I write about topics in deep learning and machine learning.
 
@@ -30,3 +26,8 @@ I maintain several technical blogs where I write about topics in deep learning a
 - [2024-03-01] My first journal paper titled "[DCENSnet: A new deep convolutional ensemble network for skin cancer classification](https://www.sciencedirect.com/science/article/pii/S1746809423011904)" got accepted to [Biomedical Signal Processing and Control](https://www.sciencedirect.com/journal/biomedical-signal-processing-and-control).
 - [2023-09-20] My conference paper titled "[Graph-based Multi-Task Learning for Fault Detection in Smart Grid](https://graph-based-mtl-fault-detection.github.io/)" got accepted to MLSP 2023.
 - [2023-01-01] I started my graduate student journey at Marquette University.
+
+------
+
+I have a habit of curating courses in deep learning and related resources. Check out this [GitHub repo](https://github.com/dibaloke/DL-ML-Courses/tree/main) for that. I also have a habit of curating technical blog posts on deep learning-related topics. Check out this [Github repo](https://github.com/dibaloke/DL-ML-Blogs) for that. I also have a [repository](https://github.com/dibaloke/others) where I curate other interesting stuff I find about deep learning, stats and math which includes interactive websites and publicly available books and e-books.
+
