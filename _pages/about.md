@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a graduate student at [Marquette University](https://www.marquette.edu/), affiliated with the Machine Learning, Optimization and Data (MOD) lab.
+I am a graduate student at [Marquette University](https://www.marquette.edu/).
 
 I have a keen interest in exploring all areas within the machine and deep learning. However, I have most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
 
