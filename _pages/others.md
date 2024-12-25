@@ -22,7 +22,7 @@ Following is a list of courses and projects/skills I gained during my Master's i
 |COSC 5610  <br> <b> Data Mining </b> | The topics covered in this course included Decision Trees, Naive Bayes, KNN, Regression, K-means clustering, DBSCAN clustering, Hierarchical Clustering, Support Vector Machines, Association Rules, etc.|
 |COSC 6570  <br> <b> Data at Scale </b> |This course introduced me to a variety of database concepts, including relational data stores, codebooks, schema diagrams, NoSQL graph databases, NoSQL key-value stores, NoSQL document stores, wide-column databases, and MapReduce. As a final project for this course, I proposed a scalable national-level cancer-genomic database that integrates all these database concepts.|
 |COSC 6510  <br> <b> Data Intelligence </b> | This course provided me with a strong foundation in Business and Data Intelligence (BI), focusing on both conceptual understanding and practical skills for leveraging BI to optimize business performance. I explored key concepts such as decision support systems, descriptive, predictive, and prescriptive analytics, as well as data types and measurement scales.|
-|COSC 6060 <br> <br> Distributed and Cloud Computing </b>| This course introduced me to advanced topics in distributed and cloud computing, including system architectures, process management, communication mechanisms, fault tolerance, security, and consistency models.| 
+|COSC 6060 <br> <br> <b> Distributed and Cloud Computing </b>| This course introduced me to advanced topics in distributed and cloud computing, including system architectures, process management, communication mechanisms, fault tolerance, security, and consistency models.| 
 
 
 ## Coursera Certifications
