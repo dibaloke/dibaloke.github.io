@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a graduate student at [Marquette University](https://www.marquette.edu/).
+I am a graduate student at [Marquette University](https://www.marquette.edu/) in the computer science department.
 
-I have a keen interest in exploring all areas within the machine and deep learning. However, I have most experience in computer vision and graph neural networks. My current research focuses on vision+x models and their interpretability. At the moment I am exploring vision+x models used in computational pathology and how to understand their predictions.
+My current research focuses on Vision+X models in computational pathology and how to interpret their predictions through explainability algorithms. I am also interested in foundation models, unsupervised pre-training schemes, generative AI, LLMs and adversarial attacks.
 
-Previously I was a lecturer in the Electrical, Electronic and Communication (EECE) department, [MIST](https://mist.ac.bd/).
+Previously, I was a lecturer in the Electrical, Electronic, and Communication (EECE) department, [MIST](https://mist.ac.bd/).
 
 ------
 # Technical Write-ups
