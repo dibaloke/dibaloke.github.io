@@ -10,6 +10,11 @@ For a complete list of my publications check out my Google Scholar page.
 
 ## Selected Publications
 
+<b> Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation </b>
+<br><b>Dibaloke Chanda</b>, Saba Heidari Gheshlaghi, Nasim Yahya Soltani
+<br>Arxiv.  [[paper link]](https://www.sciencedirect.com/science/article/pii/S0950705124015296)
+
+------
 <b> A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid </b>
 <br><b>Dibaloke Chanda</b>, Nasim Yahyasoltani
 <br>IEEE Transactions on Power Systems.  [[project page]](https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/), [[dataset generation code]](https://github.com/Machine-Learning-Optimization-Data-Lab/Graph-Based-Fault-Detection-Data-Generation)
@@ -48,10 +53,7 @@ For a complete list of my publications check out my Google Scholar page.
 <br> <b> Dibaloke Chanda </b>, Milan Aryal, Nasim Yahya Soltani, Masoud Ganji
 <br>Arxiv.  [[arxiv link]](https://arxiv.org/abs/2408.14496)
 
-------
 
-<b> Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation </b>
-<br><b>Dibaloke Chanda</b>, Saba Heidari Gheshlaghi, Nasim Yahya Soltani
-<br>Arxiv.  [[arxiv link]](https://arxiv.org/abs/2312.17301)
+
 
 
