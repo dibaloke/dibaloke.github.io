@@ -1,28 +1,41 @@
+# When an announcement date is not supplied, date_label identifies the conference or publication year.
+- date_label: WACV 2027
+  title: MOSAIC accepted to WACV 2027
+  description: 'MOSAIC: Towards a Universal Latent Space for Computational Pathology Foundation Models'
+  url: /publication/#mosaic
+- date_label: BigData 2026
+  title: INVEX accepted to IEEE BigData 2026
+  description: 'INVEX: Label-Free Pathology Foundation Model Ranking via Invariance and Expressiveness'
+  url: /publication/#invex
+- date_label: ICASSP 2026
+  title: MERI-VL-MIL at ICASSP 2026
+  description: 'MERI-VL-MIL: Multi-Expert Reasoning-Informed Vision-Language Multi-Instance Learning for Few-Shot
+    Cancer Subtyping'
+  url: /publication/#meri-vl-mil
+- date_label: '2026'
+  title: Survey published in Journal of Pathology Informatics
+  description: 'A New Era in Computational Pathology: A Survey on Foundation and Vision-Language Models'
+  url: /publication/#pathology-foundation-models
 - date: '2024-12-15'
-  title: 'Paper accepted to Knowledge-Based Systems'
-  description: 'Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation.'
+  title: Paper accepted to Knowledge-Based Systems
+  description: Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation.
   url: https://arxiv.org/abs/2312.17301
-
 - date: '2024-08-17'
-  title: 'Paper accepted to IEEE Transactions on Power Systems'
-  description: 'A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid.'
+  title: Paper accepted to IEEE Transactions on Power Systems
+  description: A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid.
   url: https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/
-
 - date: '2024-07-30'
-  title: 'Paper accepted to IEEE GLOBECOM 2024'
-  description: 'A Graph Motif Adversarial Attack for Fault Detection in Power Distribution Systems.'
-
+  title: Paper accepted to IEEE GLOBECOM 2024
+  description: A Graph Motif Adversarial Attack for Fault Detection in Power Distribution Systems.
 - date: '2024-03-01'
-  title: 'First journal paper accepted'
-  description: 'DCENSnet accepted to Biomedical Signal Processing and Control.'
+  title: First journal paper accepted
+  description: DCENSnet accepted to Biomedical Signal Processing and Control.
   url: https://www.sciencedirect.com/science/article/pii/S1746809423011904
-
 - date: '2023-09-20'
-  title: 'Paper accepted to MLSP 2023'
-  description: 'Graph-Based Multi-Task Learning for Fault Detection in Smart Grid.'
+  title: Paper accepted to MLSP 2023
+  description: Graph-Based Multi-Task Learning for Fault Detection in Smart Grid.
   url: https://graph-based-mtl-fault-detection.github.io/
-
 - date: '2023-01-01'
-  title: 'Started graduate studies at Marquette University'
-  description: 'Beginning a new chapter in computer science research.'
+  title: Started graduate studies at Marquette University
+  description: Beginning a new chapter in computer science research.
   url: https://www.marquette.edu/
