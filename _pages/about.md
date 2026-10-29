@@ -34,7 +34,7 @@ redirect_from:
 
 
 <section class="home-section selected-section" aria-labelledby="selected-title">
-  <div class="section-heading"><div><h2 id="selected-title">Selected research, <span>from questions to insight.</span></h2><p>Papers on complex data, the models that learn from it, and what their predictions reveal.</p></div><a class="button button-secondary button-small" href="{{ '/publication/' | relative_url }}">All {{ site.data.publications | size }} publications {% include academic/icon.html name="arrow-right" %}</a></div>
+  <div class="section-heading"><div><h2 id="selected-title">Projects</h2><p>Papers on complex data, the models that learn from it, and what their predictions reveal.</p></div><a class="button button-secondary button-small" href="{{ '/publication/' | relative_url }}">All {{ site.data.publications | size }} publications {% include academic/icon.html name="arrow-right" %}</a></div>
   <div class="work-grid">{% for paper in site.data.publications limit: 6 %}{% assign illustration = 'vision' %}{% if paper.topic == 'pathology' %}{% assign illustration = 'pathology' %}{% elsif paper.topic == 'graphs' %}{% assign illustration = 'graph-learning' %}{% endif %}{% if paper.id == 'explainability-graph-attack' %}{% assign illustration = 'explainability' %}{% endif %}
     {% assign default_image = '/assets/images/research/' | append: illustration | append: '.svg' %}{% assign paper_image = paper.image | default: default_image %}
     {% assign fallback_url = '/publication/' | relative_url | append: '#' | append: paper.id %}{% assign paper_url = paper.links.first.url | default: fallback_url %}
