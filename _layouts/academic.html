@@ -39,7 +39,7 @@
     <footer class="site-footer" id="contact">
       <div class="footer-top">
         <div class="footer-identity"><a class="footer-brand" href="{{ '/' | relative_url }}">Dibaloke Chanda<span>.</span></a><p>Understanding AI. Sharing what I learn.</p></div>
-        <nav class="footer-links" aria-label="Contact and profiles"><a href="https://github.com/{{ site.author.github }}">GitHub {% include academic/icon.html name="arrow-up-right" %}</a><a href="{{ site.author.googlescholar }}">Google Scholar {% include academic/icon.html name="arrow-up-right" %}</a><a href="mailto:{{ site.author.email }}">Get in touch {% include academic/icon.html name="arrow-right" %}</a></nav>
+        <nav class="footer-links" aria-label="Contact and profiles"><a href="https://github.com/{{ site.author.github }}">{% include academic/icon.html name="github" %} GitHub</a><a href="{{ site.author.googlescholar }}">{% include academic/icon.html name="google-scholar" %} Google Scholar</a><a href="mailto:{{ site.author.email }}">{% include academic/icon.html name="mail" %} Email</a>{% if site.author.orcid %}<a href="{{ site.author.orcid }}">{% include academic/icon.html name="orcid" %} ORCID</a>{% endif %}</nav>
       </div>
       <div class="footer-bottom"><p>© {{ site.time | date: '%Y' }} Dibaloke Chanda</p><p>Marquette University · Milwaukee, Wisconsin</p><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a></div>
     </footer>

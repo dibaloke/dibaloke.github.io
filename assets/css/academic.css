@@ -363,3 +363,11 @@ html:not(.js) .work-arrow{display:none}
 @media(max-width:700px){.publication-summary{font-size:11px}.publication-status{font-size:9px}.filter-group{justify-content:flex-start;gap:5px}}
 
 .publication-details{font-size:11px;color:var(--muted);line-height:1.8;margin-top:5px}
+
+/* Profile identities retain text labels alongside decorative, self-hosted SVG icons. */
+.profile-socials{display:grid;grid-template-columns:repeat(2,max-content);gap:10px 16px}
+.profile-socials a{gap:6px;min-height:24px}
+.profile-socials .icon{width:15px;height:15px}
+.footer-links{flex-wrap:wrap}
+.footer-links .icon{width:15px;height:15px}
+@media(max-width:700px){.profile-socials{display:flex;flex-wrap:wrap;gap:8px 12px}.profile-socials a{font-size:9px;gap:5px}.profile-socials .icon{width:13px;height:13px}}
