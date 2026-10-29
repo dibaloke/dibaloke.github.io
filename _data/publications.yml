@@ -18,6 +18,9 @@
   status: under-review
   image_alt: CThoughtPathNet architecture showing dynamic prompts, expert-agent reasoning, thought-driven embeddings,
     and attention-based fusion with whole-slide image patches.
+  image: /assets/images/research/cthoughtpathnet.png
+  image_width: 2617
+  image_height: 1529
 - id: invex
   title: 'INVEX: Label-Free Pathology Foundation Model Ranking via Invariance and Expressiveness'
   authors: Dibaloke Chanda, Praveen Madiraju
@@ -36,6 +39,9 @@
   status: accepted
   image_alt: INVEX illustration showing tissue symmetry on a histology-textured sphere and representational discriminability
     as a similarity heatmap.
+  image: /assets/images/research/invex.png
+  image_width: 1402
+  image_height: 673
 - id: mosaic
   title: 'MOSAIC: Towards a Universal Latent Space for Computational Pathology Foundation Models'
   authors: Dibaloke Chanda, Praveen Madiraju
@@ -53,6 +59,9 @@
   status: accepted
   image_alt: MOSAIC illustration connecting UNI, CONCH, KEEP, VIRCHOW, MUSK, and PHIKON pathology foundation models
     around a shared representation.
+  image: /assets/images/research/mosaic.jpg
+  image_width: 1024
+  image_height: 905
 - id: meri-vl-mil
   title: 'MERI-VL-MIL: Multi-Expert Reasoning-Informed Vision-Language Multi-Instance Learning for Few-Shot Cancer
     Subtyping'
@@ -71,6 +80,9 @@
   links: []
   image_alt: MERI-VL-MIL diagram showing response summarization and extraction of medically relevant reasoning terms,
     followed by text encoding, projection, and combination into a reasoning-informed embedding.
+  image: /assets/images/research/meri-vl-mil.png
+  image_width: 1110
+  image_height: 526
 - id: pathology-foundation-models
   title: 'A New Era in Computational Pathology: A Survey on Foundation and Vision-Language Models'
   authors: Dibaloke Chanda, Milan Aryal, Masoud Ganji, Anil Parwani, Nasim Yahya Soltani
@@ -87,6 +99,11 @@
   links:
   - label: arXiv
     url: https://arxiv.org/abs/2408.14496
+  image: /assets/images/research/pathology-foundation-models.png
+  image_width: 1587
+  image_height: 920
+  image_alt: Timeline of computational pathology foundation models, multimodal datasets, and vision–language models,
+    grouped by research direction.
 - id: explainability-graph-attack
   title: Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation
   authors: Dibaloke Chanda, Saba Heidari Gheshlaghi, Nasim Yahya Soltani

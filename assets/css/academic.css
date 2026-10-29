@@ -307,7 +307,7 @@ html:not(.js) .publication-toolbar{display:none}
 .footer-top{padding:30px 0 17px}
 .footer-brand{font-size:16px;font-weight:700;letter-spacing:-.04em}
 .footer-brand>span{color:var(--accent)}
-.footer-identity>p{font-size:11px;color:var(--muted);margin-top:9px}
+
 .footer-links{display:flex;gap:23px;align-items:center}
 .footer-links>a{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500}
 .footer-links .icon{width:12px;height:12px}
