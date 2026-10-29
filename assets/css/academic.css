@@ -371,3 +371,10 @@ html:not(.js) .work-arrow{display:none}
 .footer-links{flex-wrap:wrap}
 .footer-links .icon{width:15px;height:15px}
 @media(max-width:700px){.profile-socials{display:flex;flex-wrap:wrap;gap:8px 12px}.profile-socials a{font-size:9px;gap:5px}.profile-socials .icon{width:13px;height:13px}}
+
+.work-image--figure{background:white}
+.work-image--figure img{object-fit:contain;background:white}
+.work-card:hover .work-image--figure img{transform:none}
+.dialog-visual--figure{background:white;border:1px solid var(--line)}
+.dialog-visual--figure img{object-fit:contain}
+.figure-full-link{margin-top:20px;font-size:11px}

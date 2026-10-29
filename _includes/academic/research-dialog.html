@@ -1,7 +1,9 @@
 {% assign dialog_paper = include.paper %}
+{% assign default_image = '/assets/images/research/' | append: include.illustration | append: '.svg' %}
+{% assign dialog_image = dialog_paper.image | default: default_image %}
 <dialog class="research-dialog" id="paper-{{ dialog_paper.id }}" data-research-dialog aria-labelledby="title-{{ dialog_paper.id }}">
   <div class="research-dialog-panel">
-    <div class="dialog-visual"><img src="{{ '/assets/images/research/' | append: include.illustration | append: '.svg' | relative_url }}" alt="" width="900" height="520" loading="lazy"><p>Conceptual research illustration</p></div>
+    <div class="dialog-visual{% if dialog_paper.image %} dialog-visual--figure{% endif %}"><img src="{{ dialog_image | relative_url }}" alt="{% if dialog_paper.image %}{{ dialog_paper.image_alt | default: dialog_paper.title | escape }}{% endif %}" width="{{ dialog_paper.image_width | default: 900 }}" height="{{ dialog_paper.image_height | default: 520 }}" loading="lazy">{% if dialog_paper.image %}<a class="text-link figure-full-link" href="{{ dialog_image | relative_url }}" target="_blank" rel="noopener">View full-size figure {% include academic/icon.html name="arrow-up-right" %}</a>{% else %}<p>Conceptual research illustration</p>{% endif %}</div>
     <div class="dialog-content">
       <button class="dialog-close" data-dialog-close type="button" aria-label="Close research details"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
       <h2 id="title-{{ dialog_paper.id }}">{{ dialog_paper.title }}</h2>

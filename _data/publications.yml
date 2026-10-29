@@ -16,6 +16,8 @@
   - Cancer subtyping
   links: []
   status: under-review
+  image_alt: CThoughtPathNet architecture showing dynamic prompts, expert-agent reasoning, thought-driven embeddings,
+    and attention-based fusion with whole-slide image patches.
 - id: invex
   title: 'INVEX: Label-Free Pathology Foundation Model Ranking via Invariance and Expressiveness'
   authors: Dibaloke Chanda, Praveen Madiraju
@@ -32,6 +34,8 @@
   - Computational pathology
   links: []
   status: accepted
+  image_alt: INVEX illustration showing tissue symmetry on a histology-textured sphere and representational discriminability
+    as a similarity heatmap.
 - id: mosaic
   title: 'MOSAIC: Towards a Universal Latent Space for Computational Pathology Foundation Models'
   authors: Dibaloke Chanda, Praveen Madiraju
@@ -47,6 +51,8 @@
   - Latent representations
   links: []
   status: accepted
+  image_alt: MOSAIC illustration connecting UNI, CONCH, KEEP, VIRCHOW, MUSK, and PHIKON pathology foundation models
+    around a shared representation.
 - id: meri-vl-mil
   title: 'MERI-VL-MIL: Multi-Expert Reasoning-Informed Vision-Language Multi-Instance Learning for Few-Shot Cancer
     Subtyping'
@@ -63,6 +69,8 @@
   - Few-shot learning
   - Cancer subtyping
   links: []
+  image_alt: MERI-VL-MIL diagram showing response summarization and extraction of medically relevant reasoning terms,
+    followed by text encoding, projection, and combination into a reasoning-informed embedding.
 - id: pathology-foundation-models
   title: 'A New Era in Computational Pathology: A Survey on Foundation and Vision-Language Models'
   authors: Dibaloke Chanda, Milan Aryal, Masoud Ganji, Anil Parwani, Nasim Yahya Soltani
@@ -97,7 +105,14 @@
     url: https://www.sciencedirect.com/science/article/pii/S0950705124015296
   - label: arXiv
     url: https://arxiv.org/abs/2312.17301
+  - label: Graphical abstract
+    url: /assets/images/research/explainability-graph-attack.png
   year: 2025
+  image: /assets/images/research/explainability-graph-attack.png
+  image_width: 2400
+  image_height: 1202
+  image_alt: Graphical abstract showing graph neural network predictions, GNNExplainer and PGExplainer explanations,
+    and adversarial edge perturbations guided by important subgraphs.
 - id: heterogeneous-graph-mtl
   title: A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid
   authors: Dibaloke Chanda, Nasim Yahya Soltani
