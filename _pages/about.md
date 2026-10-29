@@ -17,14 +17,6 @@ redirect_from:
   <div class="profile-copy"><p class="eyebrow">A little about me</p><p>I’m a graduate student in the Computer Science department at <a href="https://www.marquette.edu/">Marquette University</a>, working at the intersection of machine learning, computational pathology, and model interpretability.</p><p>My interests include foundation models, unsupervised pre-training, generative AI, large language models, and adversarial attacks. I’m drawn to the question of what models learn—and how we can make sense of it.</p><p>Previously, I was a lecturer in the Electrical, Electronic, and Communication Engineering department at <a href="https://mist.ac.bd/">MIST</a>. Teaching continues to shape how I approach research: work through the details, connect the ideas, and share what I learn.</p><div class="profile-facts"><div><p class="card-label">Current chapter</p><h2>Graduate studies</h2><p>Marquette University</p></div><div><p class="card-label">Research focus</p><h2>Vision &amp; interpretable AI</h2><p>Foundation models · Computational pathology</p></div></div><a class="text-link" href="{{ '/experience/' | relative_url }}">Follow my experience {% include academic/icon.html name="arrow-right" %}</a></div>
 </section>
 
-<section class="research-showcase" aria-label="Research themes">
-  <div class="research-animation">
-    <div class="research-visual" data-research-visual aria-hidden="true"><canvas></canvas></div>
-    <div class="visual-controls"><div class="visual-modes" role="group" aria-label="Explore research themes"><button type="button" data-research-mode="pathology" aria-pressed="true">Computational pathology</button><button type="button" data-research-mode="explainability" aria-pressed="false">Explainable AI</button><button type="button" data-research-mode="graphs" aria-pressed="false">Graph learning</button></div><button type="button" class="particle-pause" data-particle-pause aria-pressed="false" aria-label="Pause animation"><span aria-hidden="true">Ⅱ</span></button></div>
-    <noscript><p class="visual-fallback">Computational pathology · Explainable AI · Graph learning</p></noscript>
-  </div>
-</section>
-
 <section class="research-intro" aria-label="Research overview">
   <p>I study vision and foundation models in computational pathology. My research explores how we can <span>interpret their predictions, understand their vulnerabilities, and learn from complex data.</span></p>
   <div class="tag-list"><span class="tag">Computational pathology</span><span class="tag">Explainable AI</span><span class="tag">Graph learning</span></div>
@@ -34,7 +26,7 @@ redirect_from:
 
 
 <section class="home-section selected-section" aria-labelledby="selected-title">
-  <div class="section-heading"><div><h2 id="selected-title">Projects</h2><p>Papers on complex data, the models that learn from it, and what their predictions reveal.</p></div><a class="button button-secondary button-small" href="{{ '/publication/' | relative_url }}">All {{ site.data.publications | size }} publications {% include academic/icon.html name="arrow-right" %}</a></div>
+  <div class="section-heading"><div><h2 id="selected-title">Selected Publications</h2><p>Papers on complex data, the models that learn from it, and what their predictions reveal.</p></div><a class="button button-secondary button-small" href="{{ '/publication/' | relative_url }}">All {{ site.data.publications | size }} publications {% include academic/icon.html name="arrow-right" %}</a></div>
   <div class="work-grid">{% for paper in site.data.publications limit: 6 %}{% assign illustration = 'vision' %}{% if paper.topic == 'pathology' %}{% assign illustration = 'pathology' %}{% elsif paper.topic == 'graphs' %}{% assign illustration = 'graph-learning' %}{% endif %}{% if paper.id == 'explainability-graph-attack' %}{% assign illustration = 'explainability' %}{% endif %}
     {% assign default_image = '/assets/images/research/' | append: illustration | append: '.svg' %}{% assign paper_image = paper.image | default: default_image %}
     {% assign fallback_url = '/publication/' | relative_url | append: '#' | append: paper.id %}{% assign paper_url = paper.links.first.url | default: fallback_url %}

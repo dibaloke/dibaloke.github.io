@@ -46,6 +46,6 @@ The repository originated from [Academic Pages](https://academicpages.github.io/
 
 The redesign follows the supplied reference screenshots: a portrait-led introduction, bold DM Sans typography, cobalt accents, pale gradients, visual research cards, compact publication rows, and an expanded research dialog. DM Sans is self-hosted; its SIL Open Font License is included in `assets/fonts/dm-sans/`. The original portrait and CV are preserved.
 
-The homepage particle field (`assets/js/research-field.js`) has three research themes, a pause control, and reduced-motion support. Research dialogs (`assets/js/research-dialogs.js`) use native browser focus handling and preserve direct paper links when JavaScript is unavailable. The SVGs in `assets/images/research/` are conceptual illustrations, not paper figures or reported results.
+Research dialogs (`assets/js/research-dialogs.js`) use native browser focus handling and preserve direct paper links when JavaScript is unavailable. The SVGs in `assets/images/research/` are conceptual illustrations, not paper figures or reported results.
 
 Template posts, sample collections, and unused demo pages are excluded in `_config.yml`, with their source retained. The publication archive now reads from `_data/publications.yml`; the former `/publications/` URL redirects to `/publication/`.
