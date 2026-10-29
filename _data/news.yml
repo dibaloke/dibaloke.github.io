@@ -1,0 +1,28 @@
+- date: '2024-12-15'
+  title: 'Paper accepted to Knowledge-Based Systems'
+  description: 'Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation.'
+  url: https://arxiv.org/abs/2312.17301
+
+- date: '2024-08-17'
+  title: 'Paper accepted to IEEE Transactions on Power Systems'
+  description: 'A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid.'
+  url: https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/
+
+- date: '2024-07-30'
+  title: 'Paper accepted to IEEE GLOBECOM 2024'
+  description: 'A Graph Motif Adversarial Attack for Fault Detection in Power Distribution Systems.'
+
+- date: '2024-03-01'
+  title: 'First journal paper accepted'
+  description: 'DCENSnet accepted to Biomedical Signal Processing and Control.'
+  url: https://www.sciencedirect.com/science/article/pii/S1746809423011904
+
+- date: '2023-09-20'
+  title: 'Paper accepted to MLSP 2023'
+  description: 'Graph-Based Multi-Task Learning for Fault Detection in Smart Grid.'
+  url: https://graph-based-mtl-fault-detection.github.io/
+
+- date: '2023-01-01'
+  title: 'Started graduate studies at Marquette University'
+  description: 'Beginning a new chapter in computer science research.'
+  url: https://www.marquette.edu/

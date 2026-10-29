@@ -1,0 +1,5 @@
+<nav class="academic-links" aria-label="Academic profiles">
+  <a href="{{ site.author.googlescholar }}"><span class="academic-link-icon" aria-hidden="true">{% include academic/icon.html name="book" %}</span><span>Google Scholar</span>{% include academic/icon.html name="arrow-up-right" %}</a>
+  {% if site.author.orcid %}<a href="{{ site.author.orcid }}"><span class="academic-link-icon" aria-hidden="true">iD</span><span>ORCID</span>{% include academic/icon.html name="arrow-up-right" %}</a>{% endif %}
+  <a href="https://github.com/{{ site.author.github }}"><span class="academic-link-icon" aria-hidden="true">{ }</span><span>GitHub</span>{% include academic/icon.html name="arrow-up-right" %}</a>
+</nav>

@@ -1,51 +1,51 @@
-# Academic Pages
+# Dibaloke Chanda · Academic website
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+A personal academic website for research, publications, teaching, and technical writing. Built with Jekyll and hosted on GitHub Pages. The design uses a shared responsive layout, locally served assets, and a small vanilla JavaScript file.
 
-Academic Pages is a Github Pages template for academic websites.
+## Preview locally
 
-# Getting Started
+Install Ruby 3.3, Bundler, and your platform's C/C++ build tools, then run:
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+```sh
+bundle install
+bundle exec jekyll serve --livereload
+```
 
-See more info at https://academicpages.github.io/
+Open <http://localhost:4000>. Restart Jekyll after editing `_config.yml`.
 
-## Running Locally
+Node.js is not needed for the redesigned site. The existing `package.json` and legacy theme assets are retained for compatibility with the original Academic Pages theme.
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+## Edit content
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+| File | Content |
+| --- | --- |
+| `_config.yml` | Site identity, description, author links, and URL |
+| `_data/navigation.yml` | Main navigation |
+| `_data/publications.yml` | Publication titles, authors, venues, and resource links |
+| `_data/research.yml` | Research interests |
+| `_data/news.yml` | Dated research updates |
+| `_data/writing.yml` | Technical writing and learning resources |
+| `_pages/` | Page introductions, experience, CV, and other academic content |
+| `images/profile.jpg` | Original profile portrait |
+| `files/Dibaloke_Chanda_CV.pdf` | Downloadable CV |
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+The shared design lives in `_layouts/academic.html` and the academic assets under `assets/`. Content dates and biographical details reflect the information supplied in the original repository; update them as your work develops.
 
-# Maintenance
+## Validate before publishing
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+```sh
+JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --trace
+python3 scripts/check_site.py
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+The GitHub Actions validation workflow runs these checks on pull requests and pushes to `main` or `master`. It builds the site and checks generated internal links and local asset references. It does not deploy the website. GitHub Pages publishing remains controlled by the repository's Pages settings.
 
-## Bugfixes and enhancements
+## Credits
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+The repository originated from [Academic Pages](https://academicpages.github.io/), based on [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/). Original theme licensing is retained in `LICENSE`.
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+The redesign follows the supplied reference screenshots: a portrait-led introduction, bold DM Sans typography, cobalt accents, pale gradients, visual research cards, compact publication rows, and an expanded research dialog. DM Sans is self-hosted; its SIL Open Font License is included in `assets/fonts/dm-sans/`. The original portrait and CV are preserved.
+
+The homepage particle field (`assets/js/research-field.js`) has three research themes, a pause control, and reduced-motion support. Research dialogs (`assets/js/research-dialogs.js`) use native browser focus handling and preserve direct paper links when JavaScript is unavailable. The SVGs in `assets/images/research/` are conceptual illustrations, not paper figures or reported results.
+
+Template posts, sample collections, and unused demo pages are excluded in `_config.yml`, with their source retained. The publication archive now reads from `_data/publications.yml`; the former `/publications/` URL redirects to `/publication/`.

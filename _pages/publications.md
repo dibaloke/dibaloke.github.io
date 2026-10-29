@@ -1,59 +1,17 @@
 ---
+layout: academic
 permalink: /publication/
-title: "Publications"
-author_profile: true
-
+title: Publications
+description: Selected journal articles, conference papers, and manuscripts by Dibaloke Chanda, spanning computational pathology, graph learning, and machine learning.
+redirect_from:
+  - /publications/
 ---
-For a complete list of my publications check out my Google Scholar page.
+<header class="page-heading"><h1>Publications</h1><a class="text-link" href="{{ site.author.googlescholar }}">Complete list on Google Scholar {% include academic/icon.html name="arrow-up-right" %}</a></header>
+<section aria-label="Publication library" data-publication-library>
+  <div class="publication-toolbar"><div class="filter-group" role="group" aria-label="Filter publications"><button type="button" class="filter-button" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-button" data-filter="journal" aria-pressed="false">Journal articles</button><button type="button" class="filter-button" data-filter="conference" aria-pressed="false">Conferences</button><button type="button" class="filter-button" data-filter="accepted" aria-pressed="false">Accepted</button><button type="button" class="filter-button" data-filter="under-review" aria-pressed="false">Under review</button></div><label class="publication-search">{% include academic/icon.html name="search" %}<span class="sr-only">Search publications</span><input type="search" placeholder="Search publications…" data-publication-search></label></div>
+  <p class="result-count" data-result-count aria-live="polite">{{ site.data.publications | size }} publications</p>
+  <div class="publication-list">{% for paper in site.data.publications %}{% include academic/publication.html paper=paper heading="h2" %}{% endfor %}</div>
+  <p class="empty-state" data-empty-state hidden>No publications match your search. Try another title, author, or venue.</p>
+</section>
 
- <a href="https://scholar.google.com/citations?user=dO8bRn0AAAAJ&hl=en" target="_blank">Google Scholar</a> 
-
-## Selected Publications
-
-<b> Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation </b>
-<br><b>Dibaloke Chanda</b>, Saba Heidari Gheshlaghi, Nasim Yahya Soltani
-<br>Arxiv.  [[paper link]](https://www.sciencedirect.com/science/article/pii/S0950705124015296)
-
-------
-<b> A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid </b>
-<br><b>Dibaloke Chanda</b>, Nasim Yahyasoltani
-<br>IEEE Transactions on Power Systems.  [[project page]](https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/), [[dataset generation code]](https://github.com/Machine-Learning-Optimization-Data-Lab/Graph-Based-Fault-Detection-Data-Generation)
-
-------
-<b> Graph-Based Multi-Task Learning For Fault Detection In Smart Grid </b>
-<br><b>Dibaloke Chanda</b>, Nasim Yahyasoltani
-<br>MLSP 2023. [[project page]](https://graph-based-mtl-fault-detection.github.io/), [[Poster]](https://drive.google.com/file/d/1nfBjpoZ2eipo_oYeew5BV9r738I0bPx6/view)
-
-------
-
-<b> DCENSnet: A new deep convolutional ensemble network for skin cancer classification </b>
-<br><b>Dibaloke Chanda</b>, Md Saif Hassan Onim, Hussain Nyeem, Tareque Bashar Ovi, Sauda Suara Naba
-<br>Biomedical Signal Processing and Control. [[paper link]](https://www.sciencedirect.com/science/article/pii/S1746809423011904)
-
-------
-<b> A Robust Webcam-based Eye Gaze Estimation System for Human-Computer Interaction </b>
-<br> Koushik Roy, <b>Dibaloke Chanda</b>
-<br>ICISET 2022. [[paper link]](https://ieeexplore.ieee.org/abstract/document/9775896)
-
-------
-
-<b> A Transfer-Learning Based Ensemble Architecture for ECG Signal Classification </b>
-<br>Tareque Bashar Ovi, Sauda Suara Naba, <b> Dibaloke Chanda</b>, Md Saif Hassan Onim
-<br> IEEE tensymp 2022. [[paper link]](https://arxiv.org/abs/2207.00002)
-
-------
-
-<b> Performance analysis of LSTMs and FBProphet models for short term load forecasting </b>
-<br>Md Arafat Alam, Sheikh Mehrab Hossain, <b> Dibaloke Chanda</b>, Md Ahsan Kabir
-<br> ICEEICT 2021. [[paper link]](https://ieeexplore.ieee.org/abstract/document/9667833)
-
-## Pre-Prints
-
-<b> A New Era in Computational Pathology: A Survey on Foundation and Vision-Language Models </b>
-<br> <b> Dibaloke Chanda </b>, Milan Aryal, Nasim Yahya Soltani, Masoud Ganji
-<br>Arxiv.  [[arxiv link]](https://arxiv.org/abs/2408.14496)
-
-
-
-
-
+{% include academic/profile-links.html %}

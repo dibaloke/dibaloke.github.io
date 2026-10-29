@@ -1,31 +1,68 @@
 ---
+layout: academic
 permalink: /experience/
 title: "Experience"
-author_profile: true
-redirect_from: 
+description: "Teaching, mentoring, and academic experience at Marquette University and MIST."
+redirect_from:
   - /md/
   - /markdown.html
 ---
-### Teaching Assistant in the  <a href="https://www.marquette.edu/computer-science/" target="_blank">Computer Science Department, Marquette University</a>
--  TA for the "COSC 1010 - Introduction to Software Development" for Fall 2023, Spring 2024 and Fall 2024.
--  TA for the "COSC 1020 - Object-Oriented Software Design" for Spring 2024
+<header class="page-heading">
+  <h1>Experience</h1>
+  </header>
 
-### Lecturer in the <a href="https://mist.ac.bd/department/eece" target="_blank">EECE Department, MIST </a>  
-You can check out my <a href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371" target="_blank">profile</a> here.
-- The courses I taught include:
-  - Random Signal and Processes (EECE 441)
-  - Electrical Drives and Instrumentation (EECE 269)
-  - Digital Signal Processing Laboratory (EECE 312)
-  - Microwave Engineering Laboratory (EECE 434)
-  - Numerical Techniques Laboratory (EECE 212)
-  - Digital Communication Laboratory (EECE 438)
-  - Electrical Drive and Instrumentation Laboratory (EECE 270)
-  - Electronic Devices and Circuits Sessional (EECE 170)
-  - Fundamentals of Electrical Engineering Laboratory (EECE 272)
-  - Principle of Electrical Engineering Sessional (EECE 164)
- 
-- I was also an instructor of the <a href="https://eece.gitbook.io/python-certification-course-2022" target="_blank">Python Certification Course 2022</a>  arranged by the EECE Department, MIST.
+<div class="timeline">
+  <article class="timeline-item">
+    <div class="timeline-meta"><span class="eyebrow">Marquette University</span><p>Milwaukee, Wisconsin</p></div>
+    <div class="timeline-body prose">
+      <h2>Teaching Assistant</h2>
+      <p><a href="https://www.marquette.edu/computer-science/">Department of Computer Science</a></p>
+      <p>I supported students in introductory software development and object-oriented software design.</p>
+      <ul>
+        <li><strong>COSC 1010 · Introduction to Software Development</strong><br>Fall 2023, Spring 2024, and Fall 2024</li>
+        <li><strong>COSC 1020 · Object-Oriented Software Design</strong><br>Spring 2024</li>
+      </ul>
+    </div>
+  </article>
 
-### Senior Mentor (Android and IOS App Development) in <a href="https://innovationclub.mist.ac.bd/" target="_blank">MIST Innovation Club</a>
-- In my undergrad, I designed a course called <a href="https://eece.gitbook.io/mist-innovation-club-flutter-course-1" target="_blank">Intermediate Dart</a>
-  as part of the introduction to the Flutter framework. On the linked website, you will find recorded videos in my native language and code snippets.
+  <article class="timeline-item">
+    <div class="timeline-meta"><span class="eyebrow">MIST</span><p>Electrical, Electronic &amp;<br>Communication Engineering</p></div>
+    <div class="timeline-body prose">
+      <h2>Lecturer</h2>
+      <p><a href="https://mist.ac.bd/department/eece">Department of EECE</a></p>
+      <p>I taught courses and laboratories spanning signal processing, communication, electrical engineering, and numerical methods. I also served as an instructor for the department’s <a href="https://eece.gitbook.io/python-certification-course-2022">Python Certification Course 2022</a>.</p>
+      <details class="course-details">
+        <summary>Courses I taught <span aria-hidden="true">+</span></summary>
+        <ul>
+          <li>Random Signal and Processes · EECE 441</li>
+          <li>Electrical Drives and Instrumentation · EECE 269</li>
+          <li>Digital Signal Processing Laboratory · EECE 312</li>
+          <li>Microwave Engineering Laboratory · EECE 434</li>
+          <li>Numerical Techniques Laboratory · EECE 212</li>
+          <li>Digital Communication Laboratory · EECE 438</li>
+          <li>Electrical Drive and Instrumentation Laboratory · EECE 270</li>
+          <li>Electronic Devices and Circuits Sessional · EECE 170</li>
+          <li>Fundamentals of Electrical Engineering Laboratory · EECE 272</li>
+          <li>Principle of Electrical Engineering Sessional · EECE 164</li>
+        </ul>
+      </details>
+      <a class="text-link" href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371">MIST faculty profile <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+
+  <article class="timeline-item">
+    <div class="timeline-meta"><span class="eyebrow">MIST Innovation Club</span><p>Android &amp; iOS development</p></div>
+    <div class="timeline-body prose">
+      <h2>Senior Mentor</h2>
+      <p>During my undergraduate studies, I designed an Intermediate Dart course as part of an introduction to Flutter. The course includes recorded lessons in my native language and accompanying code examples.</p>
+      <a class="text-link" href="https://eece.gitbook.io/mist-innovation-club-flutter-course-1">Explore the Dart course <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+</div>
+
+<section class="page-callout">
+  <p class="eyebrow">Always learning</p>
+  <h2>The classroom goes both ways.</h2>
+  <p>Explore the courses, projects, and resources that have shaped my own learning.</p>
+  <a class="text-link" href="{{ '/others/' | relative_url }}">Coursework &amp; projects <span aria-hidden="true">→</span></a>
+</section>

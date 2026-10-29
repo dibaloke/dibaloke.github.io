@@ -1,0 +1,24 @@
+- title: 'Notes on machine learning'
+  description: 'Deep learning architectures, PyTorch, statistics, and the ideas behind machine learning.'
+  url: https://dibalokechanda.github.io/
+  category: Technical blog
+
+- title: 'Linear algebra, from the ground up'
+  description: 'Lecture notes and explanations of the mathematics that underpins machine learning.'
+  url: https://dibalokechanda.github.io/Linear-Algebra/
+  category: Lecture notes
+
+- title: 'Courses worth keeping'
+  description: 'A curated collection of courses in deep learning and related topics.'
+  url: https://github.com/dibaloke/DL-ML-Courses/tree/main
+  category: Learning resources
+
+- title: 'A reading list for curious minds'
+  description: 'Technical blog posts on deep learning, collected in one place.'
+  url: https://github.com/dibaloke/DL-ML-Blogs
+  category: Reading list
+
+- title: 'Beyond the syllabus'
+  description: 'Interactive websites, books, and other resources on deep learning, statistics, and mathematics.'
+  url: https://github.com/dibaloke/others
+  category: Learning resources

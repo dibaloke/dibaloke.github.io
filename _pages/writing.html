@@ -1,0 +1,27 @@
+---
+layout: academic
+permalink: /writing/
+title: "Writing & Resources"
+description: "Technical writing, lecture notes, and curated resources on deep learning, statistics, linear algebra, and machine learning."
+---
+<header class="page-heading">
+  <h1>Writing &amp; Resources</h1>
+  </header>
+
+<div class="resource-grid">
+  {% for resource in site.data.writing %}
+  <article class="resource-card">
+    <p class="card-label">{{ resource.category }}</p>
+    <h2><a href="{{ resource.url }}">{{ resource.title }} <span aria-hidden="true">↗</span></a></h2>
+    <p>{{ resource.description }}</p>
+    <a class="text-link" href="{{ resource.url }}">Explore resource <span aria-hidden="true">↗</span></a>
+  </article>
+  {% endfor %}
+</div>
+
+<section class="page-callout">
+  <p class="eyebrow">Learning in practice</p>
+  <h2>Beyond the reading list.</h2>
+  <p>Coursework and projects from my master’s studies in data science, alongside the courses that helped me get started.</p>
+  <a class="text-link" href="{{ '/others/' | relative_url }}">Coursework &amp; projects <span aria-hidden="true">→</span></a>
+</section>

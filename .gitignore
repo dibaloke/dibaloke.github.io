@@ -10,3 +10,10 @@ Gemfile.lock
 # Ingore files created by npm
 node_modules
 package-lock.json
+
+# Local build caches
+.sass-cache/
+.jekyll-cache/
+.bundle/
+__pycache__/
+*.pyc

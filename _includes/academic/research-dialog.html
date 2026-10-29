@@ -1,0 +1,16 @@
+{% assign dialog_paper = include.paper %}
+<dialog class="research-dialog" id="paper-{{ dialog_paper.id }}" data-research-dialog aria-labelledby="title-{{ dialog_paper.id }}">
+  <div class="research-dialog-panel">
+    <div class="dialog-visual"><img src="{{ '/assets/images/research/' | append: include.illustration | append: '.svg' | relative_url }}" alt="" width="900" height="520" loading="lazy"><p>Conceptual research illustration</p></div>
+    <div class="dialog-content">
+      <button class="dialog-close" data-dialog-close type="button" aria-label="Close research details"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
+      <h2 id="title-{{ dialog_paper.id }}">{{ dialog_paper.title }}</h2>
+      <p class="dialog-meta">{{ dialog_paper.type | capitalize }}{% if dialog_paper.year %} · {{ dialog_paper.year }}{% endif %}{% include academic/publication-status.html paper=dialog_paper %}</p>
+      <p class="dialog-summary">{{ dialog_paper.summary }}</p>
+      <div class="dialog-section"><h3>Authors</h3><p>{{ dialog_paper.authors | escape | replace: 'Dibaloke Chanda', '<strong>Dibaloke Chanda</strong>' }}</p></div>
+      <div class="dialog-section"><h3>Publication</h3><p>{{ dialog_paper.venue }}</p></div>
+      <div class="dialog-section"><h3>Research themes</h3><div class="tag-list">{% for tag in dialog_paper.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div></div>
+      {% if dialog_paper.links.size > 0 %}<div class="dialog-section"><h3>Explore the work</h3><div class="dialog-resource-links">{% for link in dialog_paper.links %}<a class="button {% if forloop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ link.url }}">{{ link.label }} {% include academic/icon.html name="arrow-up-right" %}</a>{% endfor %}</div></div>{% endif %}
+    </div>
+  </div>
+</dialog>

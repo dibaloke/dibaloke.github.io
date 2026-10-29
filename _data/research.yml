@@ -1,0 +1,23 @@
+- number: '01'
+  title: 'Computational pathology'
+  description: 'Exploring foundation and vision-language models for computational pathology, with an emphasis on understanding their predictions.'
+  tags:
+    - Vision + language
+    - Foundation models
+    - Medical AI
+
+- number: '02'
+  title: 'Explainable & robust AI'
+  description: 'Studying how explainability algorithms reveal model behavior, and how adversarial attacks expose vulnerabilities in learned predictions.'
+  tags:
+    - Interpretability
+    - Adversarial attacks
+    - Trustworthy AI
+
+- number: '03'
+  title: 'Graph learning'
+  description: 'Using graph-based multi-task learning for fault detection and event diagnosis in smart grids.'
+  tags:
+    - Graph neural networks
+    - Multi-task learning
+    - Smart grids

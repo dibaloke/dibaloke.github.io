@@ -1,0 +1,291 @@
+# Publication details include author-supplied updates; omitted years and author lists were not supplied.
+- id: cthoughtpathnet
+  title: 'CThoughtPathNet: Expert-Guided Vision–Language Reasoning for Few-Shot Cancer Subtyping in Whole-Slide
+    Pathology'
+  authors: Dibaloke Chanda, Nasim Yahya Soltani, Masoud Ganji
+  venue: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+  year: 2027
+  type: journal
+  topic: pathology
+  selected: true
+  summary: Expert-guided vision–language reasoning for few-shot cancer subtyping in whole-slide pathology.
+  tags:
+  - Computational pathology
+  - Vision–language reasoning
+  - Few-shot learning
+  - Cancer subtyping
+  links: []
+  status: under-review
+- id: invex
+  title: 'INVEX: Label-Free Pathology Foundation Model Ranking via Invariance and Expressiveness'
+  authors: Dibaloke Chanda, Praveen Madiraju
+  venue: IEEE International Conference on Big Data (IEEE BigData)
+  year: 2026
+  type: conference
+  topic: pathology
+  selected: true
+  summary: Ranking pathology foundation models without labels using invariance and expressiveness.
+  tags:
+  - Foundation models
+  - Model ranking
+  - Label-free evaluation
+  - Computational pathology
+  links: []
+  status: accepted
+- id: mosaic
+  title: 'MOSAIC: Towards a Universal Latent Space for Computational Pathology Foundation Models'
+  authors: Dibaloke Chanda, Praveen Madiraju
+  venue: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  year: 2027
+  type: conference
+  topic: pathology
+  selected: true
+  summary: Exploring a universal latent space for computational pathology foundation models.
+  tags:
+  - Computational pathology
+  - Foundation models
+  - Latent representations
+  links: []
+  status: accepted
+- id: meri-vl-mil
+  title: 'MERI-VL-MIL: Multi-Expert Reasoning-Informed Vision-Language Multi-Instance Learning for Few-Shot Cancer
+    Subtyping'
+  authors: Dibaloke Chanda, Nasim Yahya Soltani, Masoud Ganji
+  venue: Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
+  year: 2026
+  type: conference
+  topic: pathology
+  selected: true
+  summary: Multi-expert reasoning-informed vision–language multi-instance learning for few-shot cancer subtyping.
+  tags:
+  - Multi-instance learning
+  - Vision–language models
+  - Few-shot learning
+  - Cancer subtyping
+  links: []
+- id: pathology-foundation-models
+  title: 'A New Era in Computational Pathology: A Survey on Foundation and Vision-Language Models'
+  authors: Dibaloke Chanda, Milan Aryal, Masoud Ganji, Anil Parwani, Nasim Yahya Soltani
+  venue: Journal of Pathology Informatics
+  year: 2026
+  type: journal
+  topic: pathology
+  selected: true
+  summary: A survey of foundation models and vision-language models in computational pathology.
+  tags:
+  - Computational pathology
+  - Foundation models
+  - Vision-language models
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2408.14496
+- id: explainability-graph-attack
+  title: Explainability-Based Adversarial Attack on Graphs Through Edge Perturbation
+  authors: Dibaloke Chanda, Saba Heidari Gheshlaghi, Nasim Yahya Soltani
+  venue: Knowledge-Based Systems
+  type: journal
+  topic: graphs
+  selected: true
+  summary: An explainability-based approach to adversarial attacks on graphs through edge perturbation.
+  tags:
+  - Explainability
+  - Adversarial attacks
+  - Graph learning
+  - Edge perturbation
+  links:
+  - label: Paper
+    url: https://www.sciencedirect.com/science/article/pii/S0950705124015296
+  - label: arXiv
+    url: https://arxiv.org/abs/2312.17301
+  year: 2025
+- id: heterogeneous-graph-mtl
+  title: A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid
+  authors: Dibaloke Chanda, Nasim Yahya Soltani
+  venue: IEEE Transactions on Power Systems
+  type: journal
+  topic: graphs
+  selected: true
+  summary: Heterogeneous graph-based multi-task learning for diagnosing fault events in smart grids.
+  tags:
+  - Heterogeneous graphs
+  - Multi-task learning
+  - Fault diagnosis
+  - Smart grids
+  links:
+  - label: Project
+    url: https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/
+  - label: Code
+    url: https://github.com/Machine-Learning-Optimization-Data-Lab/Graph-Based-Fault-Detection-Data-Generation
+  year: 2025
+- id: automated-quality-inspection
+  title: 'Automated Quality Inspection: An Embedded Machine Vision System for Process Optimization'
+  authors: KS Raja, AB Rashid, CMA Rahman, Dibaloke Chanda, N Ahmad
+  venue: 2024 3rd International Conference on Advancement in Electrical and Electronic Engineering (ICAEEE)
+  year: 2024
+  type: conference
+  topic: vision
+  selected: false
+  summary: An embedded machine vision system using a portable Linux-based computer, a camera module, and machine
+    learning to analyze images for automated quality inspection and process optimization.
+  tags:
+  - Machine vision
+  - Embedded systems
+  - Quality inspection
+  - Process optimization
+  links:
+  - label: Paper
+    url: https://ieeexplore.ieee.org/abstract/document/10561766/
+  publication_date: '2024-04-25'
+  pages: 1–6
+  publisher: IEEE
+- id: graph-mtl-fault-detection
+  title: Graph-Based Multi-Task Learning for Fault Detection in Smart Grid
+  authors: Dibaloke Chanda, Nasim Yahya Soltani
+  venue: IEEE International Workshop on Machine Learning for Signal Processing (MLSP)
+  year: 2023
+  type: conference
+  topic: graphs
+  selected: false
+  summary: A graph-based multi-task learning approach to fault detection in smart grids.
+  tags:
+  - Graph learning
+  - Multi-task learning
+  - Fault detection
+  - Smart grids
+  links:
+  - label: Project
+    url: https://graph-based-mtl-fault-detection.github.io/
+  - label: Poster
+    url: https://drive.google.com/file/d/1nfBjpoZ2eipo_oYeew5BV9r738I0bPx6/view
+- id: dcensnet
+  title: 'DCENSnet: A new deep convolutional ensemble network for skin cancer classification'
+  authors: Dibaloke Chanda, Md Saif Hassan Onim, Hussain Nyeem, Tareque Bashar Ovi, Sauda Suara Naba
+  venue: Biomedical Signal Processing and Control
+  type: journal
+  topic: vision
+  selected: false
+  summary: A deep convolutional ensemble network for skin cancer classification.
+  tags:
+  - Computer vision
+  - Ensemble learning
+  - Skin cancer classification
+  links:
+  - label: Paper
+    url: https://www.sciencedirect.com/science/article/pii/S1746809423011904
+- id: webcam-gaze-estimation
+  title: A Robust Webcam-Based Eye Gaze Estimation System for Human-Computer Interaction
+  authors: Koushik Roy, Dibaloke Chanda
+  venue: International Conference on Innovations in Science, Engineering and Technology (ICISET)
+  year: 2022
+  type: conference
+  topic: vision
+  selected: false
+  summary: A webcam-based system for eye-gaze estimation in human-computer interaction.
+  tags:
+  - Computer vision
+  - Gaze estimation
+  - Human-computer interaction
+  links:
+  - label: Paper
+    url: https://ieeexplore.ieee.org/abstract/document/9775896
+- id: ecg-ensemble
+  title: A Transfer-Learning Based Ensemble Architecture for ECG Signal Classification
+  authors: Tareque Bashar Ovi, Sauda Suara Naba, Dibaloke Chanda, Md. Saif Hassan Onim
+  venue: IEEE TENSYMP
+  year: 2022
+  type: conference
+  topic: signals
+  selected: false
+  summary: An ensemble architecture that applies transfer learning to ECG signal classification.
+  tags:
+  - Transfer learning
+  - Ensemble learning
+  - ECG classification
+  links:
+  - label: Paper
+    url: https://arxiv.org/abs/2207.00002
+- id: load-forecasting
+  title: Performance Analysis of LSTMs and FBProphet Models for Short Term Load Forecasting
+  authors: Md. Arafat Alam, Sheikh Mehrab Hossain, Dibaloke Chanda, Md Ahsan Kabir
+  venue: International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)
+  year: 2021
+  type: conference
+  topic: signals
+  selected: false
+  summary: An analysis of LSTM and FBProphet models for short-term load forecasting.
+  tags:
+  - LSTM
+  - FBProphet
+  - Time series
+  - Load forecasting
+  links:
+  - label: Paper
+    url: https://ieeexplore.ieee.org/abstract/document/9667833
+- id: alamouti-fading-channels
+  title: Performance Analysis Through Image and Video Transmission for Alamouti Space Time Block Coding Over Rayleigh
+    and Rician Fading Channel
+  authors: Dibaloke Chanda, Muhaiminul Islam Akash
+  venue: International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)
+  year: 2021
+  type: conference
+  topic: wireless
+  selected: false
+  summary: An analysis of image and video transmission using Alamouti space time block coding over Rayleigh and
+    Rician fading channels.
+  tags:
+  - Wireless communications
+  - Alamouti coding
+  - Image and video transmission
+  - Fading channels
+  links: []
+- id: hybrid-diversity-combining
+  title: A Study on the Performance Analysis of Hybrid Diversity Combining Techniques for Rayleigh and Rician Fading
+    Channels under AWGN
+  authors: Tasmiha Tahseen Faiza, Sharika Shirin Haq, Dibaloke Chanda, Md Abdul Halim
+  venue: International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)
+  year: 2021
+  type: conference
+  topic: wireless
+  selected: false
+  summary: A study of hybrid diversity combining techniques for Rayleigh and Rician fading channels under additive
+    white Gaussian noise.
+  tags:
+  - Diversity combining
+  - Rayleigh fading
+  - Rician fading
+  - AWGN
+  links: []
+- id: hybrid-diversity-noise-models
+  title: Comparative Analysis of Hybrid Diversity Schemes under AWGN and Impulsive Noise Models for Rayleigh Fading
+    Channels
+  authors: Md Abdul Halim, Sharika Shirin Haq, Tasmiha Tahseen Faiza, Dibaloke Chanda
+  venue: International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)
+  year: 2021
+  type: conference
+  topic: wireless
+  selected: false
+  summary: A comparison of hybrid diversity schemes for Rayleigh fading channels under AWGN and impulsive noise
+    models.
+  tags:
+  - Hybrid diversity
+  - Rayleigh fading
+  - AWGN
+  - Impulsive noise
+  links: []
+- id: beamforming-initialization
+  title: Performance Analysis of Initialization Algorithms of Deep Neural Network Based Coordinated Beamforming
+    System for mmWave
+  authors: Dibaloke Chanda, AKM Nazrul Islam
+  venue: International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)
+  year: 2021
+  type: conference
+  topic: wireless
+  selected: false
+  summary: An analysis of initialization algorithms for a deep neural network based coordinated beamforming system
+    for millimeter-wave communications.
+  tags:
+  - Deep neural networks
+  - Initialization algorithms
+  - Coordinated beamforming
+  - mmWave
+  links: []

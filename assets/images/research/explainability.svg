@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Explainability and adversarial graph perturbation</title>
+<desc id="desc">Conceptual graph illustration with salient nodes and an orange changed edge, alongside an edge perturbation schematic. This is an illustration, not a research result.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f3f5fd"/><stop offset="1" stop-color="#e9eefd"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#9eafea" stop-opacity=".44"/><stop offset="1" stop-color="#9eafea" stop-opacity="0"/></radialGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dy="12" stdDeviation="18" flood-color="#445eaa" flood-opacity=".08"/></filter>
+</defs>
+<rect width="900" height="520" fill="url(#bg)"/>
+<circle cx="297" cy="258" r="235" fill="url(#glow)"/>
+<circle cx="297" cy="258" r="196" fill="none" stroke="#dce3f7" stroke-dasharray="4 8"/>
+<circle cx="297" cy="258" r="145" fill="none" stroke="#dce3f7"/>
+<path d="M110 206 178 110" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M110 206 101 316" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M110 206 246 225" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M178 110 294 86" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M178 110 246 225" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M294 86 407 131" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M294 86 322 162" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M407 131 488 222" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M407 131 322 162" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M488 222 445 343" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M488 222 333 290" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M445 343 335 408" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M445 343 333 290" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M335 408 204 382" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M335 408 333 290" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M204 382 101 316" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M204 382 193 304" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M101 316 193 304" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M246 225 322 162" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M246 225 193 304" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M246 225 333 290" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M333 290 322 162" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M333 290 193 304" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<path d="M322 162 407 131" stroke="#b3c1e7" stroke-width="2" fill="none"/>
+<circle cx="246" cy="225" r="50" fill="#405dd2" opacity=".05"/>
+<circle cx="246" cy="225" r="36" fill="#405dd2" opacity=".08"/>
+<circle cx="333" cy="290" r="53" fill="#405dd2" opacity=".05"/>
+<circle cx="333" cy="290" r="38" fill="#405dd2" opacity=".08"/>
+<path d="M246 225 445 343" stroke="#d99478" stroke-width="4" stroke-dasharray="9 7" fill="none"/>
+<circle cx="110" cy="206" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="110" cy="206" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="178" cy="110" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="178" cy="110" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="294" cy="86" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="294" cy="86" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="407" cy="131" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="407" cy="131" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="488" cy="222" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="488" cy="222" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="445" cy="343" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="445" cy="343" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="335" cy="408" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="335" cy="408" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="204" cy="382" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="204" cy="382" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="101" cy="316" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="101" cy="316" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="246" cy="225" r="19" fill="#405dd2" stroke="#405dd2" stroke-width="2"/>
+<circle cx="333" cy="290" r="19" fill="#405dd2" stroke="#405dd2" stroke-width="2"/>
+<circle cx="322" cy="162" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="322" cy="162" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="193" cy="304" r="13" fill="#fafbff" stroke="#8197d9" stroke-width="2.5"/>
+<circle cx="193" cy="304" r="4" fill="#8197d9" opacity=".55"/>
+<circle cx="348" cy="285" r="15" fill="#fff7f1" stroke="#e6c4b4"/>
+<path d="M342 285H354M348 279V291" stroke="#c78063" stroke-width="2" stroke-linecap="round"/>
+<path d="M493 254H588" stroke="#9baad7" stroke-width="1.5" stroke-dasharray="4 6"/>
+<path d="m581 247 8 7-8 7" fill="none" stroke="#9baad7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="618" y="80" width="218" height="356" rx="24" fill="#fff" filter="url(#shadow)"/>
+<g font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="#7c88a6"><text x="645" y="115">EDGE PERTURBATION</text></g>
+<path d="M654 192 724 151 797 192 724 223Z" fill="none" stroke="#b7c5ea" stroke-width="2"/>
+<path d="M654 192 797 192" stroke="#91a4df" stroke-width="2"/>
+<g fill="#f8faff" stroke="#8197d9" stroke-width="2"><circle cx="654" cy="192" r="9"/><circle cx="724" cy="151" r="9"/><circle cx="797" cy="192" r="9"/><circle cx="724" cy="223" r="9"/></g>
+<path d="M724 256V282m-6-6 6 6 6-6" fill="none" stroke="#b4bfdd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M654 351 724 310 797 351 724 382Z" fill="none" stroke="#b7c5ea" stroke-width="2"/>
+<path d="M724 310V382" stroke="#d99478" stroke-width="3" stroke-dasharray="6 5"/>
+<g fill="#f8faff" stroke="#8197d9" stroke-width="2"><circle cx="654" cy="351" r="9"/><circle cx="724" cy="310" r="9"/><circle cx="797" cy="351" r="9"/><circle cx="724" cy="382" r="9"/></g>
+<circle cx="724" cy="310" r="4" fill="#d99478" stroke="none"/>
+<circle cx="724" cy="382" r="4" fill="#d99478" stroke="none"/>
+<g font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#7784a7"><text x="142" y="469">NODE SALIENCY × GRAPH STRUCTURE</text></g>
+</svg>
