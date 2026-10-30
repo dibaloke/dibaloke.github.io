@@ -35,7 +35,9 @@
   - Model ranking
   - Label-free evaluation
   - Computational pathology
-  links: []
+  links:
+  - label: Project
+    url: https://researchsubmissions66.github.io/INVEX
   status: accepted
   image_alt: INVEX illustration showing tissue symmetry on a histology-textured sphere and representational discriminability
     as a similarity heatmap.
@@ -55,7 +57,11 @@
   - Computational pathology
   - Foundation models
   - Latent representations
-  links: []
+  links:
+  - label: Project
+    url: https://mosaic-wacv2027.github.io/mosaic/
+  - label: Code
+    url: https://github.com/researchsubmissions66/MOSAIC
   status: accepted
   image_alt: MOSAIC illustration connecting UNI, CONCH, KEEP, VIRCHOW, MUSK, and PHIKON pathology foundation models
     around a shared representation.
