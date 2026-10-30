@@ -24,6 +24,8 @@ redirect_from:
 
 
 
+{% include academic/transformer-particles.html %}
+
 <section class="home-section selected-section" aria-labelledby="selected-title">
   <div class="section-heading"><div><h2 id="selected-title">Selected Publications</h2></div><a class="button button-secondary button-small" href="{{ '/publication/' | relative_url }}">All {{ site.data.publications | size }} publications {% include academic/icon.html name="arrow-right" %}</a></div>
   <div class="work-grid">{% assign selected_papers = site.data.publications | where: "selected", true %}{% for paper in selected_papers %}{% assign illustration = 'vision' %}{% if paper.topic == 'pathology' %}{% assign illustration = 'pathology' %}{% elsif paper.topic == 'graphs' %}{% assign illustration = 'graph-learning' %}{% endif %}{% if paper.id == 'explainability-graph-attack' %}{% assign illustration = 'explainability' %}{% endif %}
