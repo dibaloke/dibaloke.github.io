@@ -350,7 +350,9 @@
     "segmented": "143",
     "features": "143",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Lung histopathology identified in the supplied inventory as adenocarcinoma and squamous-cell carcinoma subtyping. The exact public release and label definitions have not been confirmed for this short cohort name."
+    "domain": "Lung histopathology for adenocarcinoma and squamous-cell carcinoma subtyping. See the original Dartmouth dataset page for cohort details and label definitions.",
+    "dataset_url": "https://bmirds.github.io/LungCancer/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 36,
