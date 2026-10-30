@@ -79,7 +79,7 @@ description: "Projects and coursework from Dibaloke Chanda’s master’s studie
       <details class="coursework-details"><summary>Course details</summary><p>Advanced distributed and cloud computing concepts: system architectures, process management, communication mechanisms, fault tolerance, security, and consistency models.</p></details>
     </article>
     <article class="resource-card">
-      <p class="card-label">LLMs</p>
+      <p class="card-label">COSC 5931</p>
       <h3>Introduction to Large Language Models</h3>
       <details class="coursework-details"><summary>Course details</summary><p>Fundamentals of large language models, including transformer architectures, tokenization, pre-training, fine-tuning, and prompting. Retrieval-augmented generation (RAG) connects models with external knowledge through document retrieval and context construction. Agentic workflows combine reasoning, planning, and tool use to carry out multi-step tasks.</p></details>
     </article>
