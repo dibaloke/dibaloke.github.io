@@ -47,7 +47,6 @@ redirect_from:
           <li>Principle of Electrical Engineering Sessional · EECE 164</li>
         </ul>
       </details>
-      <a class="text-link" href="https://mist.ac.bd/department/eece/facultyMembers/dibaloke_chanda-371">MIST faculty profile <span aria-hidden="true">↗</span></a>
       <div class="experience-skills" aria-label="Teaching areas"><span>Signal processing</span><span>Communication</span><span>Electrical engineering</span><span>Python</span></div>
     </div>
   </article>
