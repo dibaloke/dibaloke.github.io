@@ -149,6 +149,11 @@
   - label: Code
     url: https://github.com/Machine-Learning-Optimization-Data-Lab/Graph-Based-Fault-Detection-Data-Generation
   year: 2025
+  image: /assets/images/research/heterogeneous-graph-mtl.png
+  image_width: 2000
+  image_height: 1141
+  image_alt: Heterogeneous graph-based multi-task learning architecture showing hierarchical smart-grid graphs, graph embeddings, concatenation, and five classification and regression task heads.
+
 - id: automated-quality-inspection
   title: 'Automated Quality Inspection: An Embedded Machine Vision System for Process Optimization'
   authors: KS Raja, AB Rashid, CMA Rahman, Dibaloke Chanda, N Ahmad
