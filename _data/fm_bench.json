@@ -16,7 +16,6 @@
     "features": "10,615",
     "magnifications": "20×, 10×, 5×",
     "domain": "Prostate biopsy histopathology for automated cancer grading. The benchmark predicts ISUP grade groups 0–5, distinguishing non-cancerous tissue from progressively higher-grade prostate cancer.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
     "dataset_url": "https://www.kaggle.com/competitions/prostate-cancer-grade-assessment",
     "dataset_link_label": "Challenge"
   },
@@ -67,8 +66,7 @@
     "segmented": "5,486",
     "features": "5,481",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Multi-cancer histopathology linked to proteomic and molecular profiling. Patho-Bench includes mutation-prediction tasks across breast, colorectal, kidney, brain, head-and-neck, lung, and pancreatic cancer cohorts.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "domain": "Multi-cancer histopathology linked to proteomic and molecular profiling, supporting mutation-prediction tasks across breast, colorectal, kidney, brain, head-and-neck, lung, and pancreatic cancer cohorts.",
     "dataset_url": "https://proteomics.cancer.gov/data-portal",
     "dataset_link_label": "Data portal"
   },
@@ -78,8 +76,7 @@
     "segmented": "4,539",
     "features": "4,536",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Breast lesion subtyping across benign, atypical, in situ, and invasive disease. The supplied labels are B, PB, UDH, ADH, FEA, DCIS, and IC; Patho-Bench defines fine-grained and grouped slide-level classification tasks.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "domain": "Breast lesion subtyping across benign, atypical, in situ, and invasive disease. The supplied labels are B, PB, UDH, ADH, FEA, DCIS, and IC, supporting fine-grained and grouped slide-level classification.",
     "dataset_url": "https://www.bracs.icar.cnr.it/",
     "dataset_link_label": "Dataset"
   },
@@ -100,7 +97,6 @@
     "features": "3,097",
     "magnifications": "20×",
     "domain": "Brain and central nervous system histopathology for neuropathological diagnosis. Public benchmark tasks include both detailed diagnoses and broader diagnostic groups.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
     "dataset_url": "https://search.kg.ebrains.eu/instances/8fc108ab-e2b4-406f-8999-60269dc1f994",
     "dataset_link_label": "Dataset"
   },
@@ -260,8 +256,7 @@
     "segmented": "449",
     "features": "449",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Prostate-cancer histopathology associated with neoadjuvant androgen-deprivation therapy. Patho-Bench defines a treatment-response task for this cohort.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "domain": "Prostate-cancer histopathology associated with neoadjuvant androgen-deprivation therapy, supporting treatment-response assessment.",
     "dataset_url": "https://www.cancerimagingarchive.net/collection/nadt-prostate/",
     "dataset_link_label": "Collection"
   },
@@ -326,7 +321,7 @@
     "segmented": "183",
     "features": "183",
     "magnifications": "20×, 10×, 5×",
-    "domain": "High-grade serous ovarian cancer histopathology from the OncoFusion multimodal risk-stratification study. The original study integrates whole-slide histology, CT imaging, genomic data, and clinical variables for overall-survival modeling; Patho-Bench defines a progression-free survival task for this cohort.",
+    "domain": "High-grade serous ovarian cancer histopathology from the OncoFusion multimodal risk-stratification study. The original study integrates whole-slide histology, CT imaging, genomic data, and clinical variables for overall-survival modeling.",
     "source_url": "https://github.com/kmboehm/onco-fusion",
     "dataset_url": "https://www.synapse.org/#!Synapse:syn25946117",
     "dataset_link_label": "Synapse project",
@@ -347,8 +342,7 @@
     "segmented": "174",
     "features": "174",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Ovarian-cancer histopathology associated with bevacizumab treatment response. Patho-Bench includes an ovarian response-prediction task; the inventory identifies the treatment-specific cohort.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "domain": "Ovarian-cancer histopathology associated with bevacizumab treatment response, supporting investigation of relationships between tumor morphology and therapeutic outcomes.",
     "dataset_url": "https://www.cancerimagingarchive.net/collection/ovarian-bevacizumab-response/",
     "dataset_link_label": "Collection"
   },
