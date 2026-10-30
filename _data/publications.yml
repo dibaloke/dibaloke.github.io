@@ -165,6 +165,8 @@
   - Fault diagnosis
   - Smart grids
   links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2309.09921
   - label: Project
     url: https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/
   - label: Code
