@@ -87,7 +87,9 @@
   - Vision–language models
   - Few-shot learning
   - Cancer subtyping
-  links: []
+  links:
+  - label: Paper
+    url: https://ieeexplore.ieee.org/document/11463619
   image_alt: MERI-VL-MIL diagram showing response summarization and extraction of medically relevant reasoning terms,
     followed by text encoding, projection, and combination into a reasoning-informed embedding.
   image: /assets/images/research/meri-vl-mil.png
