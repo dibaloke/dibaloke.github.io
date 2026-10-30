@@ -303,6 +303,12 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-table tr[hidden]{display:none}
 .fm-empty{font-size:13px;color:var(--muted);margin-top:18px}
 .fm-back{margin-top:30px}
+.fm-inventory-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.fm-inventory-nav a{border:1px solid var(--line);border-radius:20px;padding:7px 13px;background:#ffffff90;font-size:12px;color:var(--accent)}
+.fm-patch-inventory{margin-top:48px}
+.fm-patch-table{min-width:1020px}
+.fm-patch-table td:nth-child(3),.fm-patch-table td:nth-child(4){font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.fm-patch-table th:nth-child(5),.fm-patch-table th:nth-child(6){min-width:230px}
 .fm-table-wrap:focus-visible,.fm-search input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media(max-width:700px){.fm-overview{grid-template-columns:1fr;gap:10px;margin-bottom:28px}.fm-overview>div{padding:17px 20px}.fm-overview strong{font-size:26px}.fm-inventory .section-heading h2{font-size:24px}}
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}

@@ -17,7 +17,7 @@
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <script src="{{ '/assets/js/academic.js' | relative_url }}" defer></script>
-    {% if page.fm_bench %}<script src="{{ '/assets/js/fm-bench.js' | relative_url }}" defer></script>{% endif %}
+    {% if page.fm_bench %}<script src="{{ '/assets/js/fm-bench.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
     {% if page.home %}<script src="{{ '/assets/js/research-dialogs.js' | relative_url }}" defer></script>{% endif %}
   </head>
   <body>
