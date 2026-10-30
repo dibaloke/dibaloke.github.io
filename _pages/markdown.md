@@ -66,7 +66,7 @@ redirect_from:
 </div>
 
 <section class="reviewer-section" aria-labelledby="reviewer-title">
-  <div class="section-heading"><div><p class="eyebrow">Academic service</p><h2 id="reviewer-title">Reviewer</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Academic service</p><h2 id="reviewer-title">Reviewer</h2></div><a class="button button-secondary button-small" href="https://orcid.org/0000-0001-5993-659X">{% include academic/icon.html name="orcid" %} ORCID {% include academic/icon.html name="arrow-up-right" %}</a></div>
   <p>I serve as a reviewer for the following journals:</p>
   <ul class="reviewer-journals">
     <li>Knowledge and Information Systems</li>
