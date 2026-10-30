@@ -32,9 +32,9 @@
     - Algorithms
     - Equations
 - title: Pathology Foundation Models
-  image: /assets/images/projects/pathology-foundation-models.png
-  image_width: 1200
-  image_height: 630
+  image: /assets/images/projects/pathology-foundation-models-illustration.png
+  image_width: 1254
+  image_height: 1254
   category: Computational pathology
   description: An interactive catalog of pathology foundation models, organized by model family and application, with summaries of pretraining data, key ideas, and links to papers, code, and model releases.
   url: https://dibalokechanda.github.io/PFMs/
@@ -43,9 +43,9 @@
     - Vision-language
     - Model taxonomy
 - title: Agentic AI in Computational Pathology
-  image: /assets/images/projects/agentic-ai-cpath.png
-  image_width: 1200
-  image_height: 630
+  image: /assets/images/projects/agentic-ai-cpath-illustration.png
+  image_width: 1254
+  image_height: 1254
   category: Agents & computational pathology
   description: An interactive catalog of pathology agents and copilots, covering diagnostic reasoning, slide navigation, multi-agent systems, tool use, and evaluation, with links to the underlying research.
   url: https://researchsubmissions66.github.io/Agentic-AI-CPath/
