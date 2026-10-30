@@ -20,7 +20,6 @@ redirect_from:
 <section class="research-intro" aria-label="Research overview">
   <p>I study multimodal and agentic AI in computational pathology. My research explores how we can <span>make these systems interpretable, analyze uncertainty in their predictions, understand their vulnerabilities, and learn from complex data.</span></p>
   <div class="tag-list"><span class="tag">Computational pathology</span><span class="tag">Explainable AI</span><span class="tag">Graph learning</span></div>
-  <a class="button button-primary" href="{{ '/research/' | relative_url }}">Inside my research {% include academic/icon.html name="arrow-right" %}</a>
 </section>
 
 
