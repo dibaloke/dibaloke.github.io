@@ -89,18 +89,20 @@ description: "Projects and coursework from Dibaloke Chanda’s master’s studie
 <section class="certification-section" aria-labelledby="certifications-title">
   <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Certificates &amp; specializations</h2></div></div>
   <div class="prose"><p>My undergraduate background is in Electrical, Electronic, and Communication Engineering. Without formal undergraduate exposure to deep learning, machine learning, or data science, I began teaching myself through Coursera. These are the certifications I completed along the way.</p></div>
-  <div class="certificate-table-wrap">
-    <table class="certificate-table">
-      <caption class="sr-only">Completed courses and certificate links</caption>
-      <thead><tr><th scope="col">Course / specialization</th><th scope="col">Certificate</th></tr></thead>
-      <tbody>
-        {% for certificate in site.data.certificates %}
-        <tr>
-          <th scope="row">{{ certificate.title }}</th>
-          <td><a href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">View {% include academic/icon.html name="arrow-up-right" %}</a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <div class="certificate-gallery">
+    {% for certificate in site.data.certificates %}
+    <article class="certificate-tile">
+      <a class="certificate-image" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener" aria-label="Open certificate PDF: {{ certificate.title | escape }}">
+        <img src="{{ certificate.image | relative_url }}" alt="{{ certificate.title | escape }} — certificate awarded to Dibaloke Chanda" width="1000" height="773" loading="lazy" decoding="async">
+      </a>
+      <div class="certificate-info">
+        <h3>{{ certificate.title }}</h3>
+        <div class="certificate-actions">
+          <a class="text-link" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener">View PDF {% include academic/icon.html name="arrow-up-right" %}<span class="sr-only">: {{ certificate.title }}</span></a>
+          {% if certificate.url %}<a class="text-link" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer">Verify<span class="sr-only">: {{ certificate.title }}</span></a>{% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
   </div>
 </section>

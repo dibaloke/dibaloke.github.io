@@ -1,26 +1,63 @@
 [
   {
     "title": "Computer Vision Basics",
+    "pdf": "/files/certificates/computer-vision-basics.pdf",
+    "image": "/assets/images/certificates/computer-vision-basics.jpg",
     "url": "https://www.coursera.org/account/accomplishments/verify/BYXMQ88TQX3L"
   },
   {
     "title": "Data Science Math Skills",
+    "pdf": "/files/certificates/data-science-math-skills.pdf",
+    "image": "/assets/images/certificates/data-science-math-skills.jpg",
     "url": "https://www.coursera.org/account/accomplishments/verify/P8SANQHZKNPQ"
   },
   {
     "title": "Managing Machine Learning Projects with Google Cloud",
+    "pdf": "/files/certificates/managing-machine-learning-projects-with-google-cloud.pdf",
+    "image": "/assets/images/certificates/managing-machine-learning-projects-with-google-cloud.jpg",
     "url": "https://www.coursera.org/account/accomplishments/verify/ZEVY2KYAGSTS"
   },
   {
     "title": "Understanding and Visualizing Data with Python",
+    "pdf": "/files/certificates/understanding-and-visualizing-data-with-python.pdf",
+    "image": "/assets/images/certificates/understanding-and-visualizing-data-with-python.jpg",
     "url": "https://www.coursera.org/account/accomplishments/verify/AYSRSEVXSKKA"
   },
   {
     "title": "Inferential Statistical Analysis with Python",
+    "pdf": "/files/certificates/inferential-statistical-analysis-with-python.pdf",
+    "image": "/assets/images/certificates/inferential-statistical-analysis-with-python.jpg",
     "url": "https://www.coursera.org/account/accomplishments/verify/J6MZBRSJTEGA"
   },
   {
-    "title": "Deep Learning Specialization \u00b7 5 courses",
+    "title": "Deep Learning Specialization",
+    "pdf": "/files/certificates/deep-learning-specialization.pdf",
+    "image": "/assets/images/certificates/deep-learning-specialization.jpg",
     "url": "https://coursera.org/share/5292e1d314ee6016f6fe335c0bcb7461"
+  },
+  {
+    "title": "Convolutional Neural Networks",
+    "pdf": "/files/certificates/convolutional-neural-networks.pdf",
+    "image": "/assets/images/certificates/convolutional-neural-networks.jpg"
+  },
+  {
+    "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+    "pdf": "/files/certificates/improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization.pdf",
+    "image": "/assets/images/certificates/improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization.jpg"
+  },
+  {
+    "title": "Neural Networks and Deep Learning",
+    "pdf": "/files/certificates/neural-networks-and-deep-learning.pdf",
+    "image": "/assets/images/certificates/neural-networks-and-deep-learning.jpg"
+  },
+  {
+    "title": "Sequence Models",
+    "pdf": "/files/certificates/sequence-models.pdf",
+    "image": "/assets/images/certificates/sequence-models.jpg"
+  },
+  {
+    "title": "Structuring Machine Learning Projects",
+    "pdf": "/files/certificates/structuring-machine-learning-projects.pdf",
+    "image": "/assets/images/certificates/structuring-machine-learning-projects.jpg"
   }
 ]
