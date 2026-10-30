@@ -47,11 +47,6 @@
       updateProfileLink();
     }
   }
-  document.querySelectorAll('[data-certificate-preview]').forEach(preview => {
-    const showFallback = () => { preview.hidden = true; };
-    preview.addEventListener('error', showFallback);
-    if (preview.complete && preview.naturalWidth === 0) showFallback();
-  });
   const library = document.querySelector('[data-publication-library]');
   if (!library) return;
   const filters = [...library.querySelectorAll('[data-filter]')];

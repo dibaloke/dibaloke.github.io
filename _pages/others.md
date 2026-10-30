@@ -84,25 +84,18 @@ description: "Projects and coursework from Dibaloke Chanda’s master’s studie
 <section class="certification-section" aria-labelledby="certifications-title">
   <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Certificates &amp; specializations</h2></div></div>
   <div class="prose"><p>My undergraduate background is in Electrical, Electronic, and Communication Engineering. Without formal undergraduate exposure to deep learning, machine learning, or data science, I began teaching myself through Coursera. These are the certifications I completed along the way.</p></div>
-  <div class="certificate-grid">
-    {% for certificate in site.data.certificates %}
-    <article class="certificate-card">
-      {% if certificate.credential_id %}
-      <a class="certificate-preview" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">
-        <span class="certificate-preview-fallback">{% include academic/icon.html name="arrow-up-right" %}<span>View original certificate</span></span>
-        <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~{{ certificate.credential_id }}.jpeg" alt="Coursera certificate for {{ certificate.title | escape }}" loading="lazy" decoding="async" width="1200" height="900" data-certificate-preview>
-      </a>
-      {% else %}
-      <a class="certificate-preview certificate-preview--specialization" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">
-        <span class="eyebrow">Deep Learning</span><span class="specialization-count">5<span>courses completed</span></span><span class="text-link">View specialization certificate {% include academic/icon.html name="arrow-up-right" %}</span>
-      </a>
-      {% endif %}
-      <div class="certificate-body">
-        <p class="card-label">Coursera{% unless certificate.credential_id %} · Specialization{% endunless %}</p>
-        <h3>{{ certificate.title }}</h3>
-        <a class="text-link" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="Verify certificate: {{ certificate.title | escape }}">Verify certificate {% include academic/icon.html name="arrow-up-right" %}</a>
-      </div>
-    </article>
-    {% endfor %}
+  <div class="certificate-table-wrap">
+    <table class="certificate-table">
+      <caption class="sr-only">Completed courses and certificate links</caption>
+      <thead><tr><th scope="col">Course / specialization</th><th scope="col">Certificate</th></tr></thead>
+      <tbody>
+        {% for certificate in site.data.certificates %}
+        <tr>
+          <th scope="row">{{ certificate.title }}</th>
+          <td><a href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">View {% include academic/icon.html name="arrow-up-right" %}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </section>
