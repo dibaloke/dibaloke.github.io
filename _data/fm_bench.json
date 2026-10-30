@@ -261,7 +261,9 @@
     "features": "449",
     "magnifications": "20×, 10×, 5×",
     "domain": "Prostate-cancer histopathology associated with neoadjuvant androgen-deprivation therapy. Patho-Bench defines a treatment-response task for this cohort.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://www.cancerimagingarchive.net/collection/nadt-prostate/",
+    "dataset_link_label": "Collection"
   },
   {
     "number": 27,
