@@ -57,7 +57,9 @@
     "segmented": "6,883",
     "features": "6,869",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Colorectal cancer histopathology cohort in the supplied inventory. Intended for studying colorectal tissue and tumor morphology; the exact public release and task-label definitions have not been confirmed."
+    "domain": "Colorectal cancer histopathology cohort. See the original COBRA dataset page for cohort composition, annotations, and data-access details.",
+    "dataset_url": "https://daangeijs.github.io/cobra/dataset/index.html",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 7,
