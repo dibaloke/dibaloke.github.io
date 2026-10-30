@@ -273,6 +273,14 @@ html:not(.js) .publication-toolbar{display:none}
 .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .resource-card{border:1px solid #dce3f5;border-radius:var(--radius);background:linear-gradient(135deg,#ffffffb3,#f5f5fd80);padding:31px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:var(--shadow)}
 .resource-card:nth-child(2n){background:linear-gradient(135deg,#ffffffb3,#faf1f380);border-color:#e5dfea}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.project-grid .project-card{min-width:0;padding:25px}
+.project-card h3 a{display:inline-flex;align-items:center;gap:10px}
+.project-card h3 .icon{width:18px;height:18px;color:var(--accent)}
+.project-card .tag-list{gap:6px;margin-top:18px}
+.project-card .tag{font-size:9px;padding:3px 8px}
+@media(max-width:1000px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.project-grid{grid-template-columns:1fr;gap:16px}.project-grid .project-card{padding:22px}}
 .resource-card .card-label{margin-bottom:20px}
 .resource-card h2,.resource-card h3{font-size:27px;margin-bottom:16px;letter-spacing:-.035em}
 .resource-card h2 a:hover{color:var(--accent)}

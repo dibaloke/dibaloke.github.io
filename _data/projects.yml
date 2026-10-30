@@ -1,0 +1,24 @@
+- title: RAGViz
+  category: Retrieval-augmented generation
+  description: An interactive map of vanilla RAG, GraphRAG variants, and agentic retrieval, with stage-by-stage explanations, worked mathematics, and code examples.
+  url: https://ragviz.github.io/
+  tags:
+    - RAG
+    - GraphRAG
+    - Agents
+- title: LLMViz
+  category: Language model internals
+  description: A visual guide to the design choices inside language models. Explore the forward pass, compare architecture families, and trace real model configurations through the design space.
+  url: https://llmviz.github.io/
+  tags:
+    - LLMs
+    - Transformers
+    - Architecture
+- title: RL Cheatsheet
+  category: Reinforcement learning
+  description: An interactive explorer of reinforcement learning concepts and algorithm families, bringing together a navigable taxonomy, equations, notation, and visual comparisons.
+  url: https://dibalokechanda.github.io/rl-cheatsheet/
+  tags:
+    - Reinforcement learning
+    - Algorithms
+    - Equations

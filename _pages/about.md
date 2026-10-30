@@ -34,6 +34,21 @@ redirect_from:
   {% endfor %}</div>
 </section>
 
+<section class="home-section selected-projects" aria-labelledby="projects-title">
+  <div class="section-heading"><div><h2 id="projects-title">Selected Projects</h2></div></div>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+    <article class="resource-card project-card">
+      <p class="card-label">{{ project.category }}</p>
+      <h3><a href="{{ project.url }}">{{ project.title }} {% include academic/icon.html name="arrow-up-right" %}</a></h3>
+      <p>{{ project.description }}</p>
+      <div class="tag-list" aria-label="Project topics">{% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
+      <a class="text-link" href="{{ project.url }}" aria-label="Explore {{ project.title }}">Explore project {% include academic/icon.html name="arrow-up-right" %}</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="home-section notes-section" aria-labelledby="news-title">
   <div class="news-column"><div class="section-heading"><div><p class="eyebrow">Along the way</p><h2 id="news-title">News &amp; <span>milestones.</span></h2></div></div><div class="news-list">{% for item in site.data.news limit: 4 %}<article class="news-item">{% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>{% else %}<span class="news-when">{{ item.date_label }}</span>{% endif %}<p>{% if item.url %}<a href="{{ item.url }}">{{ item.title }} {% include academic/icon.html name="arrow-up-right" %}</a>{% else %}{{ item.title }}{% endif %}{% if item.description %}<span class="news-description">{{ item.description }}</span>{% endif %}</p></article>{% endfor %}</div><details class="older-news"><summary>Earlier milestones <span aria-hidden="true">+</span></summary>{% for item in site.data.news offset: 4 %}<article class="news-item">{% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>{% else %}<span class="news-when">{{ item.date_label }}</span>{% endif %}<p>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}{% if item.description %}<span class="news-description">{{ item.description }}</span>{% endif %}</p></article>{% endfor %}</details></div>
   <aside class="writing-feature"><span class="feature-icon">{% include academic/icon.html name="book" %}</span><p class="eyebrow">Learning in public</p><h2>Ideas worth<br><span>sharing.</span></h2><p>I write about deep learning, mathematics, and the things I learn along the way. My notes connect the intuition with the details.</p><a class="button button-primary" href="{{ '/writing/' | relative_url }}">Explore my writing {% include academic/icon.html name="arrow-right" %}</a><div class="writing-topics"><span>Deep learning</span><span>Linear algebra</span><span>Machine learning</span></div></aside>
