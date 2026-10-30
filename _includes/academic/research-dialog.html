@@ -13,7 +13,7 @@
       <div class="dialog-section"><h3>Authors</h3><p>{{ dialog_paper.authors | escape | replace: 'Dibaloke Chanda', '<strong>Dibaloke Chanda</strong>' }}</p></div>
       <div class="dialog-section"><h3>Publication</h3><p>{{ dialog_paper.venue }}</p></div>
       <div class="dialog-section"><h3>Research themes</h3><div class="tag-list">{% for tag in dialog_paper.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div></div>
-      {% if dialog_paper.links.size > 0 %}<div class="dialog-section"><h3>Explore the work</h3><div class="dialog-resource-links">{% for link in dialog_paper.links %}<a class="button {% if forloop.first %}button-primary{% else %}button-secondary{% endif %}" href="{{ link.url }}">{{ link.label }} {% include academic/icon.html name="arrow-up-right" %}</a>{% endfor %}</div></div>{% endif %}
+      {% if dialog_paper.links.size > 0 %}<div class="dialog-section"><h3>Explore the work</h3>{% include academic/publication-links.html paper=dialog_paper %}</div>{% endif %}
     </div>
   </div>
 </dialog>
