@@ -13,5 +13,3 @@ redirect_from:
   <div class="publication-list">{% for paper in site.data.publications %}{% include academic/publication.html paper=paper heading="h2" %}{% endfor %}</div>
   <p class="empty-state" data-empty-state hidden>No publications match your search. Try another title, author, or venue.</p>
 </section>
-
-{% include academic/profile-links.html %}
