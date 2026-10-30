@@ -38,6 +38,8 @@
   links:
   - label: Project
     url: https://researchsubmissions66.github.io/INVEX
+  - label: Code
+    url: https://github.com/researchsubmissions66/INVEX
   status: accepted
   image_alt: INVEX illustration showing tissue symmetry on a histology-textured sphere and representational discriminability
     as a similarity heatmap.
