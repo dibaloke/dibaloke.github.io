@@ -37,15 +37,15 @@ fm_bench: true
 <section class="fm-inventory fm-patch-inventory" aria-labelledby="fm-patches-title" data-fm-inventory>
   <div class="section-heading"><h2 id="fm-patches-title">Patch-Level Datasets</h2></div>
   <label class="fm-search" hidden data-fm-search-label>Search patch datasets, tasks, or labels<input type="search" data-fm-search placeholder="e.g., prostate, MSI, melanoma" aria-controls="fm-patch-rows"></label>
-  <p class="fm-note" id="fm-patch-note">Patch counts and extracted-model counts reflect the supplied processing inventory. Dataset variants and validation subsets are listed separately. Scroll horizontally on smaller screens to view all columns.</p>
+  <p class="fm-note" id="fm-patch-note">Patch counts reflect the supplied processing inventory. Dataset variants and validation subsets are listed separately. Scroll horizontally on smaller screens to view all columns.</p>
   <p class="fm-result-count" data-fm-count aria-live="polite">{{ site.data.fm_bench_patches | size }} datasets</p>
   <div class="fm-table-wrap" role="region" aria-label="Patch-level dataset inventory" tabindex="0" aria-describedby="fm-patch-note">
     <table class="fm-table fm-patch-table">
-      <caption class="sr-only">Patch-level datasets, total patches, extracted models, pathology domains, and labels</caption>
-      <thead><tr><th scope="col">#</th><th scope="col">Dataset</th><th scope="col">Total Patches</th><th scope="col">Models Extracted</th><th scope="col">Pathology Domain / Clinical Task</th><th scope="col">Key Classes / Labels</th></tr></thead>
+      <caption class="sr-only">Patch-level datasets, total patches, pathology domains, and labels</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Dataset</th><th scope="col">Total Patches</th><th scope="col">Pathology Domain / Clinical Task</th><th scope="col">Key Classes / Labels</th></tr></thead>
       <tbody id="fm-patch-rows">
         {% for row in site.data.fm_bench_patches %}
-        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}</th><td>{{ row.patches }}</td><td>{{ row.models }}</td><td>{{ row.domain | escape }}</td><td>{{ row.labels | escape }}</td></tr>
+        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}</th><td>{{ row.patches }}</td><td>{{ row.domain | escape }}</td><td>{{ row.labels | escape }}</td></tr>
         {% endfor %}
       </tbody>
     </table>
