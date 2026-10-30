@@ -5,7 +5,7 @@
     "segmented": "11,031",
     "features": "10,725",
     "magnifications": "20×, 10×, 5×, 40×",
-    "domain": "Pan-cancer histopathology linked to genomic and clinical data. The processed inventory spans 29 subcohorts, including breast (BRCA), lung adenocarcinoma (LUAD), lung squamous cell carcinoma (LUSC), and prostate adenocarcinoma (PRAD), supporting organ-specific and cross-cancer studies.",
+    "domain": "Pan-cancer histopathology linked to genomic and clinical data, covering all TCGA cohorts in the FM-Bench collection. Supports organ-specific and cross-cancer studies across the full TCGA disease spectrum.",
     "dataset_url": "https://www.cancer.gov/ccg/research/genome-sequencing/tcga",
     "dataset_link_label": "Project"
   },
@@ -66,7 +66,7 @@
     "segmented": "5,486",
     "features": "5,481",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Multi-cancer histopathology linked to proteomic and molecular profiling, supporting mutation-prediction tasks across breast, colorectal, kidney, brain, head-and-neck, lung, and pancreatic cancer cohorts.",
+    "domain": "Histopathology linked to proteomic, genomic, and clinical profiling, covering all CPTAC cohorts in the FM-Bench collection. Supports cross-cancer studies of tumor morphology, molecular characteristics, and clinical outcomes.",
     "dataset_url": "https://proteomics.cancer.gov/data-portal",
     "dataset_link_label": "Data portal"
   },
@@ -156,7 +156,7 @@
     "segmented": "945",
     "features": "940",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Cancer Moonshot Biobank: a multi-cancer biospecimen resource supporting research on cancer treatment response and resistance. The FM-Bench inventory contains histopathology from this biobank.",
+    "domain": "Cancer Moonshot Biobank histopathology covering all CMB cohorts in the FM-Bench collection. This multi-cancer biospecimen resource supports research on cancer treatment response and resistance.",
     "dataset_url": "https://www.cancerimagingarchive.net/research/cmb/",
     "dataset_link_label": "Data portal"
   },
