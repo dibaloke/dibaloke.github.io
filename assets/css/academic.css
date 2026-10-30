@@ -250,6 +250,12 @@ html:not(.js) .publication-toolbar{display:none}
 .experience-skills span{font-size:10px;line-height:1.5;padding:3px 9px;border:1px solid #d3ddf1;border-radius:20px;background:#edf2fc;color:#35465e}
 @media(max-width:1000px){.experience-timeline .timeline-item{grid-template-columns:170px minmax(0,1fr);gap:32px}.experience-timeline .experience-years{font-size:26px}.experience-timeline .timeline-body{padding:26px}.experience-timeline .timeline-body::before{left:-28px}.experience-timeline .timeline-body::after{left:-24px;width:23px}.experience-timeline .experience-card-heading h2{font-size:26px}.experience-timeline .timeline-body>ul{grid-template-columns:1fr}}
 @media(max-width:700px){.experience-timeline .timeline-item{grid-template-columns:1fr;gap:18px;padding:0 0 28px 18px;border-left:1px solid #aebfe9}.experience-timeline .timeline-meta{padding:0}.experience-timeline .experience-years{font-size:29px;margin-bottom:12px}.experience-timeline .timeline-body{padding:22px 20px;border-radius:14px}.experience-timeline .timeline-body::before{left:-24px;top:30px}.experience-timeline .timeline-body::after{display:none}.experience-card-heading{gap:12px;margin-bottom:20px}.experience-timeline .experience-card-heading h2{font-size:24px}.experience-timeline .timeline-body>p{font-size:13px}.experience-current{margin-top:10px}}
+.reviewer-section{margin-top:20px;padding:28px;border:1px solid var(--line);border-radius:16px;background:#ffffff8c}
+.reviewer-section .section-heading{margin-bottom:16px}
+.reviewer-section>p{font-size:13px;color:var(--muted);margin-bottom:18px}
+.reviewer-journals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;padding-left:18px;margin:0;font-size:13px;line-height:1.7;color:var(--muted)}
+.reviewer-journals li::marker{color:var(--accent)}
+@media(max-width:700px){.reviewer-section{padding:22px}.reviewer-journals{grid-template-columns:1fr;gap:9px}}
 /* Teaching and education, presented as an academic timeline. */
 .timeline{position:relative}
 .timeline-item{display:grid;grid-template-columns:250px minmax(0,1fr);gap:50px;padding:0 0 44px}

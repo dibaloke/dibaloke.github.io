@@ -62,6 +62,21 @@ redirect_from:
   </article>
 </div>
 
+<section class="reviewer-section" aria-labelledby="reviewer-title">
+  <div class="section-heading"><div><p class="eyebrow">Academic service</p><h2 id="reviewer-title">Reviewer</h2></div></div>
+  <p>I serve as a reviewer for the following journals:</p>
+  <ul class="reviewer-journals">
+    <li>Knowledge and Information Systems</li>
+    <li>Scientific Reports</li>
+    <li>Peer-to-Peer Networking and Applications</li>
+    <li>Discover Artificial Intelligence</li>
+    <li>Electrical Engineering</li>
+    <li>International Journal of Machine Learning and Cybernetics</li>
+    <li>IEEE Transactions on Smart Grid</li>
+    <li>IEEE Transactions on Power Delivery</li>
+  </ul>
+</section>
+
 <section class="page-callout">
   <p class="eyebrow">Always learning</p>
   <h2>The classroom goes both ways.</h2>
