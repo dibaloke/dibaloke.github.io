@@ -150,6 +150,15 @@
   topic: graphs
   selected: true
   summary: Heterogeneous graph-based multi-task learning for diagnosing fault events in smart grids.
+  highlights:
+  - label: Big idea
+    text: Diagnose multiple aspects of a smart-grid fault together using the network's graph structure.
+  - label: Method
+    text: A shared heterogeneous graph encoder feeds task-specific classification and regression heads, trained with a combined multi-task objective.
+  - label: Outputs
+    text: Jointly addresses fault detection, fault-type classification, and localization alongside fault-resistance and current estimation.
+  - label: Impact
+    text: Connects whether, what, and where a fault occurs with estimates of its electrical characteristics for a more complete diagnosis.
   tags:
   - Heterogeneous graphs
   - Multi-task learning

@@ -1,0 +1,7 @@
+{% if include.paper.highlights.size > 0 %}
+<ul class="publication-highlights" aria-label="Research highlights">
+  {% for highlight in include.paper.highlights %}
+  <li><strong>{{ highlight.label | escape }}:</strong> {{ highlight.text | escape }}</li>
+  {% endfor %}
+</ul>
+{% endif %}

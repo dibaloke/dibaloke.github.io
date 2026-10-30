@@ -9,6 +9,7 @@
       <h2 id="title-{{ dialog_paper.id }}">{{ dialog_paper.title }}</h2>
       <p class="dialog-meta">{{ dialog_paper.type | capitalize }}{% if dialog_paper.year %} · {{ dialog_paper.year }}{% endif %}{% include academic/publication-status.html paper=dialog_paper %}</p>
       <p class="dialog-summary">{{ dialog_paper.summary }}</p>
+      {% include academic/publication-highlights.html paper=dialog_paper %}
       <div class="dialog-section"><h3>Authors</h3><p>{{ dialog_paper.authors | escape | replace: 'Dibaloke Chanda', '<strong>Dibaloke Chanda</strong>' }}</p></div>
       <div class="dialog-section"><h3>Publication</h3><p>{{ dialog_paper.venue }}</p></div>
       <div class="dialog-section"><h3>Research themes</h3><div class="tag-list">{% for tag in dialog_paper.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div></div>

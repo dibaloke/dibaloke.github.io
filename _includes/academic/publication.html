@@ -8,6 +8,7 @@
     <p class="publication-venue">{{ paper.venue | escape }} <span class="publication-type">{{ paper.type | capitalize }}</span>{% include academic/publication-status.html paper=paper %}</p>
     {% if paper.publication_date or paper.pages or paper.publisher %}<p class="publication-details">{% if paper.publication_date %}<time datetime="{{ paper.publication_date }}">{{ paper.publication_date | date: "%B %-d, %Y" }}</time>{% endif %}{% if paper.pages %}{% if paper.publication_date %} · {% endif %}pp. {{ paper.pages }}{% endif %}{% if paper.publisher %}{% if paper.publication_date or paper.pages %} · {% endif %}{{ paper.publisher }}{% endif %}</p>{% endif %}
     {% if paper.summary %}<p class="publication-summary">{{ paper.summary | escape }}</p>{% endif %}
+    {% include academic/publication-highlights.html paper=paper %}
     <div class="publication-links">{% for link in paper.links %}<a href="{{ link.url }}">{{ link.label }} {% include academic/icon.html name="arrow-up-right" %}</a>{% endfor %}</div>
   </div>
 </article>
