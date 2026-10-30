@@ -160,7 +160,9 @@
     "segmented": "945",
     "features": "940",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Cancer Moonshot Biobank: a multi-cancer biospecimen resource supporting research on cancer treatment response and resistance. The FM-Bench inventory contains histopathology from this biobank."
+    "domain": "Cancer Moonshot Biobank: a multi-cancer biospecimen resource supporting research on cancer treatment response and resistance. The FM-Bench inventory contains histopathology from this biobank.",
+    "dataset_url": "https://www.cancerimagingarchive.net/research/cmb/",
+    "dataset_link_label": "Data portal"
   },
   {
     "number": 17,
