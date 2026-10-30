@@ -109,6 +109,8 @@
   - Foundation models
   - Vision-language models
   links:
+  - label: Paper
+    url: https://www.sciencedirect.com/science/article/pii/S2153353926001768
   - label: arXiv
     url: https://arxiv.org/abs/2408.14496
   image: /assets/images/research/pathology-foundation-models.png
