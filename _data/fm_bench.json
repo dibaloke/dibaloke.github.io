@@ -100,7 +100,9 @@
     "features": "3,097",
     "magnifications": "20×",
     "domain": "Brain and central nervous system histopathology for neuropathological diagnosis. Public benchmark tasks include both detailed diagnoses and broader diagnostic groups.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://search.kg.ebrains.eu/instances/8fc108ab-e2b4-406f-8999-60269dc1f994",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 11,
