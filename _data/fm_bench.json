@@ -154,11 +154,11 @@
   },
   {
     "number": 16,
-    "dataset": "CMB",
+    "dataset": "CMB (Cancer Moonshot Biobank)",
     "segmented": "945",
     "features": "940",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Clinical pathology cohort identified in the supplied inventory as brain metastases. The short identifier does not uniquely establish a public dataset; organ coverage and diagnostic endpoints require confirmation."
+    "domain": "Cancer Moonshot Biobank: a multi-cancer biospecimen resource supporting research on cancer treatment response and resistance. The FM-Bench inventory contains histopathology from this biobank."
   },
   {
     "number": 17,
