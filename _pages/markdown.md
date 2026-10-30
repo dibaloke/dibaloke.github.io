@@ -77,6 +77,9 @@ redirect_from:
     <li>International Journal of Machine Learning and Cybernetics</li>
     <li>IEEE Transactions on Smart Grid</li>
     <li>IEEE Transactions on Power Delivery</li>
+    <li>International Journal of Computational Intelligence Systems</li>
+    <li>International Journal of Multimedia Information Retrieval</li>
+    <li>Artificial Intelligence Review</li>
   </ul>
 </section>
 
