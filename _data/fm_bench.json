@@ -346,7 +346,7 @@
   },
   {
     "number": 35,
-    "dataset": "DHMC",
+    "dataset": "DHMC-LUNG",
     "segmented": "143",
     "features": "143",
     "magnifications": "20×, 10×, 5×",
