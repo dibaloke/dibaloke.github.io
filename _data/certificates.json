@@ -1,63 +1,123 @@
 [
   {
+    "title": "Deep Learning Specialization",
+    "pdf": "/files/certificates/deep-learning-specialization.pdf",
+    "image": "/assets/images/certificates/deep-learning-specialization.jpg",
+    "url": "https://coursera.org/share/5292e1d314ee6016f6fe335c0bcb7461",
+    "issued": "Sep 2020",
+    "issued_date": "2020-09-10",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Neural networks, optimization, convolutional networks, and sequence models."
+  },
+  {
     "title": "Computer Vision Basics",
     "pdf": "/files/certificates/computer-vision-basics.pdf",
     "image": "/assets/images/certificates/computer-vision-basics.jpg",
-    "url": "https://www.coursera.org/account/accomplishments/verify/BYXMQ88TQX3L"
+    "url": "https://coursera.org/verify/BYXMQ88TQX3L",
+    "issued": "May 2020",
+    "issued_date": "2020-05-28",
+    "issuer": "University at Buffalo \u00b7 SUNY",
+    "category": "applied-ai",
+    "description": "Image formation, visual features, and foundations of computer vision."
   },
   {
     "title": "Data Science Math Skills",
     "pdf": "/files/certificates/data-science-math-skills.pdf",
     "image": "/assets/images/certificates/data-science-math-skills.jpg",
-    "url": "https://www.coursera.org/account/accomplishments/verify/P8SANQHZKNPQ"
+    "url": "https://coursera.org/verify/P8SANQHZKNPQ",
+    "issued": "May 2020",
+    "issued_date": "2020-05-28",
+    "issuer": "Duke University",
+    "category": "python-data",
+    "description": "Mathematical foundations for data science and statistical reasoning."
   },
   {
     "title": "Managing Machine Learning Projects with Google Cloud",
     "pdf": "/files/certificates/managing-machine-learning-projects-with-google-cloud.pdf",
     "image": "/assets/images/certificates/managing-machine-learning-projects-with-google-cloud.jpg",
-    "url": "https://www.coursera.org/account/accomplishments/verify/ZEVY2KYAGSTS"
+    "url": "https://coursera.org/verify/ZEVY2KYAGSTS",
+    "issued": "May 2020",
+    "issued_date": "2020-05-28",
+    "issuer": "Google Cloud",
+    "category": "applied-ai",
+    "description": "Planning, organizing, and managing machine learning projects."
   },
   {
     "title": "Understanding and Visualizing Data with Python",
     "pdf": "/files/certificates/understanding-and-visualizing-data-with-python.pdf",
     "image": "/assets/images/certificates/understanding-and-visualizing-data-with-python.jpg",
-    "url": "https://www.coursera.org/account/accomplishments/verify/AYSRSEVXSKKA"
+    "url": "https://coursera.org/verify/AYSRSEVXSKKA",
+    "issued": "Nov 2020",
+    "issued_date": "2020-11-06",
+    "issuer": "University of Michigan",
+    "category": "python-data",
+    "description": "Exploring data, visualizing distributions, and interpreting statistical summaries with Python."
   },
   {
     "title": "Inferential Statistical Analysis with Python",
     "pdf": "/files/certificates/inferential-statistical-analysis-with-python.pdf",
     "image": "/assets/images/certificates/inferential-statistical-analysis-with-python.jpg",
-    "url": "https://www.coursera.org/account/accomplishments/verify/J6MZBRSJTEGA"
-  },
-  {
-    "title": "Deep Learning Specialization",
-    "pdf": "/files/certificates/deep-learning-specialization.pdf",
-    "image": "/assets/images/certificates/deep-learning-specialization.jpg",
-    "url": "https://coursera.org/share/5292e1d314ee6016f6fe335c0bcb7461"
+    "url": "https://coursera.org/verify/J6MZBRSJTEGA",
+    "issued": "Nov 2020",
+    "issued_date": "2020-11-28",
+    "issuer": "University of Michigan",
+    "category": "python-data",
+    "description": "Statistical inference, confidence intervals, and hypothesis testing with Python."
   },
   {
     "title": "Convolutional Neural Networks",
     "pdf": "/files/certificates/convolutional-neural-networks.pdf",
-    "image": "/assets/images/certificates/convolutional-neural-networks.jpg"
+    "image": "/assets/images/certificates/convolutional-neural-networks.jpg",
+    "issued": "Aug 2020",
+    "issued_date": "2020-08-09",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Convolutional architectures and deep learning for computer vision.",
+    "url": "https://coursera.org/verify/DU5MC9E7C9D4"
   },
   {
     "title": "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
     "pdf": "/files/certificates/improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization.pdf",
-    "image": "/assets/images/certificates/improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization.jpg"
+    "image": "/assets/images/certificates/improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization.jpg",
+    "issued": "Jul 2020",
+    "issued_date": "2020-07-04",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Hyperparameter tuning, regularization, and optimization of neural networks.",
+    "url": "https://coursera.org/verify/XK6HQ6MR3PEW"
   },
   {
     "title": "Neural Networks and Deep Learning",
     "pdf": "/files/certificates/neural-networks-and-deep-learning.pdf",
-    "image": "/assets/images/certificates/neural-networks-and-deep-learning.jpg"
+    "image": "/assets/images/certificates/neural-networks-and-deep-learning.jpg",
+    "issued": "Jun 2020",
+    "issued_date": "2020-06-21",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Neural network foundations, forward propagation, and backpropagation.",
+    "url": "https://coursera.org/verify/FNT62FHWZ8NE"
   },
   {
     "title": "Sequence Models",
     "pdf": "/files/certificates/sequence-models.pdf",
-    "image": "/assets/images/certificates/sequence-models.jpg"
+    "image": "/assets/images/certificates/sequence-models.jpg",
+    "issued": "Sep 2020",
+    "issued_date": "2020-09-10",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Recurrent neural networks and models for sequential data.",
+    "url": "https://coursera.org/verify/3TWLFJ8VL2PM"
   },
   {
     "title": "Structuring Machine Learning Projects",
     "pdf": "/files/certificates/structuring-machine-learning-projects.pdf",
-    "image": "/assets/images/certificates/structuring-machine-learning-projects.jpg"
+    "image": "/assets/images/certificates/structuring-machine-learning-projects.jpg",
+    "issued": "Jul 2020",
+    "issued_date": "2020-07-05",
+    "issuer": "DeepLearning.AI",
+    "category": "deep-learning",
+    "description": "Error analysis, evaluation strategies, and practical machine learning decisions.",
+    "url": "https://coursera.org/verify/8JA4Y298KH87"
   }
 ]

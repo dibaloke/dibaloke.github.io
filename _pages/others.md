@@ -87,22 +87,33 @@ description: "Projects and coursework from Dibaloke Chanda’s master’s studie
 </section>
 
 <section class="certification-section" aria-labelledby="certifications-title">
-  <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Certificates &amp; specializations</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Certifications &amp; training</h2></div></div>
   <div class="prose"><p>My undergraduate background is in Electrical, Electronic, and Communication Engineering. Without formal undergraduate exposure to deep learning, machine learning, or data science, I began teaching myself through Coursera. These are the certifications I completed along the way.</p></div>
-  <div class="certificate-gallery">
-    {% for certificate in site.data.certificates %}
-    <article class="certificate-tile">
-      <a class="certificate-image" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener" aria-label="Open certificate PDF: {{ certificate.title | escape }}">
-        <img src="{{ certificate.image | relative_url }}" alt="{{ certificate.title | escape }} — certificate awarded to Dibaloke Chanda" width="1000" height="773" loading="lazy" decoding="async">
-      </a>
-      <div class="certificate-info">
-        <h3>{{ certificate.title }}</h3>
-        <div class="certificate-actions">
-          <a class="text-link" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener">View PDF {% include academic/icon.html name="arrow-up-right" %}<span class="sr-only">: {{ certificate.title }}</span></a>
-          {% if certificate.url %}<a class="text-link" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer">Verify<span class="sr-only">: {{ certificate.title }}</span></a>{% endif %}
+  {% for group in site.data.certificate_groups %}
+  <div class="certificate-group" aria-labelledby="cert-group-{{ group.id }}">
+    <div class="certificate-category">
+      <h3 id="cert-group-{{ group.id }}">{{ group.title }}</h3>
+      <p>{{ group.description }}</p>
+    </div>
+    <div class="certificate-gallery">
+      {% assign certificates = site.data.certificates | where: "category", group.id %}
+      {% for certificate in certificates %}
+      <article class="certificate-tile">
+        <a class="certificate-image" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener" aria-label="Open certificate PDF: {{ certificate.title | escape }}">
+          <img src="{{ certificate.image | relative_url }}" alt="{{ certificate.title | escape }} — certificate awarded to Dibaloke Chanda" width="1000" height="773" loading="lazy" decoding="async">
+        </a>
+        <div class="certificate-info">
+          <div class="certificate-meta"><span>{{ certificate.issuer }} (Coursera)</span><time datetime="{{ certificate.issued_date }}">Issued {{ certificate.issued }}</time></div>
+          <h4>{{ certificate.title }}</h4>
+          <p>{{ certificate.description }}</p>
+          <div class="certificate-actions">
+            {% if certificate.url %}<a class="text-link" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer">Verify certificate {% include academic/icon.html name="arrow-up-right" %}<span class="sr-only">: {{ certificate.title }}</span></a>{% endif %}
+            <a class="text-link" href="{{ certificate.pdf | relative_url }}" target="_blank" rel="noopener">View PDF<span class="sr-only">: {{ certificate.title }}</span></a>
+          </div>
         </div>
-      </div>
-    </article>
-    {% endfor %}
+      </article>
+      {% endfor %}
+    </div>
   </div>
+  {% endfor %}
 </section>

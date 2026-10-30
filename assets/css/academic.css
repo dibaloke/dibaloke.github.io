@@ -254,16 +254,22 @@ html:not(.js) .publication-toolbar{display:none}
 .coursework-grid .resource-links .text-link{font-size:11px;overflow-wrap:anywhere}
 @media(max-width:1000px){.coursework-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.resource-grid.coursework-grid{grid-template-columns:1fr;gap:10px}.coursework-grid .resource-card{padding:16px}.coursework-grid .resource-card h3{font-size:17px}}
-.certificate-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.certificate-tile{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff}
-.certificate-image{display:block;padding:10px;background:var(--soft)}
-.certificate-image img{display:block;width:100%;height:auto;aspect-ratio:1000/773;object-fit:contain;background:#fff;box-shadow:0 2px 8px #22305b12}
-.certificate-info{padding:14px 16px 16px}
-.certificate-info h3{font-size:15px;line-height:1.45;margin:0 0 10px;letter-spacing:-.015em}
-.certificate-actions{display:flex;flex-wrap:wrap;gap:10px 18px}
+.certificate-group{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.certificate-category h3{font-size:17px;margin:0 0 10px;letter-spacing:-.025em}
+.certificate-category p{font-size:12px;line-height:1.8;color:var(--muted);max-width:290px}
+.certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.certificate-tile{min-width:0;overflow:hidden;border:1px solid #e6dfc8;border-radius:16px;background:#fffcf4;box-shadow:0 8px 24px #28334c0a}
+.certificate-image{display:flex;align-items:center;justify-content:center;padding:26px;background:#edece5;aspect-ratio:1.6}
+.certificate-image img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;filter:drop-shadow(0 4px 6px #20283c24)}
+.certificate-info{padding:17px 18px 18px}
+.certificate-meta{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:10px;color:var(--muted);line-height:1.6}
+.certificate-meta time{border:1px solid var(--line);border-radius:5px;padding:2px 6px;white-space:nowrap}
+.certificate-info h4{font-size:15px;line-height:1.45;margin:0 0 7px;letter-spacing:-.015em}
+.certificate-info>p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 16px}
+.certificate-actions{display:flex;flex-wrap:wrap;gap:8px 18px}
 .certificate-actions .text-link{font-size:11px;min-height:32px}
-@media(max-width:1000px){.certificate-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.certificate-gallery{grid-template-columns:1fr;gap:14px}}
+@media(max-width:1000px){.certificate-group{grid-template-columns:1fr;gap:18px}.certificate-category p{max-width:none}}
+@media(max-width:600px){.certificate-gallery{grid-template-columns:1fr;gap:16px}.certificate-image{padding:24px}.certificate-group{padding:22px 0}.certificate-info{padding:16px}}
 .certification-section>.prose{max-width:850px;margin-bottom:25px}
 .certificate-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:#ffffff8c;overflow:hidden}
 .certificate-list li+li{border-top:1px solid var(--line)}

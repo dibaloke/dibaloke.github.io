@@ -1,0 +1,17 @@
+[
+  {
+    "id": "deep-learning",
+    "title": "AI & machine learning",
+    "description": "Foundations in neural networks, deep learning, and building effective models."
+  },
+  {
+    "id": "python-data",
+    "title": "Python & data",
+    "description": "Mathematical foundations, data visualization, and statistical analysis."
+  },
+  {
+    "id": "applied-ai",
+    "title": "Applied AI & computer vision",
+    "description": "Visual understanding and managing machine learning projects."
+  }
+]
