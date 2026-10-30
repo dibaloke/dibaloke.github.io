@@ -89,7 +89,9 @@
     "segmented": "4,525",
     "features": "4,525",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Colorectal liver-metastasis histopathology, identified in the supplied inventory as a treatment-response cohort. Organ focus and response assessment are retained as supplied; the public release and grading scheme need confirmation."
+    "domain": "Colorectal liver-metastasis histopathology for treatment-response assessment, as identified in the supplied inventory. See the original release for cohort details and annotation definitions.",
+    "dataset_url": "https://rdm.inesctec.pt/dataset/nis-2023-008",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 10,
