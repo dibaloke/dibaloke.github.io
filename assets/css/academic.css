@@ -310,6 +310,7 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-patch-table td:nth-child(3){font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
 .fm-patch-table th:nth-child(4),.fm-patch-table th:nth-child(5){min-width:230px}
 .fm-table .fm-original-source{width:120px;min-width:110px}
+.fm-original-source .fm-dataset-link+.fm-dataset-link{margin-top:8px}
 .fm-dataset-link{display:inline-flex;align-items:center;gap:4px;color:var(--accent);font-size:11px;white-space:nowrap}
 .fm-dataset-link .icon{width:12px;height:12px}
 .fm-dataset-link:hover{text-decoration:underline}

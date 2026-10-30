@@ -293,11 +293,16 @@
   },
   {
     "number": 30,
-    "dataset": "CLWD",
+    "dataset": "CLWD (Chinese Lung Whole-slide image Dataset)",
     "segmented": "291",
     "features": "291",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Whole-slide cohort supplied as clear-cell kidney pathology. The exact public cohort name, release, and diagnostic annotation scheme have not been confirmed."
+    "domain": "Lung adenocarcinoma histopathology from Lee Lab, Kunming Medical University. The public release contains 408 Aperio whole-slide images (.svs), scanned at 20×/40× (approximately 450–500 GB). Tasks follow WHO 2015/2021 guidelines: invasive adenocarcinoma (IA), minimally invasive adenocarcinoma (MIA), and adenocarcinoma in situ (AIS); predominant lepidic, acinar, papillary, micropapillary, and solid growth patterns; and mucinous versus non-mucinous status.",
+    "dataset_url": "https://leelab.kmmu.edu.cn/PathologyRepository/",
+    "dataset_link_label": "Data repository",
+    "source_url": "https://doi.org/10.1038/s41597-026-06906-z",
+    "publication_url": "https://doi.org/10.1038/s41597-026-06906-z",
+    "publication_label": "Scientific Data"
   },
   {
     "number": 31,
