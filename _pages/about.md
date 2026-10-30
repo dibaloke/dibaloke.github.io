@@ -39,12 +39,14 @@ redirect_from:
   <div class="project-grid">
     {% for project in site.data.projects %}
     <article class="resource-card project-card">
-      <a class="project-illustration" href="{{ project.url }}" aria-label="Explore {{ project.title }}"><img src="{{ project.image | relative_url }}" alt="" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy" decoding="async"></a>
+      <a class="project-visual" href="{{ project.url }}" aria-label="Explore {{ project.title }}"><img src="{{ project.image | relative_url }}" alt="" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy" decoding="async"></a>
+      <div class="project-content">
       <p class="card-label">{{ project.category }}</p>
       <h3><a href="{{ project.url }}">{{ project.title }} {% include academic/icon.html name="arrow-up-right" %}</a></h3>
       <p>{{ project.description }}</p>
       <div class="tag-list" aria-label="Project topics">{% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
       <a class="text-link" href="{{ project.url }}" aria-label="Explore {{ project.title }}">Explore project {% include academic/icon.html name="arrow-up-right" %}</a>
+      </div>
     </article>
     {% endfor %}
   </div>
