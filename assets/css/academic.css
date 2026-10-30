@@ -287,6 +287,10 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-organ-marker{cursor:pointer;outline:none}
 .fm-organ-hit{fill:transparent;stroke:none}
 .fm-organ-dot{fill:white;stroke:#5574c8;stroke-width:1.5}
+.fm-organ-pulse{display:none;fill:none;stroke:var(--accent);stroke-width:3;pointer-events:none;transform-box:fill-box;transform-origin:center}
+.fm-body-ready .fm-organ-marker[aria-pressed=true] .fm-organ-pulse{display:block;animation:fm-site-pulse 1.6s ease-out infinite}
+@keyframes fm-site-pulse{0%{transform:scale(.75);opacity:.85}100%{transform:scale(1.8);opacity:0}}
+@media(prefers-reduced-motion:reduce){.fm-body-ready .fm-organ-marker[aria-pressed=true] .fm-organ-pulse{animation:none;opacity:.7}}
 .fm-organ-marker text{fill:#3c58a5;font:600 13px sans-serif;pointer-events:none}
 .fm-organ-marker:hover .fm-organ-dot,.fm-organ-marker[aria-pressed=true] .fm-organ-dot{fill:var(--accent);stroke:white;stroke-width:2}
 .fm-organ-marker:hover text,.fm-organ-marker[aria-pressed=true] text{fill:white}

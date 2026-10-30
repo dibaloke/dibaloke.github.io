@@ -9,11 +9,11 @@
         <image href="{{ '/assets/images/fm-bench/human-anatomy-2d.png' | relative_url }}" x="0" y="0" width="1024" height="1536" preserveAspectRatio="xMidYMid meet"/>
         {% for organ in site.data.fm_organs %}{% if organ.illustrated %}
         <g class="fm-organ-marker" data-organ="{{ organ.id }}" role="button" tabindex="0" aria-label="{{ organ.number }}. {{ organ.name | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" transform="translate({{ organ.x }} {{ organ.y }})">
-          <title>{{ organ.name | escape }}</title><circle class="fm-organ-hit" r="25"/><circle class="fm-organ-dot" r="15"/><text text-anchor="middle" dy="4.5">{{ organ.number }}</text>
+          <title>{{ organ.name | escape }}</title><circle class="fm-organ-hit" r="25"/><circle class="fm-organ-pulse" r="24"/><circle class="fm-organ-dot" r="15"/><text text-anchor="middle" dy="4.5">{{ organ.number }}</text>
         </g>
         {% endif %}{% endfor %}
       </svg>
-      <figcaption>Anatomical overview with approximate annotation points. Sites not visible in this illustration remain selectable in the coverage list. Paired organs are counted once.</figcaption>
+      <figcaption>The selected illustrated site pulses on the body. Locations are approximate; paired organs are counted once. Sites not shown remain selectable in the coverage list.</figcaption>
     </figure>
     <div class="fm-anatomy-controls">
       <div class="fm-organ-info" aria-live="polite" aria-atomic="true">
