@@ -1,0 +1,5 @@
+{% for item in site.data.navigation.main %}
+  {% if include.list %}<li class="masthead__menu-item">{% endif %}
+  <a{% if item.style == 'cv' %} class="nav-cv"{% endif %} href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}{% if item.style == 'cv' %} {% include academic/icon.html name="arrow-up-right" %}{% endif %}</a>
+  {% if include.list %}</li>{% endif %}
+{% endfor %}

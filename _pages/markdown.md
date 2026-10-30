@@ -17,10 +17,12 @@ redirect_from:
     <div class="timeline-body prose">
       <h2>Teaching Assistant</h2>
       <p><a href="https://www.marquette.edu/computer-science/">Department of Computer Science</a></p>
-      <p>I supported students in introductory software development and object-oriented software design.</p>
+      <p>My teaching assistant work spans introductory software development, object-oriented software design, hardware systems, and data structures.</p>
       <ul>
-        <li><strong>COSC 1010 · Introduction to Software Development</strong><br>Fall 2023, Spring 2024, and Fall 2024</li>
-        <li><strong>COSC 1020 · Object-Oriented Software Design</strong><br>Spring 2024</li>
+        <li><strong>COSC 1010 · Introduction to Software Development</strong><br>Fall 2023, Spring 2024</li>
+        <li><strong>COSC 1020 · Object-Oriented Software Design</strong><br>Fall 2024, Spring 2025</li>
+        <li><strong>COSC 2200 · Hardware Systems</strong><br>Fall 2025</li>
+        <li><strong>COSC 2100 · Data Structures</strong><br>Fall 2026</li>
       </ul>
     </div>
   </article>

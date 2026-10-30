@@ -26,10 +26,7 @@
         <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Dibaloke Chanda, home"><svg class="brand-monogram" width="24" height="26" viewBox="0 0 26 28" fill="none" aria-hidden="true"><path d="M4 4h7c7 0 11 4 11 10S18 24 11 24H4V4Z" stroke="currentColor" stroke-width="2.5"/><path d="M9 9h2c4 0 6 2 6 5s-2 5-6 5H9V9Z" fill="#405dd2"/></svg><span class="brand-name">Dibaloke Chanda</span></a>
         <button class="menu-toggle" aria-expanded="false" aria-controls="site-navigation" type="button"><span>Menu</span>{% include academic/icon.html name="menu" %}</button>
         <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-          {% for item in site.data.navigation.main %}
-          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-          {% endfor %}
-          <a class="nav-cv" href="{{ '/cv/' | relative_url }}"{% if page.url == '/cv/' %} aria-current="page"{% endif %}>CV {% include academic/icon.html name="arrow-up-right" %}</a>
+          {% include academic/navigation.html %}
         </nav>
       </div>
     </header>

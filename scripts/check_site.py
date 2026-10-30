@@ -14,9 +14,15 @@ class References(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.links = []
         self.ids = set()
+        self.navigation = []
+        self.in_navigation = False
 
     def handle_starttag(self, tag, attrs):
         values = dict(attrs)
+        if tag == "nav" and values.get("id") in ("site-navigation", "site-nav"):
+            self.in_navigation = True
+        if tag == "a" and self.in_navigation and "href" in values:
+            self.navigation.append(values["href"])
         if values.get("id"):
             self.ids.add(values["id"])
         if tag == "a" and values.get("name"):
@@ -26,6 +32,10 @@ class References(HTMLParser):
                 self.links.append(values[attribute])
         if tag == "object" and values.get("data"):
             self.links.append(values["data"])
+
+    def handle_endtag(self, tag):
+        if tag == "nav":
+            self.in_navigation = False
 
 
 def main():
@@ -45,10 +55,21 @@ def main():
 
     errors = set()
     for route in ("index.html", "publication/index.html", "experience/index.html",
-                  "others/index.html", "cv/index.html", "research/index.html",
+                  "others/index.html", "cv/index.html",
                   "writing/index.html"):
         if not (root / route).is_file():
             errors.add(f"Missing main page: {route}")
+
+    home = pages.get(root / "index.html")
+    if home:
+        if not home.navigation:
+            errors.add("Homepage is missing main navigation")
+        for route in ("publication/index.html", "experience/index.html",
+                      "others/index.html", "cv/index.html", "writing/index.html",
+                      "sitemap/index.html", "404.html"):
+            page = pages.get(root / route)
+            if page and page.navigation != home.navigation:
+                errors.add(f"{route}: main navigation differs from homepage")
 
     site = urlsplit(options.site_url)
     count = 0

@@ -7,3 +7,6 @@ main:
     url: /experience/
   - title: Writing
     url: /writing/
+  - title: CV
+    url: /cv/
+    style: cv
