@@ -209,6 +209,33 @@ html:not(.js) .publication-toolbar{display:none}
 .page-callout h2{font-size:33px;margin-bottom:15px}
 .page-callout>p:not(.eyebrow){font-size:14px;color:var(--muted)}
 .page-callout>a{margin-top:21px}
+/* Experience cards with a separate date rail. */
+.experience-timeline .timeline-item{position:relative;grid-template-columns:220px minmax(0,1fr);gap:44px;padding-bottom:30px}
+.experience-timeline .timeline-meta{padding:32px 0 0}
+.experience-timeline .experience-years{font-size:31px;line-height:1.25;letter-spacing:-.055em;color:var(--ink);margin:0 0 22px;font-weight:400}
+.experience-years span{color:var(--accent)}
+.experience-timeline .experience-dates{font-size:11px;margin:0 0 4px}
+.experience-timeline .experience-location{font-size:11px;margin:0;letter-spacing:.015em}
+.experience-current{display:inline-flex;align-items:center;gap:7px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-top:18px;font-weight:650}
+.experience-current::before{content:"";width:6px;height:6px;border-radius:50%;background:#22a66b;box-shadow:0 0 0 3px #22a66b16}
+.experience-timeline .experience-era{font-size:25px;line-height:1.3;letter-spacing:-.04em;color:var(--ink);margin:0 0 18px}
+.experience-timeline .timeline-body{padding:34px 38px;border:1px solid #fff;border-radius:18px;background:linear-gradient(125deg,#f2f5ffcf,#ffffffd9 55%,#fff8f5a6);box-shadow:0 12px 36px #26335412}
+.experience-timeline .timeline-body::before{left:-40px;top:51px;width:9px;height:9px;background:#fff;box-shadow:0 0 0 3px var(--paper);z-index:1}
+.experience-timeline .timeline-body::after{content:"";position:absolute;left:-36px;top:55px;width:35px;height:calc(100% + 30px);border-left:1px solid #aebfe9;border-top:1px solid #aebfe9;pointer-events:none}
+.experience-timeline .timeline-item:last-child .timeline-body::after{height:calc(100% - 55px)}
+.experience-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:25px}
+.experience-timeline .experience-card-heading h2{font-size:30px;line-height:1.2;letter-spacing:-.045em;margin:0 0 8px}
+.experience-card-heading h3{font-size:15px;line-height:1.4;margin:0 0 3px;letter-spacing:-.02em;font-weight:600}
+.experience-timeline .experience-card-heading p{font-size:12px;line-height:1.6;margin:0}
+.experience-emblem{flex-shrink:0;display:grid;place-items:center;min-width:72px;min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:13px;background:#ffffff9c;color:#294674;font-family:Georgia,serif;font-size:18px;letter-spacing:.04em}
+.experience-timeline .timeline-body>p{font-size:14px;line-height:1.8}
+.experience-timeline .timeline-body>ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;list-style:none;padding:0;margin:24px 0}
+.experience-timeline .timeline-body>ul li{font-size:12px;line-height:1.8;margin:0;padding-left:15px;position:relative}
+.experience-timeline .timeline-body>ul li::before{content:"◆";position:absolute;left:0;top:0;color:var(--accent);font-size:9px}
+.experience-skills{display:flex;flex-wrap:wrap;gap:7px;border-top:1px solid var(--line);padding-top:18px;margin-top:25px}
+.experience-skills span{font-size:10px;line-height:1.5;padding:3px 9px;border:1px solid #d3ddf1;border-radius:20px;background:#edf2fc;color:#35465e}
+@media(max-width:1000px){.experience-timeline .timeline-item{grid-template-columns:170px minmax(0,1fr);gap:32px}.experience-timeline .experience-years{font-size:26px}.experience-timeline .timeline-body{padding:26px}.experience-timeline .timeline-body::before{left:-28px}.experience-timeline .timeline-body::after{left:-24px;width:23px}.experience-timeline .experience-card-heading h2{font-size:26px}.experience-timeline .timeline-body>ul{grid-template-columns:1fr}}
+@media(max-width:700px){.experience-timeline .timeline-item{grid-template-columns:1fr;gap:18px;padding:0 0 28px 18px;border-left:1px solid #aebfe9}.experience-timeline .timeline-meta{padding:0}.experience-timeline .experience-years{font-size:29px;margin-bottom:12px}.experience-timeline .timeline-body{padding:22px 20px;border-radius:14px}.experience-timeline .timeline-body::before{left:-24px;top:30px}.experience-timeline .timeline-body::after{display:none}.experience-card-heading{gap:12px;margin-bottom:20px}.experience-timeline .experience-card-heading h2{font-size:24px}.experience-emblem{min-width:50px;min-height:42px;font-size:14px;padding:8px}.experience-timeline .timeline-body>p{font-size:13px}.experience-current{margin-top:10px}}
 /* Teaching and education, presented as an academic timeline. */
 .timeline{position:relative}
 .timeline-item{display:grid;grid-template-columns:250px minmax(0,1fr);gap:50px;padding:0 0 44px}
