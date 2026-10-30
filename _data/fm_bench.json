@@ -215,7 +215,9 @@
     "segmented": "527",
     "features": "527",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Renal cell carcinoma histopathology for subtype classification. Focuses on distinguishing morphologically different kidney-cancer categories rather than treating renal tumors as a single class."
+    "domain": "Renal cell carcinoma histopathology for subtype classification. Focuses on distinguishing morphologically different kidney-cancer categories rather than treating renal tumors as a single class.",
+    "dataset_url": "https://bmirds.github.io/KidneyCancer/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 23,
