@@ -326,8 +326,12 @@
     "segmented": "183",
     "features": "183",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Clinical-outcome cohort used in Patho-Bench for progression-free survival (PFS) prediction. The organ-level identity of this inventory label remains unverified.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "domain": "High-grade serous ovarian cancer histopathology from the OncoFusion multimodal risk-stratification study. The original study integrates whole-slide histology, CT imaging, genomic data, and clinical variables for overall-survival modeling; Patho-Bench defines a progression-free survival task for this cohort.",
+    "source_url": "https://github.com/kmboehm/onco-fusion",
+    "dataset_url": "https://www.synapse.org/#!Synapse:syn25946117",
+    "dataset_link_label": "Synapse project",
+    "publication_url": "https://doi.org/10.1038/s43018-022-00388-9",
+    "publication_label": "Nature Cancer (2022)"
   },
   {
     "number": 33,
