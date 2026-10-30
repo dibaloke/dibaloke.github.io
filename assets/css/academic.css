@@ -276,7 +276,7 @@ html:not(.js) .publication-toolbar{display:none}
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .project-grid .project-card{min-width:0;padding:25px;overflow:hidden}
 .project-illustration{display:block;position:relative;flex-shrink:0;width:calc(100% + 50px);aspect-ratio:1;margin:-25px -25px 24px;overflow:hidden;background:#f6f7fc;border-bottom:1px solid var(--line)}
-.project-illustration img{position:absolute;top:0;left:calc(var(--project-panel) * -100%);display:block;width:300%;max-width:none;height:100%}
+.project-illustration img{display:block;width:100%;height:100%;object-fit:contain}
 .project-illustration:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
 .project-card h3 a{display:inline-flex;align-items:center;gap:10px}
 .project-card h3 .icon{width:18px;height:18px;color:var(--accent)}

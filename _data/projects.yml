@@ -1,4 +1,7 @@
 - title: RAGViz
+  image: /assets/images/projects/rag-pipeline.png
+  image_width: 1254
+  image_height: 1254
   category: Retrieval-augmented generation
   description: An interactive map of vanilla RAG, GraphRAG variants, and agentic retrieval, with stage-by-stage explanations, worked mathematics, and code examples.
   url: https://ragviz.github.io/
@@ -7,6 +10,9 @@
     - GraphRAG
     - Agents
 - title: LLMViz
+  image: /assets/images/projects/transformer.png
+  image_width: 1254
+  image_height: 1254
   category: Language model internals
   description: A visual guide to the design choices inside language models. Explore the forward pass, compare architecture families, and trace real model configurations through the design space.
   url: https://llmviz.github.io/
@@ -15,6 +21,9 @@
     - Transformers
     - Architecture
 - title: RL Cheatsheet
+  image: /assets/images/projects/reinforcement-learning.png
+  image_width: 1254
+  image_height: 1254
   category: Reinforcement learning
   description: An interactive explorer of reinforcement learning concepts and algorithm families, bringing together a navigable taxonomy, equations, notation, and visual comparisons.
   url: https://dibalokechanda.github.io/rl-cheatsheet/

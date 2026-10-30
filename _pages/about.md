@@ -39,7 +39,7 @@ redirect_from:
   <div class="project-grid">
     {% for project in site.data.projects %}
     <article class="resource-card project-card">
-      <a class="project-illustration" href="{{ project.url }}" aria-label="Explore {{ project.title }}" style="--project-panel: {{ forloop.index0 }}"><img src="{{ '/assets/images/projects/ai-project-illustrations.png' | relative_url }}" alt="" width="2048" height="683" loading="lazy" decoding="async"></a>
+      <a class="project-illustration" href="{{ project.url }}" aria-label="Explore {{ project.title }}"><img src="{{ project.image | relative_url }}" alt="" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy" decoding="async"></a>
       <p class="card-label">{{ project.category }}</p>
       <h3><a href="{{ project.url }}">{{ project.title }} {% include academic/icon.html name="arrow-up-right" %}</a></h3>
       <p>{{ project.description }}</p>
