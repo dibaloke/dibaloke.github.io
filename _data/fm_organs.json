@@ -1,0 +1,535 @@
+[
+  {
+    "id": "adrenal-gland",
+    "number": 1,
+    "name": "Adrenal gland",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Small glands above the kidneys.",
+    "examples": [
+      "TCGA",
+      "GTEx"
+    ],
+    "x": 157,
+    "y": 362
+  },
+  {
+    "id": "bile-ducts",
+    "number": 2,
+    "name": "Bile ducts",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Channels carrying bile from the liver toward the intestine.",
+    "examples": [
+      "TCGA"
+    ],
+    "x": 188,
+    "y": 343
+  },
+  {
+    "id": "bone",
+    "number": 3,
+    "name": "Bone",
+    "category": "organ",
+    "region": "Distributed",
+    "description": "Skeletal tissue; a leg is used as a representative location.",
+    "examples": [
+      "Osteo"
+    ],
+    "x": 174,
+    "y": 639
+  },
+  {
+    "id": "brain-cns",
+    "number": 4,
+    "name": "Brain/CNS",
+    "category": "organ",
+    "region": "Head & neck",
+    "description": "Brain and central nervous system; brain regions and spinal cord are grouped together.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "EBRAINS",
+      "GTEx"
+    ],
+    "x": 209,
+    "y": 45
+  },
+  {
+    "id": "breast",
+    "number": 5,
+    "name": "Breast",
+    "category": "organ",
+    "region": "Chest",
+    "description": "Breast tissue on the anterior chest wall.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "BRACS",
+      "GTEx"
+    ],
+    "x": 250,
+    "y": 246
+  },
+  {
+    "id": "cervix",
+    "number": 6,
+    "name": "Cervix",
+    "category": "organ",
+    "region": "Female pelvic inset",
+    "description": "Lower part of the uterus; shown as a separate clinical anatomical site.",
+    "examples": [
+      "TCGA",
+      "GTEx",
+      "TissueNet"
+    ],
+    "x": 488,
+    "y": 517
+  },
+  {
+    "id": "colon",
+    "number": 7,
+    "name": "Colon",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Large intestine; shown separately from the rectum.",
+    "examples": [
+      "TCGA",
+      "UNITOPATHO",
+      "COBRA",
+      "CPTAC"
+    ],
+    "x": 155,
+    "y": 435
+  },
+  {
+    "id": "esophagus",
+    "number": 8,
+    "name": "Esophagus",
+    "category": "organ",
+    "region": "Chest",
+    "description": "Food passage through the neck and chest to the stomach.",
+    "examples": [
+      "TCGA",
+      "GTEx",
+      "CMB (Cancer Moonshot Biobank)"
+    ],
+    "x": 210,
+    "y": 185
+  },
+  {
+    "id": "eye",
+    "number": 9,
+    "name": "Eye",
+    "category": "organ",
+    "region": "Head & neck",
+    "description": "Eye; uveal melanoma cohorts contribute this site.",
+    "examples": [
+      "TCGA"
+    ],
+    "x": 232,
+    "y": 73
+  },
+  {
+    "id": "fallopian-tube",
+    "number": 10,
+    "name": "Fallopian tube",
+    "category": "organ",
+    "region": "Female pelvic inset",
+    "description": "Tubes extending from the uterus toward the ovaries.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 448,
+    "y": 449
+  },
+  {
+    "id": "heart",
+    "number": 11,
+    "name": "Heart",
+    "category": "organ",
+    "region": "Chest",
+    "description": "Heart; multiple sampled regions count as one organ group.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 217,
+    "y": 275
+  },
+  {
+    "id": "kidney",
+    "number": 12,
+    "name": "Kidney",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Kidney; cortex and other sampled subregions are merged.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "KidRare",
+      "GTEx"
+    ],
+    "x": 155,
+    "y": 394
+  },
+  {
+    "id": "liver",
+    "number": 13,
+    "name": "Liver",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Liver; includes primary hepatic disease and liver specimens from metastatic disease.",
+    "examples": [
+      "TCGA",
+      "IMP-CRS-2024",
+      "GTEx",
+      "VALENTINO"
+    ],
+    "x": 166,
+    "y": 317
+  },
+  {
+    "id": "lung",
+    "number": 14,
+    "name": "Lung",
+    "category": "organ",
+    "region": "Chest",
+    "description": "Lung; different lung-cancer subtypes do not add separate organs.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "GTEx",
+      "CMB (Cancer Moonshot Biobank)"
+    ],
+    "x": 172,
+    "y": 226
+  },
+  {
+    "id": "lymph-nodes",
+    "number": 15,
+    "name": "Lymph nodes",
+    "category": "organ",
+    "region": "Distributed",
+    "description": "Lymphatic tissue. A neck node is illustrated; CAMELYON and PCAM contain lymph-node specimens.",
+    "examples": [
+      "TCGA",
+      "CAMELYON16",
+      "CAMELYON17",
+      "PCAM (PatchCamelyon)"
+    ],
+    "x": 257,
+    "y": 166
+  },
+  {
+    "id": "ovary",
+    "number": 16,
+    "name": "Ovary",
+    "category": "organ",
+    "region": "Female pelvic inset",
+    "description": "Ovarian tissue, including ovarian-cancer cohorts.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "GTEx",
+      "UBC-OCEAN"
+    ],
+    "x": 545,
+    "y": 471
+  },
+  {
+    "id": "pancreas",
+    "number": 17,
+    "name": "Pancreas",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Gland extending across the upper abdomen.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "GTEx"
+    ],
+    "x": 209,
+    "y": 390
+  },
+  {
+    "id": "pituitary-gland",
+    "number": 18,
+    "name": "Pituitary gland",
+    "category": "organ",
+    "region": "Head & neck",
+    "description": "Small endocrine gland at the base of the brain; position is schematic.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 205,
+    "y": 92
+  },
+  {
+    "id": "prostate",
+    "number": 19,
+    "name": "Prostate",
+    "category": "organ",
+    "region": "Male pelvic inset",
+    "description": "Gland below the bladder in male pelvic anatomy.",
+    "examples": [
+      "TCGA",
+      "PANDA",
+      "GTEx",
+      "CMB (Cancer Moonshot Biobank)"
+    ],
+    "x": 485,
+    "y": 675
+  },
+  {
+    "id": "rectum",
+    "number": 20,
+    "name": "Rectum",
+    "category": "organ",
+    "region": "Pelvis",
+    "description": "Distal large intestine; counted separately from colon as a clinical site.",
+    "examples": [
+      "TCGA",
+      "UNITOPATHO",
+      "COBRA",
+      "CMB (Cancer Moonshot Biobank)"
+    ],
+    "x": 211,
+    "y": 494
+  },
+  {
+    "id": "salivary-glands",
+    "number": 21,
+    "name": "Salivary glands",
+    "category": "organ",
+    "region": "Head & neck",
+    "description": "Salivary gland tissue; individual glands are merged into one group.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 178,
+    "y": 106
+  },
+  {
+    "id": "skin",
+    "number": 22,
+    "name": "Skin",
+    "category": "organ",
+    "region": "Distributed",
+    "description": "Distributed over the body; the arm indicates a representative skin site.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "VisioMel",
+      "GTEx"
+    ],
+    "x": 310,
+    "y": 300
+  },
+  {
+    "id": "small-intestine",
+    "number": 23,
+    "name": "Small intestine",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Small bowel; sampled segments are merged into one group.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 209,
+    "y": 435
+  },
+  {
+    "id": "spleen",
+    "number": 24,
+    "name": "Spleen",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Lymphatic organ in the left upper abdomen.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 263,
+    "y": 330
+  },
+  {
+    "id": "stomach",
+    "number": 25,
+    "name": "Stomach",
+    "category": "organ",
+    "region": "Abdomen",
+    "description": "Stomach; gastric-cancer labels map to this site.",
+    "examples": [
+      "TCGA",
+      "GTEx",
+      "CMB (Cancer Moonshot Biobank)"
+    ],
+    "x": 239,
+    "y": 363
+  },
+  {
+    "id": "testis",
+    "number": 26,
+    "name": "Testis",
+    "category": "organ",
+    "region": "Male pelvic inset",
+    "description": "Testicular tissue; separate from the prostate.",
+    "examples": [
+      "TCGA",
+      "GTEx"
+    ],
+    "x": 486,
+    "y": 758
+  },
+  {
+    "id": "thymus",
+    "number": 27,
+    "name": "Thymus",
+    "category": "organ",
+    "region": "Chest",
+    "description": "Lymphatic organ in the upper chest.",
+    "examples": [
+      "TCGA"
+    ],
+    "x": 237,
+    "y": 199
+  },
+  {
+    "id": "thyroid-gland",
+    "number": 28,
+    "name": "Thyroid gland",
+    "category": "organ",
+    "region": "Head & neck",
+    "description": "Endocrine gland in the neck.",
+    "examples": [
+      "TCGA",
+      "GTEx"
+    ],
+    "x": 209,
+    "y": 142
+  },
+  {
+    "id": "urinary-bladder",
+    "number": 29,
+    "name": "Urinary bladder",
+    "category": "organ",
+    "region": "Pelvis",
+    "description": "Urinary bladder; not the same site as kidney or prostate.",
+    "examples": [
+      "TCGA",
+      "GTEx"
+    ],
+    "x": 242,
+    "y": 470
+  },
+  {
+    "id": "uterus-corpus",
+    "number": 30,
+    "name": "Uterus (corpus)",
+    "category": "organ",
+    "region": "Female pelvic inset",
+    "description": "Body of the uterus; cervix is shown separately as a clinical site.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "GTEx"
+    ],
+    "x": 488,
+    "y": 485
+  },
+  {
+    "id": "vagina",
+    "number": 31,
+    "name": "Vagina",
+    "category": "organ",
+    "region": "Female pelvic inset",
+    "description": "Vaginal tissue in female pelvic anatomy.",
+    "examples": [
+      "GTEx"
+    ],
+    "x": 489,
+    "y": 557
+  },
+  {
+    "id": "adipose-tissue",
+    "number": 32,
+    "name": "Adipose tissue",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Fat tissue distributed across the body; GTEx sampling sites are merged.",
+    "examples": [
+      "GTEx"
+    ]
+  },
+  {
+    "id": "blood",
+    "number": 33,
+    "name": "Blood",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Circulating blood and blood-clot specimens; a stroke indication does not make a clot a brain specimen.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "GTEx",
+      "CMB (Cancer Moonshot Biobank)"
+    ]
+  },
+  {
+    "id": "blood-vessels",
+    "number": 34,
+    "name": "Blood vessels",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Vascular tissue; arterial sampling beds are merged.",
+    "examples": [
+      "GTEx"
+    ]
+  },
+  {
+    "id": "bone-marrow",
+    "number": 35,
+    "name": "Bone marrow",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Hematopoietic tissue within bones; listed separately from bone and circulating blood.",
+    "examples": [
+      "TCGA",
+      "CPTAC",
+      "CMB (Cancer Moonshot Biobank)"
+    ]
+  },
+  {
+    "id": "mesothelium-pleura-peritoneum",
+    "number": 36,
+    "name": "Mesothelium (pleura/peritoneum)",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Tissue lining the chest and abdominal cavities.",
+    "examples": [
+      "TCGA"
+    ]
+  },
+  {
+    "id": "peripheral-nerve",
+    "number": 37,
+    "name": "Peripheral nerve",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Nerve tissue outside the brain and spinal cord.",
+    "examples": [
+      "TCGA",
+      "GTEx"
+    ]
+  },
+  {
+    "id": "skeletal-muscle",
+    "number": 38,
+    "name": "Skeletal muscle",
+    "category": "tissue",
+    "region": "Distributed tissues",
+    "description": "Voluntary muscle tissue distributed across the skeleton.",
+    "examples": [
+      "GTEx"
+    ]
+  }
+]

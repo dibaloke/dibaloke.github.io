@@ -11,11 +11,12 @@ fm_bench: true
   <p class="page-intro">200 TB+ of WSI data processed across diverse organs and pathology domains, with tissue segmentation and multi-magnification feature extraction. The collection includes all cohorts from TCGA, CPTAC, and the Cancer Moonshot Biobank (CMB).</p>
 </header>
 <section class="fm-overview" aria-label="Processing overview">
-  <div><strong>200 TB+</strong><span>WSI data processed</span></div>
-  <div><strong>{{ site.data.fm_bench | size }}</strong><span>WSI datasets</span></div>
-  <div><strong>{{ site.data.fm_bench_patches | size }}</strong><span>Patch-level datasets</span></div>
+  <div><span class="fm-stat-icon" aria-hidden="true">{% include academic/icon.html name="storage" %}</span><strong>200 TB+</strong><span>WSI data processed</span></div>
+  <div><span class="fm-stat-icon" aria-hidden="true">{% include academic/icon.html name="slides" %}</span><strong>{{ site.data.fm_bench | size }}</strong><span>WSI datasets</span></div>
+  <div><span class="fm-stat-icon" aria-hidden="true">{% include academic/icon.html name="patch-grid" %}</span><strong>{{ site.data.fm_bench_patches | size }}</strong><span>Patch-level datasets</span></div>
 </section>
-<nav class="fm-inventory-nav" aria-label="Dataset inventories"><a href="#fm-datasets-title">WSI datasets</a><a href="#fm-patches-title">Patch-level datasets</a></nav>
+{% include academic/body-map.html %}
+<nav class="fm-inventory-nav" aria-label="Dataset inventories"><a href="#fm-anatomy-title">Organ coverage</a><a href="#fm-datasets-title">WSI datasets</a><a href="#fm-patches-title">Patch-level datasets</a></nav>
 <section class="fm-inventory" aria-labelledby="fm-datasets-title" data-fm-inventory>
   <div class="section-heading"><h2 id="fm-datasets-title">Processed WSI Datasets</h2></div>
   <label class="fm-search" hidden data-fm-search-label>Search datasets or pathology domains<input type="search" data-fm-search placeholder="e.g., TCGA, prostate, brain" aria-controls="fm-dataset-rows"></label>
