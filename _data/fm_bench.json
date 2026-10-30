@@ -162,7 +162,7 @@
   },
   {
     "number": 17,
-    "dataset": "HCMI_CMDC",
+    "dataset": "HCMI-CMDC",
     "segmented": "810",
     "features": "810",
     "magnifications": "20×, 10×, 5×",
@@ -328,7 +328,7 @@
   },
   {
     "number": 34,
-    "dataset": "OVARIAN_BEVACIZUMAB",
+    "dataset": "OVARIAN-BEVACIZUMAB",
     "segmented": "174",
     "features": "174",
     "magnifications": "20×, 10×, 5×",
