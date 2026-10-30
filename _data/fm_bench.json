@@ -26,7 +26,9 @@
     "segmented": "10,582",
     "features": "10,582",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Regional clinical cohort. Organ coverage, diagnostic labels, and clinical endpoints have not been specified for a publicly identifiable release."
+    "domain": "Clinical histopathology challenge cohort. See the official challenge page for organ coverage, task definitions, and participation or data-access details.",
+    "dataset_url": "https://reg2026.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 4,
@@ -45,7 +47,9 @@
     "segmented": "7,492",
     "features": "7,491",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Regional clinical histopathology cohort. Public documentation identifying its organ composition, diagnostic categories, and outcome labels is not available from the supplied cohort identifier."
+    "domain": "Clinical histopathology challenge cohort. See the official challenge page for organ coverage, task definitions, and participation or data-access details.",
+    "dataset_url": "https://reg2025.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 6,
