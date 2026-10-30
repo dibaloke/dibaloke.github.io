@@ -1,5 +1,6 @@
 {% if include.row.dataset_url %}
 <a class="fm-dataset-link" href="{{ include.row.dataset_url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="Original source for {{ include.row.dataset | escape }}">{{ include.row.dataset_link_label | default: 'Dataset' }} {% include academic/icon.html name="arrow-up-right" %}</a>
+{% if include.row.citation_title %}<details class="fm-citation"><summary>Citation</summary><p>{{ include.row.citation_authors | escape }} <cite>{{ include.row.citation_title | escape }}</cite>. {{ include.row.citation_venue | escape }}.</p></details>{% endif %}
 {% if include.row.publication_url %}<a class="fm-dataset-link" href="{{ include.row.publication_url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="Publication for {{ include.row.dataset | escape }}">{{ include.row.publication_label | default: 'Publication' }} {% include academic/icon.html name="arrow-up-right" %}</a>{% endif %}
 {% else %}
 <span class="fm-source-pending" title="An original public source could not be confidently matched to this inventory identifier.">Not verified</span>

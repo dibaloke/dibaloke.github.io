@@ -316,6 +316,9 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-dataset-link:hover{text-decoration:underline}
 .fm-dataset-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .fm-source-pending{font-size:11px;color:var(--muted)}
+.fm-citation{margin-top:8px;font-size:11px;color:var(--muted)}
+.fm-citation summary{cursor:pointer;color:var(--accent)}
+.fm-citation p{margin-top:8px!important;line-height:1.7;overflow-wrap:anywhere}
 .fm-table-wrap:focus-visible,.fm-search input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media(max-width:700px){.fm-overview{grid-template-columns:1fr;gap:10px;margin-bottom:28px}.fm-overview>div{padding:17px 20px}.fm-overview strong{font-size:26px}.fm-inventory .section-heading h2{font-size:24px}}
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}

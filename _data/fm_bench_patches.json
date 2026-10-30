@@ -44,8 +44,13 @@
     "dataset": "SkinCancer",
     "patches": "129,364",
     "models": 8,
-    "domain": "Dermatopathology / Cutaneous lesions",
-    "labels": "Malignant melanoma vs. benign nevi/lesions"
+    "domain": "Dermatopathology: detection of anatomical tissue structures and skin neoplasms in scanned histopathological tissue sections. Developed by Georg Steinbuß, Mark Kriegsmann, and colleagues at the Institute of Pathology, Heidelberg University Hospital.",
+    "labels": "Malignant melanoma vs. benign nevi/lesions",
+    "dataset_url": "https://doi.org/10.3389/fonc.2022.1009893",
+    "dataset_link_label": "Original paper",
+    "citation_title": "Deep learning for the detection of anatomical tissue structures and neoplasms of the skin on scanned histopathological tissue sections",
+    "citation_authors": "Georg Steinbuß, Mark Kriegsmann, et al.",
+    "citation_venue": "Frontiers in Oncology (2022)"
   },
   {
     "number": 6,
