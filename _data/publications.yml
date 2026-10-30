@@ -124,6 +124,15 @@
   topic: graphs
   selected: true
   summary: An explainability-based approach to adversarial attacks on graphs through edge perturbation.
+  highlights:
+  - label: Big idea
+    text: Explanations of a graph neural network's predictions can reveal which parts of the graph an adversary should target.
+  - label: Method
+    text: Use GNNExplainer and PGExplainer to identify important subgraphs, then perturb graph edges to construct adversarial test samples.
+  - label: Finding
+    text: Explanation-guided attacks can avoid complex attack optimization and training-time model access by exploiting information from a trained model.
+  - label: Impact
+    text: Reveals a security tradeoff in model transparency and motivates evaluating explainability alongside adversarial robustness.
   tags:
   - Explainability
   - Adversarial attacks
