@@ -23,6 +23,9 @@ redirect_from:
         <li><strong>COSC 2200 · Hardware Systems</strong><br>Fall 2025</li>
         <li><strong>COSC 2100 · Data Structures</strong><br>Fall 2026</li>
       </ul>
+      <ul class="experience-service" aria-label="Academic leadership">
+        <li><strong>Student Co-Chair,</strong> research subcommittee of the Northwestern Mutual Data Science Institute.</li>
+      </ul>
       <div class="experience-skills" aria-label="Teaching areas"><span>Software development</span><span>Object-oriented design</span><span>Hardware systems</span><span>Data structures</span></div>
     </div>
   </article>
