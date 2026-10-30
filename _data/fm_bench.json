@@ -129,14 +129,6 @@
   },
   {
     "number": 17,
-    "dataset": "TCGA_EVAL",
-    "segmented": "820",
-    "features": "1,189",
-    "magnifications": "20×",
-    "domain": "TCGA evaluation subset"
-  },
-  {
-    "number": 18,
     "dataset": "HCMI_CMDC",
     "segmented": "810",
     "features": "810",
@@ -144,7 +136,7 @@
     "domain": "Human Cancer Models Initiative"
   },
   {
-    "number": 19,
+    "number": 18,
     "dataset": "MAYO (STRIP AI)",
     "segmented": "754",
     "features": "737",
@@ -152,7 +144,7 @@
     "domain": "Ischemic stroke clot etiology (CE vs. LAA)"
   },
   {
-    "number": 20,
+    "number": 19,
     "dataset": "AI4SkIN",
     "segmented": "640",
     "features": "640",
@@ -160,7 +152,7 @@
     "domain": "Dermatopathology / Skin lesions"
   },
   {
-    "number": 21,
+    "number": 20,
     "dataset": "PAR",
     "segmented": "609",
     "features": "609",
@@ -168,7 +160,7 @@
     "domain": "Prostate adenocarcinoma"
   },
   {
-    "number": 22,
+    "number": 21,
     "dataset": "UBC-OCEAN",
     "segmented": "542",
     "features": "538",
@@ -176,7 +168,7 @@
     "domain": "Ovarian carcinoma histotyping"
   },
   {
-    "number": 23,
+    "number": 22,
     "dataset": "DHMC-RCC",
     "segmented": "527",
     "features": "527",
@@ -184,7 +176,7 @@
     "domain": "Renal cell carcinoma subtypes"
   },
   {
-    "number": 24,
+    "number": 23,
     "dataset": "TUPAC16",
     "segmented": "499",
     "features": "499",
@@ -192,7 +184,7 @@
     "domain": "Breast tumor proliferation assessment"
   },
   {
-    "number": 25,
+    "number": 24,
     "dataset": "LEOPARD",
     "segmented": "483",
     "features": "483",
@@ -200,7 +192,7 @@
     "domain": "Pancreatic adenocarcinoma"
   },
   {
-    "number": 26,
+    "number": 25,
     "dataset": "HANCOCK",
     "segmented": "449",
     "features": "449",
@@ -208,7 +200,7 @@
     "domain": "Head and neck squamous cell carcinoma"
   },
   {
-    "number": 27,
+    "number": 26,
     "dataset": "NADT-Prostate",
     "segmented": "449",
     "features": "449",
@@ -216,7 +208,7 @@
     "domain": "Neoadjuvant androgen deprivation therapy prostate"
   },
   {
-    "number": 28,
+    "number": 27,
     "dataset": "BACH",
     "segmented": "400",
     "features": "400",
@@ -224,7 +216,7 @@
     "domain": "Breast cancer histology (Normal, Benign, In situ, Invasive)"
   },
   {
-    "number": 29,
+    "number": 28,
     "dataset": "AGGC2022",
     "segmented": "314",
     "features": "314",
@@ -232,7 +224,7 @@
     "domain": "Gastric adenocarcinoma grading"
   },
   {
-    "number": 30,
+    "number": 29,
     "dataset": "TissueNet",
     "segmented": "316",
     "features": "282",
@@ -240,7 +232,7 @@
     "domain": "Cervical / multi-tissue cellular segmentation"
   },
   {
-    "number": 31,
+    "number": 30,
     "dataset": "CLWD",
     "segmented": "291",
     "features": "291",
@@ -248,7 +240,7 @@
     "domain": "Clear cell kidney & whole slide data"
   },
   {
-    "number": 32,
+    "number": 31,
     "dataset": "NLST",
     "segmented": "215",
     "features": "0 (seg only)",
@@ -256,7 +248,7 @@
     "domain": "National Lung Screening Trial WSIs"
   },
   {
-    "number": 33,
+    "number": 32,
     "dataset": "BOEHMK",
     "segmented": "183",
     "features": "183",
@@ -264,7 +256,7 @@
     "domain": "Clear cell renal cancer"
   },
   {
-    "number": 34,
+    "number": 33,
     "dataset": "VALENTINO",
     "segmented": "177",
     "features": "177",
@@ -272,7 +264,7 @@
     "domain": "Colorectal cancer liver metastases"
   },
   {
-    "number": 35,
+    "number": 34,
     "dataset": "OVARIAN_BEVACIZUMAB",
     "segmented": "174",
     "features": "174",
@@ -280,7 +272,7 @@
     "domain": "Ovarian cancer bevacizumab response"
   },
   {
-    "number": 36,
+    "number": 35,
     "dataset": "DHMC",
     "segmented": "143",
     "features": "143",
@@ -288,7 +280,7 @@
     "domain": "Lung adenocarcinoma / squamous cell subtypes"
   },
   {
-    "number": 37,
+    "number": 36,
     "dataset": "TIGER",
     "segmented": "82",
     "features": "82",
@@ -296,7 +288,7 @@
     "domain": "Breast cancer tumor-infiltrating lymphocytes (TILs)"
   },
   {
-    "number": 38,
+    "number": 37,
     "dataset": "SurGen",
     "segmented": "75",
     "features": "75",
@@ -304,7 +296,7 @@
     "domain": "Surgical margin pathology"
   },
   {
-    "number": 39,
+    "number": 38,
     "dataset": "PAIP2019",
     "segmented": "50",
     "features": "50",
@@ -312,7 +304,7 @@
     "domain": "Liver cancer / Hepatocellular carcinoma"
   },
   {
-    "number": 40,
+    "number": 39,
     "dataset": "PAIP2020",
     "segmented": "47",
     "features": "47",

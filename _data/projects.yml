@@ -58,9 +58,9 @@
   image_width: 1254
   image_height: 1254
   category: Whole-slide pathology benchmarking
-  description: 200 TB+ of WSI data processed across 40 datasets, spanning diverse organs and pathology domains. Explore the segmentation and multi-magnification feature-extraction inventory.
+  description: 200 TB+ of WSI data processed across 39 datasets, spanning diverse organs and pathology domains. Explore the segmentation and multi-magnification feature-extraction inventory.
   url: /fm-bench/
   tags:
     - 200 TB+ processed
-    - 40 datasets
+    - 39 datasets
     - Whole-slide images
