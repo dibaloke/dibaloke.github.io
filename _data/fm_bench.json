@@ -130,7 +130,9 @@
     "segmented": "1,149",
     "features": "1,148",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Rare kidney-tumor histopathology, identified in the supplied inventory as a pediatric cohort. The exact public release, patient-age coverage, and tumor-class definitions have not been independently established."
+    "domain": "Rare kidney-tumor histopathology, identified in the supplied inventory as a pediatric cohort. See the dataset card for patient coverage, tumor classes, and access details.",
+    "dataset_url": "https://huggingface.co/datasets/Firehdx233/KidRare",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 14,
