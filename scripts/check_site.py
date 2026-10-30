@@ -56,7 +56,7 @@ def main():
     errors = set()
     for route in ("index.html", "publication/index.html", "experience/index.html",
                   "others/index.html", "cv/index.html",
-                  "writing/index.html"):
+                  "writing/index.html", "fm-bench/index.html"):
         if not (root / route).is_file():
             errors.add(f"Missing main page: {route}")
 
@@ -66,7 +66,7 @@ def main():
             errors.add("Homepage is missing main navigation")
         for route in ("publication/index.html", "experience/index.html",
                       "others/index.html", "cv/index.html", "writing/index.html",
-                      "sitemap/index.html", "404.html"):
+                      "sitemap/index.html", "fm-bench/index.html", "404.html"):
             page = pages.get(root / route)
             if page and page.navigation != home.navigation:
                 errors.add(f"{route}: main navigation differs from homepage")

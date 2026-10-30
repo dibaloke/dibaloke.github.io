@@ -1,0 +1,322 @@
+[
+  {
+    "number": 1,
+    "dataset": "TCGA",
+    "segmented": "11,031",
+    "features": "10,725",
+    "magnifications": "20×, 10×, 5×, 40×",
+    "domain": "Pan-cancer (29 distinct subcohorts: BRCA, LUAD, LUSC, PRAD, etc.)"
+  },
+  {
+    "number": 2,
+    "dataset": "PANDA",
+    "segmented": "10,616",
+    "features": "10,615",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Prostate (ISUP grade groups 0–5)"
+  },
+  {
+    "number": 3,
+    "dataset": "REG2026 (actively running)",
+    "segmented": "10,582",
+    "features": "10,582",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Regional / Clinical cohort"
+  },
+  {
+    "number": 4,
+    "dataset": "UNITOPATHO",
+    "segmented": "8,669",
+    "features": "8,669",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Colorectal polyps & adenomas"
+  },
+  {
+    "number": 5,
+    "dataset": "REG2025",
+    "segmented": "7,492",
+    "features": "7,491",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Regional / Clinical cohort"
+  },
+  {
+    "number": 6,
+    "dataset": "COBRA",
+    "segmented": "6,883",
+    "features": "6,869",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Colorectal cancer cohort"
+  },
+  {
+    "number": 7,
+    "dataset": "CPTAC",
+    "segmented": "5,486",
+    "features": "5,481",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Multi-cancer clinical proteomic tumor atlas"
+  },
+  {
+    "number": 8,
+    "dataset": "BRACS",
+    "segmented": "4,539",
+    "features": "4,536",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Breast carcinoma subtyping (B, PB, UDH, ADH, FEA, DCIS, IC)"
+  },
+  {
+    "number": 9,
+    "dataset": "IMP-CRS-2024",
+    "segmented": "4,525",
+    "features": "4,525",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Colorectal liver metastases / treatment response"
+  },
+  {
+    "number": 10,
+    "dataset": "EBRAINS",
+    "segmented": "3,097",
+    "features": "3,097",
+    "magnifications": "20×",
+    "domain": "Neuropathology / Brain histopathology"
+  },
+  {
+    "number": 11,
+    "dataset": "VisioMel",
+    "segmented": "1,883",
+    "features": "1,883",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Cutaneous melanoma prognosis / relapse"
+  },
+  {
+    "number": 12,
+    "dataset": "CAMELYON16",
+    "segmented": "1,229",
+    "features": "431",
+    "magnifications": "20×, 10×, 5×, 40×",
+    "domain": "Breast lymph node metastasis"
+  },
+  {
+    "number": 13,
+    "dataset": "KidRare",
+    "segmented": "1,149",
+    "features": "1,148",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Rare pediatric kidney tumors"
+  },
+  {
+    "number": 14,
+    "dataset": "CAMELYON17",
+    "segmented": "1,100",
+    "features": "1,000",
+    "magnifications": "20×, 10×, 5×, 40×",
+    "domain": "Breast lymph node pN-stage classification"
+  },
+  {
+    "number": 15,
+    "dataset": "GTEx",
+    "segmented": "971",
+    "features": "971",
+    "magnifications": "20×",
+    "domain": "Multi-tissue normal histopathology"
+  },
+  {
+    "number": 16,
+    "dataset": "CMB",
+    "segmented": "945",
+    "features": "940",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Brain metastases / Clinical pathology"
+  },
+  {
+    "number": 17,
+    "dataset": "TCGA_EVAL",
+    "segmented": "820",
+    "features": "1,189",
+    "magnifications": "20×",
+    "domain": "TCGA evaluation subset"
+  },
+  {
+    "number": 18,
+    "dataset": "HCMI_CMDC",
+    "segmented": "810",
+    "features": "810",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Human Cancer Models Initiative"
+  },
+  {
+    "number": 19,
+    "dataset": "MAYO (STRIP AI)",
+    "segmented": "754",
+    "features": "737",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Ischemic stroke clot etiology (CE vs. LAA)"
+  },
+  {
+    "number": 20,
+    "dataset": "AI4SkIN",
+    "segmented": "640",
+    "features": "640",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Dermatopathology / Skin lesions"
+  },
+  {
+    "number": 21,
+    "dataset": "PAR",
+    "segmented": "609",
+    "features": "609",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Prostate adenocarcinoma"
+  },
+  {
+    "number": 22,
+    "dataset": "UBC-OCEAN",
+    "segmented": "542",
+    "features": "538",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Ovarian carcinoma histotyping"
+  },
+  {
+    "number": 23,
+    "dataset": "DHMC-RCC",
+    "segmented": "527",
+    "features": "527",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Renal cell carcinoma subtypes"
+  },
+  {
+    "number": 24,
+    "dataset": "TUPAC16",
+    "segmented": "499",
+    "features": "499",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Breast tumor proliferation assessment"
+  },
+  {
+    "number": 25,
+    "dataset": "LEOPARD",
+    "segmented": "483",
+    "features": "483",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Pancreatic adenocarcinoma"
+  },
+  {
+    "number": 26,
+    "dataset": "HANCOCK",
+    "segmented": "449",
+    "features": "449",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Head and neck squamous cell carcinoma"
+  },
+  {
+    "number": 27,
+    "dataset": "NADT-Prostate",
+    "segmented": "449",
+    "features": "449",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Neoadjuvant androgen deprivation therapy prostate"
+  },
+  {
+    "number": 28,
+    "dataset": "BACH",
+    "segmented": "400",
+    "features": "400",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Breast cancer histology (Normal, Benign, In situ, Invasive)"
+  },
+  {
+    "number": 29,
+    "dataset": "AGGC2022",
+    "segmented": "314",
+    "features": "314",
+    "magnifications": "20×",
+    "domain": "Gastric adenocarcinoma grading"
+  },
+  {
+    "number": 30,
+    "dataset": "TissueNet",
+    "segmented": "316",
+    "features": "282",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Cervical / multi-tissue cellular segmentation"
+  },
+  {
+    "number": 31,
+    "dataset": "CLWD",
+    "segmented": "291",
+    "features": "291",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Clear cell kidney & whole slide data"
+  },
+  {
+    "number": 32,
+    "dataset": "NLST",
+    "segmented": "215",
+    "features": "0 (seg only)",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "National Lung Screening Trial WSIs"
+  },
+  {
+    "number": 33,
+    "dataset": "BOEHMK",
+    "segmented": "183",
+    "features": "183",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Clear cell renal cancer"
+  },
+  {
+    "number": 34,
+    "dataset": "VALENTINO",
+    "segmented": "177",
+    "features": "177",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Colorectal cancer liver metastases"
+  },
+  {
+    "number": 35,
+    "dataset": "OVARIAN_BEVACIZUMAB",
+    "segmented": "174",
+    "features": "174",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Ovarian cancer bevacizumab response"
+  },
+  {
+    "number": 36,
+    "dataset": "DHMC",
+    "segmented": "143",
+    "features": "143",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Lung adenocarcinoma / squamous cell subtypes"
+  },
+  {
+    "number": 37,
+    "dataset": "TIGER",
+    "segmented": "82",
+    "features": "82",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Breast cancer tumor-infiltrating lymphocytes (TILs)"
+  },
+  {
+    "number": 38,
+    "dataset": "SurGen",
+    "segmented": "75",
+    "features": "75",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Surgical margin pathology"
+  },
+  {
+    "number": 39,
+    "dataset": "PAIP2019",
+    "segmented": "50",
+    "features": "50",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Liver cancer / Hepatocellular carcinoma"
+  },
+  {
+    "number": 40,
+    "dataset": "PAIP2020",
+    "segmented": "47",
+    "features": "47",
+    "magnifications": "20×, 10×, 5×",
+    "domain": "Colorectal cancer microsatellite instability (MSI)"
+  }
+]
