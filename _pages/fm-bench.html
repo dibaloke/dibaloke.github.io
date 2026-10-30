@@ -15,8 +15,7 @@ fm_bench: true
   <div><span class="fm-stat-icon" aria-hidden="true">{% include academic/icon.html name="slides" %}</span><strong>{{ site.data.fm_bench | size }}</strong><span>WSI datasets</span></div>
   <div><span class="fm-stat-icon" aria-hidden="true">{% include academic/icon.html name="patch-grid" %}</span><strong>{{ site.data.fm_bench_patches | size }}</strong><span>Patch-level datasets</span></div>
 </section>
-{% include academic/body-map.html %}
-<nav class="fm-inventory-nav" aria-label="Dataset inventories"><a href="#fm-anatomy-title">Organ coverage</a><a href="#fm-datasets-title">WSI datasets</a><a href="#fm-patches-title">Patch-level datasets</a></nav>
+<nav class="fm-inventory-nav" aria-label="Dataset inventories"><a href="#fm-datasets-title">WSI datasets</a><a href="#fm-patches-title">Patch-level datasets</a><a href="#fm-anatomy-title">Organ coverage</a></nav>
 <section class="fm-inventory" aria-labelledby="fm-datasets-title" data-fm-inventory>
   <div class="section-heading"><h2 id="fm-datasets-title">Processed WSI Datasets</h2></div>
   <label class="fm-search" hidden data-fm-search-label>Search datasets or pathology domains<input type="search" data-fm-search placeholder="e.g., TCGA, prostate, brain" aria-controls="fm-dataset-rows"></label>
@@ -53,4 +52,6 @@ fm_bench: true
   </div>
   <p class="fm-empty" data-fm-empty hidden>No matching patch datasets. Try another task or class label.</p>
 </section>
+{% include academic/body-map.html %}
+
 <a class="text-link fm-back" href="{{ '/' | relative_url }}#projects-title">Back to Selected Projects {% include academic/icon.html name="arrow-right" %}</a>
