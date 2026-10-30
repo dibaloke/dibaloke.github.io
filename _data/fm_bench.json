@@ -18,11 +18,11 @@
   },
   {
     "number": 3,
-    "dataset": "REG2026 (actively running)",
+    "dataset": "REG2026",
     "segmented": "10,582",
     "features": "10,582",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Regional clinical cohort with processing actively underway. Organ coverage, diagnostic labels, and clinical endpoints have not been specified for a publicly identifiable release."
+    "domain": "Regional clinical cohort. Organ coverage, diagnostic labels, and clinical endpoints have not been specified for a publicly identifiable release."
   },
   {
     "number": 4,
