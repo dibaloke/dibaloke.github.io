@@ -242,6 +242,18 @@ html:not(.js) .publication-toolbar{display:none}
 .coursework-grid .resource-card h3{font-size:24px}
 .coursework-grid .card-label{margin-bottom:13px}
 .certification-section{margin-top:60px}
+.coursework-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.coursework-grid .resource-card{padding:18px;border-radius:14px;min-width:0}
+.coursework-grid .resource-card .card-label{font-size:10px;margin-bottom:7px}
+.coursework-grid .resource-card h3{font-size:18px;line-height:1.35;margin-bottom:10px;letter-spacing:-.025em}
+.coursework-details{font-size:12px;color:var(--muted)}
+.coursework-details summary{cursor:pointer;padding:5px 0;color:var(--ink);font-size:12px}
+.coursework-details summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.coursework-details p{font-size:12px;line-height:1.7;margin:8px 0 0}
+.coursework-grid .resource-links{gap:8px 14px;margin-top:12px}
+.coursework-grid .resource-links .text-link{font-size:11px;overflow-wrap:anywhere}
+@media(max-width:1000px){.coursework-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.resource-grid.coursework-grid{grid-template-columns:1fr;gap:10px}.coursework-grid .resource-card{padding:16px}.coursework-grid .resource-card h3{font-size:17px}}
 .certificate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .certificate-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:0 8px 28px #22305b08}
 .certificate-preview{position:relative;display:flex;aspect-ratio:4/3;margin:12px;padding:12px;align-items:center;justify-content:center;border-radius:12px;background:#f0f2fa;overflow:hidden}
