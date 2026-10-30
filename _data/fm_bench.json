@@ -344,7 +344,9 @@
     "features": "174",
     "magnifications": "20×, 10×, 5×",
     "domain": "Ovarian-cancer histopathology associated with bevacizumab treatment response. Patho-Bench includes an ovarian response-prediction task; the inventory identifies the treatment-specific cohort.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://www.cancerimagingarchive.net/collection/ovarian-bevacizumab-response/",
+    "dataset_link_label": "Collection"
   },
   {
     "number": 35,
