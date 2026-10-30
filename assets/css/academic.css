@@ -289,11 +289,15 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-note{font-size:12px;line-height:1.8;color:var(--muted);max-width:900px}
 .fm-result-count{font-size:11px;color:var(--muted);margin:15px 0 10px}
 .fm-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#ffffffb3}
-.fm-table{width:100%;min-width:940px;margin:0;border-collapse:collapse;font-size:12px;line-height:1.65}
+.fm-table{width:100%;min-width:640px;margin:0;border-collapse:collapse;font-size:12px;line-height:1.8}
 .fm-table th,.fm-table td{padding:12px 14px;border:0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .fm-table thead th{background:#eaf0fc;color:var(--ink);font-size:11px;font-weight:650}
-.fm-table tbody th{font-weight:600;max-width:230px;overflow-wrap:anywhere}
-.fm-table td:nth-child(3),.fm-table td:nth-child(4){font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.fm-table th:first-child,.fm-table td:first-child{width:45px;font-variant-numeric:tabular-nums}
+.fm-table th:nth-child(2){width:210px;overflow-wrap:anywhere}
+.fm-table tbody th{font-weight:600}
+.fm-table td p{margin:0}
+.fm-source{display:inline-flex;align-items:center;gap:5px;margin-top:8px;color:var(--accent);font-size:11px}
+.fm-source .icon{width:12px;height:12px}
 .fm-table tbody tr:last-child>*{border-bottom:0}
 .fm-table tbody tr:nth-child(even){background:#f4f6fc80}
 .fm-table tr[hidden]{display:none}

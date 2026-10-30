@@ -18,15 +18,15 @@ fm_bench: true
 <section class="fm-inventory" aria-labelledby="fm-datasets-title">
   <div class="section-heading"><h2 id="fm-datasets-title">Processed WSI Datasets</h2></div>
   <label class="fm-search" hidden data-fm-search-label>Search datasets or pathology domains<input type="search" data-fm-search placeholder="e.g., TCGA, prostate, brain" aria-controls="fm-dataset-rows"></label>
-  <p class="fm-note" id="fm-table-note">Processing inventory as supplied. Segmentation and feature counts are reported separately. REG2026 is actively running; NLST has segmentation only. Scroll horizontally to view all columns on smaller screens.</p>
+  <p class="fm-note" id="fm-table-note">Public documentation is linked where the dataset identity could be matched. Other entries retain author-supplied cohort context, with unresolved identities or label definitions noted. REG2026 is actively running.</p>
   <p class="fm-result-count" data-fm-count aria-live="polite">{{ site.data.fm_bench | size }} datasets</p>
   <div class="fm-table-wrap" role="region" aria-label="Processed WSI dataset inventory" tabindex="0" aria-describedby="fm-table-note">
     <table class="fm-table">
-      <caption class="sr-only">Processed WSI datasets, segmentation counts, maximum 20× feature counts, magnifications, and organ or pathology domains</caption>
-      <thead><tr><th scope="col">#</th><th scope="col">Dataset</th><th scope="col">Segmented WSIs</th><th scope="col">Max 20× Features</th><th scope="col">Magnifications Available</th><th scope="col">Organ / Pathology Domain</th></tr></thead>
+      <caption class="sr-only">Processed WSI datasets and their organ coverage, pathology domains, and research tasks</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Dataset</th><th scope="col">Organ / Pathology Domain &amp; Research Tasks</th></tr></thead>
       <tbody id="fm-dataset-rows">
         {% for row in site.data.fm_bench %}
-        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}</th><td>{{ row.segmented }}</td><td>{{ row.features }}</td><td>{{ row.magnifications }}</td><td>{{ row.domain | escape }}</td></tr>
+        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}</th><td><p>{{ row.domain | escape }}</p>{% if row.source_url %}<a class="fm-source" href="{{ row.source_url }}" target="_blank" rel="noopener noreferrer">Documentation {% include academic/icon.html name="arrow-up-right" %}<span class="sr-only"> for {{ row.dataset | escape }}</span></a>{% endif %}</td></tr>
         {% endfor %}
       </tbody>
     </table>
