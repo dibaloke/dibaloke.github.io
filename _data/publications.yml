@@ -11,15 +11,17 @@
   summary: Expert-guided vision–language reasoning for few-shot cancer subtyping in whole-slide pathology.
   highlights:
   - label: Big idea
-    text: Bring pathology-specific expert reasoning into few-shot whole-slide cancer subtyping.
+    text: Use domain-specific expert roles and model-generated reasoning to guide few-shot cancer subtyping from whole-slide
+      images.
   - label: Method
-    text: Fuse expert-pooled text embeddings with 10×/20× visual features through learned patch prototypes and attention.
-  - label: Design
-    text: Compress variable-length patch sets into fixed-size prototypes, with orthogonality regularization to discourage
-      redundant visual representations.
-  - label: Impact & limits
-    text: Connects expert-derived descriptions with tissue representations; the supplementary material identifies
-      clinical validation and uncertainty estimation as future work.
+    text: Combine four expert-role prompts and reasoning-informed text embeddings with 10×/20× visual features using
+      learned patch prototypes and cross-attention.
+  - label: Finding
+    text: Under the 16-shot, five-fold protocol, the best reported configurations achieve AUC 0.9604 ± 0.0088 on TCGA-RCC
+      and 0.8770 ± 0.0195 on TCGA-NSCLC (mean ± standard deviation), outperforming the 20 evaluated MIL baselines.
+  - label: Impact
+    text: Shows how expert-derived language and multi-scale visual evidence can support cancer subtyping with limited
+      labeled slides; benefits depend on the chosen encoder and prompting configuration.
   tags:
   - Computational pathology
   - Vision–language reasoning
