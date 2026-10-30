@@ -9,6 +9,17 @@
   topic: pathology
   selected: true
   summary: Expert-guided vision–language reasoning for few-shot cancer subtyping in whole-slide pathology.
+  highlights:
+  - label: Big idea
+    text: Bring pathology-specific expert reasoning into few-shot whole-slide cancer subtyping.
+  - label: Method
+    text: Fuse expert-pooled text embeddings with 10×/20× visual features through learned patch prototypes and attention.
+  - label: Design
+    text: Compress variable-length patch sets into fixed-size prototypes, with orthogonality regularization to discourage
+      redundant visual representations.
+  - label: Impact & limits
+    text: Connects expert-derived descriptions with tissue representations; the supplementary material identifies
+      clinical validation and uncertainty estimation as future work.
   tags:
   - Computational pathology
   - Vision–language reasoning
@@ -30,6 +41,17 @@
   topic: pathology
   selected: true
   summary: Ranking pathology foundation models without labels using invariance and expressiveness.
+  highlights:
+  - label: Big idea
+    text: Rank pathology foundation models without labels, fine-tuning, or training a downstream predictor.
+  - label: Method
+    text: Combine rotational invariance with representation expressiveness, using a standardized score based on neighborhood
+      retention and effective rank.
+  - label: Finding
+    text: Across 22 encoders and 16 datasets containing over 1.2 million patches, ranking agreement reaches Spearman
+      correlations of 0.749 with a linear oracle and 0.683 with a kNN oracle.
+  - label: Impact
+    text: Provides an annotation-free way to shortlist encoders before investing in task-specific evaluation.
   tags:
   - Foundation models
   - Model ranking
@@ -55,6 +77,19 @@
   topic: pathology
   selected: true
   summary: Exploring a universal latent space for computational pathology foundation models.
+  highlights:
+  - label: Big idea
+    text: Test whether independently trained pathology models can share a useful latent representation despite incompatible
+      native embedding spaces.
+  - label: Method
+    text: Compare 18 patch- and slide-level encoders across 4,331 TCGA/CPTAC slides, using similarity analysis, multiview
+      alignment, retrieval, and 13 downstream tasks.
+  - label: Finding
+    text: Shared-space features improve selected molecular tasks, including BRCA GATA3 AUC from approximately 0.55
+      to 0.63, while underperforming on some other targets.
+  - label: Impact
+    text: Supports cross-model interoperability while showing that geometric alignment does not guarantee better performance
+      on every pathology task.
   tags:
   - Computational pathology
   - Foundation models
@@ -82,6 +117,19 @@
   topic: pathology
   selected: true
   summary: Multi-expert reasoning-informed vision–language multi-instance learning for few-shot cancer subtyping.
+  highlights:
+  - label: Big idea
+    text: Use multiple expert perspectives and model-generated reasoning to enrich language guidance for few-shot
+      cancer subtyping.
+  - label: Method
+    text: Prompt three multimodal language models as four diagnostic experts, encode their responses and reasoning,
+      and fuse the pooled embeddings with 10×/20× whole-slide features.
+  - label: Finding
+    text: On TCGA lung subtyping, GPT-5 with mean pooling reports 71.6% mean accuracy (standard deviation 23.1 percentage
+      points) across five runs; pooled experts outperform individual experts.
+  - label: Impact
+    text: Shows how complementary expert-derived language can guide visual multiple-instance learning when labeled
+      slides are limited.
   tags:
   - Multi-instance learning
   - Vision–language models
@@ -104,6 +152,18 @@
   topic: pathology
   selected: true
   summary: A survey of foundation models and vision-language models in computational pathology.
+  highlights:
+  - label: Big idea
+    text: Map the shift from task-specific pathology models toward reusable foundation and vision-language models.
+  - label: Method
+    text: Organize the literature into vision foundation models, vision-language models, multimodal datasets, and
+      benchmarking and adaptation approaches.
+  - label: Synthesis
+    text: Connects model development with supporting datasets, evaluation frameworks, prompting, and vision-instruction
+      tuning in a unified research timeline.
+  - label: Impact
+    text: Provides a guide for navigating pathology models and datasets and understanding how the research directions
+      fit together.
   tags:
   - Computational pathology
   - Foundation models
