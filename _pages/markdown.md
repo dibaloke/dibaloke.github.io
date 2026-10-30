@@ -15,7 +15,7 @@ redirect_from:
   <article class="timeline-item">
     <div class="timeline-meta"><p class="experience-years">2023 <span>– Present</span></p><p class="experience-dates">Jan 2023 – Present</p><p class="experience-location">Milwaukee, WI, USA</p><span class="experience-current">Current</span></div>
     <div class="timeline-body prose">
-      <div class="experience-card-heading"><div><h2>Marquette University</h2><h3>Teaching Assistant</h3><p><a href="https://www.marquette.edu/computer-science/">Department of Computer Science</a></p></div><span class="experience-emblem" aria-hidden="true">MU</span></div>
+      <div class="experience-card-heading"><div><h2>Marquette University</h2><h3>Teaching Assistant</h3><p><a href="https://www.marquette.edu/computer-science/">Department of Computer Science</a></p></div><span class="experience-logo" aria-hidden="true"><img src="{{ '/assets/images/organizations/marquette.png' | relative_url }}" alt="" width="88" height="72" loading="lazy" decoding="async"></span></div>
       <p>My teaching assistant work spans introductory software development, object-oriented software design, hardware systems, and data structures.</p>
       <ul>
         <li><strong>COSC 1010 · Introduction to Software Development</strong><br>Fall 2023, Spring 2024</li>
@@ -30,7 +30,7 @@ redirect_from:
   <article class="timeline-item">
     <div class="timeline-meta"><p class="experience-years">2021 <span>– 2022</span></p><p class="experience-dates">Mar 2021 – Dec 2022</p><p class="experience-location">Dhaka, Bangladesh</p></div>
     <div class="timeline-body prose">
-      <div class="experience-card-heading"><div><h2>Military Institute of Science and Technology</h2><h3>Lecturer</h3><p><a href="https://mist.ac.bd/department/eece">Department of Electrical, Electronic &amp; Communication Engineering</a></p></div><span class="experience-emblem" aria-hidden="true">MIST</span></div>
+      <div class="experience-card-heading"><div><h2>Military Institute of Science and Technology</h2><h3>Lecturer</h3><p><a href="https://mist.ac.bd/department/eece">Department of Electrical, Electronic &amp; Communication Engineering</a></p></div><span class="experience-logo" aria-hidden="true"><img src="{{ '/assets/images/organizations/mist.svg' | relative_url }}" alt="" width="88" height="72" loading="lazy" decoding="async"></span></div>
       <p>I taught courses and laboratories spanning signal processing, communication, electrical engineering, and numerical methods. I also served as an instructor for the department’s <a href="https://eece.gitbook.io/python-certification-course-2022">Python Certification Course 2022</a>.</p>
       <details class="course-details">
         <summary>Courses I taught <span aria-hidden="true">+</span></summary>
@@ -55,7 +55,7 @@ redirect_from:
   <article class="timeline-item">
     <div class="timeline-meta"><p class="experience-era">Undergraduate years</p><p class="experience-dates">During my undergraduate studies</p><p class="experience-location">MIST Innovation Club</p></div>
     <div class="timeline-body prose">
-      <div class="experience-card-heading"><div><h2>MIST Innovation Club</h2><h3>Senior Mentor</h3><p>Android &amp; iOS development</p></div><span class="experience-emblem" aria-hidden="true">MIC</span></div>
+      <div class="experience-card-heading"><div><h2>MIST Innovation Club</h2><h3>Senior Mentor</h3><p>Android &amp; iOS development</p></div><span class="experience-logo experience-logo--dark" aria-hidden="true"><img src="{{ '/assets/images/organizations/mist-innovation-club.png' | relative_url }}" alt="" width="88" height="72" loading="lazy" decoding="async"></span></div>
       <p>During my undergraduate studies, I designed an Intermediate Dart course as part of an introduction to Flutter. The course includes recorded lessons in my native language and accompanying code examples.</p>
       <a class="text-link" href="https://eece.gitbook.io/mist-innovation-club-flutter-course-1">Explore the Dart course <span aria-hidden="true">↗</span></a>
       <div class="experience-skills" aria-label="Mentoring areas"><span>Dart</span><span>Flutter</span><span>Mobile development</span><span>Mentoring</span></div>
