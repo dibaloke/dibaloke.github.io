@@ -3,42 +3,17 @@
   <p class="fm-note">The coverage audit identifies <strong>31+ organ/anatomical sites</strong> and <strong>7 additional tissue groups</strong>. Select a numbered point or a name to explore. These are cohort-level lower bounds; the exact specimen-level total may be higher.</p>
   <div class="fm-anatomy-grid">
     <figure class="fm-body-figure">
-      <svg viewBox="0 0 620 840" role="group" aria-labelledby="fm-body-title fm-body-desc">
-        <title id="fm-body-title">Schematic human anatomy and dataset coverage</title>
-        <desc id="fm-body-desc">Numbered organ sites correspond to the labeled controls alongside the diagram. Female and male reproductive sites are shown in separate insets. Locations are schematic, and paired organs are counted once.</desc>
-        <g class="fm-body-outline">
-          <ellipse cx="210" cy="70" rx="43" ry="55"/>
-          <path d="M189 119v24l-67 28c-18 8-27 25-31 48L57 402c-4 18 0 37 12 41 13 4 22-8 27-26l30-119 9 134c-2 35 1 53 7 83l5 238c1 22 31 30 39 8l18-220h13l18 220c8 22 38 14 39-8l5-238c6-30 9-48 7-83l9-134 30 119c5 18 14 30 27 26 12-4 16-23 12-41l-34-183c-4-23-13-40-31-48l-67-28v-24"/>
-        </g>
-        <g class="fm-body-organs">
-          <path d="M185 48q5-23 25-15 21-8 28 14 12 17-3 27-12 7-25-1-18 8-28-4-9-10 3-21Z"/>
-          <path d="M203 156v79M217 157v81" class="fm-organ-line"/>
-          <path d="M195 206c-37-15-48 20-49 61-2 34 20 39 44 16l6-65Z M227 206c37-15 48 20 49 61 2 34-20 39-44 16l-6-65Z"/>
-          <path d="M210 254c-20-17-28 10-14 26l19 20 18-25c9-19-9-31-23-21Z" class="fm-body-heart"/>
-          <path d="M141 313q39-18 74 5l-10 26-60 3q-18-7-4-34Z"/>
-          <path d="M232 337q-6 19 12 26 10 8-2 22-13 8-28-5l-2-22"/>
-          <path d="M153 379c-26-13-30 41-10 46 18 4 22-18 10-22 10-3 10-17 0-24Z M267 379c26-13 30 41 10 46-18 4-22-18-10-22-10-3-10-17 0-24Z"/>
-          <path d="M155 435v-12q0-11 15-11h79q16 0 16 14v34q0 11-13 11h-22v27 M172 427q44 16 74 1m-74 14q40 16 74 1m-74 14q43 12 74-1" class="fm-organ-line"/>
-          <path d="M230 466q16-13 25 1 4 18-12 23-18-3-13-24Z"/>
-          <path d="M173 548v143m-9-144h18m-18 145h18" class="fm-organ-line"/>
-        </g>
-        <g class="fm-inset">
-          <rect x="365" y="378" width="235" height="220" rx="18"/>
-          <text x="382" y="404">Female pelvic anatomy</text>
-          <path d="M487 471c-14-20-30-32-50-16l-10 15m60 1c14-20 30-32 50-16l10 15 M470 468q17 39 17 48h7q0-9 17-48-23 12-41 0Z M490 516v47"/>
-          <ellipse cx="427" cy="476" rx="11" ry="16"/><ellipse cx="547" cy="476" rx="11" ry="16"/>
-          <rect x="365" y="619" width="235" height="192" rx="18"/>
-          <text x="382" y="645">Male pelvic anatomy</text>
-          <path d="M468 661q20-13 37 0-1 20-20 25-17-5-17-25Z M485 689v35m0-5-20 17m20-17 20 17"/>
-          <ellipse cx="484" cy="686" rx="15" ry="10"/><ellipse cx="465" cy="750" rx="12" ry="18"/><ellipse cx="505" cy="750" rx="12" ry="18"/>
-        </g>
-        {% for organ in site.data.fm_organs %}{% if organ.category == 'organ' %}
+      <svg viewBox="0 0 1024 1536" role="group" aria-labelledby="fm-body-title fm-body-desc">
+        <title id="fm-body-title">Anatomical illustration of organ coverage</title>
+        <desc id="fm-body-desc">A translucent human figure showing the brain, lungs, heart, abdominal organs, vessels, and lymphatic structures. Numbered points correspond to the coverage list. Sites not visible in the illustration can be selected from the list.</desc>
+        <image href="{{ '/assets/images/fm-bench/human-anatomy-2d.png' | relative_url }}" x="0" y="0" width="1024" height="1536" preserveAspectRatio="xMidYMid meet"/>
+        {% for organ in site.data.fm_organs %}{% if organ.illustrated %}
         <g class="fm-organ-marker" data-organ="{{ organ.id }}" role="button" tabindex="0" aria-label="{{ organ.number }}. {{ organ.name | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" transform="translate({{ organ.x }} {{ organ.y }})">
-          <title>{{ organ.name | escape }}</title><circle class="fm-organ-hit" r="18"/><circle class="fm-organ-dot" r="11"/><text text-anchor="middle" dy="3.5">{{ organ.number }}</text>
+          <title>{{ organ.name | escape }}</title><circle class="fm-organ-hit" r="25"/><circle class="fm-organ-dot" r="15"/><text text-anchor="middle" dy="4.5">{{ organ.number }}</text>
         </g>
         {% endif %}{% endfor %}
       </svg>
-      <figcaption>Schematic locations, not to scale. Paired organs and sampled subregions are merged. Reproductive anatomy is shown in separate insets.</figcaption>
+      <figcaption>Anatomical overview with approximate annotation points. Sites not visible in this illustration remain selectable in the coverage list. Paired organs are counted once.</figcaption>
     </figure>
     <div class="fm-anatomy-controls">
       <div class="fm-organ-info" aria-live="polite" aria-atomic="true">

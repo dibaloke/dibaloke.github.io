@@ -284,18 +284,10 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-body-figure{margin:0;padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(140deg,#edf2ff,#ffffffc9)}
 .fm-body-figure svg{display:block;width:100%;height:auto}
 .fm-body-figure figcaption{font-size:10px;line-height:1.7;color:var(--muted);padding:8px}
-.fm-body-outline{fill:#e1e9f5;stroke:#b7c5df;stroke-width:2}
-.fm-body-organs{fill:#b9d0ea;fill-opacity:.7;stroke:#7f9fc5;stroke-width:1.5}
-.fm-body-organs .fm-organ-line{fill:none;stroke-width:3;stroke-linecap:round}
-.fm-body-organs .fm-body-heart{fill:#d7b9d0;stroke:#b693b3}
-.fm-inset rect{fill:#ffffffa8;stroke:#cbd7e9;stroke-width:1.4}
-.fm-inset text{fill:#61718e;font-size:12px;font-family:inherit}
-.fm-inset path{fill:#ded4ee;stroke:#b29cc9;stroke-width:2;stroke-linecap:round}
-.fm-inset ellipse{fill:#d1d8ed;stroke:#9caed1;stroke-width:1.5}
 .fm-organ-marker{cursor:pointer;outline:none}
 .fm-organ-hit{fill:transparent;stroke:none}
 .fm-organ-dot{fill:white;stroke:#5574c8;stroke-width:1.5}
-.fm-organ-marker text{fill:#3c58a5;font:600 10px sans-serif;pointer-events:none}
+.fm-organ-marker text{fill:#3c58a5;font:600 13px sans-serif;pointer-events:none}
 .fm-organ-marker:hover .fm-organ-dot,.fm-organ-marker[aria-pressed=true] .fm-organ-dot{fill:var(--accent);stroke:white;stroke-width:2}
 .fm-organ-marker:hover text,.fm-organ-marker[aria-pressed=true] text{fill:white}
 .fm-organ-marker:focus-visible .fm-organ-hit{fill:#405dd226;stroke:var(--accent);stroke-width:2}
