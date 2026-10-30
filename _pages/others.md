@@ -82,14 +82,27 @@ description: "Projects and coursework from Dibaloke Chanda’s master’s studie
 </section>
 
 <section class="certification-section" aria-labelledby="certifications-title">
-  <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Where I started</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Independent learning</p><h2 class="section-title" id="certifications-title">Certificates &amp; specializations</h2></div></div>
   <div class="prose"><p>My undergraduate background is in Electrical, Electronic, and Communication Engineering. Without formal undergraduate exposure to deep learning, machine learning, or data science, I began teaching myself through Coursera. These are the certifications I completed along the way.</p></div>
-  <ul class="certificate-list">
-    <li><span>Computer Vision Basics</span><a class="text-link" href="https://www.coursera.org/account/accomplishments/verify/BYXMQ88TQX3L">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Computer Vision Basics</span></a></li>
-    <li><span>Data Science Math Skills</span><a class="text-link" href="https://www.coursera.org/account/accomplishments/verify/P8SANQHZKNPQ">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Data Science Math Skills</span></a></li>
-    <li><span>Managing Machine Learning Projects with Google Cloud</span><a class="text-link" href="https://www.coursera.org/account/accomplishments/verify/ZEVY2KYAGSTS">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Managing Machine Learning Projects with Google Cloud</span></a></li>
-    <li><span>Understanding and Visualizing Data with Python</span><a class="text-link" href="https://www.coursera.org/account/accomplishments/verify/AYSRSEVXSKKA">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Understanding and Visualizing Data with Python</span></a></li>
-    <li><span>Inferential Statistical Analysis with Python</span><a class="text-link" href="https://www.coursera.org/account/accomplishments/verify/J6MZBRSJTEGA">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Inferential Statistical Analysis with Python</span></a></li>
-    <li><span>Deep Learning Specialization · 5 courses</span><a class="text-link" href="https://coursera.org/share/5292e1d314ee6016f6fe335c0bcb7461">Certificate <span aria-hidden="true">↗</span><span class="visually-hidden"> for Deep Learning Specialization · 5 courses</span></a></li>
-  </ul>
+  <div class="certificate-grid">
+    {% for certificate in site.data.certificates %}
+    <article class="certificate-card">
+      {% if certificate.credential_id %}
+      <a class="certificate-preview" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">
+        <span class="certificate-preview-fallback">{% include academic/icon.html name="arrow-up-right" %}<span>View original certificate</span></span>
+        <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~{{ certificate.credential_id }}.jpeg" alt="Coursera certificate for {{ certificate.title | escape }}" loading="lazy" decoding="async" width="1200" height="900" data-certificate-preview>
+      </a>
+      {% else %}
+      <a class="certificate-preview certificate-preview--specialization" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="View certificate: {{ certificate.title | escape }}">
+        <span class="eyebrow">Deep Learning</span><span class="specialization-count">5<span>courses completed</span></span><span class="text-link">View specialization certificate {% include academic/icon.html name="arrow-up-right" %}</span>
+      </a>
+      {% endif %}
+      <div class="certificate-body">
+        <p class="card-label">Coursera{% unless certificate.credential_id %} · Specialization{% endunless %}</p>
+        <h3>{{ certificate.title }}</h3>
+        <a class="text-link" href="{{ certificate.url }}" target="_blank" rel="noopener noreferrer" aria-label="Verify certificate: {{ certificate.title | escape }}">Verify certificate {% include academic/icon.html name="arrow-up-right" %}</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
 </section>
