@@ -289,7 +289,7 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-note{font-size:12px;line-height:1.8;color:var(--muted);max-width:900px}
 .fm-result-count{font-size:11px;color:var(--muted);margin:15px 0 10px}
 .fm-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#ffffffb3}
-.fm-table{width:100%;min-width:640px;margin:0;border-collapse:collapse;font-size:12px;line-height:1.8}
+.fm-table{width:100%;min-width:760px;margin:0;border-collapse:collapse;font-size:12px;line-height:1.8}
 .fm-table th,.fm-table td{padding:12px 14px;border:0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .fm-table thead th{background:#eaf0fc;color:var(--ink);font-size:11px;font-weight:650}
 .fm-table th:first-child,.fm-table td:first-child{width:45px;font-variant-numeric:tabular-nums}
@@ -306,9 +306,15 @@ html:not(.js) .publication-toolbar{display:none}
 .fm-inventory-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
 .fm-inventory-nav a{border:1px solid var(--line);border-radius:20px;padding:7px 13px;background:#ffffff90;font-size:12px;color:var(--accent)}
 .fm-patch-inventory{margin-top:48px}
-.fm-patch-table{min-width:1020px}
+.fm-patch-table{min-width:1140px}
 .fm-patch-table td:nth-child(3){font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
 .fm-patch-table th:nth-child(4),.fm-patch-table th:nth-child(5){min-width:230px}
+.fm-table .fm-original-source{width:120px;min-width:110px}
+.fm-dataset-link{display:inline-flex;align-items:center;gap:4px;color:var(--accent);font-size:11px;white-space:nowrap}
+.fm-dataset-link .icon{width:12px;height:12px}
+.fm-dataset-link:hover{text-decoration:underline}
+.fm-dataset-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.fm-source-pending{font-size:11px;color:var(--muted)}
 .fm-table-wrap:focus-visible,.fm-search input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media(max-width:700px){.fm-overview{grid-template-columns:1fr;gap:10px;margin-bottom:28px}.fm-overview>div{padding:17px 20px}.fm-overview strong{font-size:26px}.fm-inventory .section-heading h2{font-size:24px}}
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}

@@ -5,7 +5,9 @@
     "patches": "327,680",
     "models": 28,
     "domain": "Breast lymph node metastasis detection",
-    "labels": "Binary (metastatic vs. non-metastatic)"
+    "labels": "Binary (metastatic vs. non-metastatic)",
+    "dataset_url": "https://github.com/basveeling/pcam",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 2,
@@ -13,7 +15,9 @@
     "patches": "227,699",
     "models": 29,
     "domain": "Pan-cancer tumor-infiltrating lymphocytes",
-    "labels": "TIL presence / density"
+    "labels": "TIL presence / density",
+    "dataset_url": "https://doi.org/10.5281/zenodo.6604094",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 3,
@@ -21,7 +25,9 @@
     "patches": "218,578",
     "models": 29,
     "domain": "Gastric adenocarcinoma (STAD)",
-    "labels": "Microsatellite Instability (MSI vs. MSS)"
+    "labels": "Microsatellite Instability (MSI vs. MSS)",
+    "dataset_url": "https://doi.org/10.5281/zenodo.2530835",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 4,
@@ -29,7 +35,9 @@
     "patches": "192,312",
     "models": 29,
     "domain": "Colorectal cancer (CRC)",
-    "labels": "Microsatellite Instability (MSI vs. MSS)"
+    "labels": "Microsatellite Instability (MSI vs. MSS)",
+    "dataset_url": "https://doi.org/10.5281/zenodo.2530835",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 5,
@@ -45,7 +53,9 @@
     "patches": "114,841",
     "models": 29,
     "domain": "Gastric cancer histology (Kangbuk Samsung)",
-    "labels": "Tumor vs. normal stroma / grading"
+    "labels": "Tumor vs. normal stroma / grading",
+    "dataset_url": "https://github.com/QuIIL/KBSMC_gastric_cancer_grading_dataset",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 7,
@@ -53,7 +63,9 @@
     "patches": "107,180",
     "models": 29,
     "domain": "Colorectal cancer tissue phenotyping",
-    "labels": "9 tissue classes (tumor, stroma, mucus, normal, debris, etc.)"
+    "labels": "9 tissue classes (tumor, stroma, mucus, normal, debris, etc.)",
+    "dataset_url": "https://doi.org/10.5281/zenodo.1214456",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 8,
@@ -61,7 +73,9 @@
     "patches": "70,379",
     "models": 29,
     "domain": "Digestive system & colonoscopy lesions",
-    "labels": "Colon cancer lesion detection"
+    "labels": "Colon cancer lesion detection",
+    "dataset_url": "https://digestpath2019.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 9,
@@ -69,7 +83,9 @@
     "patches": "52,713",
     "models": 29,
     "domain": "Clear cell renal cell carcinoma",
-    "labels": "Tissue architecture / tumor composition"
+    "labels": "Tissue architecture / tumor composition",
+    "dataset_url": "https://zenodo.org/records/7898308",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 10,
@@ -77,7 +93,9 @@
     "patches": "25,095",
     "models": 29,
     "domain": "Clear cell renal cell carcinoma",
-    "labels": "Lymphocyte infiltration quantification"
+    "labels": "Lymphocyte infiltration quantification",
+    "dataset_url": "https://zenodo.org/records/7898308",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 11,
@@ -85,7 +103,9 @@
     "patches": "15,000",
     "models": 29,
     "domain": "Lung histopathology",
-    "labels": "Adenocarcinoma, squamous cell ca, benign lung"
+    "labels": "Adenocarcinoma, squamous cell ca, benign lung",
+    "dataset_url": "https://github.com/tampapath/lung_colon_image_set",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 12,
@@ -93,7 +113,9 @@
     "patches": "12,081",
     "models": 29,
     "domain": "Prostate needle biopsies",
-    "labels": "Gleason patterns (non-cancer, pattern 3, 4, 5)"
+    "labels": "Gleason patterns (non-cancer, pattern 3, 4, 5)",
+    "dataset_url": "https://data.mendeley.com/datasets/9xxm58dvs3/2",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 13,
@@ -101,7 +123,9 @@
     "patches": "10,000",
     "models": 29,
     "domain": "Colon histopathology",
-    "labels": "Colon adenocarcinoma vs. benign colon"
+    "labels": "Colon adenocarcinoma vs. benign colon",
+    "dataset_url": "https://github.com/tampapath/lung_colon_image_set",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 14,
@@ -109,7 +133,9 @@
     "patches": "9,857",
     "models": 29,
     "domain": "Colorectal cancer (Kangbuk Samsung)",
-    "labels": "Colon tumor classification"
+    "labels": "Colon tumor classification",
+    "dataset_url": "https://github.com/QuIIL/KBSMC_colon_cancer_grading_dataset",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 15,
@@ -117,7 +143,9 @@
     "patches": "7,909",
     "models": 29,
     "domain": "Breast cancer histopathology",
-    "labels": "Benign (4 subtypes) vs. Malignant (4 subtypes)"
+    "labels": "Benign (4 subtypes) vs. Malignant (4 subtypes)",
+    "dataset_url": "https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 16,
@@ -125,7 +153,9 @@
     "patches": "7,180",
     "models": 29,
     "domain": "CRC external test/validation set",
-    "labels": "9 colorectal tissue classes"
+    "labels": "9 colorectal tissue classes",
+    "dataset_url": "https://doi.org/10.5281/zenodo.1214456",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 17,
@@ -133,7 +163,9 @@
     "patches": "6,160",
     "models": 29,
     "domain": "Colorectal cancer histology",
-    "labels": "Normal, adenoma, serrated, adenocarcinoma"
+    "labels": "Normal, adenoma, serrated, adenocarcinoma",
+    "dataset_url": "https://bupt-ai-cz.github.io/HSA-NRL/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 18,
@@ -141,7 +173,9 @@
     "patches": "4,693",
     "models": 29,
     "domain": "Lung adenocarcinoma subtyping",
-    "labels": "Tumor, stroma, normal tissue"
+    "labels": "Tumor, stroma, normal tissue",
+    "dataset_url": "https://wsss4luad.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 19,
@@ -149,7 +183,9 @@
     "patches": "3,152",
     "models": 29,
     "domain": "Colorectal polyps",
-    "labels": "Hyperplastic polyp (HP) vs. Sessile serrated adenoma (SSA)"
+    "labels": "Hyperplastic polyp (HP) vs. Sessile serrated adenoma (SSA)",
+    "dataset_url": "https://bmirds.github.io/MHIST/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 20,
@@ -157,6 +193,8 @@
     "patches": "1,392",
     "models": 8,
     "domain": "Osteosarcoma histopathology",
-    "labels": "Viable tumor, non-viable/necrotic, non-tumor"
+    "labels": "Viable tumor, non-viable/necrotic, non-tumor",
+    "dataset_url": "https://www.cancerimagingarchive.net/collection/osteosarcoma-tumor-assessment/",
+    "dataset_link_label": "Collection"
   }
 ]

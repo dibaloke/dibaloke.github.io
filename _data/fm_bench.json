@@ -5,7 +5,9 @@
     "segmented": "11,031",
     "features": "10,725",
     "magnifications": "20×, 10×, 5×, 40×",
-    "domain": "Pan-cancer histopathology linked to genomic and clinical data. The processed inventory spans 29 subcohorts, including breast (BRCA), lung adenocarcinoma (LUAD), lung squamous cell carcinoma (LUSC), and prostate adenocarcinoma (PRAD), supporting organ-specific and cross-cancer studies."
+    "domain": "Pan-cancer histopathology linked to genomic and clinical data. The processed inventory spans 29 subcohorts, including breast (BRCA), lung adenocarcinoma (LUAD), lung squamous cell carcinoma (LUSC), and prostate adenocarcinoma (PRAD), supporting organ-specific and cross-cancer studies.",
+    "dataset_url": "https://www.cancer.gov/ccg/research/genome-sequencing/tcga",
+    "dataset_link_label": "Project"
   },
   {
     "number": 2,
@@ -14,7 +16,9 @@
     "features": "10,615",
     "magnifications": "20×, 10×, 5×",
     "domain": "Prostate biopsy histopathology for automated cancer grading. The benchmark predicts ISUP grade groups 0–5, distinguishing non-cancerous tissue from progressively higher-grade prostate cancer.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://www.kaggle.com/competitions/prostate-cancer-grade-assessment",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 3,
@@ -31,7 +35,9 @@
     "features": "8,669",
     "magnifications": "20×, 10×, 5×",
     "domain": "Colorectal polyp classification and adenoma dysplasia grading. Public labels distinguish normal tissue, hyperplastic polyps, and tubular or tubulovillous adenomas with low- or high-grade dysplasia.",
-    "source_url": "https://github.com/EIDOSLAB/UNITOPATHO"
+    "source_url": "https://github.com/EIDOSLAB/UNITOPATHO",
+    "dataset_url": "https://ieee-dataport.org/open-access/unitopatho",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 5,
@@ -56,7 +62,9 @@
     "features": "5,481",
     "magnifications": "20×, 10×, 5×",
     "domain": "Multi-cancer histopathology linked to proteomic and molecular profiling. Patho-Bench includes mutation-prediction tasks across breast, colorectal, kidney, brain, head-and-neck, lung, and pancreatic cancer cohorts.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://proteomics.cancer.gov/data-portal",
+    "dataset_link_label": "Data portal"
   },
   {
     "number": 8,
@@ -65,7 +73,9 @@
     "features": "4,536",
     "magnifications": "20×, 10×, 5×",
     "domain": "Breast lesion subtyping across benign, atypical, in situ, and invasive disease. The supplied labels are B, PB, UDH, ADH, FEA, DCIS, and IC; Patho-Bench defines fine-grained and grouped slide-level classification tasks.",
-    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml"
+    "source_url": "https://github.com/mahmoodlab/Patho-Bench/blob/main/advanced_usage/configs/tasks.yaml",
+    "dataset_url": "https://www.bracs.icar.cnr.it/",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 9,
@@ -90,7 +100,9 @@
     "segmented": "1,883",
     "features": "1,883",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Cutaneous melanoma histopathology for studying prognosis and relapse. The focus is the relationship between primary-tumor morphology and subsequent clinical outcome."
+    "domain": "Cutaneous melanoma histopathology for studying prognosis and relapse. The focus is the relationship between primary-tumor morphology and subsequent clinical outcome.",
+    "dataset_url": "https://www.drivendata.org/competitions/148/visiomel-melanoma/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 12,
@@ -98,7 +110,9 @@
     "segmented": "1,229",
     "features": "431",
     "magnifications": "20×, 10×, 5×, 40×",
-    "domain": "Breast-cancer metastasis detection in lymph-node histopathology. Supports identifying tumor-containing slides and localizing metastatic regions within otherwise non-tumor lymph-node tissue."
+    "domain": "Breast-cancer metastasis detection in lymph-node histopathology. Supports identifying tumor-containing slides and localizing metastatic regions within otherwise non-tumor lymph-node tissue.",
+    "dataset_url": "https://camelyon16.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 13,
@@ -114,7 +128,9 @@
     "segmented": "1,100",
     "features": "1,000",
     "magnifications": "20×, 10×, 5×, 40×",
-    "domain": "Breast-cancer lymph-node assessment with patient-level pathological nodal staging. Combines evidence across a patient’s lymph-node slides to classify nodal involvement rather than only detecting an individual tumor region."
+    "domain": "Breast-cancer lymph-node assessment with patient-level pathological nodal staging. Combines evidence across a patient’s lymph-node slides to classify nodal involvement rather than only detecting an individual tumor region.",
+    "dataset_url": "https://camelyon17.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 15,
@@ -122,7 +138,9 @@
     "segmented": "971",
     "features": "971",
     "magnifications": "20×",
-    "domain": "Normal, non-cancer human tissue histopathology spanning multiple organs. Provides a reference for tissue morphology and for comparing normal tissue representations across anatomical sites."
+    "domain": "Normal, non-cancer human tissue histopathology spanning multiple organs. Provides a reference for tissue morphology and for comparing normal tissue representations across anatomical sites.",
+    "dataset_url": "https://gtexportal.org/home/",
+    "dataset_link_label": "Data portal"
   },
   {
     "number": 16,
@@ -138,7 +156,9 @@
     "segmented": "810",
     "features": "810",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Human Cancer Models Initiative histopathology associated with cancer-model development. Connects tumor-tissue morphology with the broader study of patient-derived cancer models and their molecular characteristics."
+    "domain": "Human Cancer Models Initiative histopathology associated with cancer-model development. Connects tumor-tissue morphology with the broader study of patient-derived cancer models and their molecular characteristics.",
+    "dataset_url": "https://hcmi-searchable-catalog.nci.nih.gov/",
+    "dataset_link_label": "Catalog"
   },
   {
     "number": 18,
@@ -146,7 +166,9 @@
     "segmented": "754",
     "features": "737",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Histopathology of blood clots retrieved from ischemic-stroke patients. The supplied task distinguishes cardioembolic (CE) from large-artery atherosclerosis (LAA) stroke etiologies using clot morphology."
+    "domain": "Histopathology of blood clots retrieved from ischemic-stroke patients. The supplied task distinguishes cardioembolic (CE) from large-artery atherosclerosis (LAA) stroke etiologies using clot morphology.",
+    "dataset_url": "https://www.kaggle.com/competitions/mayo-clinic-strip-ai",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 19,
@@ -155,7 +177,9 @@
     "features": "640",
     "magnifications": "20×, 10×, 5×",
     "domain": "Dermatopathology of cutaneous spindle-cell neoplasms, covering lesions from benign to malignant. The public dataset provides multiclass annotations from expert and trainee pathologists for studying diagnostically challenging skin tumors.",
-    "source_url": "https://github.com/vipgugr/AI4SkIN-technical-validation"
+    "source_url": "https://github.com/vipgugr/AI4SkIN-technical-validation",
+    "dataset_url": "https://doi.org/10.6084/m9.figshare.27118035",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 20,
@@ -171,7 +195,9 @@
     "segmented": "542",
     "features": "538",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Ovarian carcinoma histotyping from whole-slide histology. The task distinguishes major ovarian cancer histotypes, supporting evaluation of tumor-subtype recognition across morphologically distinct ovarian cancers."
+    "domain": "Ovarian carcinoma histotyping from whole-slide histology. The task distinguishes major ovarian cancer histotypes, supporting evaluation of tumor-subtype recognition across morphologically distinct ovarian cancers.",
+    "dataset_url": "https://www.kaggle.com/competitions/UBC-OCEAN",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 22,
@@ -187,7 +213,9 @@
     "segmented": "499",
     "features": "499",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Breast-tumor proliferation assessment from histopathology. The challenge connects tissue morphology and mitotic activity with tumor-proliferation scoring."
+    "domain": "Breast-tumor proliferation assessment from histopathology. The challenge connects tissue morphology and mitotic activity with tumor-proliferation scoring.",
+    "dataset_url": "https://tupac.tue-image.nl/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 24,
@@ -195,7 +223,10 @@
     "segmented": "483",
     "features": "483",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Cohort identified in the supplied inventory as pancreatic adenocarcinoma. Its exact public dataset mapping, diagnostic categories, and clinical endpoints have not been confirmed."
+    "domain": "Prostate-cancer histopathology for predicting biochemical recurrence after prostatectomy. The LEOPARD study includes follow-up data from multiple cohorts; its project repository identifies the publicly released development data.",
+    "dataset_url": "https://github.com/DIAGNijmegen/leopard-challenge",
+    "dataset_link_label": "Project",
+    "source_url": "https://github.com/DIAGNijmegen/leopard-challenge"
   },
   {
     "number": 25,
@@ -203,7 +234,9 @@
     "segmented": "449",
     "features": "449",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Head-and-neck squamous cell carcinoma histopathology in a multimodal clinical-research setting. Supports studying tumor morphology alongside associated clinical information."
+    "domain": "Head-and-neck squamous cell carcinoma histopathology in a multimodal clinical-research setting. Supports studying tumor morphology alongside associated clinical information.",
+    "dataset_url": "https://hancock.research.fau.eu/download",
+    "dataset_link_label": "Dataset"
   },
   {
     "number": 26,
@@ -220,7 +253,9 @@
     "segmented": "400",
     "features": "400",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Breast histology classified into four categories: normal, benign, in situ carcinoma, and invasive carcinoma. Supports evaluating progression-aware diagnostic classification across benign and malignant tissue patterns."
+    "domain": "Breast histology classified into four categories: normal, benign, in situ carcinoma, and invasive carcinoma. Supports evaluating progression-aware diagnostic classification across benign and malignant tissue patterns.",
+    "dataset_url": "https://iciar2018-challenge.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 28,
@@ -229,7 +264,9 @@
     "features": "314",
     "magnifications": "20×",
     "domain": "Automated Gleason grading in prostate whole-slide histopathology. The challenge evaluates recognition of prostate-cancer growth patterns for grading.",
-    "source_url": "https://github.com/MIC-DKFZ/AGGC2022"
+    "source_url": "https://github.com/MIC-DKFZ/AGGC2022",
+    "dataset_url": "https://aggc22.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 29,
@@ -238,7 +275,9 @@
     "features": "282",
     "magnifications": "20×, 10×, 5×",
     "domain": "Epithelial lesions in cervical biopsies. The challenge classifies the most severe lesion present into four categories: benign, low malignant potential, high malignant potential, or invasive cancer.",
-    "source_url": "https://github.com/drivendataorg/tissuenet-cervical-biopsies"
+    "source_url": "https://github.com/drivendataorg/tissuenet-cervical-biopsies",
+    "dataset_url": "https://www.drivendata.org/competitions/67/competition-cervical-biopsy/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 30,
@@ -254,7 +293,9 @@
     "segmented": "215",
     "features": "0 (seg only)",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Lung histopathology associated with the National Lung Screening Trial. This inventory currently contains segmented slides only."
+    "domain": "Lung histopathology associated with the National Lung Screening Trial. This inventory currently contains segmented slides only.",
+    "dataset_url": "https://www.cancerimagingarchive.net/collection/nlst/",
+    "dataset_link_label": "Collection"
   },
   {
     "number": 32,
@@ -296,7 +337,9 @@
     "segmented": "82",
     "features": "82",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Breast-cancer histopathology focused on tumor-infiltrating lymphocytes (TILs). Supports studying the immune microenvironment and the relationship between immune-cell presence and tumor tissue."
+    "domain": "Breast-cancer histopathology focused on tumor-infiltrating lymphocytes (TILs). Supports studying the immune microenvironment and the relationship between immune-cell presence and tumor tissue.",
+    "dataset_url": "https://tiger.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 37,
@@ -305,7 +348,9 @@
     "features": "75",
     "magnifications": "20×, 10×, 5×",
     "domain": "Colorectal-cancer histopathology with survival and genetic-marker annotations. Public data include KRAS, NRAS, BRAF, mismatch-repair status, and five-year survival information, with primary colorectal tumors and metastatic sites represented.",
-    "source_url": "https://github.com/CraigMyles/SurGen-Dataset"
+    "source_url": "https://github.com/CraigMyles/SurGen-Dataset",
+    "dataset_url": "https://doi.org/10.6019/S-BIAD1285",
+    "dataset_link_label": "Data release"
   },
   {
     "number": 38,
@@ -313,7 +358,9 @@
     "segmented": "50",
     "features": "50",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Liver-cancer histopathology focused on hepatocellular carcinoma. Supports evaluating tumor-region recognition and segmentation within whole-slide tissue images."
+    "domain": "Liver-cancer histopathology focused on hepatocellular carcinoma. Supports evaluating tumor-region recognition and segmentation within whole-slide tissue images.",
+    "dataset_url": "https://paip2019.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   },
   {
     "number": 39,
@@ -321,6 +368,8 @@
     "segmented": "47",
     "features": "47",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Colorectal-cancer histopathology for microsatellite-instability (MSI) prediction. Relates tumor morphology to molecular instability status rather than only to a visual histological subtype."
+    "domain": "Colorectal-cancer histopathology for microsatellite-instability (MSI) prediction. Relates tumor morphology to molecular instability status rather than only to a visual histological subtype.",
+    "dataset_url": "https://paip2020.grand-challenge.org/",
+    "dataset_link_label": "Challenge"
   }
 ]
