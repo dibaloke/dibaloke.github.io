@@ -71,7 +71,7 @@
   },
   {
     "number": 8,
-    "dataset": "digestPath",
+    "dataset": "DigestPath",
     "patches": "70,379",
     "models": 29,
     "domain": "Digestive system & colonoscopy lesions",
