@@ -62,6 +62,8 @@
     url: https://mosaic-wacv2027.github.io/mosaic/
   - label: Code
     url: https://github.com/researchsubmissions66/MOSAIC
+  - label: arXiv
+    url: https://arxiv.org/abs/2610.33059v1
   status: accepted
   image_alt: MOSAIC illustration connecting UNI, CONCH, KEEP, VIRCHOW, MUSK, and PHIKON pathology foundation models
     around a shared representation.
