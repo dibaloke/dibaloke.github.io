@@ -243,7 +243,7 @@
   - label: arXiv
     url: https://arxiv.org/abs/2309.09921
   - label: Project
-    url: https://graphbasedmtl.github.io/heterogenous-graph-mtl-fault-diagonosis/
+    url: https://dibalokechanda.github.io/MTL-GNN/
   - label: Code
     url: https://github.com/Machine-Learning-Optimization-Data-Lab/Graph-Based-Fault-Detection-Data-Generation
   year: 2025
