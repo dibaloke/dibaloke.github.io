@@ -53,7 +53,8 @@
       "TCGA",
       "CPTAC",
       "EBRAINS",
-      "GTEx"
+      "GTEx",
+      "IPD-Brain"
     ],
     "x": 520,
     "y": 60,
@@ -70,7 +71,9 @@
       "TCGA",
       "CPTAC",
       "BRACS",
-      "GTEx"
+      "GTEx",
+      "ACROBAT",
+      "DROID-Breast (DRBR)"
     ],
     "x": 620,
     "y": 350,
@@ -101,7 +104,8 @@
       "TCGA",
       "UNITOPATHO",
       "COBRA",
-      "CPTAC"
+      "CPTAC",
+      "HTAN (Vanderbilt Atlas)"
     ],
     "x": 410,
     "y": 600,
@@ -174,7 +178,8 @@
       "TCGA",
       "CPTAC",
       "KidRare",
-      "GTEx"
+      "GTEx",
+      "MUT-HET-RCC"
     ],
     "x": 420,
     "y": 536,
@@ -287,7 +292,8 @@
       "TCGA",
       "PANDA",
       "GTEx",
-      "CMB (Cancer Moonshot Biobank)"
+      "CMB (Cancer Moonshot Biobank)",
+      "DiagSet"
     ],
     "illustrated": false
   },
@@ -377,7 +383,8 @@
     "examples": [
       "TCGA",
       "GTEx",
-      "CMB (Cancer Moonshot Biobank)"
+      "CMB (Cancer Moonshot Biobank)",
+      "Gastritis_WSI"
     ],
     "x": 532,
     "y": 460,
@@ -450,7 +457,8 @@
     "examples": [
       "TCGA",
       "CPTAC",
-      "GTEx"
+      "GTEx",
+      "ENDOMETRIAL_WSI (S-BIAD1199)"
     ],
     "illustrated": false
   },

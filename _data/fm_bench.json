@@ -396,5 +396,87 @@
     "domain": "Colorectal-cancer histopathology for microsatellite-instability (MSI) prediction. Relates tumor morphology to molecular instability status rather than only to a visual histological subtype.",
     "dataset_url": "https://paip2020.grand-challenge.org/",
     "dataset_link_label": "Challenge"
+  },
+  {
+    "number": 40,
+    "dataset": "MUT-HET-RCC",
+    "inventory": "1,292 WSIs (.svs)",
+    "storage": "~475 GB",
+    "status": "Fully downloaded",
+    "domain": "Clear cell renal cell carcinoma (ccRCC): multi-region whole-slide histopathology paired with targeted exome sequencing to study intratumoral clonal heterogeneity and driver mutations (VHL, PBRM1, BAP1, SETD2).",
+    "source_label": "Acosta et al., Cancer Research (2022)"
+  },
+  {
+    "number": 41,
+    "dataset": "ENDOMETRIAL_WSI (S-BIAD1199)",
+    "inventory": "1,851 WSIs (.isyntax); 2,910 GeoJSONs; 2,724 CSVs",
+    "storage": "~3.16 TB",
+    "status": "Downloaded",
+    "domain": "Endometrial biopsy and resection histopathology for normal, benign, and malignant lesion classification, diagnostic grading, and nuclear morphometry.",
+    "source_label": "BioImage Archive S-BIAD1199",
+    "dataset_url": "https://www.ebi.ac.uk/bioimage-archive/studies/S-BIAD1199/",
+    "dataset_link_label": "Dataset"
+  },
+  {
+    "number": 42,
+    "dataset": "Gastritis_WSI",
+    "inventory": "798 WSIs (.tif)",
+    "storage": "~250 GB",
+    "status": "Downloaded",
+    "domain": "Chronic gastritis assessment: paired gastric antrum and corpus biopsies scanned at 40× for grading inflammation, activity, atrophy, and intestinal metaplasia under the updated Sydney System.",
+    "source_label": "ScienceDB",
+    "dataset_url": "https://doi.org/10.57760/sciencedb.19700",
+    "dataset_link_label": "Dataset"
+  },
+  {
+    "number": 43,
+    "dataset": "IPD-Brain",
+    "inventory": "547 WSIs (.tiff)",
+    "storage": "~744 GB",
+    "status": "Downloaded",
+    "domain": "Neuropathology: high-resolution CNS slides from 367 patients spanning astrocytomas, oligodendrogliomas, glioblastomas, meningiomas, and schwannomas, accompanied by clinical annotations.",
+    "source_label": "IBDC / IBIA, Scientific Data (2024)"
+  },
+  {
+    "number": 44,
+    "dataset": "ACROBAT",
+    "inventory": "4,212 WSIs",
+    "storage": "~477 GB archives",
+    "status": "Stored as archives",
+    "domain": "Primary breast cancer (CHIME cohort): matched H&E and routine diagnostic IHC (ER, PR, HER2, Ki-67) from 1,153 patients, scanned at 10× on Hamamatsu scanners for slide registration and multi-stain learning.",
+    "source_label": "Karolinska Institutet / Grand Challenge",
+    "dataset_url": "https://acrobat.grand-challenge.org/",
+    "dataset_link_label": "Dataset"
+  },
+  {
+    "number": 45,
+    "dataset": "HTAN (Vanderbilt Atlas)",
+    "inventory": "45 gigapixel WSIs (.tif)",
+    "storage": "~120 GB",
+    "status": "Available locally",
+    "domain": "Colorectal precancer and polyp progression: whole-slide histology (1.6–4.4 GB per slide) linked to single-cell and spatial omics profiling (.h5ad) from the Human Tumor Atlas Network.",
+    "source_label": "NCI HTAN",
+    "dataset_url": "https://humantumoratlas.org/",
+    "dataset_link_label": "Dataset"
+  },
+  {
+    "number": 46,
+    "dataset": "DROID-Breast (DRBR)",
+    "inventory": "361 WSIs (.ndpi)",
+    "storage": "~500.8 GB cataloged",
+    "status": "Configured; download completion not confirmed",
+    "domain": "Invasive and benign breast pathology: 40× single-plane Hamamatsu scans with 4,144 manual pathologist segmentations across invasive ductal carcinoma, invasive lobular carcinoma, DCIS, and benign conditions.",
+    "source_label": "AIDA Data Hub",
+    "dataset_url": "https://doi.org/10.23698/aida/drbr",
+    "dataset_link_label": "Dataset"
+  },
+  {
+    "number": 47,
+    "dataset": "DiagSet",
+    "inventory": "5,151 WSIs (cataloged)",
+    "storage": "Not supplied",
+    "status": "Downloader and catalog available",
+    "domain": "Prostate cancer histopathology: 40× Hamamatsu scans across DiagSet-A (430 fully annotated WSIs with Gleason R1–R5), DiagSet-B (4,675 cancer-detection scans), and DiagSet-C (46 multi-pathologist consensus slides).",
+    "source_label": "Koziarski et al., Scientific Reports (2024)"
   }
 ]
