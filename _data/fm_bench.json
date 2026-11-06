@@ -197,7 +197,11 @@
     "segmented": "609",
     "features": "609",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Prostate adenocarcinoma histopathology cohort in the supplied inventory. The exact public release and any Gleason-grade, treatment, or outcome labels are not established by the identifier alone."
+    "domain": "Prostate core needle biopsy histopathology from PAR Hospital in Erbil, Iraq. The public release includes matched scans from three scanners and independent Gleason-score and ISUP-grade annotations from three pathologists, supporting cancer grading and cross-scanner evaluation.",
+    "dataset_url": "https://doi.org/10.6019/S-BIAD2323",
+    "dataset_link_label": "Data release",
+    "publication_url": "https://doi.org/10.1038/s41597-026-07798-9",
+    "publication_label": "Scientific Data (2026)"
   },
   {
     "number": 21,
@@ -334,7 +338,11 @@
     "segmented": "177",
     "features": "177",
     "magnifications": "20×, 10×, 5×",
-    "domain": "Colorectal-cancer liver-metastasis histopathology in the supplied inventory. Intended for studying metastatic tumor morphology in a clinical-treatment setting; the exact public release and available response or survival labels need confirmation."
+    "domain": "Colorectal-cancer histopathology from the VALENTINO clinical cohort, released alongside BRAF and MISSONI in BioImage Archive study S-BIAD1407. Supports studying immune and endothelial cell spatial patterns and their association with progression-free survival and treatment outcomes.",
+    "dataset_url": "https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BIAD1407",
+    "dataset_link_label": "Data release",
+    "publication_url": "https://doi.org/10.1002/path.6378",
+    "publication_label": "Journal of Pathology (2025)"
   },
   {
     "number": 34,
@@ -403,8 +411,12 @@
     "inventory": "1,292 WSIs (.svs)",
     "storage": "~475 GB",
     "status": "Fully downloaded",
-    "domain": "Clear cell renal cell carcinoma (ccRCC): multi-region whole-slide histopathology paired with targeted exome sequencing to study intratumoral clonal heterogeneity and driver mutations (VHL, PBRM1, BAP1, SETD2).",
-    "source_label": "Acosta et al., Cancer Research (2022)"
+    "domain": "Clear cell renal cell carcinoma histopathology for predicting BAP1, PBRM1, and SETD2 loss and resolving intratumoral heterogeneity. H&E whole-slide images are paired with gene-status labels derived from matched immunohistochemistry.",
+    "source_label": "Acosta et al., Cancer Research (2022)",
+    "dataset_url": "https://doi.org/10.25452/figshare.plus.19310870",
+    "dataset_link_label": "Data release",
+    "publication_url": "https://doi.org/10.1158/0008-5472.CAN-21-2318",
+    "publication_label": "Cancer Research (2022)"
   },
   {
     "number": 41,
@@ -435,7 +447,11 @@
     "storage": "~744 GB",
     "status": "Downloaded",
     "domain": "Neuropathology: high-resolution CNS slides from 367 patients spanning astrocytomas, oligodendrogliomas, glioblastomas, meningiomas, and schwannomas, accompanied by clinical annotations.",
-    "source_label": "IBDC / IBIA, Scientific Data (2024)"
+    "source_label": "IBDC / IBIA, Scientific Data (2024)",
+    "dataset_url": "https://ibdc.dbt.gov.in/ibia/study_details_browse/HISTOS_1000000035/",
+    "dataset_link_label": "Data portal",
+    "publication_url": "https://doi.org/10.1038/s41597-024-04225-9",
+    "publication_label": "Scientific Data (2024)"
   },
   {
     "number": 44,
@@ -477,6 +493,10 @@
     "storage": "Not supplied",
     "status": "Downloader and catalog available",
     "domain": "Prostate cancer histopathology: 40× Hamamatsu scans across DiagSet-A (430 fully annotated WSIs with Gleason R1–R5), DiagSet-B (4,675 cancer-detection scans), and DiagSet-C (46 multi-pathologist consensus slides).",
-    "source_label": "Koziarski et al., Scientific Reports (2024)"
+    "source_label": "Koziarski et al., Scientific Reports (2024)",
+    "dataset_url": "https://github.com/michalkoziarski/DiagSet",
+    "dataset_link_label": "Project",
+    "publication_url": "https://doi.org/10.1038/s41598-024-52183-4",
+    "publication_label": "Scientific Reports (2024)"
   }
 ]
