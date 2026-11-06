@@ -19,7 +19,7 @@ fm_bench: true
 <section class="fm-inventory" aria-labelledby="fm-datasets-title" data-fm-inventory>
   <div class="section-heading"><h2 id="fm-datasets-title">WSI Dataset Inventory</h2></div>
   <label class="fm-search" hidden data-fm-search-label>Search datasets or pathology domains<input type="search" data-fm-search placeholder="e.g., TCGA, prostate, brain" aria-controls="fm-dataset-rows"></label>
-  <p class="fm-note" id="fm-table-note">The inventory includes processed datasets and additional downloaded, archived, or cataloged collections; availability does not imply completed processing. Counts, approximate storage sizes, and availability for new entries reflect the supplied inventory. Original sources link to dataset releases, official challenges, provider portals, or dataset-author projects. “Not verified” means the inventory identifier could not be confidently matched to a public source.</p>
+  <p class="fm-note" id="fm-table-note">The inventory includes processed datasets and additional downloaded, archived, or cataloged collections; availability does not imply completed processing. Original sources link to dataset releases, official challenges, provider portals, or dataset-author projects. “Not verified” means the inventory identifier could not be confidently matched to a public source.</p>
   <p class="fm-result-count" data-fm-count aria-live="polite">{{ site.data.fm_bench | size }} datasets</p>
   <div class="fm-table-wrap" role="region" aria-label="WSI dataset inventory" tabindex="0" aria-describedby="fm-table-note">
     <table class="fm-table">
@@ -27,7 +27,7 @@ fm_bench: true
       <thead><tr><th scope="col">#</th><th scope="col">Dataset</th><th scope="col">Organ / Pathology Domain &amp; Research Tasks</th><th scope="col" class="fm-original-source">Original Source</th></tr></thead>
       <tbody id="fm-dataset-rows">
         {% for row in site.data.fm_bench %}
-        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}{% if row.inventory %}<p>{{ row.inventory | escape }}<br>{{ row.storage | escape }}<br>{{ row.status | escape }}</p>{% endif %}</th><td><p>{{ row.domain | escape }}</p></td><td class="fm-original-source">{% include academic/dataset-source.html row=row %}</td></tr>
+        <tr><td>{{ row.number }}</td><th scope="row">{{ row.dataset | escape }}</th><td><p>{{ row.domain | escape }}</p></td><td class="fm-original-source">{% include academic/dataset-source.html row=row %}</td></tr>
         {% endfor %}
       </tbody>
     </table>
