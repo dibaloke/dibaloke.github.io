@@ -176,6 +176,12 @@
     - title: LLM Visualization
       description: An interactive visualization of nanoGPT
       url: https://bbycroft.net/llm
+    - title: CNN Explainer
+      description: Explore how convolutional neural networks work through interactive visualizations.
+      url: https://poloclub.github.io/cnn-explainer/
+    - title: Transformer Explainer
+      description: Explore how transformers generate text through interactive visualizations of attention and predictions.
+      url: https://poloclub.github.io/transformer-explainer/
   - title: Online books
     items:
     - title: Dive into Deep Learning
