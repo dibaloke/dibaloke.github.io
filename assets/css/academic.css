@@ -530,10 +530,21 @@ html:not(.js) .work-arrow{display:none}
 @media(max-width:700px){.work-image--figure{padding:12px}}
 
 /* Curated collections on the writing page. */
-.writing-collection{margin-top:56px;padding-top:36px;border-top:1px solid var(--line);scroll-margin-top:100px}
-.writing-collection .section-heading{margin-bottom:24px}
+.writing-navigation{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px;padding:16px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius)}
+.writing-navigation a{padding:10px 16px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-weight:650;background:var(--paper)}
+.writing-navigation a:hover,.writing-navigation a:focus-visible{background:var(--accent);color:white}
+.writing-overview{scroll-margin-top:100px}
+.writing-overview>h2{font-size:32px;margin-bottom:24px}
+.writing-collection{--collection-accent:#405dd2;--collection-tint:#e9edfc;margin-top:64px;padding-top:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;scroll-margin-top:100px;background:var(--white)}
+.writing-collection#reading-list{--collection-accent:#80417c;--collection-tint:#f5eaf4}
+.writing-collection#beyond-the-syllabus{--collection-accent:#216759;--collection-tint:#e5f2ed}
+.writing-collection .section-heading{margin-bottom:32px;padding:30px 32px;background:var(--collection-tint);border-top:5px solid var(--collection-accent)}
+.writing-collection .section-heading h2{font-size:36px;line-height:1.2;color:var(--collection-accent)}
+.writing-collection .section-heading .eyebrow{color:var(--collection-accent)}
+.writing-collection>.writing-group{margin-left:32px;margin-right:32px}
+.writing-collection>.text-link{margin:0 32px 30px}
 .writing-group{margin-bottom:28px}
-.writing-group>h3{font-size:21px;margin-bottom:12px}
+.writing-group>h3{font-size:21px;margin-bottom:12px;padding:10px 14px;border-left:3px solid var(--collection-accent);background:var(--paper);border-radius:0 6px 6px 0}
 .writing-resource-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
 .writing-resource-list>li{min-width:0;padding:18px 0;border-bottom:1px solid var(--line)}
 .writing-resource-list h4{font-size:17px;line-height:1.5;margin:0 0 8px;overflow-wrap:anywhere}
@@ -541,4 +552,4 @@ html:not(.js) .work-arrow{display:none}
 .writing-resource-list h4 span{color:var(--accent)}
 .writing-resource-list p{font-size:14px;line-height:1.8;color:var(--muted);margin:0}
 .writing-resource-list .writing-provider{font-size:12px;margin-bottom:6px;color:var(--accent)}
-@media(max-width:700px){.writing-collection{margin-top:36px;padding-top:26px}.writing-resource-list{grid-template-columns:1fr}.writing-group>h3{font-size:19px}.writing-resource-list h4{font-size:16px}.writing-resource-list p{font-size:13px}}
+@media(max-width:700px){.writing-navigation{gap:8px;padding:12px}.writing-navigation a{font-size:12px;padding:9px 12px}.writing-overview>h2{font-size:27px}.writing-collection{margin-top:36px}.writing-collection .section-heading{padding:24px 20px;margin-bottom:24px}.writing-collection .section-heading h2{font-size:29px}.writing-collection>.writing-group{margin-left:20px;margin-right:20px}.writing-collection>.text-link{margin-left:20px;margin-right:20px}.writing-resource-list{grid-template-columns:1fr}.writing-group>h3{font-size:19px}.writing-resource-list h4{font-size:16px}.writing-resource-list p{font-size:13px}}

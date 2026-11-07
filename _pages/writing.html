@@ -6,25 +6,38 @@ description: "Technical writing, lecture notes, and curated resources on deep le
 ---
 <header class="page-heading">
   <h1>Writing &amp; Resources</h1>
-  </header>
+  <p class="page-intro">Research writing, courses, blogs, and tools for learning.</p>
+</header>
 
+<nav class="writing-navigation" aria-label="Writing sections">
+  <a href="#writing-guides">Writing &amp; notes</a>
+  {% for collection in site.data.writing_collections %}
+  <a href="#{{ collection.id }}">{{ collection.section_title | escape }}</a>
+  {% endfor %}
+</nav>
+
+<section class="writing-overview" id="writing-guides" aria-labelledby="writing-guides-title">
+<h2 id="writing-guides-title">Writing &amp; notes</h2>
 <div class="resource-grid">
   {% for resource in site.data.writing %}
+  {% unless resource.collection %}
   <article class="resource-card">
     <p class="card-label">{{ resource.category }}</p>
     <h2><a href="{{ resource.url }}">{{ resource.title }} <span aria-hidden="true">{% if resource.collection %}↓{% else %}↗{% endif %}</span></a></h2>
     <p>{{ resource.description }}</p>
     <a class="text-link" href="{{ resource.url }}">{% if resource.collection %}Browse collection <span aria-hidden="true">↓</span>{% else %}Explore resource <span aria-hidden="true">↗</span>{% endif %}</a>
   </article>
+  {% endunless %}
   {% endfor %}
 </div>
+</section>
 
 {% for collection in site.data.writing_collections %}
 <section class="writing-collection" id="{{ collection.id }}" aria-labelledby="{{ collection.id }}-title">
   <header class="section-heading">
     <div>
-      <p class="eyebrow">{{ collection.category | escape }}</p>
-      <h2 id="{{ collection.id }}-title">{{ collection.title | escape }}</h2>
+      <p class="eyebrow">Collection {{ forloop.index }} · {{ collection.title | escape }}</p>
+      <h2 id="{{ collection.id }}-title">{{ collection.section_title | escape }}</h2>
       <p>{{ collection.description | escape }}</p>
     </div>
   </header>

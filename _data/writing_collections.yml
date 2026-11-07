@@ -113,6 +113,7 @@
       description: A GitHub repo which contains a list of courses and resources for convex optimization
         courses
       url: https://github.com/ebrahimpichka/awesome-optimization
+  section_title: Courses
 - id: reading-list
   title: A reading list for curious minds
   category: Reading list
@@ -146,6 +147,7 @@
     - title: Bounded Rationality
       description: Cover different topics in Deep Learning and Bayesian Inference
       url: https://bjlkeng.io/
+  section_title: Blogs & reading
 - id: beyond-the-syllabus
   title: Beyond the syllabus
   category: Learning resources
@@ -193,3 +195,4 @@
     - title: Hands-On-Large-Language-Models
       description: Code examples from the book Hands-On Large Language Models
       url: https://github.com/HandsOnLLM/Hands-On-Large-Language-Models
+  section_title: Interactive tools & books
