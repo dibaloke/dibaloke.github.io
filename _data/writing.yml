@@ -1,3 +1,8 @@
+- title: 'The Reviewer-Proof Paper Playbook'
+  description: 'A checklist-driven guide to writing research papers, covering narrative, prose, literature, methodology, experiments, visualization, failure analysis, and rebuttals.'
+  url: /files/The_Reviewer_Proof_Paper_Playbook.pdf
+  category: Research writing guide
+
 - title: 'Notes on machine learning'
   description: 'Deep learning architectures, PyTorch, statistics, and the ideas behind machine learning.'
   url: https://dibalokechanda.github.io/
