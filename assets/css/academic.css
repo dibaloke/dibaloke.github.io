@@ -534,6 +534,8 @@ html:not(.js) .work-arrow{display:none}
 .writing-navigation a{padding:10px 16px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-weight:650;background:var(--paper)}
 .writing-navigation a:hover,.writing-navigation a:focus-visible{background:var(--accent);color:white}
 .writing-overview{scroll-margin-top:100px}
+.writing-section-title{display:flex;align-items:center;gap:12px}
+.writing-section-icon{width:.9em;height:.9em;flex-shrink:0}
 .writing-overview>h2{font-size:32px;margin-bottom:24px}
 .writing-collection{--collection-accent:#405dd2;--collection-tint:#e9edfc;margin-top:64px;padding-top:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;scroll-margin-top:100px;background:var(--white)}
 .writing-collection#reading-list{--collection-accent:#80417c;--collection-tint:#f5eaf4}

@@ -17,7 +17,7 @@ description: "Technical writing, lecture notes, and curated resources on deep le
 </nav>
 
 <section class="writing-overview" id="writing-guides" aria-labelledby="writing-guides-title">
-<h2 id="writing-guides-title">Writing &amp; notes</h2>
+<h2 class="writing-section-title" id="writing-guides-title">{% include academic/writing-icon.html section="writing-guides" %}<span>Writing &amp; notes</span></h2>
 <div class="resource-grid">
   {% for resource in site.data.writing %}
   {% unless resource.collection %}
@@ -37,7 +37,7 @@ description: "Technical writing, lecture notes, and curated resources on deep le
   <header class="section-heading">
     <div>
       <p class="eyebrow">Collection {{ forloop.index }} · {{ collection.title | escape }}</p>
-      <h2 id="{{ collection.id }}-title">{{ collection.section_title | escape }}</h2>
+      <h2 class="writing-section-title" id="{{ collection.id }}-title">{% include academic/writing-icon.html section=collection.id %}<span>{{ collection.section_title | escape }}</span></h2>
       <p>{{ collection.description | escape }}</p>
     </div>
   </header>
