@@ -15,15 +15,18 @@
 
 - title: 'Courses worth keeping'
   description: 'A curated collection of courses in deep learning and related topics.'
-  url: https://github.com/dibaloke/DL-ML-Courses/tree/main
+  url: '#courses'
+  collection: true
   category: Learning resources
 
 - title: 'A reading list for curious minds'
   description: 'Technical blog posts on deep learning, collected in one place.'
-  url: https://github.com/dibaloke/DL-ML-Blogs
+  url: '#reading-list'
+  collection: true
   category: Reading list
 
 - title: 'Beyond the syllabus'
   description: 'Interactive websites, books, and other resources on deep learning, statistics, and mathematics.'
-  url: https://github.com/dibaloke/others
+  url: '#beyond-the-syllabus'
+  collection: true
   category: Learning resources

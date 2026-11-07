@@ -1,0 +1,195 @@
+- id: courses
+  title: Courses worth keeping
+  category: Learning resources
+  description: A curated collection of courses in deep learning and related topics.
+  source: https://github.com/dibaloke/DL-ML-Courses
+  groups:
+  - title: Machine Learning
+    items:
+    - title: Foundations of Machine Learning
+      description: This course covers a wide variety of topics in machine learning and statistical modeling
+      url: https://bloomberg.github.io/foml/#about
+      provider: Bloomberg
+    - title: UvA - Machine Learning 1
+      description: Topics in machine learning
+      url: https://uvaml1.github.io/
+      provider: University of Amsterdam
+    - title: MSSC 6250 - Statistical Machine Learning
+      description: Intro topics in machine learning
+      url: https://mssc6250-s24.github.io/website/
+      provider: Marquette University
+    - title: DatA414 Introduction to machine learning
+      description: Intro topics in machine learning
+      url: https://www.kamperh.com/data414/
+    - title: MATH 4780 - Regression Analysis
+      description: Intro topics in regression
+      url: https://math4780-f23.github.io/website/
+      provider: Marquette University
+  - title: Advanced Topics in Machine Learning
+    items:
+    - title: 'CSC412/2506 Winter 2020: Probabilistic Learning and Reasoning'
+      description: Advanced topics in Probabilistic Machine Learning
+      url: https://probmlcourse.github.io/csc412/
+      provider: University of Toronto
+    - title: 10-708 Probabilistic Graphical Models
+      description: Introduction and Advanced topics in PGM
+      url: https://www.cs.cmu.edu/~epxing/Class/10708-20/lectures.html
+  - title: Deep Learning
+    items:
+    - title: Deep Learning for Computer Vision, Winter 2022
+      description: Basic and Advanced topics in deep learning
+      url: https://web.eecs.umich.edu/~justincj/teaching/eecs498/WI2022/
+      provider: University of Michigan
+    - title: Deep Learning from the University of Tübingen
+      description: Intro topics of deep learning
+      url: https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/lectures/deep-learning/
+      provider: University of Tübingen
+    - title: CS 182 Designing, Visualizing and Understanding Deep Neural Networks
+      description: Basic and Advanced topics in deep learning
+      url: https://www.youtube.com/watch?v=rSY1pVGdZ4I&list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A&pp=iAQB
+      provider: UC Berkeley
+    - title: Virginia Tech Fall 2015 Machine Learning
+      description: Basic concepts of Machine Learning (Rigorous Mathematics)
+      url: https://www.youtube.com/watch?v=gZkQYANS5Mo&list=PLUenpfvlyoa0rMoE5nXA8kdctBKE9eSob
+      provider: Virginia Tech
+  - title: Advanced Topics in Deep Learning
+    items:
+    - title: Multi-Modal Machine Learning, Fall 2023
+      description: 'The fundamental mathematical concepts in machine learning and deep learning relevant
+        to the five main challenges in multimodal machine learning: (1) multimodal representation learning
+        (2) translation & mapping (3) modality alignment (4) multimodal fusion (5) co-learning'
+      url: https://cmu-multicomp-lab.github.io/mmml-course/fall2022/
+      provider: CMU
+    - title: 'CS 330: Deep Multi-Task and Meta Learning, Fall 2023'
+      description: self-supervised pre-training for downstream few-shot learning and transfer learning
+        meta-learning methods that aim to learn efficient learning algorithms that can learn new tasks
+        quickly curriculum and lifelong learning, where the problem requires learning a sequence of tasks,
+        leveraging their shared structure to enable knowledge transfer
+      url: https://cs330.stanford.edu/
+      provider: Stanford
+    - title: 'COMP547: Deep Unsupervised Learning, Spring 2021'
+      description: This class will provide an in-depth and comprehensive overview of the fundamental concepts
+        and recent advances in the field of deep unsupervised learning. The first part of the course focuses
+        on deep generative models such as autoregressive models, normalizing flow models, variational
+        autoencoders, generative adversarial networks and their extensions with discrete latent variables.
+        The second part covers self-supervised learning, including pretraining of large language models
+      url: https://aykuterdem.github.io/classes/comp547.s21/index.html
+    - title: Deep Generative Models CS236 - Fall 2023
+      description: The course will also discuss application areas that have benefitted from deep generative
+        models, including computer vision, speech and natural language processing, graph mining, reinforcement
+        learning, reliable machine learning, and inverse problem solving
+      url: https://deepgenerativemodels.github.io/
+      provider: Stanford University
+    - title: 'CS 886: Recent Advances on Foundation Models, Winter 2024'
+      description: Advanced and recent topics
+      url: https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/
+      provider: University of Waterloo
+    - title: UvA - An Introduction to Group Equivariant Deep Learning
+      description: Group Equivariant Deep Learning
+      url: https://uvagedl.github.io/
+    - title: CS 285 Deep Reinforcement Learning
+      description: Introductory topics in RL
+      url: https://www.youtube.com/watch?v=SupFHGbytvA&list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps&pp=iAQB
+      provider: UC Berkeley
+    - title: 'CS224N: Natural Language Processing with Deep Learning'
+      description: Intro and Advanced topics in NLP
+      url: https://web.stanford.edu/class/cs224n/
+      provider: Stanford
+    - title: 'CS 198-126: Modern Computer Vision'
+      description: Intro topics in computer vision
+      url: https://ml-berkeley.notion.site/CS-198-126-Deep-Learning-for-Visual-Data-a57e2aca54c046edb7014439f81ba1d5
+      provider: UC Berkeley
+    - title: 'CS 11-711: Advanced NLP (Fall 2024)'
+      description: SOTA topics in NLP
+      url: https://www.youtube.com/playlist?list=PL8PYTP1V4I8D4BeyjwWczukWq9d8PNyZp
+      provider: CMU
+    - title: Deep Unsupervised Learning -- Berkeley Spring 2024
+      description: Beginner Level introduction, Covers GenAI topics
+      url: https://www.youtube.com/playlist?list=PLwRJQ4m4UJjPIvv4kgBkvu_uygrV3ut_U
+      provider: UC Berkeley
+  - title: Convex Optimization
+    items:
+    - title: Awesome Optimization Courses
+      description: A GitHub repo which contains a list of courses and resources for convex optimization
+        courses
+      url: https://github.com/ebrahimpichka/awesome-optimization
+- id: reading-list
+  title: A reading list for curious minds
+  category: Reading list
+  description: Technical blogs on deep learning, statistics, mathematics, and machine learning.
+  source: https://github.com/dibaloke/DL-ML-Blogs
+  groups:
+  - title: Blogs to follow
+    items:
+    - title: Gregory Gundersen Blog
+      description: Covers a wide range of topics from stats, math, machine learning, optimization, etc
+      url: https://gregorygundersen.com/
+    - title: Jake Tae Blog
+      description: Covers a wide range of topics but focuses on advance and SOTA deep learning architectures
+        and methods
+      url: https://jaketae.github.io/
+    - title: Lilian Weng Blog
+      description: Covers advanced SOTA topics in deep learning and cites a lot interesting papers
+      url: https://lilianweng.github.io/
+    - title: Maxime Labonne Blog
+      description: Covers topics include GNN and LLMs
+      url: https://mlabonne.github.io/blog/
+    - title: Ayan Das Blog
+      description: Covers advanced and SOTA topics in DL
+      url: https://ayandas.me/blogs.html
+    - title: Maurice Weiler Blog
+      description: Covers Geometric Deep Learning
+      url: https://maurice-weiler.gitlab.io/
+    - title: Hendrik J. Weideman Blog
+      description: Covers general concepts in Deep Learning
+      url: https://hjweide.github.io/
+    - title: Bounded Rationality
+      description: Cover different topics in Deep Learning and Bayesian Inference
+      url: https://bjlkeng.io/
+- id: beyond-the-syllabus
+  title: Beyond the syllabus
+  category: Learning resources
+  description: Interactive websites, books, and other resources on deep learning, statistics, and mathematics.
+  source: https://github.com/dibaloke/others
+  groups:
+  - title: Interactive Websites
+    items:
+    - title: matrixcalculus.org
+      description: If you want to perform some complex matrix and vector stuff this is your place to go.
+        I have used this numerous times when solving any optimization problem
+      url: https://www.matrixcalculus.org/
+    - title: Distribution Explorer
+      description: You can visualize probability distributions and how they change if the parameters are
+        changed
+      url: https://distribution-explorer.github.io/index.html
+    - title: The Distribution Zoo
+      description: Interactively visualize probability distributions
+      url: https://ben18785.shinyapps.io/distribution-zoo/
+    - title: Seeing Theory
+      description: Introduce basic topics of probability with interactive visualizations
+      url: https://seeing-theory.brown.edu/
+    - title: R Psychologist
+      description: Provides interactive visualization to introductory topics in Stats
+      url: https://rpsychologist.com/
+    - title: LLM Visualization
+      description: An interactive visualization of nanoGPT
+      url: https://bbycroft.net/llm
+  - title: Online books
+    items:
+    - title: Dive into Deep Learning
+      description: Covers introductory topics in deep learning
+      url: https://d2l.ai/
+    - title: Bayes Rules! An Introduction to Applied Bayesian Modeling
+      description: Advanced topics in Bayesian Stufss
+      url: https://www.bayesrulesbook.com/
+    - title: 'Deep Learning: Foundations and Concepts'
+      description: Covers beginner and intermediate topics in DL
+      url: https://issuu.com/cmb321/docs/deep_learning_ebook
+    - title: Understanding Deep Learning
+      description: Nice book for beginners and intermediate people in DL
+      url: https://udlbook.github.io/udlbook/
+  - title: Github Repos
+    items:
+    - title: Hands-On-Large-Language-Models
+      description: Code examples from the book Hands-On Large Language Models
+      url: https://github.com/HandsOnLLM/Hands-On-Large-Language-Models

@@ -12,12 +12,39 @@ description: "Technical writing, lecture notes, and curated resources on deep le
   {% for resource in site.data.writing %}
   <article class="resource-card">
     <p class="card-label">{{ resource.category }}</p>
-    <h2><a href="{{ resource.url }}">{{ resource.title }} <span aria-hidden="true">↗</span></a></h2>
+    <h2><a href="{{ resource.url }}">{{ resource.title }} <span aria-hidden="true">{% if resource.collection %}↓{% else %}↗{% endif %}</span></a></h2>
     <p>{{ resource.description }}</p>
-    <a class="text-link" href="{{ resource.url }}">Explore resource <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href="{{ resource.url }}">{% if resource.collection %}Browse collection <span aria-hidden="true">↓</span>{% else %}Explore resource <span aria-hidden="true">↗</span>{% endif %}</a>
   </article>
   {% endfor %}
 </div>
+
+{% for collection in site.data.writing_collections %}
+<section class="writing-collection" id="{{ collection.id }}" aria-labelledby="{{ collection.id }}-title">
+  <header class="section-heading">
+    <div>
+      <p class="eyebrow">{{ collection.category | escape }}</p>
+      <h2 id="{{ collection.id }}-title">{{ collection.title | escape }}</h2>
+      <p>{{ collection.description | escape }}</p>
+    </div>
+  </header>
+  {% for group in collection.groups %}
+  <div class="writing-group">
+    <h3>{{ group.title | escape }}</h3>
+    <ul class="writing-resource-list">
+      {% for item in group.items %}
+      <li>
+        <h4><a href="{{ item.url | escape }}">{{ item.title | escape }} <span aria-hidden="true">↗</span></a></h4>
+        {% if item.provider %}<p class="writing-provider">{{ item.provider | escape }}</p>{% endif %}
+        <p>{{ item.description | escape }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  <a class="text-link" href="{{ collection.source }}">View source collection on GitHub <span aria-hidden="true">↗</span></a>
+</section>
+{% endfor %}
 
 <section class="page-callout">
   <p class="eyebrow">Learning in practice</p>
