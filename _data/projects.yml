@@ -64,3 +64,14 @@
     - 200 TB+ processed
     - 47 WSI datasets
     - 20 patch datasets
+- title: SSL Methods in CPath
+  image: /ssl-methods-cpath/dino-wsi-patch.jpg
+  image_width: 480
+  image_height: 480
+  category: Computational pathology
+  description: An illustrated guide to self-supervised learning methods, with pseudocode and a closer look at how DINOv2 is adapted for pathology foundation models.
+  url: /ssl-methods-cpath/
+  tags:
+    - Self-supervised learning
+    - Foundation models
+    - Computational pathology
