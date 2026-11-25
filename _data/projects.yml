@@ -75,3 +75,14 @@
     - Self-supervised learning
     - Foundation models
     - Computational pathology
+- title: OncoPath Atlas
+  image: /assets/images/projects/oncopath-atlas.png
+  image_width: 1600
+  image_height: 1200
+  category: Oncology & pathology ecosystem
+  description: An interactive atlas of companies, startups, academic labs, and research centers across oncology and pathology, with focus-area maps, organization profiles, and a founding-year timeline.
+  url: /oncopath-atlas/
+  tags:
+    - Oncology
+    - Computational pathology
+    - Interactive atlas
