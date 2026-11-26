@@ -33,9 +33,9 @@
   .modes .btn[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
   .toggle::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; box-shadow: inset 0 0 0 1.3px currentColor; vertical-align: 1px; }
   .toggle[aria-pressed="true"] { color: var(--ink); } .toggle[aria-pressed="true"]::before { background: currentColor; }
-  .tools input { width: min(180px, 40vw); padding: 5px 0; border: 0; border-bottom: 1px solid #cdc8dc; border-radius: 0; background: transparent; font: inherit; color: var(--ink); outline: none; }
-  .tools input::placeholder { color: var(--faint); }
-  .tools input:focus { border-bottom-color: var(--ink); }
+  .map-search input { width: min(180px, 40vw); padding: 5px 0; border: 0; border-bottom: 1px solid #cdc8dc; border-radius: 0; background: transparent; font: inherit; color: var(--ink); outline: none; }
+  .map-search input::placeholder { color: var(--faint); }
+  .map-search input:focus { border-bottom-color: var(--ink); }
 
   .legend { position: fixed; left: 28px; bottom: 24px; display: flex; flex-direction: column; gap: 2px; max-width: 344px; }
   .chip { all: unset; box-sizing: border-box; display: inline-flex; align-items: center; gap: 9px; padding: 3px 0; width: fit-content; font-size: 12.5px; color: var(--ink); cursor: pointer; }
@@ -105,22 +105,98 @@
   .time input::-moz-range-thumb { width: 9px; height: 9px; border-radius: 50%; background: var(--ink); border: 2px solid var(--glass); box-shadow: 0 0 0 1px var(--ink); }
   .time .now { min-width: 200px; color: var(--ink); font-weight: 600; }
   .time .now small { margin-left: 8px; font-weight: 400; color: var(--muted); font-size: 12px; }
-  @media (max-width: 1150px) {
-    .title { top: 16px; left: 16px; }
-    .title h1 { font-size: 30px; }
-    .tools { top: 60px; left: 16px; right: 16px; max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; gap: 6px 10px; }
-    .modes { gap: 10px; border-right: 0; padding-right: 0; }
-    .tools input { grid-column: 1 / -1; width: 100%; min-width: 0; }
-    .time { top: 140px; left: 16px; right: 16px; bottom: auto; transform: none; display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 4px 10px; padding: 8px 12px; border-radius: 12px; white-space: normal; }
-    .time .tick { display: none; }
-    .time input { width: 100%; min-width: 0; }
-    .time .now { grid-column: 1 / -1; min-width: 0; display: flex; flex-wrap: wrap; gap: 0 8px; }
-    .time .now small { margin-left: 0; }
-    .panel { top: 216px; left: 16px; right: 16px; width: auto; max-height: calc(100vh - 232px); max-height: calc(100dvh - 232px); }
-    .rail { top: 216px; left: 16px; margin: 0; padding: 0; max-width: calc(100vw - 32px); max-height: calc(100vh - 384px); max-height: calc(100dvh - 384px); overflow: auto; background: rgba(248,247,251,.94); }
-    .legend { left: 16px; bottom: 16px; margin: 0; padding: 0; max-width: calc(100vw - 32px); }
-  }
   @media (max-width: 720px) { .foot, .keys { display: none; } }
+
+  .products-open { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 44px; margin-top: 16px; padding: 10px 14px; border: 1px solid #c9c2df; border-radius: 8px; background: #eeebf7; color: var(--hema); font: 600 14px/1.4 var(--sans); cursor: pointer; }
+  .products-open:hover { background: #e4dff2; }
+  .products-open span { min-width: 22px; padding: 1px 6px; border-radius: 20px; background: #fff; font-size: 13px; }
+  .products-panel { position: fixed; inset: 0 0 0 auto; width: min(480px, 100%); max-width: 100%; height: 100dvh; height: var(--app-height, 100dvh); max-height: 100%; margin: 0; padding: 0; overflow: auto; overscroll-behavior: contain; border: 0; border-left: 1px solid var(--line); background: #fcfbfd; color: var(--ink); box-shadow: -16px 0 70px #231e3c26; font: 16px/1.6 var(--sans); }
+  .products-panel::backdrop, .map-controls-dialog::backdrop { background: #231e3c45; backdrop-filter: blur(2px); }
+  .products-heading { position: sticky; top: 0; z-index: 1; padding: 26px 72px 20px 28px; background: #fcfbfd; border-bottom: 1px solid var(--line); }
+  .products-eyebrow { margin: 0 0 6px; color: var(--muted); font-size: 14px; }
+  .products-heading h2 { margin: 0; font: 500 30px/1.15 var(--serif); overflow-wrap: anywhere; }
+  .products-close { position: absolute; top: 20px; right: 18px; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--ink); font-size: 24px; cursor: pointer; }
+  .products-close:hover { background: #eeebf5; }
+  .products-content { padding: 22px 28px 32px; }
+  .products-intro { margin: 0 0 4px; color: var(--muted); font-size: 14px; }
+  .product-card { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .product-card:last-child { border-bottom: 0; padding-bottom: 0; }
+  .product-type { display: inline-block; padding: 3px 9px; border-radius: 5px; background: #eeebf5; color: var(--hema); font-size: 14px; }
+  .product-card h3 { margin: 12px 0 8px; font: 500 28px/1.2 var(--serif); }
+  .product-card p { margin: 12px 0; }
+  .product-card .product-release, .product-card .product-checked { color: var(--muted); font-size: 14px; }
+  .product-card ul { margin: 16px 0; padding-left: 22px; }
+  .product-card li { padding-left: 2px; margin: 10px 0; }
+  .product-sources { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 20px; }
+  .product-sources a, .products-empty a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .products-empty h3 { margin: 2px 0 10px; font-size: 20px; }
+  .products-empty p { margin: 0 0 18px; color: var(--muted); }
+  @media (max-width: 480px) { .products-heading { padding: 22px 70px 18px 20px; } .products-content { padding: 20px 20px 28px; } }
+
+
+  .title, .map-search, .tools, .legend, .time, .rail, .foot { z-index: 2; }
+  .panel { z-index: 4; }
+  .map-controls { display: contents; }
+  .tools { right: 226px; }
+  .map-search { position: fixed; top: 24px; right: 28px; width: 180px; }
+  .map-search input { width: 100%; }
+  .controls-toggle { display: none; }
+  .zoom-controls { position: fixed; right: 28px; bottom: 58px; z-index: 3; display: flex; gap: 6px; }
+  .zoom-controls button, .controls-toggle { width: 44px; height: 44px; padding: 0; border: 1px solid #d2cde1; border-radius: 10px; background: #fcfbfdf2; color: var(--ink); box-shadow: 0 3px 12px #231e3c0b; font: 500 24px/1 var(--sans); cursor: pointer; }
+  .zoom-controls #fit-map { font-size: 14px; }
+  .zoom-controls button:hover, .controls-toggle:hover { background: #eeebf5; }
+  .map-controls-dialog { position: fixed; width: min(560px, calc(100% - 24px)); max-width: calc(100% - 24px); max-height: calc(var(--app-height, 100dvh) - 24px); padding: 0; border: 1px solid var(--line); border-radius: 16px; background: #fcfbfd; color: var(--ink); overflow: auto; overscroll-behavior: contain; font: 16px/1.5 var(--sans); }
+  .control-heading { position: sticky; top: 0; z-index: 1; padding: 22px 72px 22px 20px; border-bottom: 1px solid var(--line); background: #fcfbfd; }
+  .control-heading h2 { margin: 0; font-size: 20px; }
+  #controls-close { position: absolute; right: 14px; top: 14px; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: var(--ink); font-size: 24px; cursor: pointer; }
+  .controls-content { display: flex; flex-direction: column; gap: 24px; padding: 20px; }
+  .map-controls-dialog .tools { position: static; inset: auto; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; max-width: none; width: 100%; }
+  .map-controls-dialog .btn { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; text-align: center; }
+  .map-controls-dialog .tools > .btn { flex: 1; }
+  .map-controls-dialog .modes { width: 100%; border: 0; padding: 0; gap: 8px; }
+  .map-controls-dialog .modes .btn { flex: 1; }
+  .map-controls-dialog .modes .btn[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .map-controls-dialog .time { position: static; inset: auto; transform: none; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 8px 12px; width: 100%; padding: 0; border-radius: 0; background: none; backdrop-filter: none; white-space: normal; font-size: 14px; }
+  .map-controls-dialog .time .tick { display: none; }
+  .map-controls-dialog .time .play { width: 44px; height: 44px; line-height: 44px; font-size: 14px; }
+  .map-controls-dialog .time input { width: 100%; min-width: 0; height: 44px; }
+  .map-controls-dialog .time .now { grid-column: 1 / -1; min-width: 0; display: flex; flex-wrap: wrap; gap: 0 8px; }
+  .map-controls-dialog .time .now small { margin-left: 0; font-size: 14px; }
+  .map-controls-dialog .legend { position: static; inset: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: none; margin: 0; padding: 0; background: none; }
+  .map-controls-dialog .chip { width: auto; min-height: 44px; padding: 9px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; }
+  .map-controls-dialog .keys { display: block; grid-column: 1 / -1; margin-top: 4px; font-size: 14px; }
+  .map-controls-dialog .rail { position: static; inset: auto; display: none; width: 100%; max-width: none; max-height: none; margin: 0; padding: 0; overflow: visible; background: none; }
+  body[data-mode='layers'] .map-controls-dialog .rail { display: flex; visibility: visible; gap: 4px; }
+  .map-controls-dialog .rail h4 { font-size: 16px; }
+  .map-controls-dialog .rail label { min-height: 44px; width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; }
+  .map-controls-dialog .rail .all { min-height: 44px; font-size: 14px; }
+  @media (max-width: 1150px), (max-height: 500px) {
+    html, body { height: var(--app-height, 100dvh); }
+    canvas { height: var(--app-height, 100dvh); }
+    .title { top: 16px; left: 16px; max-width: calc(100% - 80px); }
+    .title h1 { font-size: clamp(20px, 5.8vw, 28px); }
+    .map-search { top: 64px; left: 16px; right: 16px; width: auto; }
+    .map-search input { min-width: 0; width: 100%; height: 44px; padding: 10px 12px; border: 1px solid #d2cde1; border-radius: 10px; background: #fcfbfdf5; font-size: 16px; }
+    .controls-toggle { position: fixed; top: 12px; right: 16px; z-index: 3; display: grid; place-items: center; }
+    .map-controls { display: none; }
+    .zoom-controls { right: 16px; bottom: 16px; }
+    .foot { display: none; }
+    .panel { top: auto; bottom: 16px; right: 16px; left: auto; width: min(420px, calc(100% - 32px)); max-height: calc(var(--app-height, 100dvh) - var(--map-header-bottom, 108px) - 28px); padding: 20px; border-radius: 14px; font-size: 16px; line-height: 1.6; }
+    .panel .close { position: sticky; top: 0; right: auto; float: right; width: 44px; height: 44px; margin: -8px -8px 0 8px; padding: 0; border: 1px solid var(--line); background: #fcfbfd; z-index: 1; }
+    .panel h2 { margin-right: 0; font-size: 26px; overflow-wrap: anywhere; }
+    .panel .seg { max-width: calc(100% - 50px); }
+    .panel p, .panel li { font-size: 16px; }
+    .panel .seg, .panel .meta, .panel .status, .panel h3, .panel li small, .panel li em, .panel a.site, .panel .tags span { font-size: 14px; }
+    .panel li button { display: inline-flex; align-items: center; min-height: 44px; }
+    .panel a.site { max-width: 100%; overflow-wrap: anywhere; }
+    .panel .products-open { font-size: 16px; }
+  }
+  @media (min-width: 600px) and (max-height: 500px) {
+    .title { top: 18px; max-width: 42%; }
+    .title h1 { font-size: 24px; }
+    .map-search { top: 12px; left: auto; right: 76px; width: min(42vw, 360px); }
+  }
+
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
@@ -132,26 +208,50 @@
   <h1><svg id="logo" viewBox="-13 -13 26 26" aria-hidden="true"></svg>OncoPathNexus</h1>
 </div>
 
-<div class="tools">
-  <span class="modes" role="group" aria-label="View"><button class="btn" data-mode="cloud" aria-pressed="true" title="3D similarity cloud">Cloud</button><button class="btn" data-mode="flat" aria-pressed="false" title="Flat similarity map">Flat</button><button class="btn" data-mode="layers" aria-pressed="false" title="Stacked planes, one per part of the field">Layers</button></span>
-  <button class="btn toggle" id="spin" aria-pressed="true" title="Rotate the cloud automatically">Rotate</button>
-  <button class="btn toggle" id="labels" aria-pressed="true" title="Show every name">Labels</button>
-  <button class="btn" id="reset" title="Reset view">Reset</button>
-  <input id="search" type="search" placeholder="Find an organization" autocomplete="off" list="names">
-  <datalist id="names"></datalist>
+<button id='controls-toggle' class='controls-toggle' type='button' aria-label='Map controls' aria-haspopup='dialog' aria-controls='map-controls-dialog' aria-expanded='false' title='Map controls'>
+  <svg viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='1.7' aria-hidden='true'><path d='M3 6h18M3 12h18M3 18h18'/><circle cx='8' cy='6' r='2' fill='currentColor'/><circle cx='16' cy='12' r='2' fill='currentColor'/><circle cx='10' cy='18' r='2' fill='currentColor'/></svg>
+</button>
+<div class='map-search'>
+  <input id='search' type='search' aria-label='Find an organization' placeholder='Find an organization' autocomplete='off' list='names'>
+  <datalist id='names'></datalist>
 </div>
-
-<div class="rail" id="rail" aria-label="Layers shown"></div>
-<div class="legend" id="legend"></div>
-<div class="time" id="time">
-  <button class="play" id="play" aria-label="Play timeline" title="Play the timeline">▶</button>
-  <span class="tick">2010</span>
-  <input id="year" type="range" min="2010" max="2026" step="1" value="2026" aria-label="Show organizations founded up to this year">
-  <span class="tick">2026</span>
-  <span class="now" id="yearLabel"></span>
+<div id='map-controls' class='map-controls'>
+  <div class='tools'>
+    <span class='modes' role='group' aria-label='View'><button class='btn' data-mode='cloud' aria-pressed='true' title='3D similarity cloud'>Cloud</button><button class='btn' data-mode='flat' aria-pressed='false' title='Flat similarity map'>Flat</button><button class='btn' data-mode='layers' aria-pressed='false' title='Stacked planes, one per part of the field'>Layers</button></span>
+    <button class='btn toggle' id='spin' aria-pressed='true' title='Rotate the cloud automatically'>Rotate</button>
+    <button class='btn toggle' id='labels' aria-pressed='true' title='Show every name'>Labels</button>
+    <button class='btn' id='reset' title='Reset view'>Reset</button>
+  </div>
+  <div class='rail' id='rail' aria-label='Layers shown'></div>
+  <div class='legend' id='legend' aria-label='Organization types'></div>
+  <div class='time' id='time'>
+    <button class='play' id='play' aria-label='Play timeline' title='Play the timeline'>▶</button>
+    <span class='tick'>2010</span>
+    <input id='year' type='range' min='2010' max='2026' step='1' value='2026' aria-label='Show organizations founded up to this year'>
+    <span class='tick'>2026</span><span class='now' id='yearLabel'></span>
+  </div>
 </div>
+<div class='zoom-controls' role='group' aria-label='Map zoom'>
+  <button type='button' id='zoom-out' aria-label='Zoom out'>−</button>
+  <button type='button' id='fit-map' aria-label='Fit map'>Fit</button>
+  <button type='button' id='zoom-in' aria-label='Zoom in'>+</button>
+</div>
+<dialog id='map-controls-dialog' class='map-controls-dialog' aria-labelledby='map-controls-title'>
+  <header class='control-heading'><h2 id='map-controls-title'>Map controls</h2><button id='controls-close' type='button' aria-label='Close map controls' autofocus>×</button></header>
+  <div id='mobile-control-content' class='controls-content'></div>
+</dialog>
 <aside class="panel" id="panel" hidden></aside>
-<div class="foot"><span id="hint">Drag to rotate</span>, scroll to zoom, click a dot for details<br>Facts checked 25 November 2026</div>
+
+<dialog id='products-panel' class='products-panel' aria-labelledby='products-company'>
+  <header class='products-heading'>
+    <p class='products-eyebrow'>Models &amp; products</p>
+    <h2 id='products-company'></h2>
+    <button type='button' class='products-close' aria-label='Close models and products' autofocus>×</button>
+  </header>
+  <div id='products-content' class='products-content'></div>
+</dialog>
+
+<div class="foot"><span id="hint">Drag to rotate</span>, scroll to zoom, click a dot for details</div>
 
 <script>
 /* ---------- Vocabulary: the focus areas that define similarity ---------- */
@@ -172,12 +272,350 @@ const KIND = {
   center:  { name: "Research & medical centers", color: "#c28a1f" }
 };
 
+// Selected company models and products. Add dated, source-backed entries by organization ID.
+const COMPANY_PRODUCTS = {
+  "noetik": [
+    {
+      "name": "TARIO-2",
+      "type": "Foundation model",
+      "date": "2026-04-17",
+      "dateLabel": "Research report",
+      "summary": "Predicts spatial gene expression from H&E pathology images, using representations learned from paired histology and spatial transcriptomics data. The model is used for research into tumor biology and treatment response.",
+      "features": [
+        "Uses H&E images at inference",
+        "Produces predicted expression maps for genes in its training panel",
+        "Connects tissue morphology with molecular patterns"
+      ],
+      "sources": [
+        {
+          "label": "Official TARIO-2 report",
+          "url": "https://www.noetik.blog/p/tario-2-a-whole-transcriptome-foundation"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "OCTO",
+      "type": "Multimodal research model",
+      "date": "2024-07-16",
+      "dateLabel": "Technical report",
+      "summary": "The Oncology Counterfactual Therapeutics Oracle combines tissue images and molecular measurements to model cancer biology. Its research demonstrations generate protein-image predictions and simulate biological changes.",
+      "features": [
+        "Trained on aligned histology, spatial expression, DNA and multiplex protein data",
+        "Generates 16-channel protein-image predictions",
+        "Supports visual prompts and counterfactual experiments"
+      ],
+      "sources": [
+        {
+          "label": "Official OCTO report",
+          "url": "https://www.noetik.ai/octo"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "tempus": [
+    {
+      "name": "Tempus Lens",
+      "type": "Research platform",
+      "date": "2026-05-31",
+      "dateLabel": "Platform update",
+      "summary": "A biopharma research platform combining de-identified multimodal patient data, AI tools and analytical workspaces. It supports cohort exploration and code-based scientific workflows.",
+      "features": [
+        "Patient-linked molecular, pathology, radiology and outcomes data",
+        "AI-assisted research planning and analysis with reviewable code",
+        "Workspaces with Python, R, Jupyter and VS Code"
+      ],
+      "sources": [
+        {
+          "label": "Official Lens platform page",
+          "url": "https://www.tempus.com/lens/platform/"
+        },
+        {
+          "label": "2026 platform announcement",
+          "url": "https://www.tempus.com/news/pr/tempus-unveils-the-next-generation-of-lens-expanding-its-agentic-ai-platform-for-oncology-drug-development/"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Tempus One",
+      "type": "Generative AI assistant",
+      "summary": "An AI assistant for provider and research workflows, available through Tempus Hub and EHR integrations, with research tools in Lens. It helps users retrieve and explore relevant Tempus information.",
+      "features": [
+        "Access to patient order, report and clinical-trial information",
+        "Research cohort creation and exploration of unstructured clinical data",
+        "Selected history-summary and documentation features are EHR-only"
+      ],
+      "sources": [
+        {
+          "label": "Official Tempus One page",
+          "url": "https://www.tempus.com/solutions/one/"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "msr": [
+    {
+      "name": "Project Quine",
+      "type": "Experimental research system",
+      "date": "2026-09-29",
+      "dateLabel": "Project announcement",
+      "summary": "A shared Microsoft Research effort developing multimodal models and tool-assisted workflows for biological discovery. It connects computational predictions with scientific evidence and experimental feedback.",
+      "features": [
+        "Connects evidence across genomics, proteins, cell state and bioimaging",
+        "Combines biological models with scientific tools and literature",
+        "Supports iterative hypothesis generation and experimental planning"
+      ],
+      "sources": [
+        {
+          "label": "Official Project Quine site",
+          "url": "https://microsoft.github.io/quine/"
+        },
+        {
+          "label": "Microsoft research announcement",
+          "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "msrne": [
+    {
+      "name": "Project Ex Vivo",
+      "type": "Research collaboration",
+      "summary": "A joint Microsoft–Broad cancer research collaboration, supported by Dana-Farber. It combines AI, single-cell and spatial data, and laboratory models to investigate cancer cell states and potential therapeutic vulnerabilities.",
+      "features": [
+        "Maps cell states and spatial tumor interactions",
+        "Develops and tests ex vivo cancer models",
+        "Studies vulnerabilities associated with particular cell states"
+      ],
+      "sources": [
+        {
+          "label": "Official Project Ex Vivo page",
+          "url": "https://www.microsoft.com/en-us/research/project/project-ex-vivo/"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "owkin": [
+    {
+      "name": "MOSAIC",
+      "type": "Spatial multiomics atlas",
+      "date": "2023-06-01",
+      "dateLabel": "Project announcement",
+      "summary": "A cancer spatial-multiomics dataset built through an international research consortium led by Owkin. It links molecular measurements with pathology and clinical data for oncology research.",
+      "features": [
+        "Integrates spatial and single-cell molecular profiling",
+        "Includes histology, RNA, genomic and clinical modalities",
+        "Supports research on therapeutic targets, patient subgroups and spatial biomarkers"
+      ],
+      "sources": [
+        {
+          "label": "Official MOSAIC overview",
+          "url": "https://www.owkin.com/data/mosaic"
+        },
+        {
+          "label": "Project announcement",
+          "url": "https://www.owkin.com/newsfeed/owkin-powers-a-new-era-in-oncology-research-with-mosaic-an-unprecedented-50-million-spatial-atlas-of-cancer-cells"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "waiv": [
+    {
+      "name": "RlapsRisk BC",
+      "type": "AI prognostic test",
+      "summary": "Profiles recurrence risk in early ER+/HER2− breast cancer using digitized H&E slides and clinical information.",
+      "features": [
+        "Combines pathology images with age, lymph-node involvement and tumor size",
+        "Produces a report for pathologist interpretation",
+        "Supports integration with existing image-management workflows"
+      ],
+      "sources": [
+        {
+          "label": "Official RlapsRisk BC page",
+          "url": "https://waiv.com/precision-testing/rlapsrisk"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "MSIntuit CRC",
+      "type": "AI biomarker-screening test",
+      "summary": "Analyzes digitized colorectal-cancer H&E slides to screen for microsatellite-stable phenotypes and support MSI testing workflows.",
+      "features": [
+        "Accepts biopsy and surgical-resection slides",
+        "Reports MSS-AI or undetermined results",
+        "Undetermined cases proceed to standard microsatellite-status testing"
+      ],
+      "sources": [
+        {
+          "label": "Official MSIntuit information",
+          "url": "https://waiv.com/precision-testing/msintuit-suite"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "cpace": [
+    {
+      "name": "Pitt-GPT-Plus",
+      "type": "Local multi-agent AI framework",
+      "summary": "A CPACE framework for institution-specific expert chatbots using locally hosted language models. It combines retrieval from institution-approved information with multiple AI agents and output cross-checking.",
+      "features": [
+        "Deployment on institutional servers",
+        "Retrieval from authoritative institutional sources",
+        "Custom expert chatbots with multi-agent checking"
+      ],
+      "sources": [
+        {
+          "label": "Official Pitt technology listing",
+          "url": "https://inventions.pitt.edu/technologies/pitt-gpt-plus-multi-agent-ai--07292"
+        },
+        {
+          "label": "CPACE Innovation",
+          "url": "https://cpace.pitt.edu/innovation/"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "WSI Genie",
+      "type": "Automated machine-learning framework",
+      "summary": "CPACE’s automated machine-learning framework for whole-slide pathology images, supporting image-based model development and validation.",
+      "features": [
+        "Whole-slide image workflows",
+        "Automated model development and testing"
+      ],
+      "sources": [
+        {
+          "label": "CPACE Innovation",
+          "url": "https://cpace.pitt.edu/innovation/"
+        },
+        {
+          "label": "Pitt symposium report",
+          "url": "https://www.medschool.pitt.edu/news/cpace-symposium-champions-ai-innovation-health-care"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Report Genie",
+      "type": "Hybrid report-generation tool",
+      "summary": "A CPACE tool combining rule-based logic and a large language model to generate diagnostic reports.",
+      "features": [],
+      "sources": [
+        {
+          "label": "CPACE Innovation",
+          "url": "https://cpace.pitt.edu/innovation/"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "pathai": [
+    {
+      "name": "Outpost",
+      "type": "Internal agent platform",
+      "date": "2026-10-01",
+      "dateLabel": "Engineering post",
+      "summary": "A platform used inside PathAI to deploy long-running AI agents in the company’s cloud. Staff interact through Slack, with agent access restricted to approved tools and data.",
+      "features": [
+        "Slack-based interaction",
+        "Controlled identities and tool permissions",
+        "Persistent context and monitoring for long-running workflows"
+      ],
+      "sources": [
+        {
+          "label": "Official Outpost engineering post",
+          "url": "https://www.pathai.com/blog/outpost-a-platform-for-deploying-internal-cloud-agents-at-pathai"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PLUTO-4",
+      "type": "Pathology foundation-model family",
+      "date": "2025-11-04",
+      "dateLabel": "Research publication",
+      "summary": "A family of Vision Transformer encoders that produce reusable pathology-image representations. It includes the compact PLUTO-4S and larger PLUTO-4G variants.",
+      "features": [
+        "Pretraining across H&E, IHC and special stains",
+        "Compact and larger-capacity variants",
+        "Embeddings for downstream pathology tasks"
+      ],
+      "sources": [
+        {
+          "label": "Official PLUTO-4 research publication",
+          "url": "https://www.pathai.com/publications/pluto-4-frontier-pathology-foundation-models"
+        },
+        {
+          "label": "Company model overview",
+          "url": "https://www.pathai.com/blog/introducing-pluto-4-pathais-latest-state-of-the-art-foundation-model-for-digital-pathology"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "AISight",
+      "type": "Research image-management platform",
+      "summary": "A cloud-native platform for managing pathology cases, images and research workflows. It combines slide review, image analysis and integrated AI applications.",
+      "features": [
+        "Cloud-based case and image management",
+        "Interoperability with laboratory systems and scanners",
+        "Annotation, collaboration and third-party AI integrations"
+      ],
+      "sources": [
+        {
+          "label": "Official AISight platform page",
+          "url": "https://www.pathai.com/ap-lab-solutions"
+        },
+        {
+          "label": "Annotation Insights announcement",
+          "url": "https://www.pathai.com/news/pathai-introduces-annotation-insights-for-the-aisight-digital-pathology-platform"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PathExplore",
+      "type": "Tumor microenvironment research panel",
+      "date": "2023-04-04",
+      "dateLabel": "Launch announcement",
+      "summary": "Derives measurements of cells, tissues and spatial structure from H&E whole-slide images. The research panel links histological features with molecular and outcome data.",
+      "features": [
+        "Cell and tissue segmentation and classification",
+        "Counts, densities and spatial relationships",
+        "Overlay visualizations through AISight"
+      ],
+      "sources": [
+        {
+          "label": "Official PathExplore page",
+          "url": "https://www.pathai.com/pathexplore"
+        },
+        {
+          "label": "Launch announcement",
+          "url": "https://www.pathai.com/resources/pathai-announces-pathexplore-an-ai-powered-pathology-panel-to-unlock-untapped-insights-from-the-tumor-microenvironment"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ]
+};
+// Quine is a shared Microsoft Research effort, shown for both research locations.
+COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
+
 // id, name, kind, location / affiliation, status, description, website, focus tags
 const C = [
  // ----- Pathology AI
  ["paige","Paige","company","New York, US","Part of Tempus AI (acquired 2025)","Pathology AI company founded out of Memorial Sloan Kettering. Built the Virchow foundation models and Paige Prostate, the first AI pathology product to receive FDA marketing authorization (2021).","https://paige.ai","fm dx prostate breast wsi multi"],
  ["pathai","PathAI","startup","Boston, US","Roche agreed to acquire (May 2026)","AI pathology for labs and biopharma: the PLUTO foundation models and the AISight image management system.","https://www.pathai.com","fm ims ihc bio cdx wsi"],
  ["owkin","Owkin","startup","Paris / New York","Private","AI biotech working across histology and multi-omics; leads the MOSAIC spatial-omics atlas. Its diagnostics arm, maker of MSIntuit CRC, was spun out as Waiv.","https://www.owkin.com","fm mol stx omics drug gi multi wsi"],
+ ["waiv","Waiv","startup","Paris, France","Private · Owkin spin-out","Paris-based company developing AI pathology tests for cancer biomarker screening and recurrence-risk assessment. Formerly Owkin Dx, it became an independent Owkin spin-out in 2026; its products include RlapsRisk BC and MSIntuit CRC.","https://waiv.com/","wsi dx prog breast gi"],
  ["bioptimus","Bioptimus","startup","Paris, France","Private","Biology foundation-model company behind the H-Optimus histology models.","https://www.bioptimus.com","fm multi omics wsi"],
  ["histai","HistAI","startup","San Francisco, US","Private","AI company for computational pathology, founded in 2023. Built the Hibou pathology foundation models (2024), trained on more than a million whole-slide images, and released the Hibou-B weights and whole-slide image datasets openly.","https://hist.ai","fm open wsi"],
  ["aignostics","Aignostics","startup","Berlin, Germany","Private","Charité spin-off offering AI tissue analysis for biopharma and labs (HETA, OpenTME); built the Atlas pathology foundation models with Mayo Clinic.","https://www.aignostics.com","fm bio ihc wsi"],
@@ -348,6 +786,7 @@ const C = [
 
 // a, b, type (owned | pending | partner | origin), note
 const L = [
+ ["owkin","waiv","origin","Waiv, formerly Owkin Dx, spun out of Owkin in March 2026"],
  ["weillcornell","danafarber","partner","Research collaboration on language-model tools for digital pathology, including GPT4DFCI and PathML (2024)"],
  ["tempus","paige","owned","Tempus acquired Paige (2025)"],
  ["tempus","ambry","owned","Tempus completed its acquisition of Ambry Genetics (February 2025) for $375M in cash plus $225M in shares"],
@@ -467,7 +906,7 @@ const LAYERS = [
   { key: "dp",   name: "Digital pathology platforms",   note: "Image management and workflow software that pathologists work in",
     ids: "proscia techcyte gestalt tribun pathpresenter sectra fujifilm deciphex" },
   { key: "ai",   name: "Pathology AI",                  note: "Foundation models, AI diagnosis and biomarkers read from the slide",
-    ids: "paige pathai bioptimus aignostics sophont tremont mahmood octopathlab gevaert yu ai4path atlaslab swang haochen msr msrne lgai modella kaiko zhihuang zou rli cpace ibex deepbio primaa qritive aira pathtools radboud octopath lunit mindpeak visiopharm indica aiforia tia pictor artera ataraxis stratipath domore valar precisedx pathomiq 4dpath shen madabhushi cooper owkin imagene panakeia kather yuan pan nucleai google histai" },
+    ids: "paige pathai bioptimus aignostics sophont tremont mahmood octopathlab gevaert yu ai4path atlaslab swang haochen msr msrne lgai modella kaiko zhihuang zou rli cpace ibex deepbio primaa qritive aira pathtools radboud octopath lunit mindpeak visiopharm indica aiforia tia pictor artera ataraxis stratipath domore valar precisedx pathomiq 4dpath shen madabhushi cooper owkin waiv imagene panakeia kather yuan pan nucleai google histai" },
   { key: "sp",   name: "Spatial biology",               note: "Multiplex imaging and spatial transcriptomics that add molecules to morphology",
     ids: "tenx vizgen bruker biotechne akoya quanterix lunaphore standardbio miltenyi ionpath enable" },
   { key: "gx",   name: "Genomics & liquid biopsy",      note: "Sequencing platforms, tumor profiling, MRD monitoring and blood-based screening",
@@ -516,7 +955,7 @@ const ALSO = [
 
 // Founding year for organizations founded in 2010 or later. Anything not listed predates 2010 or has no confirmed year,
 // and is shown across the whole timeline. APPROX marks years where sources disagree or that rest on a single source.
-const YEAR = { fmi: 2010, personalis: 2011, indica: 2011, sophia: 2011, guardant: 2012, tenx: 2012, flatiron: 2012, lunit: 2013, aiforia: 2013,
+const YEAR = { waiv: 2026, fmi: 2010, personalis: 2011, indica: 2011, sophia: 2011, guardant: 2012, tenx: 2012, flatiron: 2012, lunit: 2013, aiforia: 2013,
   recursion: 2013, techcyte: 2013, proscia: 2014, lunaphore: 2014, ionpath: 2014, freenome: 2014, clarapath: 2014, tempus: 2015, bostongene: 2015, deepbio: 2015, grundium: 2015, akoya: 2015, pathai: 2016, owkin: 2016, ibex: 2016, grail: 2015,
   paige: 2017, nucleai: 2017, qritive: 2017, gestalt: 2017, pathpresenter: 2017, concertai: 2017, aignostics: 2018, mindpeak: 2018, primaa: 2018, insitro: 2018,
   panakeia: 2018, "4dpath": 2016, stratipath: 2019, pictor: 2019, vizgen: 2019, delfi: 2019, epredia: 2019, precisedx: 2020, enable: 2019,
@@ -524,7 +963,7 @@ const YEAR = { fmi: 2010, personalis: 2011, indica: 2011, sophia: 2011, guardant
   ataraxis: 2023, bioptimus: 2024, modella: 2024, sophont: 2025, aevius: 2026, tremont: 2026, bioslife: 2026, omanta: 2026, cpace: 2024, biohub: 2016, xaira: 2023, histai: 2023, deciphex: 2017 };
 const APPROX = new Set(["grail", "tremont", "precisedx", "modella", "mahmood", "concertai", "nucleai", "domore", "gestalt"]);
 // Year each deal or partnership began (first announcement). Links not listed appear as soon as both ends exist.
-const LINK_YEAR = { "weillcornell|danafarber": 2024, "merck|mayo": 2026, "merck|natera": 2023, "novartis|isomorphic": 2024, "lilly|isomorphic": 2024, "abbvie|roche": 2025, "amgen|guardant": 2020, "amgen|qiagen": 2020, "google|isomorphic": 2021, "evident|pramana": 2025, "recursion|takeda": 2020, "tempus|takeda": 2024, "illumina|xaira": 2024, "thermo|epredia": 2019, "ibex|pathpresenter": 2024, "msk|pathpresenter": 2025, "biohub|tenx": 2025, "biohub|isomorphic": 2026, "sinai|msk": 2025, "msk|paige": 2017, "mayo|techcyte": 2024, "moffitt|pramana": 2025, "sophia|az": 2026, "sophia|mdanderson": 2026, "sophia|msk": 2026, "gevaert|shen": 2026, "indica|lunit": 2026, "tempus|bms": 2026, "mgh|visiopharm": 2022, "mgh|philips": 2018, "tempus|merck": 2026, "abbott|freenome": 2026, "mahmood|mgh": 2022, "tempus|paige": 2025, "tempus|personalis": 2026, "tempus|ambry": 2025, "ucla|pictor": 2019, "tempus|bioslife": 2026, "ambry|bioslife": 2026, "jnj|paige": 2022, "jnj|isomorphic": 2026, "msr|swang": 2024, "mahmood|tremont": 2026, "az|tremont": 2026, "myriad|pathomiq": 2025, "roche|pathai": 2026, "agilent|proscia": 2026, "az|modella": 2026,
+const LINK_YEAR = { "owkin|waiv": 2026, "weillcornell|danafarber": 2024, "merck|mayo": 2026, "merck|natera": 2023, "novartis|isomorphic": 2024, "lilly|isomorphic": 2024, "abbvie|roche": 2025, "amgen|guardant": 2020, "amgen|qiagen": 2020, "google|isomorphic": 2021, "evident|pramana": 2025, "recursion|takeda": 2020, "tempus|takeda": 2024, "illumina|xaira": 2024, "thermo|epredia": 2019, "ibex|pathpresenter": 2024, "msk|pathpresenter": 2025, "biohub|tenx": 2025, "biohub|isomorphic": 2026, "sinai|msk": 2025, "msk|paige": 2017, "mayo|techcyte": 2024, "moffitt|pramana": 2025, "sophia|az": 2026, "sophia|mdanderson": 2026, "sophia|msk": 2026, "gevaert|shen": 2026, "indica|lunit": 2026, "tempus|bms": 2026, "mgh|visiopharm": 2022, "mgh|philips": 2018, "tempus|merck": 2026, "abbott|freenome": 2026, "mahmood|mgh": 2022, "tempus|paige": 2025, "tempus|personalis": 2026, "tempus|ambry": 2025, "ucla|pictor": 2019, "tempus|bioslife": 2026, "ambry|bioslife": 2026, "jnj|paige": 2022, "jnj|isomorphic": 2026, "msr|swang": 2024, "mahmood|tremont": 2026, "az|tremont": 2026, "myriad|pathomiq": 2025, "roche|pathai": 2026, "agilent|proscia": 2026, "az|modella": 2026,
   "abbott|exact": 2026, "roche|fmi": 2015, "roche|flatiron": 2018, "quanterix|akoya": 2025, "biotechne|lunaphore": 2023, "illumina|grail": 2015,
   "owkin|bioptimus": 2024, "mahmood|modella": 2024, "mahmood|aevius": 2026, "modella|aevius": 2026, "quest|pathai": 2024, "tempus|az": 2021,
   "tempus|pathos": 2025, "az|pathos": 2025, "tempus|gsk": 2020, "tempus|pfizer": 2023, "tempus|recursion": 2023, "recursion|genentech": 2021,
@@ -605,9 +1044,12 @@ const also = ALSO.map(([id, key, why]) => { const n = byId[id], Lr = LAYERS.find
 // Fit the stack to the window, then arrange each slide: organizations keep the order they have in the flat view (similar work sits close), spread to fill the slide.
 // Going left to right, each takes the free spot nearest its own, so no two dots sit on top of each other.
 function fitLayers() { if (!W) return;
-  const R1 = Math.min(W, H) * .36, L0 = rail.getBoundingClientRect().right + 22, R0 = W - 92, ya = VIEW.layers.yaw, ca = Math.cos(ya), sa = Math.sin(ya), half = Math.max(140, (R0 - L0) / 2);
-  PW = (half / R1 - PD * sa) / ca; LS = 1; if (PW < 1.1) { PW = 1.1; LS = Math.max(.5, half / (R1 * (PW * ca + PD * sa))); }   // a slide never gets stubbier than this: shrink the stack instead
-  PW = Math.min(1.95, PW); LX = (L0 + R0) / 2 - W / 2;
+  const compact = isCompactLayout(), R1 = compact ? Math.min(plotBox.width, plotBox.height) * .44 : Math.min(W, H) * .36;
+  const L0 = compact ? plotBox.left + 14 : rail.getBoundingClientRect().right + 22, R0 = compact ? plotBox.left + plotBox.width - 14 : W - 92;
+  const ya = VIEW.layers.yaw, ca = Math.cos(ya), sa = Math.sin(ya), half = Math.max(compact ? 48 : 140, (R0 - L0) / 2);
+  PW = (half / R1 - PD * sa) / ca; LS = 1;
+  if (PW < 1.1) { PW = 1.1; if (!compact) LS = Math.max(.5, half / (R1 * (PW * ca + PD * sa))); }
+  PW = Math.min(1.95, PW); LX = compact ? 0 : (L0 + R0) / 2 - W / 2;
   const XL = -PW + BAND + .09, XR = PW - .08, ZB = -PD + .13, ZF = PD - .07, GX = .078, GZ = .19;   // GX, GZ: how close two dots may sit sideways and in depth (the tilt foreshortens depth, so it needs more)
   for (const Lr of LAYERS) { const items = Lr.nodes.concat(Lr.extra), at = it => (it.n || it).p2;
     const spread = k => { const v = items.map(it => at(it)[k]), lo = Math.min(...v), sp = Math.max(...v) - lo || 1, r = []; v.map((_, i) => i).sort((a, b) => v[a] - v[b]).forEach((i, j) => { r[i] = j / Math.max(1, v.length - 1); });
@@ -630,11 +1072,53 @@ let mode = "cloud", lay = 0, flat = false, mix = 0, morph = null, panX = 0, panY
 let spinning = !matchMedia("(prefers-reduced-motion: reduce)").matches, glide = null, raf = 0;
 const off = new Set(), CAM = 3.4, calm = matchMedia("(prefers-reduced-motion: reduce)").matches; let drift = 0;
 
+const compactLayout = matchMedia('(max-width: 1150px), (max-height: 500px)');
+let mapBaseScale = 1, mapCenterX = 0, mapCenterY = 0;
+let plotBox = { left: 0, top: 0, width: 1, height: 1 }, resizeFrame = 0;
+function isCompactLayout() { return compactLayout.matches; }
+function measurePlot() {
+  const headerBottom = document.querySelector('.map-search').getBoundingClientRect().bottom;
+  document.documentElement.style.setProperty('--map-header-bottom', headerBottom + 'px');
+  const top = headerBottom + 12;
+  plotBox = isCompactLayout() ? { left: 12, top, width: Math.max(40, W - 24), height: Math.max(40, H - top - 76) } : { left: 0, top: 0, width: W, height: H };
+  mapBaseScale = Math.min(W, H) * .36; mapCenterX = W / 2; mapCenterY = H / 2 + 14;
+}
+function unitProjection(p, viewMode) {
+  const view = VIEW[viewMode], [x, y, z] = p, ca = Math.cos(view.yaw), sa = Math.sin(view.yaw), cb = Math.cos(view.pitch), sb = Math.sin(view.pitch);
+  const x1 = x * ca + z * sa, z1 = -x * sa + z * ca, y1 = y * cb - z1 * sb, z2 = y * sb + z1 * cb, c = CAM + (viewMode === 'layers' ? 60 : 0), scale = c / (c - z2);
+  return [x1 * scale, y1 * scale];
+}
+function fitCamera() {
+  if (!isCompactLayout()) { mapBaseScale = Math.min(W, H) * .36; mapCenterX = W / 2; mapCenterY = H / 2 + 14; return; }
+  let points;
+  if (mode === 'layers') {
+    points = LAYERS.filter(layer => !layerOff.has(layer.key)).flatMap(layer => [[-PW, layer.y, -PD], [PW, layer.y, -PD], [PW, layer.y, PD], [-PW, layer.y, PD]]);
+  } else points = nodes.map(n => n[VIEW[mode].key]);
+  if (!points.length) return;
+  const projected = points.map(p => unitProjection(p, mode));
+  const xs = projected.map(p => p[0]), ys = projected.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  mapBaseScale = Math.min(Math.max(12, plotBox.width - 32) / Math.max(.1, x1 - x0), Math.max(12, plotBox.height - 32) / Math.max(.1, y1 - y0));
+  if (mode === 'cloud') mapBaseScale = Math.min(mapBaseScale, Math.min(plotBox.width, plotBox.height) / 2.16);
+  mapCenterX = plotBox.left + plotBox.width / 2 - (mode === 'cloud' ? 0 : (x0 + x1) / 2 * mapBaseScale);
+  mapCenterY = plotBox.top + plotBox.height / 2 - (mode === 'cloud' ? 0 : (y0 + y1) / 2 * mapBaseScale);
+}
+function fitView() {
+  zoomK = 1; panX = panY = 0; glide = null; yaw = VIEW[mode].yaw; pitch = VIEW[mode].pitch;
+  fitCamera(); draw(); kick();
+}
+function queueResize() { if (!resizeFrame) resizeFrame = requestAnimationFrame(() => { resizeFrame = 0; resize(); }); }
+
 function project(o) { const [x, y, z] = o.p, ca = Math.cos(yaw), sa = Math.sin(yaw), cb = Math.cos(pitch), sb = Math.sin(pitch);
   const x1 = x * ca + z * sa, z1 = -x * sa + z * ca, y2 = y * cb - z1 * sb, z2 = y * sb + z1 * cb, C = CAM + 60 * lay, s = C / (C - z2);
-  const R = Math.min(W, H) * .36 * zoomK * (1 + (LS - 1) * lay); o.sx = W / 2 + panX + LX * lay + x1 * s * R; o.sy = H / 2 + 14 + panY + y2 * s * R; o.z = z2; o.s = s;
+  const R = mapBaseScale * zoomK * (1 + (LS - 1) * lay); o.sx = mapCenterX + panX + LX * lay + x1 * s * R; o.sy = mapCenterY + panY + y2 * s * R; o.z = z2; o.s = s;
   if (o.ph != null && mix > .01) { o.sx += Math.sin(drift * o.sp + o.ph) * 3.4 * mix; o.sy += Math.cos(drift * o.sp * .8 + o.ph * 1.7) * 3.4 * mix; } }   // flat view: each dot drifts gently around its spot
-function resize() { dpr = window.devicePixelRatio || 1; W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; fitLayers(); draw(); }
+function resize() {
+  dpr = window.devicePixelRatio || 1; W = document.documentElement.clientWidth || innerWidth; H = Math.round(window.visualViewport ? visualViewport.height : innerHeight);
+  document.documentElement.style.setProperty('--app-height', H + 'px');
+  cv.width = W * dpr; cv.height = H * dpr; cv.style.width = W + 'px'; cv.style.height = H + 'px';
+  const controls = document.getElementById('map-controls-dialog'); if (!isCompactLayout() && controls.open) controls.close();
+  measurePlot(); fitLayers(); fitCamera(); draw();
+}
 const visible = n => !off.has(n.kind) && n.year <= T && !(mode === "layers" && layerOff.has(n.layer.key));
 function hex(c, a) { const v = parseInt(c.slice(1), 16); return `rgba(${v >> 16},${v >> 8 & 255},${v & 255},${a})`; }
 const depth = z => { const d = .28 + .72 * Math.min(1, Math.max(0, (z + 1) / 2)); return d + (.92 - d) * mix; };
@@ -698,10 +1182,11 @@ function draw() {
   if (lay > .5) for (const Lr of LAYERS) if (!layerOff.has(Lr.key) && Lr.keep) boxes.push(...Lr.keep);
   for (const n of labels) {
     const strong = n === focus, must = strong || linked.has(n);
-    ctx.font = `${strong ? 600 : 500} ${strong ? 13 : 11.5}px "Instrument Sans", "Segoe UI", system-ui, sans-serif`;
+    ctx.font = `${strong ? 600 : 500} ${isCompactLayout() ? (strong ? 16 : 14) : (strong ? 13 : 11.5)}px "Instrument Sans", "Segoe UI", system-ui, sans-serif`;
     const w = ctx.measureText(n.name).width, mk = x => [x - 2, n.sy - 9, w + 4, 18], clash = q => boxes.some(o => o.n !== n && over(q, o)), offR = n.sx + n.rr + 6 + w > W - 8;
     let bx = n.sx + n.rr + 5, box = mk(bx);
     if (offR || (lay > .5 && !strong && clash(box))) { const lx = n.sx - n.rr - 5 - w, lb = mk(lx); if (offR || !clash(lb)) { bx = lx; box = lb; } }   // try the other side before giving up
+    if (isCompactLayout()) { bx = Math.max(8, Math.min(W - w - 8, bx)); box = mk(bx); }
     if (!must && clash(box)) continue;
     boxes.push(box); ctx.textBaseline = "middle"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(249,248,252,.94)"; ctx.strokeText(n.name, bx, n.sy);
     ctx.fillStyle = strong ? "#231e3c" : `rgba(58,52,88,${focus ? .95 : .45 + .55 * depth(n.z)})`; ctx.fillText(n.name, bx, n.sy);
@@ -728,30 +1213,69 @@ function faceTo(n) { if (mode !== "cloud") { draw(); return; } const [x, y, z] =
 /* ---------- Interaction ---------- */
 function pick(px, py) { let best = null, bz = -9; hoverF = null;
   for (const n of nodes) { if (!visible(n)) continue; const d = Math.hypot(n.sx - px, n.sy - py);
-    if (d < Math.max(11, n.rr + 5) && n.z > bz) { bz = n.z; best = n; } }
-  if (!best && lay > .9) for (const f of also) if (!off.has(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key) && Math.hypot(f.sx - px, f.sy - py) < Math.max(10, (f.rr || 4) + 4)) { hoverF = f; return f.n; }   // a ring stands for its organization
+    if (d < Math.max(isCompactLayout() ? 14 : 11, n.rr + 5) && n.z > bz) { bz = n.z; best = n; } }
+  if (!best && lay > .9) for (const f of also) if (!off.has(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key) && Math.hypot(f.sx - px, f.sy - py) < Math.max(isCompactLayout() ? 14 : 10, (f.rr || 4) + 4)) { hoverF = f; return f.n; }   // a ring stands for its organization
   return best; }
-let drag = null, moved = false, pinch = 0; const pts = new Map();
-cv.addEventListener("pointerdown", e => { cv.setPointerCapture(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]);
+let drag = null, moved = false, pinch = 0, pendingPick = null; const pts = new Map();
+cv.addEventListener("pointerdown", e => { pendingPick = null; cv.setPointerCapture(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]);
   if (morph) return; drag = [e.clientX, e.clientY]; moved = false; pinch = 0; glide = null; cv.classList.add("dragging"); });
 cv.addEventListener("pointermove", e => {
   if (pts.has(e.pointerId)) pts.set(e.pointerId, [e.clientX, e.clientY]);
-  if (pts.size === 2) { const [a, b] = [...pts.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]); if (pinch) zoom(d / pinch); pinch = d; moved = true; return; }
+  if (pts.size === 2) { const [a, b] = [...pts.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]); if (pinch) zoom(d / pinch, (a[0] + b[0]) / 2, (a[1] + b[1]) / 2); pinch = d; moved = true; return; }
   if (drag) { const dx = e.clientX - drag[0], dy = e.clientY - drag[1]; if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
     if (flat) { panX += dx; panY += dy; } else { yaw += dx * .006; pitch = Math.max(-1.4, Math.min(1.4, pitch - dy * .006)); } drag = [e.clientX, e.clientY]; draw(); return; }
   const was = hoverF, h = pick(e.clientX, e.clientY); if (h !== hover || was !== hoverF) { hover = h; cv.classList.toggle("pointing", !!h); draw(); kick(); }
 });
-const up = e => { pts.delete(e.pointerId); cv.classList.remove("dragging"); if (drag && !moved) select(pick(e.clientX, e.clientY), false); drag = null; kick(); };
+const up = e => {
+  pts.delete(e.pointerId); cv.classList.remove('dragging');
+  pendingPick = e.type === 'pointerup' && drag && !moved && !pts.size ? [e.clientX, e.clientY] : null;
+  drag = null; kick();
+};
+cv.addEventListener('click', () => {
+  if (!pendingPick) return;
+  const [x, y] = pendingPick; pendingPick = null; select(pick(x, y), false);
+});
 cv.addEventListener("pointerup", up); cv.addEventListener("pointercancel", up);
 cv.addEventListener("pointerleave", () => { if (hover) { hover = null; hoverF = null; draw(); kick(); } });
 function zoom(f, px, py) { const k = Math.min(5, Math.max(.5, zoomK * f)); f = k / zoomK; zoomK = k;
-  if ((flat || mode === "layers") && px != null && !morph) { const cx = px - W / 2 - LX * lay, cy = py - H / 2 - 14; panX = cx - (cx - panX) * f; panY = cy - (cy - panY) * f; } draw(); }
+  if ((flat || mode === "layers") && px != null && !morph) { const cx = px - mapCenterX - LX * lay, cy = py - mapCenterY; panX = cx - (cx - panX) * f; panY = cy - (cy - panY) * f; } draw(); }
 cv.addEventListener("wheel", e => { e.preventDefault(); zoom(Math.exp(-e.deltaY * .0015), e.clientX, e.clientY); }, { passive: false });
 addEventListener("keydown", e => { if (e.key === "Escape") select(null); });
-addEventListener("resize", resize);
+addEventListener("resize", queueResize);
+if (window.visualViewport) visualViewport.addEventListener("resize", queueResize);
 
 const panel = document.getElementById("panel");
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const productsPanel = document.getElementById('products-panel');
+const productDate = value => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(value + 'T00:00:00Z'));
+function openProducts(n) {
+  stopPlay();
+  const items = COMPANY_PRODUCTS[n.id] || [];
+  document.getElementById('products-company').textContent = n.name;
+  document.getElementById('products-content').innerHTML = items.length
+    ? `<p class='products-intro'>Selected models and products, with official sources.</p>` + items.map(item => `
+      <article class='product-card'>
+        <span class='product-type'>${esc(item.type)}</span>
+        <h3>${esc(item.name)}</h3>
+        ${item.date ? `<p class='product-release'>${esc(item.dateLabel || 'Announcement')} · <time datetime='${esc(item.date)}'>${productDate(item.date)}</time></p>` : ''}
+        <p>${esc(item.summary)}</p>
+        ${item.features && item.features.length ? `<ul>${item.features.map(text => `<li>${esc(text)}</li>`).join('')}</ul>` : ''}
+        <div class='product-sources'>${item.sources.map(source => `<a href='${esc(source.url)}' target='_blank' rel='noopener noreferrer'>${esc(source.label)}</a>`).join('')}</div>
+        <p class='product-checked'>Checked <time datetime='${esc(item.checked)}'>${productDate(item.checked)}</time></p>
+      </article>`).join('')
+    : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
+  productsPanel.showModal(); productsPanel.scrollTop = 0;
+}
+productsPanel.querySelector('.products-close').onclick = () => productsPanel.close();
+productsPanel.addEventListener('keydown', e => { if (e.key === 'Escape') e.stopPropagation(); });
+function closeOnBackdrop(dialog) {
+  dialog.addEventListener('click', e => {
+    const r = dialog.getBoundingClientRect();
+    if (e.target === dialog && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) dialog.close();
+  });
+}
+closeOnBackdrop(productsPanel);
+
 function select(n, turn = true) {
   sel = n; if (n && n.year > T) setYear(n.year);
   if (!n) { panel.hidden = true; draw(); kick(); return; }
@@ -761,12 +1285,15 @@ function select(n, turn = true) {
   const sims = n.similar.map(([m]) => { const shared = m.tags.filter(t => n.tags.includes(t)).sort((a, b) => df[a] - df[b]).slice(0, 2).map(t => TAG[t]).join(", ");
     return `<li><button data-id="${m.id}">${esc(m.name)}</button><small>${esc(shared)}</small></li>`; }).join("");
   const feet = (n.also || []).map(f => `<li><b style="--c:${f.layer.color}">${esc(f.layer.name)}</b><small>${esc(f.why)}</small></li>`).join("");
+  const productItems = COMPANY_PRODUCTS[n.id] || [];
+  const hasProductsPanel = n.kind === 'company' || n.kind === 'startup' || productItems.length > 0;
   panel.innerHTML = `<button class="close" aria-label="Close">×</button>
     <span class="seg" style="--c:${k.color}"><i></i>${esc(n.kind === "lab" || n.kind === "center" ? n.status : k.name)}</span>
     <h2>${esc(n.name)}</h2>
     <div class="meta">${[n.hq, n.year ? "Founded " + (n.approx ? "c. " : "") + n.year : "", ""].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("")}<span class="lay" style="--c:${n.layer.color}">${esc(`Layer ${LAYERS.indexOf(n.layer) + 1} of ${LAYERS.length}: ${n.layer.name}`)}</span></div>
     ${n.status && n.kind !== "lab" && n.kind !== "center" ? `<span class="status">${esc(n.status)}</span>` : ""}
     <p>${esc(n.desc)}</p>
+    ${hasProductsPanel ? `<button type='button' class='products-open' aria-haspopup='dialog' aria-controls='products-panel' aria-label='Models and products for ${esc(n.name)}'>Models &amp; products${productItems.length ? ` <span>${productItems.length}</span>` : ''}</button>` : ''}
     <div class="tags">${n.tags.map(t => `<span>${esc(TAG[t])}</span>`).join("")}</div>
     ${feet ? `<h3>Also works on other layers (${n.also.length})</h3><ul class="also">${feet}</ul>` : ""}
     ${sims ? `<h3>Most similar work</h3><ul>${sims}</ul>` : ""}
@@ -774,6 +1301,8 @@ function select(n, turn = true) {
     ${n.url ? `<a class="site" href="${n.url}" target="_blank" rel="noopener">${esc(n.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))}</a>` : ""}`;
   panel.hidden = false; panel.scrollTop = 0;
   panel.querySelector(".close").onclick = () => select(null);
+  const productButton = panel.querySelector('.products-open');
+  if (productButton) productButton.onclick = () => openProducts(n);
   panel.querySelectorAll("li button").forEach(b => b.onclick = () => select(byId[b.dataset.id]));
   if (turn) faceTo(n); else draw();
 }
@@ -800,7 +1329,7 @@ function runSearch(commit) { const q = search.value.trim().toLowerCase(); if (!q
   if (n) { off.delete(n.kind); legend.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(!off.has(c.dataset.kind)))); select(n); } }
 search.addEventListener("input", () => runSearch(false));
 search.addEventListener("keydown", e => { if (e.key === "Enter") runSearch(true); });
-document.getElementById("reset").onclick = () => { search.value = ""; zoomK = 1; panX = panY = 0; pitch = VIEW[mode].pitch; if (mode !== "cloud") yaw = VIEW[mode].yaw; stopPlay(); setYear(Y1); select(null); };
+document.getElementById("reset").onclick = () => { search.value = ""; zoomK = 1; panX = panY = 0; pitch = VIEW[mode].pitch; if (mode !== "cloud") yaw = VIEW[mode].yaw; stopPlay(); setYear(Y1); select(null); fitView(); };
 document.getElementById("labels").onclick = e => { showAll = !showAll; e.currentTarget.setAttribute("aria-pressed", String(showAll)); draw(); };
 const spinBtn = document.getElementById("spin"); spinBtn.setAttribute("aria-pressed", String(spinning));
 spinBtn.onclick = () => { spinning = !spinning; spinBtn.setAttribute("aria-pressed", String(spinning)); kick(); };
@@ -811,13 +1340,13 @@ function setMode(m) { if (m === mode) return; mode = m; document.body.dataset.mo
   spinBtn.disabled = m !== "cloud"; spinBtn.style.opacity = m === "cloud" ? 1 : .45; document.getElementById("hint").textContent = flat ? "Drag to pan" : "Drag to rotate"; document.getElementById("how").textContent = HOW[m];
   let y0 = yaw % 6.2832; if (y0 > 3.1416) y0 -= 6.2832; if (y0 < -3.1416) y0 += 6.2832;
   morph = { t: 0, from: nodes.map(n => n.p.slice()), to: nodes.map(n => n[VIEW[m].key]), m0: mix, m1: flat ? 1 : 0, l0: lay, l1: m === "layers" ? 1 : 0,
-    y0, y1: VIEW[m].yaw, p0: pitch, p1: VIEW[m].pitch, x0: panX, q0: panY }; kick(); }
+    y0, y1: VIEW[m].yaw, p0: pitch, p1: VIEW[m].pitch, x0: panX, q0: panY }; fitCamera(); kick(); }
 document.querySelectorAll(".modes .btn").forEach(b => b.onclick = () => setMode(b.dataset.mode));
 
 // Layer checkboxes (layered view only): unchecked layers drop out and the rest close up into an evenly spaced stack.
 const rail = document.getElementById("rail");
 function stackLayers(animate) { const on = LAYERS.filter(Lr => !layerOff.has(Lr.key)), gap = Math.min(.44, 1.73 / Math.max(1, on.length - 1));
-  on.forEach((Lr, i) => { Lr.y = (on.length - 1) / 2 * gap - i * gap; }); nodes.forEach(n => { n.pL[1] = n.layer.y; });
+  on.forEach((Lr, i) => { Lr.y = (on.length - 1) / 2 * gap - i * gap; }); nodes.forEach(n => { n.pL[1] = n.layer.y; }); fitCamera();
   if (sel && layerOff.has(sel.layer.key)) { sel = null; panel.hidden = true; }
   if (mode === "layers" && animate) { morph = { t: 0, from: nodes.map(n => n.p.slice()), to: nodes.map(n => n.pL), m0: mix, m1: 0, l0: lay, l1: 1, y0: yaw, y1: yaw, p0: pitch, p1: pitch, keepPan: true }; kick(); } else draw(); }
 rail.innerHTML = "<h4>Layers</h4>" + LAYERS.slice().reverse().map(Lr => `<label data-key="${Lr.key}" title="${esc(Lr.note)}"><input type="checkbox" checked style="accent-color:${Lr.color}"><svg class="lico" viewBox="0 0 24 24" aria-hidden="true"><path d="${LSTYLE[Lr.key].s}" fill="none" stroke="${Lr.color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="${LSTYLE[Lr.key].f}" fill="${Lr.color}"/></svg>${esc(Lr.name)} <b>${Lr.nodes.length}</b></label>`).join("") + '<button class="all" id="allLayers">Show all</button>';
@@ -835,6 +1364,24 @@ yearInput.addEventListener("input", () => { stopPlay(); setYear(yearInput.value)
 function stopPlay() { if (playing) { clearInterval(playing); playing = 0; playBtn.textContent = "▶"; } }
 playBtn.onclick = () => { if (playing) return stopPlay(); playBtn.textContent = "❚❚"; setYear(T >= Y1 ? Y0 : T + 1);
   playing = setInterval(() => { if (T >= Y1) stopPlay(); else setYear(T + 1); }, 1100); };
+const controlsDialog = document.getElementById('map-controls-dialog'), controlsHome = document.getElementById('map-controls'), controlsToggle = document.getElementById('controls-toggle');
+const controlGroups = [document.querySelector('.tools'), document.getElementById('time'), document.getElementById('legend'), document.getElementById('rail')];
+controlsToggle.onclick = () => {
+  [controlGroups[0], controlGroups[3], controlGroups[1], controlGroups[2]].forEach(group => document.getElementById('mobile-control-content').appendChild(group));
+  controlsToggle.setAttribute('aria-expanded', 'true'); controlsDialog.showModal();
+};
+document.getElementById('controls-close').onclick = () => controlsDialog.close();
+controlsDialog.addEventListener('close', () => {
+  [controlGroups[0], controlGroups[3], controlGroups[2], controlGroups[1]].forEach(group => controlsHome.appendChild(group));
+  controlsToggle.setAttribute('aria-expanded', 'false'); queueResize();
+});
+controlsDialog.addEventListener('keydown', e => { if (e.key === 'Escape') e.stopPropagation(); });
+closeOnBackdrop(controlsDialog);
+document.getElementById('zoom-in').onclick = () => zoom(1.25);
+document.getElementById('zoom-out').onclick = () => zoom(.8);
+document.getElementById('fit-map').onclick = fitView;
+compactLayout.addEventListener('change', queueResize);
+
 setYear(Y1);
 
 resize(); kick();
