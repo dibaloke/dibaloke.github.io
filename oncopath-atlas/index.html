@@ -134,7 +134,7 @@
 <div class="tools">
   <span class="modes" role="group" aria-label="View"><button class="btn" data-mode="cloud" aria-pressed="true" title="3D similarity cloud">Cloud</button><button class="btn" data-mode="flat" aria-pressed="false" title="Flat similarity map">Flat</button><button class="btn" data-mode="layers" aria-pressed="false" title="Stacked planes, one per part of the field">Layers</button></span>
   <button class="btn toggle" id="spin" aria-pressed="true" title="Rotate the cloud automatically">Rotate</button>
-  <button class="btn toggle" id="labels" aria-pressed="false" title="Show every name">Labels</button>
+  <button class="btn toggle" id="labels" aria-pressed="true" title="Show every name">Labels</button>
   <button class="btn" id="reset" title="Reset view">Reset</button>
   <input id="search" type="search" placeholder="Find an organization" autocomplete="off" list="names">
   <datalist id="names"></datalist>
@@ -619,7 +619,7 @@ nodes.forEach(n => { if (!n.pL) { n.layer = LAYERS[2]; n.pL = [0, LAYERS[2].y, 0
 
 /* ---------- 3D view ---------- */
 const cv = document.getElementById("web"), ctx = cv.getContext("2d");
-let W = 0, H = 0, dpr = 1, yaw = .6, pitch = -.18, zoomK = 1, hover = null, sel = null, showAll = false;
+let W = 0, H = 0, dpr = 1, yaw = .6, pitch = -.18, zoomK = 1, hover = null, sel = null, showAll = true;
 const layerOff = new Set(); let hotLayer = null, hoverF = null;   // hoverF: the foothold ring under the pointer, if any
 let mode = "cloud", lay = 0, flat = false, mix = 0, morph = null, panX = 0, panY = 0, T = Y1, playing = 0;
 let spinning = !matchMedia("(prefers-reduced-motion: reduce)").matches, glide = null, raf = 0;
