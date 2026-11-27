@@ -128,14 +128,15 @@
   .product-group { margin: 26px 0 0; padding: 8px 12px; border-radius: 6px; background: #eeebf5; color: var(--hema); font-size: 16px; }
   .product-card { padding: 24px 0; border-bottom: 1px solid var(--line); }
   .product-card:last-child { border-bottom: 0; padding-bottom: 0; }
-  .product-card-heading { --product-ink: #4e3d8a; --product-wash: #f0ebfb; display: flex; align-items: flex-start; gap: 13px; }
-  .product-card-heading[data-tone='teal'] { --product-ink: #136c67; --product-wash: #e0f4ee; }
-  .product-card-heading[data-tone='rose'] { --product-ink: #a13660; --product-wash: #fae8ef; }
-  .product-card-heading[data-tone='red'] { --product-ink: #a13e35; --product-wash: #f9e6e0; }
-  .product-card-heading[data-tone='amber'] { --product-ink: #85560b; --product-wash: #fbf0d5; }
-  .product-card-heading[data-tone='blue'] { --product-ink: #245c93; --product-wash: #e5effb; }
-  .product-card-heading[data-tone='green'] { --product-ink: #456923; --product-wash: #eaf2e0; }
-  .product-card-heading[data-tone='slate'] { --product-ink: #4d5f70; --product-wash: #ebeff3; }
+  .product-tone { --product-ink: #4e3d8a; --product-wash: #f0ebfb; }
+  .product-card-heading { display: flex; align-items: flex-start; gap: 13px; }
+  .product-tone[data-tone='teal'] { --product-ink: #136c67; --product-wash: #e0f4ee; }
+  .product-tone[data-tone='rose'] { --product-ink: #a13660; --product-wash: #fae8ef; }
+  .product-tone[data-tone='red'] { --product-ink: #a13e35; --product-wash: #f9e6e0; }
+  .product-tone[data-tone='amber'] { --product-ink: #85560b; --product-wash: #fbf0d5; }
+  .product-tone[data-tone='blue'] { --product-ink: #245c93; --product-wash: #e5effb; }
+  .product-tone[data-tone='green'] { --product-ink: #456923; --product-wash: #eaf2e0; }
+  .product-tone[data-tone='slate'] { --product-ink: #4d5f70; --product-wash: #ebeff3; }
   .product-art { display: grid; flex: 0 0 54px; place-items: center; width: 54px; height: 54px; border: 1px solid color-mix(in srgb, var(--product-ink) 16%, transparent); border-radius: 15px; background: linear-gradient(150deg, #fff, var(--product-wash) 68%); color: var(--product-ink); }
   .product-art svg { width: 35px; height: 35px; transition: transform 180ms ease-out; }
   .product-art-detail { transform-box: view-box; transform-origin: center; animation: product-art-in 650ms cubic-bezier(.2,.75,.25,1) both; }
@@ -160,6 +161,68 @@
   .product-sources a, .products-empty a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
   .products-empty h3 { margin: 2px 0 10px; font-size: 20px; }
   .products-empty p { margin: 0 0 18px; color: var(--muted); }
+  .catalog-toggle, .catalog-back, .catalog-reset { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 11px; border: 1px solid #d2cde1; border-radius: 9px; background: #fcfbfd; color: var(--hema); font: 600 13px/1.2 var(--sans); white-space: nowrap; cursor: pointer; }
+  .catalog-toggle:hover, .catalog-back:hover, .catalog-reset:hover { background: #eeebf5; }
+  .catalog-toggle { min-height: 34px; flex: none; }
+  .catalog-toggle svg, .catalog-back svg { width: 16px; height: 16px; flex: none; }
+  .catalog { position: fixed; inset: 0; width: 100%; max-width: none; height: var(--app-height, 100dvh); max-height: none; overflow: auto; overscroll-behavior: contain; margin: 0; padding: 0; border: 0; background: #f8f7fb; color: var(--ink); font: 15px/1.5 var(--sans); }
+  .catalog-header { background: #fdfcfe; border-bottom: 1px solid var(--line); }
+  .catalog-frame { width: min(1160px, 100%); margin: 0 auto; padding: 28px clamp(14px, 4vw, 32px); }
+  .catalog-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .catalog-title-row h2 { margin: 0; font: 500 clamp(29px, 4vw, 44px)/1.08 var(--serif); letter-spacing: -.025em; }
+  .catalog-back { min-height: 44px; }
+  .catalog-filters { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .8fr) auto; gap: 12px; align-items: end; margin-top: 25px; }
+  .catalog-field { display: grid; gap: 5px; min-width: 0; }
+  .catalog-field label { color: var(--muted); font-size: 13px; font-weight: 600; }
+  .catalog-filters input, .catalog-filters select { min-width: 0; width: 100%; height: 44px; padding: 0 10px; border: 1px solid #d2cde1; border-radius: 8px; background: #fff; color: var(--ink); font: 16px/1.2 var(--sans); }
+  .catalog-reset { min-height: 44px; }
+  .catalog-results { padding-top: 18px; }
+  .catalog-count { margin: 0 0 10px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .catalog-table-wrap { overflow: clip; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+  .catalog table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+  .catalog th, .catalog td { padding: 12px 14px; text-align: left; overflow-wrap: anywhere; }
+  .catalog thead th { background: #f2eff8; color: #4b4365; font-size: 13px; font-weight: 600; }
+  .catalog-company-col { width: 24%; }
+  .catalog-type-col { width: 30%; }
+  .catalog-number-col { width: 78px; }
+  .catalog .catalog-number { text-align: right; font-variant-numeric: tabular-nums; }
+  .catalog-company-row { border-top: 1px solid var(--line); }
+  .catalog-company-row:hover, .catalog-company-row:has(button[aria-expanded='true']) { background: #fbfaff; }
+  .catalog-company-button { display: flex; width: 100%; min-height: 44px; align-items: center; gap: 8px; padding: 0; border: 0; background: transparent; color: var(--ink); font: 600 16px/1.35 var(--sans); text-align: left; cursor: pointer; overflow-wrap: anywhere; }
+  .catalog-company-button:hover, .catalog-product:hover .catalog-product-name { color: var(--hema); text-decoration: underline; text-underline-offset: 3px; }
+  .catalog-chevron { width: 14px; height: 14px; flex: none; color: var(--hema); }
+  .catalog-company-button[aria-expanded='true'] .catalog-chevron { transform: rotate(90deg); }
+  .catalog-preview { color: var(--muted); font-size: 14px; font-weight: 400; }
+  .catalog-mobile-preview { display: none; }
+  .catalog-more { white-space: nowrap; }
+  .catalog-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .catalog-type-tag { padding: 3px 7px; border-radius: 5px; background: var(--product-wash); color: var(--product-ink); font-size: 12px; line-height: 1.3; }
+  .catalog-details td { padding: 0 14px 14px 36px; background: #fbfaff; }
+  .catalog-product-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .catalog-product { display: flex; align-items: center; gap: 10px; width: 100%; height: 100%; min-height: 56px; padding: 8px; border: 1px solid var(--line); border-radius: 9px; background: #fff; color: var(--ink); font: inherit; text-align: left; cursor: pointer; overflow-wrap: anywhere; }
+  .catalog-product .product-art { flex-basis: 36px; width: 36px; height: 36px; border-radius: 9px; }
+  .catalog-product .product-art svg { width: 23px; height: 23px; }
+  .catalog-product .product-art-detail { animation: none; }
+  .catalog-product-name { display: block; font-weight: 600; }
+  .catalog-product-type { display: block; color: var(--product-ink); font-size: 12.5px; }
+  .catalog-empty { padding: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--muted); }
+  @media (max-width: 680px) {
+    .catalog-frame { padding-block: 18px; }
+    .catalog-title-row { gap: 9px; align-items: flex-start; }
+    .catalog-back { padding-inline: 8px; }
+    .catalog-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+    .catalog-field { grid-column: span 2; }
+    .catalog-filter-search { grid-column: span 3; }
+    .catalog-reset { grid-column: 4; grid-row: 1; }
+    .catalog-company-col { width: auto; }
+    .catalog-type-col { display: none; }
+    .catalog-number-col { width: 70px; }
+    .catalog th, .catalog td { padding: 9px 10px; }
+    .catalog .catalog-types, .catalog .catalog-preview-cell { display: none; }
+    .catalog-mobile-preview { display: block; padding: 0 0 3px 22px; }
+    .catalog-details td { padding: 0 10px 10px; }
+    .catalog-product-list { grid-template-columns: 1fr; }
+  }
   .publications-catalog, .publication-list a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
   .publications-catalog { display: inline-block; margin: 8px 0 2px; }
   .publication-year { margin: 24px 0 6px; font: 500 25px/1.2 var(--serif); }
@@ -181,9 +244,9 @@
   .title, .map-search, .tools, .legend, .time, .rail, .foot { z-index: 2; }
   .panel { z-index: 4; }
   .map-controls { display: contents; }
-  .tools { right: 226px; }
-  .map-search { position: fixed; top: 24px; right: 28px; width: 180px; }
-  .map-search input { width: 100%; }
+  .tools { right: 354px; }
+  .map-search { position: fixed; top: 20px; right: 28px; width: 310px; display: flex; align-items: center; gap: 10px; }
+  .map-search input { min-width: 0; width: 100%; }
   .controls-toggle { display: none; }
   .zoom-controls { position: fixed; right: 28px; bottom: 58px; z-index: 3; display: flex; gap: 6px; }
   .zoom-controls button, .controls-toggle { width: 44px; height: 44px; padding: 0; border: 1px solid #d2cde1; border-radius: 10px; background: #fcfbfdf2; color: var(--ink); box-shadow: 0 3px 12px #231e3c0b; font: 500 24px/1 var(--sans); cursor: pointer; }
@@ -220,6 +283,7 @@
     .title { top: 16px; left: 16px; max-width: calc(100% - 80px); }
     .title h1 { font-size: clamp(20px, 5.8vw, 28px); }
     .map-search { top: 64px; left: 16px; right: 16px; width: auto; }
+    .catalog-toggle { min-height: 44px; }
     .map-search input { min-width: 0; width: 100%; height: 44px; padding: 10px 12px; border: 1px solid #d2cde1; border-radius: 10px; background: #fcfbfdf5; font-size: 16px; }
     .controls-toggle { position: fixed; top: 12px; right: 16px; z-index: 3; display: grid; place-items: center; }
     .map-controls { display: none; }
@@ -261,6 +325,10 @@
 <div class='map-search'>
   <input id='search' type='search' aria-label='Find an organization' placeholder='Find an organization' autocomplete='off' list='names'>
   <datalist id='names'></datalist>
+  <button id='catalog-toggle' class='catalog-toggle' type='button' aria-haspopup='dialog' aria-controls='product-catalog'>
+    <svg viewBox='0 0 20 20' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><rect x='2.5' y='4' width='15' height='12' rx='2'/><path d='M2.5 8.5h15M2.5 12h15M8.5 8.5V16'/></svg>
+    Product table
+  </button>
 </div>
 <div id='map-controls' class='map-controls'>
   <div class='tools'>
@@ -288,6 +356,56 @@
   <div id='mobile-control-content' class='controls-content'></div>
 </dialog>
 <aside class="panel" id="panel" hidden></aside>
+
+<dialog id='product-catalog' class='catalog' aria-labelledby='catalog-title'>
+  <header class='catalog-header'>
+    <div class='catalog-frame'>
+      <div class='catalog-title-row'>
+        <h2 id='catalog-title'>Products by company</h2>
+        <button id='catalog-close' class='catalog-back' type='button' autofocus>
+          <svg viewBox='0 0 20 20' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m8 5-5 5 5 5M3 10h14'/></svg>
+          Back to map
+        </button>
+      </div>
+      <div class='catalog-filters'>
+        <div class='catalog-field catalog-filter-search'>
+          <label for='catalog-search'>Search</label>
+          <input id='catalog-search' type='search' placeholder='Company or product' autocomplete='off'>
+        </div>
+        <div class='catalog-field'>
+          <label for='catalog-type'>Product type</label>
+          <select id='catalog-type'><option value=''>All types</option></select>
+        </div>
+        <div class='catalog-field'>
+          <label for='catalog-sort'>Sort by</label>
+          <select id='catalog-sort'>
+            <option value='name'>Company A–Z</option>
+            <option value='name-desc'>Company Z–A</option>
+            <option value='count'>Most products</option>
+          </select>
+        </div>
+        <button id='catalog-reset' class='catalog-reset' type='button'>Reset</button>
+      </div>
+    </div>
+  </header>
+  <div class='catalog-frame catalog-results'>
+    <p id='catalog-count' class='catalog-count' role='status'></p>
+    <div id='catalog-table-wrap' class='catalog-table-wrap'>
+      <table aria-label='Company products'>
+        <thead>
+          <tr>
+            <th scope='col' class='catalog-company-col'>Company</th>
+            <th scope='col' class='catalog-preview-cell'>Models &amp; products</th>
+            <th scope='col' class='catalog-types catalog-type-col'>Product types</th>
+            <th scope='col' class='catalog-number catalog-number-col'>Count</th>
+          </tr>
+        </thead>
+        <tbody id='catalog-rows'></tbody>
+      </table>
+    </div>
+    <p id='catalog-empty' class='catalog-empty' hidden>No companies match these filters.</p>
+  </div>
+</dialog>
 
 <dialog id='products-panel' class='products-panel' aria-labelledby='products-company'>
   <header class='products-heading'>
@@ -2711,112 +2829,7 @@ const COMPANY_PRODUCTS = {
       "type": "Oncology drug development platform",
       "summary": "Pathos AI’s internal platform uses multimodal evidence to prioritize oncology therapies and inform clinical development.",
       "features": [
-        "S",
-        "c",
-        "o",
-        "u",
-        "t",
-        " ",
-        "p",
-        "r",
-        "i",
-        "o",
-        "r",
-        "i",
-        "t",
-        "i",
-        "z",
-        "e",
-        "s",
-        " ",
-        "a",
-        "s",
-        "s",
-        "e",
-        "t",
-        "s",
-        ",",
-        " ",
-        "S",
-        "p",
-        "r",
-        "i",
-        "n",
-        "t",
-        " ",
-        "s",
-        "u",
-        "p",
-        "p",
-        "o",
-        "r",
-        "t",
-        "s",
-        " ",
-        "c",
-        "l",
-        "i",
-        "n",
-        "i",
-        "c",
-        "a",
-        "l",
-        " ",
-        "d",
-        "e",
-        "v",
-        "e",
-        "l",
-        "o",
-        "p",
-        "m",
-        "e",
-        "n",
-        "t",
-        ",",
-        " ",
-        "a",
-        "n",
-        "d",
-        " ",
-        "F",
-        "o",
-        "u",
-        "n",
-        "d",
-        "r",
-        "y",
-        " ",
-        "p",
-        "r",
-        "o",
-        "v",
-        "i",
-        "d",
-        "e",
-        "s",
-        " ",
-        "t",
-        "h",
-        "e",
-        " ",
-        "s",
-        "h",
-        "a",
-        "r",
-        "e",
-        "d",
-        " ",
-        "A",
-        "I",
-        " ",
-        "m",
-        "o",
-        "d",
-        "e",
-        "l",
-        "s",
-        "."
+        "Scout prioritizes assets, Sprint supports clinical development, and Foundry provides the shared AI models."
       ],
       "sources": [
         {
@@ -2875,83 +2888,7 @@ const COMPANY_PRODUCTS = {
       "type": "Microscope slide printer family",
       "summary": "Epredia’s microscope slide printers label slides at the point of use to support specimen identification and traceability.",
       "features": [
-        "T",
-        "h",
-        "e",
-        " ",
-        "r",
-        "a",
-        "n",
-        "g",
-        "e",
-        " ",
-        "i",
-        "n",
-        "c",
-        "l",
-        "u",
-        "d",
-        "e",
-        "s",
-        " ",
-        "S",
-        "l",
-        "i",
-        "d",
-        "e",
-        "M",
-        "a",
-        "t",
-        "e",
-        " ",
-        "A",
-        "S",
-        ",",
-        " ",
-        "P",
-        "r",
-        "o",
-        ",",
-        " ",
-        "L",
-        "a",
-        "s",
-        "e",
-        "r",
-        " ",
-        "a",
-        "n",
-        "d",
-        " ",
-        "T",
-        "h",
-        "e",
-        "r",
-        "m",
-        "a",
-        "l",
-        " ",
-        "S",
-        "l",
-        "i",
-        "d",
-        "e",
-        " ",
-        "P",
-        "r",
-        "i",
-        "n",
-        "t",
-        "e",
-        "r",
-        " ",
-        "m",
-        "o",
-        "d",
-        "e",
-        "l",
-        "s",
-        "."
+        "The range includes SlideMate AS, Pro, Laser and Thermal Slide Printer models."
       ],
       "sources": [
         {
@@ -3898,7 +3835,7 @@ function draw() {
     ctx.textBaseline = "middle"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(249,248,252,.94)"; ctx.strokeText(name, bx, f.sy); ctx.fillStyle = "#231e3c"; ctx.fillText(name, bx, f.sy); }
 }
 
-function tick() { raf = 0; let again = false;
+function tick() { raf = 0; if (productCatalog.open) return; let again = false;
   if (morph) { morph.t++; const e = 1 - Math.pow(1 - morph.t / 50, 3), L = (a, b) => a + (b - a) * e; mix = L(morph.m0, morph.m1); lay = L(morph.l0, morph.l1);
     yaw = L(morph.y0, morph.y1); pitch = L(morph.p0, morph.p1); if (!morph.keepPan) { panX = morph.x0 * (1 - e); panY = morph.q0 * (1 - e); }
     nodes.forEach((n, i) => { for (let k = 0; k < 3; k++) n.p[k] = L(morph.from[i][k], morph.to[i][k]); });
@@ -3951,6 +3888,7 @@ if (window.visualViewport) visualViewport.addEventListener("resize", queueResize
 const panel = document.getElementById("panel");
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const productsPanel = document.getElementById('products-panel');
+const productCatalog = document.getElementById('product-catalog');
 const resourceClose = productsPanel.querySelector('.products-close');
 const productDate = value => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(value + 'T00:00:00Z'));
 function openResourcePanel(n, label, closeLabel, content) {
@@ -4094,17 +4032,20 @@ const PRODUCT_ART = {
     "M9.5 15.6v4.2H18 M14 12.2h8.5v4.2 M2.7 12.2H5 M27 19.8h2.3"
   ]
 };
+function productIllustration([, , outline, detail]) {
+  return `<span class='product-art' aria-hidden='true'>
+    <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' focusable='false'>
+      <path d='${outline}'/>
+      <path class='product-art-detail' d='${detail}'/>
+    </svg>
+  </span>`;
+}
 function productCardHeading(item, heading) {
   const art = PRODUCT_ART[item.category];
   if (!art) return `<span class='product-type'>${esc(item.type)}</span><${heading}>${esc(item.name)}</${heading}>`;
-  const [label, tone, outline, detail] = art;
-  return `<header class='product-card-heading' data-category='${esc(item.category)}' data-tone='${tone}'>
-    <span class='product-art' aria-hidden='true'>
-      <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' focusable='false'>
-        <path d='${outline}'/>
-        <path class='product-art-detail' d='${detail}'/>
-      </svg>
-    </span>
+  const [label, tone] = art;
+  return `<header class='product-card-heading product-tone' data-category='${esc(item.category)}' data-tone='${tone}'>
+    ${productIllustration(art)}
     <div class='product-card-title'>
       <span class='product-category'>${esc(label)}</span>
       <${heading}>${esc(item.name)}</${heading}>
@@ -4112,11 +4053,12 @@ function productCardHeading(item, heading) {
     </div>
   </header>`;
 }
-function openProducts(n) {
-  const items = COMPANY_PRODUCTS[n.id] || [];
+function openProducts(n, selectedItem) {
+  const items = selectedItem ? [selectedItem] : COMPANY_PRODUCTS[n.id] || [];
   const cards = items.map((item, index) => {
-    const heading = item.group ? 'h4' : 'h3';
-    const groupHeading = item.group && item.group !== items[index - 1]?.group
+    const section = selectedItem ? null : item.group;
+    const heading = section ? 'h4' : 'h3';
+    const groupHeading = section && section !== items[index - 1]?.group
       ? `<h3 class='product-group'>${esc(item.group)}</h3>` : '';
     return `${groupHeading}
       <article class='product-card'>
@@ -4129,10 +4071,116 @@ function openProducts(n) {
       </article>`;
   }).join('');
   const content = cards
-    ? `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>` + cards
+    ? (selectedItem ? '' : `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>`) + cards
     : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
   openResourcePanel(n, 'Models & products', 'Close models and products', content);
 }
+
+// The company table uses the same records and detail panel as the map.
+const catalogCompanies = nodes.filter(n => ['company', 'startup'].includes(n.kind) && COMPANY_PRODUCTS[n.id]?.length);
+const catalogExpanded = new Set();
+const catalogSearch = document.getElementById('catalog-search');
+const catalogType = document.getElementById('catalog-type');
+const catalogSort = document.getElementById('catalog-sort');
+const catalogRows = document.getElementById('catalog-rows');
+const catalogCount = document.getElementById('catalog-count');
+const catalogTableWrap = document.getElementById('catalog-table-wrap');
+const catalogEmpty = document.getElementById('catalog-empty');
+const compactCatalog = matchMedia('(max-width: 680px)');
+const companyNameOrder = new Intl.Collator(undefined, { sensitivity: 'base' });
+const catalogTypes = new Set(catalogCompanies.flatMap(n => COMPANY_PRODUCTS[n.id].map(item => item.category)));
+for (const [key, [label]] of Object.entries(PRODUCT_ART)) {
+  if (catalogTypes.has(key)) catalogType.add(new Option(label, key));
+}
+const searchText = value => value.toLowerCase().normalize('NFKD').replace(/\p{Diacritic}/gu, '');
+const catalogChevron = `<svg class='catalog-chevron' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m6 3.5 4.5 4.5L6 12.5'/></svg>`;
+function renderCatalog() {
+  const terms = searchText(catalogSearch.value).trim().split(/\s+/).filter(Boolean);
+  const category = catalogType.value;
+  const rows = catalogCompanies.map(n => {
+    const items = COMPANY_PRODUCTS[n.id].map((item, index) => ({ item, index })).filter(({ item }) => {
+      if (category && item.category !== category) return false;
+      const text = searchText([n.name, item.name, item.type, PRODUCT_ART[item.category]?.[0], item.group, item.summary].join(' '));
+      return terms.every(term => text.includes(term));
+    });
+    return { n, items };
+  }).filter(({ items }) => items.length);
+  const order = catalogSort.value;
+  rows.sort((a, b) => {
+    const names = companyNameOrder.compare(a.n.name, b.n.name);
+    if (order === 'count') return b.items.length - a.items.length || names;
+    return order === 'name-desc' ? -names : names;
+  });
+  const total = rows.reduce((sum, row) => sum + row.items.length, 0);
+  catalogCount.textContent = `${rows.length} ${rows.length === 1 ? 'company' : 'companies'} · ${total} ${total === 1 ? 'product' : 'products'}`;
+  catalogTableWrap.hidden = !rows.length;
+  catalogEmpty.hidden = !!rows.length;
+  const detailColumns = compactCatalog.matches ? 2 : 4;
+  catalogRows.innerHTML = rows.map(({ n, items }) => {
+    const expanded = catalogExpanded.has(n.id);
+    const previewNames = items.slice(0, 2).map(({ item }) => esc(item.name)).join(' · ');
+    const preview = previewNames + (items.length > 2 ? ` <span class='catalog-more'>+${items.length - 2} more</span>` : '');
+    const categories = new Set(items.map(({ item }) => item.category));
+    const tags = [...categories].map(key => {
+      const [label, tone] = PRODUCT_ART[key] || ['Other', 'slate'];
+      return `<span class='catalog-type-tag product-tone' data-tone='${tone}'>${esc(label)}</span>`;
+    }).join('');
+    const details = items.map(({ item, index }) => {
+      const art = PRODUCT_ART[item.category];
+      return `<li><button class='catalog-product product-tone' type='button' data-company='${n.id}' data-product='${index}' data-tone='${art?.[1] || 'slate'}' aria-haspopup='dialog'>
+        ${art ? productIllustration(art) : ''}
+        <span><span class='catalog-product-name'>${esc(item.name)}</span><span class='catalog-product-type'>${esc(item.type)}</span></span>
+      </button></li>`;
+    }).join('');
+    return `<tr class='catalog-company-row'>
+      <th scope='row'>
+        <button class='catalog-company-button' type='button' data-company='${n.id}' aria-expanded='${expanded}' aria-controls='catalog-detail-${n.id}'>${catalogChevron}<span>${esc(n.name)}</span></button>
+        <span class='catalog-preview catalog-mobile-preview'>${preview}</span>
+      </th>
+      <td class='catalog-preview catalog-preview-cell'>${preview}</td>
+      <td class='catalog-types'><div class='catalog-tags'>${tags}</div></td>
+      <td class='catalog-number'>${items.length}</td>
+    </tr>
+    <tr class='catalog-details' id='catalog-detail-${n.id}'${expanded ? '' : ' hidden'}><td colspan='${detailColumns}'>
+      <ul class='catalog-product-list' aria-label="Products from ${esc(n.name)}">${details}</ul>
+    </td></tr>`;
+  }).join('');
+}
+compactCatalog.addEventListener('change', () => {
+  const detailColumns = compactCatalog.matches ? 2 : 4;
+  catalogRows.querySelectorAll('.catalog-details td').forEach(cell => { cell.colSpan = detailColumns; });
+});
+catalogRows.addEventListener('click', event => {
+  const button = event.target.closest('button[data-company]');
+  if (!button) return;
+  const company = button.dataset.company;
+  if (button.hasAttribute('data-product')) {
+    openProducts(byId[company], COMPANY_PRODUCTS[company][Number(button.dataset.product)]);
+    return;
+  }
+  const expanded = !catalogExpanded.has(company);
+  if (expanded) catalogExpanded.add(company); else catalogExpanded.delete(company);
+  button.setAttribute('aria-expanded', String(expanded));
+  document.getElementById(button.getAttribute('aria-controls')).hidden = !expanded;
+});
+catalogSearch.addEventListener('input', renderCatalog);
+catalogType.addEventListener('change', renderCatalog);
+catalogSort.addEventListener('change', renderCatalog);
+document.getElementById('catalog-reset').onclick = () => {
+  catalogSearch.value = catalogType.value = '';
+  catalogSort.value = 'name';
+  catalogExpanded.clear();
+  renderCatalog();
+};
+document.getElementById('catalog-toggle').onclick = () => {
+  stopPlay();
+  renderCatalog();
+  productCatalog.showModal();
+};
+document.getElementById('catalog-close').onclick = () => productCatalog.close();
+productCatalog.addEventListener('keydown', event => { if (event.key === 'Escape') event.stopPropagation(); });
+productCatalog.addEventListener('close', kick);
+
 function openPublications(n, publications) {
   const years = publications.years.map(({ year, papers }) => `
     <section aria-labelledby='publication-year-${year}'>
