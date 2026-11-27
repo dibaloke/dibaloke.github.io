@@ -2140,6 +2140,8 @@ const C = [
  // ----- Labs & research centers
  ["octopathlab","OctoPath Research Lab","lab","UC Irvine, California, US","Academic lab","Jana Lipkova's group at UC Irvine, in Pathology and Biomedical Engineering. Develops AI methods that combine histology, radiology, omics and clinical information to study diagnosis, prognosis, biomarkers and treatment response.","https://octopath.org/","wsi multi omics prog"],
  ["mahmood","Mahmood Lab","lab","Harvard · Mass General Brigham","Academic lab","Faisal Mahmood's group at Mass General Brigham and Harvard: the UNI and CONCH foundation models and the PathChat copilot research; a major source of open pathology tooling.","https://faisal.ai","fm vlm open wsi multi"],
+ ["kimia","Kimia Lab","lab","Mayo Clinic · Rochester, Minnesota, US","Academic lab","Hamid R. Tizhoosh leads the Knowledge Inference in Medical Image Analysis Lab at Mayo Clinic. The group develops AI methods for searching and matching pathology slides and other medical images, including retrieval across imaging and clinical data.","https://www.mayo.edu/research/labs/knowledge-inference-medical-image-analysis/overview","wsi fm multi"],
+ ["jaume","Jaume Lab","lab","University of Lausanne · Lausanne, Switzerland","Academic lab","Guillaume Jaume leads this computational pathology group in the Department of Oncology at the University of Lausanne. The lab develops foundation models and agentic AI for pathology and uses multimodal learning to discover cancer biomarkers.","https://guillaumejaume.github.io/","fm wsi multi vlm"],
  ["msr","Microsoft Research Redmond","center","Redmond, Washington, US","Corporate research","Microsoft's research lab at its Redmond, Washington headquarters. With Providence and the University of Washington it built the Prov-GigaPath whole-slide foundation model (Nature, 2024) and GigaTIME, which predicts spatial protein patterns from H&E slides to model the tumor microenvironment (Cell, published December 2025).","https://www.microsoft.com/en-us/research/","fm wsi mplex tme"],
  ["msrne","Microsoft Research New England","center","Cambridge, Massachusetts, US","Corporate research","Microsoft's research lab in Cambridge, Massachusetts. Its researchers co-developed the Virchow foundation model (Nature Medicine, 2024) and the PRISM slide-level models with Paige, and its Biomedical ML group works with the Broad Institute on Project Ex Vivo. Both Microsoft labs feed Quine, the multimodal model of biology introduced in 2026.","https://www.microsoft.com/en-us/research/lab/microsoft-research-new-england/","fm wsi vlm multi"],
  ["google","Google","company","Mountain View, US","Public (Alphabet)","Technology company whose research teams build health AI. Google Research released Path Foundation, an open-weight model that turns H&E image patches into embeddings for pathology tasks, as part of its Health AI Developer Foundations (November 2024). Isomorphic Labs was spun out of its DeepMind unit.","https://developers.google.com/health-ai-developer-foundations/path-foundation","fm open wsi"],
@@ -2180,6 +2182,8 @@ const C = [
 
 // a, b, type (owned | pending | partner | origin), note
 const L = [
+ ["mayo","kimia","affiliation","Kimia Lab is a Mayo Clinic research group led by Hamid R. Tizhoosh"],
+ ["mahmood","jaume","alumni","Guillaume Jaume was a postdoctoral fellow in Mahmood Lab before launching Jaume Lab at the University of Lausanne in February 2026"],
  ["owkin","waiv","origin","Waiv, formerly Owkin Dx, spun out of Owkin in March 2026"],
  ["weillcornell","danafarber","partner","Research collaboration on language-model tools for digital pathology, including GPT4DFCI and PathML (2024)"],
  ["tempus","paige","owned","Tempus acquired Paige (2025)"],
@@ -2300,7 +2304,7 @@ const LAYERS = [
   { key: "dp",   name: "Digital pathology platforms",   note: "Image management and workflow software that pathologists work in",
     ids: "proscia techcyte gestalt tribun pathpresenter sectra fujifilm deciphex" },
   { key: "ai",   name: "Pathology AI",                  note: "Foundation models, AI diagnosis and biomarkers read from the slide",
-    ids: "paige pathai bioptimus aignostics sophont tremont mahmood octopathlab gevaert yu ai4path atlaslab swang haochen msr msrne lgai modella kaiko zhihuang zou rli cpace ibex deepbio primaa qritive aira pathtools radboud octopath lunit mindpeak visiopharm indica aiforia tia pictor artera ataraxis stratipath domore valar precisedx pathomiq 4dpath shen madabhushi cooper owkin waiv imagene panakeia kather yuan pan nucleai google histai" },
+    ids: "paige pathai bioptimus aignostics sophont tremont mahmood kimia jaume octopathlab gevaert yu ai4path atlaslab swang haochen msr msrne lgai modella kaiko zhihuang zou rli cpace ibex deepbio primaa qritive aira pathtools radboud octopath lunit mindpeak visiopharm indica aiforia tia pictor artera ataraxis stratipath domore valar precisedx pathomiq 4dpath shen madabhushi cooper owkin waiv imagene panakeia kather yuan pan nucleai google histai" },
   { key: "sp",   name: "Spatial biology",               note: "Multiplex imaging and spatial transcriptomics that add molecules to morphology",
     ids: "tenx vizgen bruker biotechne akoya quanterix lunaphore standardbio miltenyi ionpath enable" },
   { key: "gx",   name: "Genomics & liquid biopsy",      note: "Sequencing platforms, tumor profiling, MRD monitoring and blood-based screening",
@@ -2354,7 +2358,7 @@ const YEAR = { waiv: 2026, fmi: 2010, personalis: 2011, indica: 2011, sophia: 20
   paige: 2017, nucleai: 2017, qritive: 2017, gestalt: 2017, pathpresenter: 2017, concertai: 2017, aignostics: 2018, mindpeak: 2018, primaa: 2018, insitro: 2018,
   panakeia: 2018, "4dpath": 2016, stratipath: 2019, pictor: 2019, vizgen: 2019, delfi: 2019, epredia: 2019, precisedx: 2020, enable: 2019,
   mahmood: 2019, imagene: 2020, pathos: 2020, domore: 2020, lgai: 2020, kaiko: 2021, artera: 2021, valar: 2021, pramana: 2021, isomorphic: 2021, noetik: 2022,
-  ataraxis: 2023, bioptimus: 2024, modella: 2024, sophont: 2025, aevius: 2026, tremont: 2026, bioslife: 2026, omanta: 2026, cpace: 2024, biohub: 2016, xaira: 2023, histai: 2023, deciphex: 2017 };
+  ataraxis: 2023, bioptimus: 2024, modella: 2024, sophont: 2025, aevius: 2026, tremont: 2026, bioslife: 2026, omanta: 2026, cpace: 2024, kimia: 2024, jaume: 2026, biohub: 2016, xaira: 2023, histai: 2023, deciphex: 2017 };
 const APPROX = new Set(["grail", "tremont", "precisedx", "modella", "mahmood", "concertai", "nucleai", "domore", "gestalt"]);
 // Year each deal or partnership began (first announcement). Links not listed appear as soon as both ends exist.
 const LINK_YEAR = { "owkin|waiv": 2026, "weillcornell|danafarber": 2024, "merck|mayo": 2026, "merck|natera": 2023, "novartis|isomorphic": 2024, "lilly|isomorphic": 2024, "abbvie|roche": 2025, "amgen|guardant": 2020, "amgen|qiagen": 2020, "google|isomorphic": 2021, "evident|pramana": 2025, "recursion|takeda": 2020, "tempus|takeda": 2024, "illumina|xaira": 2024, "thermo|epredia": 2019, "ibex|pathpresenter": 2024, "msk|pathpresenter": 2025, "biohub|tenx": 2025, "biohub|isomorphic": 2026, "sinai|msk": 2025, "msk|paige": 2017, "mayo|techcyte": 2024, "moffitt|pramana": 2025, "sophia|az": 2026, "sophia|mdanderson": 2026, "sophia|msk": 2026, "gevaert|shen": 2026, "indica|lunit": 2026, "tempus|bms": 2026, "mgh|visiopharm": 2022, "mgh|philips": 2018, "tempus|merck": 2026, "abbott|freenome": 2026, "mahmood|mgh": 2022, "tempus|paige": 2025, "tempus|personalis": 2026, "tempus|ambry": 2025, "ucla|pictor": 2019, "tempus|bioslife": 2026, "ambry|bioslife": 2026, "jnj|paige": 2022, "jnj|isomorphic": 2026, "msr|swang": 2024, "mahmood|tremont": 2026, "az|tremont": 2026, "myriad|pathomiq": 2025, "roche|pathai": 2026, "agilent|proscia": 2026, "az|modella": 2026,
@@ -2712,7 +2716,7 @@ closeOnBackdrop(productsPanel);
 function select(n, turn = true) {
   sel = n; if (n && n.year > T) setYear(n.year);
   if (!n) { panel.hidden = true; draw(); kick(); return; }
-  const k = KIND[n.kind], kind = { owned: "Ownership", pending: "Pending deal", partner: "Partnership", origin: "Origin" };
+  const k = KIND[n.kind], kind = { owned: "Ownership", pending: "Pending deal", partner: "Partnership", origin: "Origin", affiliation: "Affiliation", alumni: "Alumni connection" };
   const rows = n.links.map(l => { const o = l.a === n ? l.b : l.a;
     return `<li><button data-id="${o.id}">${esc(o.name)}</button><em>${kind[l.type]}</em><small>${esc(l.note)}</small></li>`; }).join("");
   const sims = n.similar.map(([m]) => { const shared = m.tags.filter(t => n.tags.includes(t)).sort((a, b) => df[a] - df[b]).slice(0, 2).map(t => TAG[t]).join(", ");
@@ -2722,10 +2726,11 @@ function select(n, turn = true) {
   const hasProductsPanel = n.kind === 'company' || n.kind === 'startup' || productItems.length > 0;
   const publications = LAB_PUBLICATIONS[n.id];
   const paperCount = publications?.years.reduce((count, year) => count + year.papers.length, 0);
+  const yearCaption = n.id === "kimia" ? "At Mayo Clinic since " : "Founded ";
   panel.innerHTML = `<button class="close" aria-label="Close">×</button>
     <span class="seg" style="--c:${k.color}"><i></i>${esc(n.kind === "lab" || n.kind === "center" ? n.status : k.name)}</span>
     <h2>${esc(n.name)}</h2>
-    <div class="meta">${[n.hq, n.year ? "Founded " + (n.approx ? "c. " : "") + n.year : "", ""].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("")}<span class="lay" style="--c:${n.layer.color}">${esc(`Layer ${LAYERS.indexOf(n.layer) + 1} of ${LAYERS.length}: ${n.layer.name}`)}</span></div>
+    <div class="meta">${[n.hq, n.year ? yearCaption + (n.approx ? "c. " : "") + n.year : ""].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("")}<span class="lay" style="--c:${n.layer.color}">${esc(`Layer ${LAYERS.indexOf(n.layer) + 1} of ${LAYERS.length}: ${n.layer.name}`)}</span></div>
     ${n.status && n.kind !== "lab" && n.kind !== "center" ? `<span class="status">${esc(n.status)}</span>` : ""}
     <p>${esc(n.desc)}</p>
     ${hasProductsPanel ? `<button type='button' class='products-open' data-resource='products' aria-haspopup='dialog' aria-controls='products-panel' aria-label='Models and products for ${esc(n.name)}'>Models &amp; products${productItems.length ? ` <span>${productItems.length}</span>` : ''}</button>` : ''}
@@ -2733,7 +2738,7 @@ function select(n, turn = true) {
     <div class="tags">${n.tags.map(t => `<span>${esc(TAG[t])}</span>`).join("")}</div>
     ${feet ? `<h3>Also works on other layers (${n.also.length})</h3><ul class="also">${feet}</ul>` : ""}
     ${sims ? `<h3>Most similar work</h3><ul>${sims}</ul>` : ""}
-    ${rows ? `<h3>Deals and partnerships (${n.links.length})</h3><ul>${rows}</ul>` : ""}
+    ${rows ? `<h3>Relationships (${n.links.length})</h3><ul>${rows}</ul>` : ""}
     ${n.url ? `<a class="site" href="${n.url}" target="_blank" rel="noopener">${esc(n.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))}</a>` : ""}`;
   panel.hidden = false; panel.scrollTop = 0;
   panel.querySelector(".close").onclick = () => select(null);
@@ -2753,7 +2758,7 @@ Object.entries(KIND).forEach(([key, k]) => { const b = document.createElement("b
 legend.insertAdjacentHTML("beforeend", `<div class="keys">
   <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#4c466e" stroke-width="1.3"/></svg>owns</span>
   <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#4c466e" stroke-width="1.3" stroke-dasharray="5 4"/></svg>pending deal</span>
-  <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#8d88a6" stroke-width="1.2" stroke-dasharray="1.5 3"/></svg>partner or origin</span>
+  <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#8d88a6" stroke-width="1.2" stroke-dasharray="1.5 3"/></svg>other relationship</span>
   <span class="onlyLayers"><svg width="12" height="12"><circle cx="6" cy="6" r="4.2" fill="none" stroke="#4c466e" stroke-width="1.4"/></svg>also works here</span>
   <div id="how"></div></div>`);
 const HOW = { cloud: "Closer dots do more similar work. Bigger dots have more deals and partnerships.", flat: "Closer dots do more similar work. Bigger dots have more deals and partnerships.",
