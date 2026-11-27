@@ -1945,6 +1945,25 @@ const LAB_PUBLICATIONS = {
       ] }
     ]
   },
+  gevaert: {
+    catalogUrl: "https://gevaertlab.github.io/publications.html",
+    years: [
+      { year: 2026, papers: [
+        ["A benchmark study of vision and pathology foundation models for computational pathology", "Nature Communications", "https://www.nature.com/articles/s41467-026-76004-6", "PathBench"]
+      ] },
+      { year: 2025, papers: [
+        ["Single-cell multimodal analysis reveals tumor microenvironment predictive of treatment response in non–small cell lung cancer", "Science Advances", "https://doi.org/10.1126/sciadv.adu2151"],
+        ["Generation of synthetic whole-slide image tiles of tumours from RNA-sequencing data via cascaded diffusion models", "Nature Biomedical Engineering", "https://www.nature.com/articles/s41551-024-01193-8", "RNA-CDM"]
+      ] },
+      { year: 2024, papers: [
+        ["Digital profiling of gene expression from histology images with linearized attention", "Nature Communications", "https://www.nature.com/articles/s41467-024-54182-5", "SEQUOIA"]
+      ] },
+      { year: 2023, papers: [
+        ["Synthetic whole-slide image tile generation with gene expression profile-infused deep generative models", "Cell Reports Methods", "https://pubmed.ncbi.nlm.nih.gov/37671024/", "RNA-GAN"],
+        ["Spatial cellular architecture predicts prognosis in glioblastoma", "Nature Communications", "https://www.nature.com/articles/s41467-023-39933-0", "GBM360"]
+      ] }
+    ]
+  },
   rli: {
     catalogUrl: "https://med.stanford.edu/lilab/publications.html",
     years: [
@@ -2410,13 +2429,16 @@ function embed(dim) {
   P.forEach(q => { for (let k = 0; k < dim; k++) q[k] -= cen[k]; maxR = Math.max(maxR, Math.hypot(...q)); });
   return P.map(q => q.map(v => v / maxR));
 }
+const centerNode = byId.tempus, centerIndex = nodes.indexOf(centerNode);
 const P3 = embed(3), P2 = embed(2);
 // Organizations doing near-identical work would pile onto one spot. Push any pair closer than a minimum gap apart, so every dot stays readable and clickable.
 function spread(P, gap) { const dim = P[0].length;
+  P[centerIndex].fill(0);
   for (let it = 0; it < 240; it++) { let moved = false;
     for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) { const v = P[i].map((x, k) => P[j][k] - x); let d = Math.hypot(...v);
       if (d < gap * .995) { if (d < 1e-6) { v[0] = Math.cos(i * 2.4 + j); v[1] = Math.sin(i * 2.4 + j); if (dim > 2) v[2] = Math.cos(i + j * 1.7); d = Math.hypot(...v); }
-        const f = (gap - d) / d / 2; for (let k = 0; k < dim; k++) { P[i][k] -= v[k] * f; P[j][k] += v[k] * f; } moved = true; } }
+        const f = (gap - d) / d, share = i === centerIndex ? 0 : j === centerIndex ? 1 : .5;
+        for (let k = 0; k < dim; k++) { P[i][k] -= v[k] * f * share; P[j][k] += v[k] * f * (1 - share); } moved = true; } }
     if (!moved) break; }
   const maxR = Math.max(...P.map(q => Math.hypot(...q))); P.forEach(q => { for (let k = 0; k < dim; k++) q[k] /= maxR; }); }
 spread(P3, .16); spread(P2, .092);
@@ -2455,7 +2477,12 @@ function fitLayers() { if (!W) return;
     const spread = k => { const v = items.map(it => at(it)[k]), lo = Math.min(...v), sp = Math.max(...v) - lo || 1, r = []; v.map((_, i) => i).sort((a, b) => v[a] - v[b]).forEach((i, j) => { r[i] = j / Math.max(1, v.length - 1); });
       return v.map((x, i) => .4 * (x - lo) / sp + .6 * r[i]); };   // part true spacing, part even spacing: neighbours stay neighbours without leaving half the slide empty
     const ux = spread(0), uz = spread(1), put = [], free = (x, z) => put.every(q => Math.hypot((x - q[0]) / GX, (z - q[1]) / GZ) >= 1);
-    items.map((it, i) => ({ it, x: XL + ux[i] * (XR - XL), z: ZB + uz[i] * (ZF - ZB) })).sort((a, b) => a.x - b.x).forEach(t => { t.it.pL[0] = t.x; t.it.pL[2] = t.z;
+    if (Lr === centerNode.layer) {
+      centerNode.pL[0] = (XL + XR) / 2;
+      centerNode.pL[2] = (ZB + ZF) / 2;
+      put.push([centerNode.pL[0], centerNode.pL[2]]);
+    }
+    items.map((it, i) => ({ it, x: XL + ux[i] * (XR - XL), z: ZB + uz[i] * (ZF - ZB) })).filter(t => t.it !== centerNode).sort((a, b) => a.x - b.x).forEach(t => { t.it.pL[0] = t.x; t.it.pL[2] = t.z;
       search: for (let k = 0; k < 400; k++) { const x = t.x + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * GX / 3; if (x < XL || x > XR) continue;
         for (let m = 0; m < 13; m++) { const z = t.z + (m % 2 ? 1 : -1) * Math.ceil(m / 2) * GZ / 2; if (z >= ZB && z <= ZF && free(x, z)) { put.push([x, z]); t.it.pL[0] = x; t.it.pL[2] = z; break search; } } } }); }
   if (mode === "layers" && !morph) nodes.forEach(n => { n.p = n.pL.slice(); }); }
@@ -2503,10 +2530,12 @@ function fitCamera() {
   if (!points.length) return;
   const projected = points.map(p => unitProjection(p, mode));
   const xs = projected.map(p => p[0]), ys = projected.map(p => p[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
-  mapBaseScale = Math.min(Math.max(12, plotBox.width - 32) / Math.max(.1, x1 - x0), Math.max(12, plotBox.height - 32) / Math.max(.1, y1 - y0));
+  const flatWidth = 2 * Math.max(-x0, x1), flatHeight = 2 * Math.max(-y0, y1);
+  const spanX = mode === 'flat' ? flatWidth : x1 - x0, spanY = mode === 'flat' ? flatHeight : y1 - y0;
+  mapBaseScale = Math.min(Math.max(12, plotBox.width - 32) / Math.max(.1, spanX), Math.max(12, plotBox.height - 32) / Math.max(.1, spanY));
   if (mode === 'cloud') mapBaseScale = Math.min(mapBaseScale, Math.min(plotBox.width, plotBox.height) / 2.16);
-  mapCenterX = plotBox.left + plotBox.width / 2 - (mode === 'cloud' ? 0 : (x0 + x1) / 2 * mapBaseScale);
-  mapCenterY = plotBox.top + plotBox.height / 2 - (mode === 'cloud' ? 0 : (y0 + y1) / 2 * mapBaseScale);
+  mapCenterX = plotBox.left + plotBox.width / 2 - (mode === 'layers' ? (x0 + x1) / 2 * mapBaseScale : 0);
+  mapCenterY = plotBox.top + plotBox.height / 2 - (mode === 'layers' ? (y0 + y1) / 2 * mapBaseScale : 0);
 }
 function fitView() {
   zoomK = 1; panX = panY = 0; glide = null; yaw = VIEW[mode].yaw; pitch = VIEW[mode].pitch;
@@ -2517,7 +2546,7 @@ function queueResize() { if (!resizeFrame) resizeFrame = requestAnimationFrame((
 function project(o) { const [x, y, z] = o.p, ca = Math.cos(yaw), sa = Math.sin(yaw), cb = Math.cos(pitch), sb = Math.sin(pitch);
   const x1 = x * ca + z * sa, z1 = -x * sa + z * ca, y2 = y * cb - z1 * sb, z2 = y * sb + z1 * cb, C = CAM + 60 * lay, s = C / (C - z2);
   const R = mapBaseScale * zoomK * (1 + (LS - 1) * lay); o.sx = mapCenterX + panX + LX * lay + x1 * s * R; o.sy = mapCenterY + panY + y2 * s * R; o.z = z2; o.s = s;
-  if (o.ph != null && mix > .01) { o.sx += Math.sin(drift * o.sp + o.ph) * 3.4 * mix; o.sy += Math.cos(drift * o.sp * .8 + o.ph * 1.7) * 3.4 * mix; } }   // flat view: each dot drifts gently around its spot
+  if (o !== centerNode && o.ph != null && mix > .01) { o.sx += Math.sin(drift * o.sp + o.ph) * 3.4 * mix; o.sy += Math.cos(drift * o.sp * .8 + o.ph * 1.7) * 3.4 * mix; } }   // flat view: dots drift gently around their spots
 function resize() {
   dpr = window.devicePixelRatio || 1; W = document.documentElement.clientWidth || innerWidth; H = Math.round(window.visualViewport ? visualViewport.height : innerHeight);
   document.documentElement.style.setProperty('--app-height', H + 'px');
@@ -2587,21 +2616,28 @@ function draw() {
     ctx.beginPath(); ctx.arc(f.sx, f.sy, f.rr, 0, 6.2832); ctx.fillStyle = on ? hex(col, .3 * lay) : `rgba(250,249,252,${(dim ? .25 : .8) * lay})`; ctx.fill();
     ctx.strokeStyle = hex(col, (dim ? .16 : on ? 1 : .85) * lay); ctx.lineWidth = on ? 1.9 : 1.4; ctx.stroke(); }
   const linked = new Set(); if (focus) focus.links.forEach(l => { if (l.year <= T) { linked.add(l.a); linked.add(l.b); } });   // organizations with a deal or tie to the one that is open: named first, and always
-  labels.sort((a, b) => ((b === focus) - (a === focus)) || (linked.has(b) - linked.has(a)) || (b.deg + b.z * 3) - (a.deg + a.z * 3));
+  labels.sort((a, b) => ((b === focus) - (a === focus)) || (linked.has(b) - linked.has(a)) || ((b === centerNode) - (a === centerNode)) || (b.deg + b.z * 3) - (a.deg + a.z * 3));
   const boxes = [], over = (p, q) => p[0] < q[0] + q[2] && p[0] + p[2] > q[0] && p[1] < q[1] + q[3] && p[1] + p[3] > q[1];
   if (lay > .5) for (const m of order) { if (focus && !near.has(m)) continue; const q = [m.sx - m.rr - 1, m.sy - m.rr - 1, 2 * m.rr + 2, 2 * m.rr + 2]; q.n = m; boxes.push(q); }   // on the slides a name never covers another dot
   if (lay > .5) for (const f of feet) boxes.push([f.sx - f.rr - 1, f.sy - f.rr - 1, 2 * f.rr + 2, 2 * f.rr + 2]);
   if (lay > .5) for (const Lr of LAYERS) if (!layerOff.has(Lr.key) && Lr.keep) boxes.push(...Lr.keep);
   for (const n of labels) {
-    const strong = n === focus, must = strong || linked.has(n);
+    const strong = n === focus, must = strong || linked.has(n) || n === centerNode;
     ctx.font = `${strong ? 600 : 500} ${isCompactLayout() ? (strong ? 16 : 14) : (strong ? 13 : 11.5)}px "Instrument Sans", "Segoe UI", system-ui, sans-serif`;
-    const w = ctx.measureText(n.name).width, mk = x => [x - 2, n.sy - 9, w + 4, 18], clash = q => boxes.some(o => o.n !== n && over(q, o)), offR = n.sx + n.rr + 6 + w > W - 8;
-    let bx = n.sx + n.rr + 5, box = mk(bx);
+    const w = ctx.measureText(n.name).width, mk = (x, y = n.sy) => [x - 2, y - 9, w + 4, 18], clash = q => boxes.some(o => o.n !== n && over(q, o)), offR = n.sx + n.rr + 6 + w > W - 8;
+    let bx = n.sx + n.rr + 5, by = n.sy, box = mk(bx);
     if (offR || (lay > .5 && !strong && clash(box))) { const lx = n.sx - n.rr - 5 - w, lb = mk(lx); if (offR || !clash(lb)) { bx = lx; box = lb; } }   // try the other side before giving up
     if (isCompactLayout()) { bx = Math.max(8, Math.min(W - w - 8, bx)); box = mk(bx); }
+    if (n === centerNode && lay > .5 && clash(box)) {
+      const x = Math.max(8, Math.min(W - w - 8, n.sx - w / 2));
+      for (const offset of [n.rr + 11, -n.rr - 11, n.rr + 27, -n.rr - 27]) {
+        const y = n.sy + offset, candidate = mk(x, y);
+        if (candidate[1] >= 0 && candidate[1] + candidate[3] <= H && !clash(candidate)) { bx = x; by = y; box = candidate; break; }
+      }
+    }
     if (!must && clash(box)) continue;
-    boxes.push(box); ctx.textBaseline = "middle"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(249,248,252,.94)"; ctx.strokeText(n.name, bx, n.sy);
-    ctx.fillStyle = strong ? "#231e3c" : `rgba(58,52,88,${focus ? .95 : .45 + .55 * depth(n.z)})`; ctx.fillText(n.name, bx, n.sy);
+    boxes.push(box); ctx.textBaseline = "middle"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(249,248,252,.94)"; ctx.strokeText(n.name, bx, by);
+    ctx.fillStyle = strong ? "#231e3c" : `rgba(58,52,88,${focus ? .95 : .45 + .55 * depth(n.z)})`; ctx.fillText(n.name, bx, by);
   }
   if (hoverF && focus === hoverF.n && feet.includes(hoverF)) { const f = hoverF, name = f.n.name; ctx.font = '600 13px "Instrument Sans", "Segoe UI", system-ui, sans-serif';
     const w = ctx.measureText(name).width, bx = f.sx + f.rr + 6 + w > W - 8 ? f.sx - f.rr - 6 - w : f.sx + f.rr + 6;
@@ -2624,6 +2660,7 @@ function faceTo(n) { if (mode !== "cloud") { draw(); return; } const [x, y, z] =
 
 /* ---------- Interaction ---------- */
 function pick(px, py) { let best = null, bz = -9; hoverF = null;
+  if (visible(centerNode) && Math.hypot(centerNode.sx - px, centerNode.sy - py) <= centerNode.rr) return centerNode;
   for (const n of nodes) { if (!visible(n)) continue; const d = Math.hypot(n.sx - px, n.sy - py);
     if (d < Math.max(isCompactLayout() ? 14 : 11, n.rr + 5) && n.z > bz) { bz = n.z; best = n; } }
   if (!best && lay > .9) for (const f of also) if (!off.has(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key) && Math.hypot(f.sx - px, f.sy - py) < Math.max(isCompactLayout() ? 14 : 10, (f.rr || 4) + 4)) { hoverF = f; return f.n; }   // a ring stands for its organization
@@ -2763,7 +2800,7 @@ legend.insertAdjacentHTML("beforeend", `<div class="keys">
   <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#8d88a6" stroke-width="1.2" stroke-dasharray="1.5 3"/></svg>other relationship</span>
   <span class="onlyLayers"><svg width="12" height="12"><circle cx="6" cy="6" r="4.2" fill="none" stroke="#4c466e" stroke-width="1.4"/></svg>also works here</span>
   <div id="how"></div></div>`);
-const HOW = { cloud: "Closer dots do more similar work. Bigger dots have more deals and partnerships.", flat: "Closer dots do more similar work. Bigger dots have more deals and partnerships.",
+const HOW = { cloud: "Tempus AI is pinned to the center. Other dots cluster by similar work. Bigger dots have more relationships.", flat: "Tempus AI is pinned to the center. Other dots cluster by similar work. Bigger dots have more relationships.",
   layers: "Each slide is one layer of the field, from tissue at the bottom to treatment at the top. A ring is an organization based on another layer that also works here." };
 document.getElementById("how").textContent = HOW.cloud;
 
