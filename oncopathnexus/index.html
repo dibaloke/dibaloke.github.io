@@ -994,6 +994,298 @@ const COMPANY_PRODUCTS = {
       "checked": "2026-11-26"
     }
   ],
+  "aignostics": [
+    {
+      "name": "HETA",
+      "type": "Spatial H&E analysis platform",
+      "date": "2026-11-18",
+      "dateLabel": "Platform update",
+      "summary": "Aignostics’ core platform for spatial H&E analysis, formerly called Atlas H&E-TME. It analyzes cells, tissue regions and their spatial relationships on whole-slide images to characterize the tumor microenvironment.",
+      "features": [
+        "Cell detection, tissue segmentation and measurements of tumor regions and immune infiltration",
+        "Recent additions include tumor-infiltrating lymphocyte analysis, mitosis detection, and nerve and fat segmentation",
+        "Research use only, with life sciences trials and academic research access"
+      ],
+      "sources": [
+        {
+          "label": "Official HETA platform page",
+          "url": "https://www.aignostics.com/life-sciences/heta"
+        },
+        {
+          "label": "November 2026 spatial analysis update",
+          "url": "https://www.aignostics.com/news/aignostics-expands-the-breadth-and-depth-of-spatial-h-e-analysis-in-heta"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PathoSearch",
+      "type": "Visual pathology search tool · Early access",
+      "date": "2026-09-12",
+      "dateLabel": "Early-access announcement",
+      "summary": "Searches a library of diagnosed reference cases for tissue morphology similar to a selected image region. Users can filter matches and compare cases side by side.",
+      "features": [
+        "Screenshot-based queries and ranked image matches",
+        "Free early access via waitlist for research use"
+      ],
+      "sources": [
+        {
+          "label": "Official PathoSearch page",
+          "url": "https://www.aignostics.com/clinical/pathosearch"
+        },
+        {
+          "label": "Early-access announcement",
+          "url": "https://www.aignostics.com/news/aignostics-launches-pathosearch-a-visual-search-engine-for-pathology-cases"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "OpenTME v2.0",
+      "type": "Spatial pathology research dataset",
+      "date": "2026-11-23",
+      "dateLabel": "Version 2.0 announcement",
+      "summary": "Precomputed HETA measurements for The Cancer Genome Atlas whole-slide images. Researchers can combine these readouts with TCGA genomic, transcriptomic and clinical data.",
+      "features": [
+        "5,268 slides across ten cancer indications, with eleven cell classes and nine tissue classes",
+        "Spatial measurements include tumor zones, tertiary lymphoid structures and cell neighborhoods",
+        "Gated academic research access, with commercial access by request"
+      ],
+      "sources": [
+        {
+          "label": "Official OpenTME v2.0 announcement",
+          "url": "https://www.aignostics.com/news/aignostics-releases-opentme-v2-0-with-new-indications-and-expanded-spatial-readouts"
+        },
+        {
+          "label": "Dataset and access terms",
+          "url": "https://huggingface.co/datasets/Aignostics/OpenTME"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Atlas 2",
+      "type": "Pathology vision foundation model family",
+      "date": "2026-01-13",
+      "dateLabel": "Research announcement",
+      "summary": "The second generation of Atlas, the pathology model family Aignostics co-developed with Mayo Clinic. It produces reusable histology image features for downstream tasks and powers applications including HETA.",
+      "features": [
+        "Includes smaller distilled models, Atlas 2-B and Atlas 2-S",
+        "Available through commercial licensing"
+      ],
+      "sources": [
+        {
+          "label": "Official Atlas 2 licensing page",
+          "url": "https://www.aignostics.com/life-sciences/foundation-model-licensing"
+        },
+        {
+          "label": "Atlas 2 research announcement",
+          "url": "https://www.aignostics.com/news/aignostics-announces-new-state-of-the-art-pathology-foundation-model"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "lgai": [
+    {
+      "name": "EXAONE Path 2.5",
+      "type": "Multimodal pathology foundation model",
+      "date": "2025-12-16",
+      "dateLabel": "Research preprint",
+      "summary": "Aligns whole-slide images with genomic, epigenetic and transcriptomic data during training. The model extracts image features for downstream computational pathology research.",
+      "features": [
+        "Produces both patch and slide embeddings",
+        "Weights are available through gated access under the EXAONEPath noncommercial license"
+      ],
+      "sources": [
+        {
+          "label": "EXAONE Path 2.5 research preprint",
+          "url": "https://arxiv.org/abs/2512.14019"
+        },
+        {
+          "label": "Official model card and access terms",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-Path-2.5"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "EXAONE Path 2.0",
+      "type": "Pathology foundation model",
+      "summary": "Learns features from small regions of pathology slides using supervision from whole-slide labels. LG evaluated these features on ten slide-level biomarker prediction tasks.",
+      "features": [
+        "Trained on approximately 37,000 whole-slide images",
+        "Model access is subject to the EXAONEPath noncommercial license"
+      ],
+      "sources": [
+        {
+          "label": "Official EXAONE Path 2.0 model card",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-Path-2.0"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "EXAONE Path EGFR and MSI",
+      "type": "Biomarker prediction research models",
+      "summary": "Task-specific models for studying biomarker prediction from pathology images. EXAONE Path 2.0 rev EGFR estimates EGFR mutation status. EXAONE Path MSI addresses microsatellite instability.",
+      "sources": [
+        {
+          "label": "EXAONE Path 2.0 rev EGFR model card",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-Path-2.0-rev-EGFR"
+        },
+        {
+          "label": "EXAONE Path MSI model card",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-Path-MSI"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "EXAONE 4.5",
+      "type": "Vision-language model",
+      "date": "2026-04-09",
+      "dateLabel": "Model release",
+      "summary": "A 33-billion-parameter vision-language model that processes images and text, including documents with complex layouts. It is LG AI Research’s first vision-language model with downloadable weights.",
+      "features": [
+        "Weights are available under the EXAONE AI Model License Agreement 1.2 - NC"
+      ],
+      "sources": [
+        {
+          "label": "Official release and documentation",
+          "url": "https://github.com/LG-AI-EXAONE/EXAONE-4.5"
+        },
+        {
+          "label": "Model card and weights",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "K-EXAONE 2.5",
+      "type": "Hosted language model",
+      "date": "2026-11-09",
+      "dateLabel": "API launch",
+      "summary": "A Korean and English language model with emphasis on Korean understanding and generation. The hosted API supports chat, tool calling and structured outputs.",
+      "features": [
+        "Available through the EXAONE API Platform under its noncommercial terms"
+      ],
+      "sources": [
+        {
+          "label": "Official model and API documentation",
+          "url": "https://docs.exaone.ai/en/docs/models"
+        },
+        {
+          "label": "API launch announcement",
+          "url": "https://www.lgresearch.ai/news/view?seq=755"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "K-EXAONE 2.0",
+      "type": "Multilingual language and reasoning model",
+      "date": "2026-07-31",
+      "dateLabel": "Model release",
+      "summary": "A mixture-of-experts language model for multilingual text generation, reasoning and tool use. The flagship model has 750 billion parameters and activates about 37 billion per token.",
+      "features": [
+        "Downloadable weights under Apache 2.0"
+      ],
+      "sources": [
+        {
+          "label": "Official release announcement",
+          "url": "https://www.lgresearch.ai/news/view?seq=678"
+        },
+        {
+          "label": "Model card and weights",
+          "url": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "EXAONE Deep",
+      "type": "Reasoning language model family",
+      "date": "2025-03-18",
+      "dateLabel": "Model release",
+      "summary": "A family of reasoning models evaluated on mathematics, coding and science tasks. The release includes 2.4B, 7.8B and 32B versions.",
+      "features": [
+        "Weights are available under the EXAONE AI Model License Agreement 1.1 - NC"
+      ],
+      "sources": [
+        {
+          "label": "Official EXAONE Deep repository",
+          "url": "https://github.com/LG-AI-EXAONE/EXAONE-Deep"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "sophont": [
+    {
+      "name": "nanopath",
+      "type": "Open-source training framework and challenge",
+      "summary": "A framework for training and evaluating small pathology foundation models on image tiles from The Cancer Genome Atlas. The reference workflow runs in about an hour on one H100 GPU.",
+      "features": [
+        "Fixed training budgets and shared evaluation tasks make runs comparable",
+        "Benchmarks cover classification, segmentation, slide-level prediction and robustness"
+      ],
+      "sources": [
+        {
+          "label": "Official nanopath announcement",
+          "url": "https://sophont.med/blog/nanopath/"
+        },
+        {
+          "label": "Training code",
+          "url": "https://github.com/MedARC-AI/nanopath"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "OpenMidnight 1.1",
+      "type": "Open-source pathology foundation model",
+      "summary": "Developed by MedARC and Sophont, OpenMidnight 1.1 refines Kaiko’s Midnight model using approximately 12,000 public whole-slide images from The Cancer Genome Atlas. It converts histology tiles into features for downstream research tasks.",
+      "features": [
+        "Evaluated on classification and segmentation benchmarks",
+        "Pretrained encoder weights are available under Apache 2.0"
+      ],
+      "sources": [
+        {
+          "label": "OpenMidnight 1.1 research paper",
+          "url": "https://arxiv.org/abs/2611.00064"
+        },
+        {
+          "label": "Model card and weights",
+          "url": "https://huggingface.co/medarc/OpenMidnight-1.1"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Holon-S1",
+      "type": "Spatial gene-expression research model",
+      "date": "2026-10-13",
+      "dateLabel": "Technical report",
+      "summary": "Predicts where genes and biological pathways are active in tissue using routine H&E pathology slides. The predictions support biomarker discovery and research into how tissue biology relates to treatment response.",
+      "features": [
+        "Maps predicted gene activity across tissue regions",
+        "Research use only, with collaborations available through Sophont"
+      ],
+      "sources": [
+        {
+          "label": "Official Holon-S1 overview",
+          "url": "https://sophont.med/holon/"
+        },
+        {
+          "label": "Holon-S1 technical report",
+          "url": "https://sophont.med/blog/holon/"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
   "xaira": [
     {
       "name": "X-Cell",
