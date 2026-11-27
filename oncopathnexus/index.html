@@ -1835,6 +1835,17 @@ COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
 
 // Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
 const LAB_PUBLICATIONS = {
+  rli: {
+    catalogUrl: "https://med.stanford.edu/lilab/publications.html",
+    years: [
+      { year: 2026, papers: [
+        ["Ensemble learning of pathology foundation models for precision oncology", "Cancer Cell", "https://www.sciencedirect.com/science/article/pii/S1535610826003855", "ELF"],
+        ["nnMIL: a generalizable multiple instance learning framework for computational pathology", "Nature Biomedical Engineering", "https://doi.org/10.1038/s41551-026-01767-8"],
+        ["Cellular architecture and neighborhood-informed virtual spatial tumor profiling from histopathology", "Cell", "https://doi.org/10.1016/j.cell.2026.05.031", "CANVAS"],
+        ["AI-enabled virtual spatial proteomics from histopathology for interpretable biomarker discovery in lung cancer", "Nature Medicine", "https://www.nature.com/articles/s41591-025-04060-4"]
+      ] }
+    ]
+  },
   mahmood: {
     catalogUrl: "https://faisal.ai/publications/",
     years: [
