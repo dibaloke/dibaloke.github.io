@@ -131,6 +131,13 @@
   .product-sources a, .products-empty a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
   .products-empty h3 { margin: 2px 0 10px; font-size: 20px; }
   .products-empty p { margin: 0 0 18px; color: var(--muted); }
+  .publications-catalog, .publication-list a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .publications-catalog { display: inline-block; margin: 8px 0 2px; }
+  .publication-year { margin: 24px 0 6px; font: 500 25px/1.2 var(--serif); }
+  .publication-list { list-style: none; margin: 0; padding: 0; }
+  .publication-list li { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .publication-list a { font-weight: 600; }
+  .publication-meta { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
   @media (max-width: 480px) { .products-heading { padding: 22px 70px 18px 20px; } .products-content { padding: 20px 20px 28px; } }
 
 
@@ -695,6 +702,53 @@ const COMPANY_PRODUCTS = {
           "label": "CPACE Innovation",
           "url": "https://cpace.pitt.edu/innovation/"
         }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "stratipath": [
+    {
+      "name": "Stratipath Breast",
+      "type": "H&E prognostic risk profiling",
+      "date": "2026-06-16",
+      "dateLabel": "CE-IVDR announcement",
+      "summary": "Analyzes digitized routine H&E slides from resected tumors to help assess the risk of relapse in early-stage invasive breast cancer. The results support clinicians alongside other clinical and pathology findings.",
+      "features": [
+        "Reports a risk category, score and risk group based on tumor morphology",
+        "CE marked under EU IVDR and registered in the UK, according to Stratipath"
+      ],
+      "sources": [
+        {"label": "Official Stratipath Breast page", "url": "https://www.stratipath.com/stratipath-breast/"},
+        {"label": "CE-IVDR announcement", "url": "https://www.stratipath.com/ivdr_pressrelease/"}
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
+  "nucleai": [
+    {
+      "name": "Nucleai Insight",
+      "type": "Translational research service",
+      "summary": "Measures spatial tissue features across H&E, IHC and other imaging modalities, then studies how those features relate to outcomes in a sponsor’s cohort.",
+      "features": [
+        "Analyze delivers structured tissue measurements and an interpreted report",
+        "Profile & Predict evaluates features and thresholds against clinical outcomes",
+        "Offered as an expert-led engagement for research use"
+      ],
+      "sources": [
+        {"label": "Official Nucleai Insight overview", "url": "https://nucleai.ai/for-pharma/translational-research/"}
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Nucleai Select",
+      "type": "Clinical trial biomarker development service",
+      "summary": "Builds scoring algorithms for validated spatial biomarkers and integrates them into sponsor trial workflows. The assays can support trial screening, selection or enrichment.",
+      "features": [
+        "Deploys trial assays through a central laboratory or an in vitro diagnostic partner’s platform",
+        "Supports development toward a companion diagnostic when needed"
+      ],
+      "sources": [
+        {"label": "Official Nucleai Select overview", "url": "https://nucleai.ai/for-pharma/clinical-development/"}
       ],
       "checked": "2026-11-26"
     }
@@ -1723,6 +1777,55 @@ const COMPANY_PRODUCTS = {
 // Quine is a shared Microsoft Research effort, shown for both research locations.
 COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
 
+// Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
+const LAB_PUBLICATIONS = {
+  mahmood: {
+    catalogUrl: "https://faisal.ai/publications/",
+    years: [
+      { year: 2026, papers: [
+        ["A multimodal foundation model for molecular and morphologic data in oncology", "Nature Cancer", "https://www.nature.com/articles/s43018-026-01252-w", "THREADS"],
+        ["Discrete Neural Interlingua for Ontology-Agnostic EHR Modeling", "arXiv preprint", "https://arxiv.org/abs/2610.27047", "MEDIATOR"],
+        ["Beyond Sparse Captions: Aligning Slide-Level Text and Patch-Level Vision in Pathology", "arXiv preprint", "https://arxiv.org/abs/2610.17233", "LIMIT / CONCH-Z"],
+        ["VIPER: An Expert-Curated Benchmark for Vision-Language Models in Veterinary Pathology", "arXiv preprint", "https://arxiv.org/abs/2608.26382"],
+        ["Mixture of Mini Experts: Overcoming the Linear Layer Bottleneck in Multiple Instance Learning", "ICLR", "https://proceedings.iclr.cc/paper_files/paper/2026/hash/87425754bcc35f2bc62ef4a421a772d6-Abstract-Conference.html"],
+        ["Towards Spatial Transcriptomics-driven Pathology Foundation Models", "arXiv preprint", "https://arxiv.org/abs/2602.14177", "SEAL"]
+      ] },
+      { year: 2025, papers: [
+        ["A multimodal whole-slide foundation model for pathology", "Nature Medicine", "https://doi.org/10.1038/s41591-025-03982-3", "TITAN"],
+        ["A Foundation Model for Spatial Proteomics", "arXiv preprint", "https://arxiv.org/abs/2506.03373", "KRONOS"],
+        ["AI-driven 3D Spatial Transcriptomics", "arXiv preprint", "https://arxiv.org/abs/2502.17761", "VORTEX"],
+        ["Accelerating Data Processing and Benchmarking of AI Models for Pathology", "arXiv preprint", "https://arxiv.org/abs/2502.06750", "TRIDENT / Patho-Bench"]
+      ] },
+      { year: 2024, papers: [
+        ["Towards a general-purpose foundation model for computational pathology", "Nature Medicine", "https://www.nature.com/articles/s41591-024-02857-3", "UNI"],
+        ["A visual-language foundation model for computational pathology", "Nature Medicine", "https://www.nature.com/articles/s41591-024-02856-4", "CONCH"],
+        ["A multimodal generative AI copilot for human pathology", "Nature", "https://www.nature.com/articles/s41586-024-07618-3", "PathChat"],
+        ["Analysis of 3D pathology samples using weakly supervised AI", "Cell", "https://www.sciencedirect.com/science/article/pii/S0092867424003519", "TriPath"],
+        ["Demographic bias in misdiagnosis by computational pathology models", "Nature Medicine", "https://www.nature.com/articles/s41591-024-02885-z"],
+        ["HEST-1k: A Dataset for Spatial Transcriptomics and Histology Image Analysis", "NeurIPS", "https://proceedings.neurips.cc/paper_files/paper/2024/hash/60a899cc31f763be0bde781a75e04458-Abstract-Datasets_and_Benchmarks_Track.html"],
+        ["Multistain Pretraining for Slide Representation Learning in Pathology", "ECCV", "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/4788_ECCV_2024_paper.php", "MADELEINE"],
+        ["Modeling Dense Multimodal Interactions Between Biological Pathways and Histology for Survival Prediction", "CVPR", "https://openaccess.thecvf.com/content/CVPR2024/html/Jaume_Modeling_Dense_Multimodal_Interactions_Between_Biological_Pathways_and_Histology_for_Survival_Prediction_CVPR_2024_paper.html", "SurvPath"],
+        ["Multimodal Prototyping for cancer survival prediction", "ICML", "https://proceedings.mlr.press/v235/song24b.html", "MMP"],
+        ["MAPS: pathologist-level cell type annotation from tissue images through machine learning", "Nature Communications", "https://www.nature.com/articles/s41467-023-44188-w"]
+      ] },
+      { year: 2023, papers: [
+        ["Visual Language Pretrained Multiple Instance Zero-Shot Transfer for Histopathology Images", "CVPR", "https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html", "MI-Zero"]
+      ] },
+      { year: 2022, papers: [
+        ["Scaling Vision Transformers to Gigapixel Images via Hierarchical Self-Supervised Learning", "CVPR", "https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Scaling_Vision_Transformers_to_Gigapixel_Images_via_Hierarchical_Self-Supervised_Learning_CVPR_2022_paper.html", "HIPT"],
+        ["Pan-cancer integrative histology-genomic analysis via multimodal deep learning", "Cancer Cell", "https://doi.org/10.1016/j.ccell.2022.07.004", "PORPOISE"],
+        ["Deep learning-enabled assessment of cardiac allograft rejection from endomyocardial biopsies", "Nature Medicine", "https://www.nature.com/articles/s41591-022-01709-2", "CRANE"],
+        ["Pathomic Fusion: An Integrated Framework for Fusing Histopathology and Genomic Features for Cancer Diagnosis and Prognosis", "IEEE Transactions on Medical Imaging", "https://ieeexplore.ieee.org/document/9186053"]
+      ] },
+      { year: 2021, papers: [
+        ["Multimodal Co-Attention Transformer for Survival Prediction in Gigapixel Whole Slide Images", "ICCV", "https://openaccess.thecvf.com/content/ICCV2021/html/Chen_Multimodal_Co-Attention_Transformer_for_Survival_Prediction_in_Gigapixel_Whole_Slide_ICCV_2021_paper.html", "MCAT"],
+        ["AI-based pathology predicts origins for cancers of unknown primary", "Nature", "https://www.nature.com/articles/s41586-021-03512-4", "TOAD"],
+        ["Data-efficient and weakly supervised computational pathology on whole-slide images", "Nature Biomedical Engineering", "https://www.nature.com/articles/s41551-020-00682-w", "CLAM"]
+      ] }
+    ]
+  }
+};
+
 // id, name, kind, location / affiliation, status, description, website, focus tags
 const C = [
  // ----- Pathology AI
@@ -2361,12 +2464,19 @@ if (window.visualViewport) visualViewport.addEventListener("resize", queueResize
 const panel = document.getElementById("panel");
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const productsPanel = document.getElementById('products-panel');
+const resourceClose = productsPanel.querySelector('.products-close');
 const productDate = value => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(value + 'T00:00:00Z'));
-function openProducts(n) {
+function openResourcePanel(n, label, closeLabel, content) {
   stopPlay();
-  const items = COMPANY_PRODUCTS[n.id] || [];
+  productsPanel.querySelector('.products-eyebrow').textContent = label;
   document.getElementById('products-company').textContent = n.name;
-  document.getElementById('products-content').innerHTML = items.length
+  resourceClose.setAttribute('aria-label', closeLabel);
+  document.getElementById('products-content').innerHTML = content;
+  productsPanel.showModal(); productsPanel.scrollTop = 0;
+}
+function openProducts(n) {
+  const items = COMPANY_PRODUCTS[n.id] || [];
+  const content = items.length
     ? `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>` + items.map(item => `
       <article class='product-card'>
         <span class='product-type'>${esc(item.type)}</span>
@@ -2378,9 +2488,23 @@ function openProducts(n) {
         ${item.checked ? `<p class='product-checked'>Checked <time datetime='${esc(item.checked)}'>${productDate(item.checked)}</time></p>` : ''}
       </article>`).join('')
     : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
-  productsPanel.showModal(); productsPanel.scrollTop = 0;
+  openResourcePanel(n, 'Models & products', 'Close models and products', content);
 }
-productsPanel.querySelector('.products-close').onclick = () => productsPanel.close();
+function openPublications(n, publications) {
+  const years = publications.years.map(({ year, papers }) => `
+    <section aria-labelledby='publication-year-${year}'>
+      <h3 class='publication-year' id='publication-year-${year}'>${year}</h3>
+      <ul class='publication-list'>${papers.map(([title, venue, url, project]) => `
+        <li>
+          <a href='${esc(url)}' target='_blank' rel='noopener noreferrer'>${esc(title)}</a>
+          <p class='publication-meta'>${esc(project ? `${project} · ${venue}` : venue)}</p>
+        </li>`).join('')}
+      </ul>
+    </section>`).join('');
+  const catalog = `<a class='publications-catalog' href='${esc(publications.catalogUrl)}' target='_blank' rel='noopener noreferrer'>Visit the lab’s publication catalog</a>`;
+  openResourcePanel(n, 'Selected publications', 'Close publications', catalog + years);
+}
+resourceClose.onclick = () => productsPanel.close();
 productsPanel.addEventListener('keydown', e => { if (e.key === 'Escape') e.stopPropagation(); });
 function closeOnBackdrop(dialog) {
   dialog.addEventListener('click', e => {
@@ -2401,13 +2525,16 @@ function select(n, turn = true) {
   const feet = (n.also || []).map(f => `<li><b style="--c:${f.layer.color}">${esc(f.layer.name)}</b><small>${esc(f.why)}</small></li>`).join("");
   const productItems = COMPANY_PRODUCTS[n.id] || [];
   const hasProductsPanel = n.kind === 'company' || n.kind === 'startup' || productItems.length > 0;
+  const publications = LAB_PUBLICATIONS[n.id];
+  const paperCount = publications?.years.reduce((count, year) => count + year.papers.length, 0);
   panel.innerHTML = `<button class="close" aria-label="Close">×</button>
     <span class="seg" style="--c:${k.color}"><i></i>${esc(n.kind === "lab" || n.kind === "center" ? n.status : k.name)}</span>
     <h2>${esc(n.name)}</h2>
     <div class="meta">${[n.hq, n.year ? "Founded " + (n.approx ? "c. " : "") + n.year : "", ""].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("")}<span class="lay" style="--c:${n.layer.color}">${esc(`Layer ${LAYERS.indexOf(n.layer) + 1} of ${LAYERS.length}: ${n.layer.name}`)}</span></div>
     ${n.status && n.kind !== "lab" && n.kind !== "center" ? `<span class="status">${esc(n.status)}</span>` : ""}
     <p>${esc(n.desc)}</p>
-    ${hasProductsPanel ? `<button type='button' class='products-open' aria-haspopup='dialog' aria-controls='products-panel' aria-label='Models and products for ${esc(n.name)}'>Models &amp; products${productItems.length ? ` <span>${productItems.length}</span>` : ''}</button>` : ''}
+    ${hasProductsPanel ? `<button type='button' class='products-open' data-resource='products' aria-haspopup='dialog' aria-controls='products-panel' aria-label='Models and products for ${esc(n.name)}'>Models &amp; products${productItems.length ? ` <span>${productItems.length}</span>` : ''}</button>` : ''}
+    ${paperCount ? `<button type='button' class='products-open' data-resource='publications' aria-haspopup='dialog' aria-controls='products-panel' aria-label='Publications for ${esc(n.name)}'>Publications <span>${paperCount}</span></button>` : ''}
     <div class="tags">${n.tags.map(t => `<span>${esc(TAG[t])}</span>`).join("")}</div>
     ${feet ? `<h3>Also works on other layers (${n.also.length})</h3><ul class="also">${feet}</ul>` : ""}
     ${sims ? `<h3>Most similar work</h3><ul>${sims}</ul>` : ""}
@@ -2415,8 +2542,10 @@ function select(n, turn = true) {
     ${n.url ? `<a class="site" href="${n.url}" target="_blank" rel="noopener">${esc(n.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))}</a>` : ""}`;
   panel.hidden = false; panel.scrollTop = 0;
   panel.querySelector(".close").onclick = () => select(null);
-  const productButton = panel.querySelector('.products-open');
+  const productButton = panel.querySelector('[data-resource="products"]');
   if (productButton) productButton.onclick = () => openProducts(n);
+  const publicationsButton = panel.querySelector('[data-resource="publications"]');
+  if (publicationsButton) publicationsButton.onclick = () => openPublications(n, publications);
   panel.querySelectorAll("li button").forEach(b => b.onclick = () => select(byId[b.dataset.id]));
   if (turn) faceTo(n); else draw();
 }
