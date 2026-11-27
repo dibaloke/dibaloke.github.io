@@ -1911,6 +1911,22 @@ const COMPANY_PRODUCTS = {
       "checked": "2026-11-27"
     }
   ],
+  "mindpeak": [
+    {
+      "name": "Mindpeak Pan Tumor H&E, PeakDissect",
+      "type": "Research use only · H&E image analysis",
+      "summary": "Detects and quantifies tumor regions in H&E whole-slide images across solid tumor types. The peakDissect workflow uses this analysis to propose tissue regions for macrodissection before genomic sequencing.",
+      "features": [
+        "Measures tumor content to support tissue selection",
+        "Available through Proscia’s Concentriq AI portfolio"
+      ],
+      "sources": [
+        { "label": "Mindpeak peakDissect overview", "url": "https://www.mindpeak.ai/for-diagnostic-labs" },
+        { "label": "Proscia AI portfolio listing", "url": "https://proscia.com/platform/ai-portfolio" }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "xaira": [
     {
       "name": "X-Cell",
@@ -2007,6 +2023,8 @@ const COMPANY_PRODUCTS = {
 };
 // Quine is a shared Microsoft Research effort, shown for both research locations.
 COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
+// Proscia distributes this Mindpeak app through its Concentriq AI portfolio.
+COMPANY_PRODUCTS.proscia.push(COMPANY_PRODUCTS.mindpeak[0]);
 
 // Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
 const LAB_PUBLICATIONS = {
