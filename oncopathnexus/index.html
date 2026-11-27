@@ -699,6 +699,115 @@ const COMPANY_PRODUCTS = {
       "checked": "2026-11-26"
     }
   ],
+  "artera": [
+    {
+      "name": "ArteraAI Prostate Test (Biopsy)",
+      "type": "Laboratory-developed test · Localized prostate cancer",
+      "summary": "Combines digitized prostate biopsy images and clinical data to estimate long-term outcomes in localized prostate cancer. For eligible patients being considered for radiation, it can estimate potential benefit from adding short-term androgen deprivation therapy.",
+      "features": ["Available through Artera’s clinical laboratory"],
+      "sources": [
+        {
+          "label": "Official prostate biopsy test page",
+          "url": "https://artera.ai/arteraai-prostate-cancer-test"
+        },
+        {
+          "label": "Sample prostate test reports",
+          "url": "https://artera.ai/prostate-test-report"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "ArteraAI Breast Cancer Test",
+      "type": "Laboratory-developed test · Early-stage breast cancer",
+      "summary": "Uses digitized tumor resection slides and clinical information to estimate distant metastasis risk in early-stage HR-positive, HER2-negative invasive breast cancer. Artera also reports evidence for chemotherapy benefit prediction in a defined cohort.",
+      "features": ["Available through Artera’s clinical laboratory after tumor resection"],
+      "sources": [
+        {
+          "label": "Official breast cancer test and intended use",
+          "url": "https://artera.ai/breast-cancer-test"
+        },
+        {
+          "label": "Sample breast cancer test report",
+          "url": "https://artera.ai/breast-cancer-test-report"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "ArteraAI Prostate Test (Post-RP)",
+      "type": "Laboratory-developed test · Post-prostatectomy recurrence",
+      "date": "2025-12-09",
+      "dateLabel": "Commercial launch",
+      "summary": "Uses digitized prostatectomy slides and clinical data for patients with biochemical recurrence after surgery. The test estimates long-term risks and potential benefit from adding short-term androgen deprivation therapy to salvage radiation.",
+      "sources": [
+        {
+          "label": "Official Post-RP test page",
+          "url": "https://artera.ai/prostate-postrp"
+        },
+        {
+          "label": "Post-RP commercial launch",
+          "url": "https://artera.ai/news/artera-debuts-arteraai-prostate-test-post%E2%80%91rp-expanding-its-oncology-portfolio"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "ArteraAI Prostate Test (mHSPC)",
+      "type": "Laboratory-developed test · Metastatic prostate cancer",
+      "date": "2026-06-04",
+      "dateLabel": "Clinical availability announced",
+      "summary": "Combines diagnostic prostate biopsy images and clinical data to estimate five-year prostate cancer-specific mortality risk in patients with metastatic hormone-sensitive prostate cancer.",
+      "features": ["Available directly through Artera and as an add-on to selected Tempus genomic tests"],
+      "sources": [
+        {
+          "label": "Official mHSPC test and ordering details",
+          "url": "https://artera.ai/mhspc"
+        },
+        {
+          "label": "mHSPC availability announcement",
+          "url": "https://artera.ai/news/artera-expands-its-validated-multimodal-ai-platform-to-metastatic-hormone-sensitive-prostate-cancer-mhspc"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "ArteraAI Prostate",
+      "type": "Prognostic software · FDA De Novo authorization",
+      "date": "2025-07-31",
+      "dateLabel": "FDA decision",
+      "summary": "Analyzes scanned H&E core needle biopsy slides to estimate 10-year risks of distant metastasis and prostate cancer-specific mortality in eligible men aged 55 or older with nonmetastatic prostate cancer.",
+      "sources": [
+        {
+          "label": "FDA De Novo decision (DEN240068)",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?ID=DEN240068"
+        },
+        {
+          "label": "FDA indications for use",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/DEN240068.pdf"
+        }
+      ],
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "ArteraAI Breast",
+      "type": "Prognostic software · FDA 510(k) clearance",
+      "date": "2026-05-04",
+      "dateLabel": "FDA decision",
+      "summary": "Analyzes scanned H&E breast resection slides to estimate five- and ten-year distant metastasis risk for eligible adults with early-stage HR-positive, HER2-negative invasive breast cancer and N0 or N1 nodal status.",
+      "sources": [
+        {
+          "label": "FDA 510(k) decision (K254115)",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K254115"
+        },
+        {
+          "label": "FDA indications for use",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K254115.pdf"
+        }
+      ],
+      "checked": "2026-11-26"
+    }
+  ],
   "paige": [
     {
       "name": "Paige Prostate Suite",
@@ -1627,7 +1736,7 @@ const C = [
  ["kaiko","Kaiko.ai","startup","Zurich, Switzerland / Amsterdam, Netherlands","Private","Clinical AI that runs across the hospital patient record, built on its own models for imaging, pathology, genomics and clinical text.","https://www.kaiko.ai","fm multi vlm wsi"],
  ["ibex","Ibex Medical Analytics","startup","Tel Aviv, Israel","Private","AI for cancer detection in prostate, breast and gastric biopsies; Ibex Prostate Detect received FDA 510(k) clearance in February 2025.","https://ibex-ai.com","dx prostate breast gi wsi"],
  ["lunit","Lunit","company","Seoul, South Korea","Public (KOSDAQ)","Korean medical-AI company with radiology and pathology lines. Lunit SCOPE reads H&E and IHC slides to quantify immune phenotype and biomarkers such as PD-L1.","https://www.lunit.io","ihc bio fm tme wsi cdx"],
- ["artera","Artera","startup","Los Altos, California, US","Private","Multimodal AI (MMAI) prognostic and predictive tests built on digital pathology; ArteraAI Prostate received FDA De Novo authorization in August 2025.","https://artera.ai","prog multi prostate wsi"],
+ ["artera","Artera","startup","Los Altos, California, US","Private","Develops prognostic and predictive tests for prostate and breast cancer using digital pathology and clinical data. Its ArteraAI Prostate software received FDA De Novo authorization in July 2025, and ArteraAI Breast received FDA 510(k) clearance in May 2026.","https://artera.ai","prog multi prostate breast wsi"],
  ["ataraxis","Ataraxis AI","startup","New York, US","Private","NYU spin-out building AI tests for cancer: the Kestrel and Falcon pathology foundation models and Ataraxis Breast, a prognostic and predictive test for breast cancer.","https://ataraxis.ai","fm prog breast multi wsi"],
  ["modella","Modella AI","company","Boston, US","Acquired by AstraZeneca (January 2026)","Multimodal and agentic AI for pathology, including the PathChat copilot.","https://www.modella.ai","fm vlm multi bio wsi"],
  ["stratipath","Stratipath","startup","Stockholm, Sweden","Private","Karolinska spin-out; Stratipath Breast grades breast-cancer risk from routine H&E.","https://www.stratipath.com","prog breast wsi"],
