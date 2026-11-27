@@ -125,10 +125,11 @@
   .products-close:hover { background: #eeebf5; }
   .products-content { padding: 22px 28px 32px; }
   .products-intro { margin: 0 0 4px; color: var(--muted); font-size: 14px; }
+  .product-group { margin: 26px 0 0; padding: 8px 12px; border-radius: 6px; background: #eeebf5; color: var(--hema); font-size: 16px; }
   .product-card { padding: 24px 0; border-bottom: 1px solid var(--line); }
   .product-card:last-child { border-bottom: 0; padding-bottom: 0; }
   .product-type { display: inline-block; padding: 3px 9px; border-radius: 5px; background: #eeebf5; color: var(--hema); font-size: 14px; }
-  .product-card h3 { margin: 12px 0 8px; font: 500 28px/1.2 var(--serif); }
+  .product-card h3, .product-card h4 { margin: 12px 0 8px; font: 500 28px/1.2 var(--serif); }
   .product-card p { margin: 12px 0; }
   .product-card .product-release, .product-card .product-checked { color: var(--muted); font-size: 14px; }
   .product-card ul { margin: 16px 0; padding-left: 22px; }
@@ -143,6 +144,7 @@
   .publication-list { list-style: none; margin: 0; padding: 0; }
   .publication-list li { padding: 11px 0; border-bottom: 1px solid var(--line); }
   .publication-list a { font-weight: 600; }
+  .publication-project { display: block; color: var(--ink); font-weight: 700; }
   .publication-meta { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
   @media (max-width: 480px) { .products-heading { padding: 22px 70px 18px 20px; } .products-content { padding: 20px 20px 28px; } }
 
@@ -730,6 +732,97 @@ const COMPANY_PRODUCTS = {
         }
       ],
       "checked": "2026-11-26"
+    }
+  ],
+  "caris": [
+    {
+      "name": "MI Cancer Seek",
+      "group": "Tissue Profiling",
+      "type": "Solid tumor molecular profiling assay",
+      "date": "2024-11-05",
+      "dateLabel": "Original FDA approval",
+      "summary": "Profiles solid tumor tissue using whole-exome DNA and whole-transcriptome RNA sequencing. FDA approval includes specified companion diagnostic indications and tumor mutational profiling under its labeling.",
+      "sources": [
+        {"label": "Official MI Cancer Seek page and current indications", "url": "https://www.carislifesciences.com/physicians/physician-tests/mi-cancer-seek/"},
+        {"label": "FDA approval record (P240010)", "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P240010"}
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "MI Clarity",
+      "group": "Tissue Profiling",
+      "type": "AI breast cancer recurrence test",
+      "date": "2026-05-05",
+      "dateLabel": "Launch announcement",
+      "summary": "Combines a routine H&E slide with clinical data to estimate early and late distant recurrence risk in eligible patients with breast cancer. It also reports estimated treatment benefit for specified patient groups.",
+      "sources": [
+        {"label": "Official MI Clarity page and report options", "url": "https://www.carislifesciences.com/physicians/physician-tests/caris-mi-clarity/"},
+        {"label": "MI Clarity launch announcement", "url": "https://www.carislifesciences.com/about/news-and-media/caris-life-sciences-launches-caris-mi-clarity/"}
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "MI Profile",
+      "group": "Tissue Profiling",
+      "type": "Tumor DNA, RNA and protein profiling",
+      "summary": "Profiles DNA, RNA and selected protein biomarkers from solid tumor tissue. It combines whole-exome and whole-transcriptome sequencing with techniques such as immunohistochemistry.",
+      "features": ["Caris lists availability in selected international markets"],
+      "sources": [{"label": "Official MI Profile page", "url": "https://www.carislifesciences.com/physicians/physician-tests/mi-profile/"}],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "MI Tumor Seek Hybrid",
+      "group": "Tissue Profiling",
+      "type": "Laboratory-developed tissue sequencing test",
+      "summary": "Combines whole-exome DNA sequencing and whole-transcriptome RNA sequencing from tumor tissue to report molecular alterations and signatures.",
+      "features": ["Caris lists availability in selected international markets"],
+      "sources": [{"label": "Official MI Tumor Seek Hybrid page", "url": "https://www.carislifesciences.com/physicians/physician-tests/mi-tumor-seek-hybrid/"}],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Caris Assure",
+      "group": "Blood Profiling",
+      "type": "Liquid biopsy for molecular profiling",
+      "summary": "Analyzes circulating DNA and RNA with matched white blood cells from a blood sample. The matched analysis helps distinguish tumor-derived findings from inherited variants and clonal hematopoiesis.",
+      "sources": [{"label": "Official Caris Assure page", "url": "https://www.carislifesciences.com/physicians/physician-tests/caris-assure/"}],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Caris ChromoSeq",
+      "group": "Blood Profiling",
+      "type": "Whole-genome sequencing for myeloid malignancies",
+      "summary": "Analyzes peripheral blood or bone marrow aspirate in diagnosed or suspected myeloid malignancies. It reports structural variants, copy-number changes and mutations for diagnosis and risk assessment.",
+      "sources": [{"label": "Official Caris ChromoSeq page", "url": "https://www.carislifesciences.com/physicians/physician-tests/caris-chromoseq/"}],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Caris Detect",
+      "group": "Blood Profiling",
+      "type": "Multi-cancer early detection blood test",
+      "date": "2026-07-01",
+      "dateLabel": "Commercial launch",
+      "summary": "Uses whole-genome and whole-transcriptome sequencing and AI to look for molecular signals associated with multiple cancers in a blood sample.",
+      "sources": [
+        {"label": "Official Caris Detect page", "url": "https://www.carislifesciences.com/carisdetect/"},
+        {"label": "Caris Detect launch announcement", "url": "https://www.carislifesciences.com/about/news-and-media/caris-life-sciences-launches-caris-detect/"}
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Caris GPSai",
+      "group": "AI Signatures",
+      "type": "Tumor origin prediction",
+      "summary": "Compares a tumor’s DNA and RNA profile with reference cancer signatures to help identify its tissue of origin, including in cancers of unknown primary.",
+      "sources": [{"label": "Official Caris GPSai page", "url": "https://www.carislifesciences.com/physicians/physician-tests/caris-gpsai/"}],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Caris FOLFIRSTai",
+      "group": "AI Signatures",
+      "type": "Chemotherapy benefit prediction",
+      "summary": "Uses molecular profiling data to estimate relative benefit from starting with FOLFOX or FOLFIRI, each with bevacizumab, in eligible patients with metastatic colorectal cancer.",
+      "sources": [{"label": "Official Caris FOLFIRSTai page", "url": "https://www.carislifesciences.com/physicians/physician-tests/caris-folfirstai/"}],
+      "checked": "2026-11-27"
     }
   ],
   "octopath": [
@@ -1835,6 +1928,23 @@ COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
 
 // Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
 const LAB_PUBLICATIONS = {
+  ai4path: {
+    catalogUrl: "https://u.osu.edu/niazilab/publications/",
+    years: [
+      { year: 2026, papers: [
+        ["Streamline pathology foundation model by cross-magnification distillation", "Medical Image Analysis (online first)", "https://doi.org/10.1016/j.media.2026.104352", "XMAG"],
+        ["RANGER: Sparsely-Gated Mixture-of-Experts with Adaptive Retrieval Re-ranking for Pathology Report Generation", "CVPR Workshops", "https://arxiv.org/abs/2603.04348"],
+        ["Predicting protein cascade expression from H&E images", "PLOS Computational Biology", "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014262"],
+        ["Morphology-Aware Prognostic Model for Five-Year Survival Prediction in Colorectal Cancer from H&E Whole Slide Images: A Study Using Multi-Center Clinical Trial Cohort", "Cancers", "https://doi.org/10.3390/cancers18071150"],
+        ["Unified Multi-Foundation-Model Slide Representation for Pan-Cancer Recognition and Text-Guided Tumor Localization", "arXiv preprint", "https://arxiv.org/abs/2604.22846"],
+        ["MorphDistill: Distilling Unified Morphological Knowledge from Pathology Foundation Models for Colorectal Cancer Survival Prediction", "arXiv preprint", "https://arxiv.org/abs/2604.06390"],
+        ["PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration", "arXiv preprint", "https://arxiv.org/abs/2603.08935"]
+      ] },
+      { year: 2025, papers: [
+        ["HistoChat: Instruction-tuning multimodal vision language assistant for colorectal histopathology on limited data", "Patterns", "https://doi.org/10.1016/j.patter.2025.101284"]
+      ] }
+    ]
+  },
   rli: {
     catalogUrl: "https://med.stanford.edu/lilab/publications.html",
     years: [
@@ -2555,17 +2665,23 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 function openProducts(n) {
   const items = COMPANY_PRODUCTS[n.id] || [];
-  const content = items.length
-    ? `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>` + items.map(item => `
+  const cards = items.map((item, index) => {
+    const heading = item.group ? 'h4' : 'h3';
+    const groupHeading = item.group && item.group !== items[index - 1]?.group
+      ? `<h3 class='product-group'>${esc(item.group)}</h3>` : '';
+    return `${groupHeading}
       <article class='product-card'>
         <span class='product-type'>${esc(item.type)}</span>
-        <h3>${esc(item.name)}</h3>
+        <${heading}>${esc(item.name)}</${heading}>
         ${item.date ? `<p class='product-release'>${esc(item.dateLabel || 'Announcement')} · <time datetime='${esc(item.date)}'>${productDate(item.date)}</time></p>` : ''}
         <p>${esc(item.summary)}</p>
         ${item.features && item.features.length ? `<ul>${item.features.map(text => `<li>${esc(text)}</li>`).join('')}</ul>` : ''}
         ${item.sources.length ? `<div class='product-sources'>${item.sources.map(source => `<a href='${esc(source.url)}' target='_blank' rel='noopener noreferrer'>${esc(source.label)}</a>`).join('')}</div>` : ''}
         ${item.checked ? `<p class='product-checked'>Checked <time datetime='${esc(item.checked)}'>${productDate(item.checked)}</time></p>` : ''}
-      </article>`).join('')
+      </article>`;
+  }).join('');
+  const content = cards
+    ? `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>` + cards
     : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
   openResourcePanel(n, 'Models & products', 'Close models and products', content);
 }
@@ -2575,8 +2691,8 @@ function openPublications(n, publications) {
       <h3 class='publication-year' id='publication-year-${year}'>${year}</h3>
       <ul class='publication-list'>${papers.map(([title, venue, url, project]) => `
         <li>
-          <a href='${esc(url)}' target='_blank' rel='noopener noreferrer'>${esc(title)}</a>
-          <p class='publication-meta'>${esc(project ? `${project} · ${venue}` : venue)}</p>
+          <a href='${esc(url)}' target='_blank' rel='noopener noreferrer'>${project ? `<strong class='publication-project'>${esc(project)}</strong>` : ''}${esc(title)}</a>
+          <p class='publication-meta'>${esc(venue)}</p>
         </li>`).join('')}
       </ul>
     </section>`).join('');
