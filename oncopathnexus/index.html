@@ -2796,6 +2796,59 @@ const COMPANY_PRODUCTS = {
       "checked": "2026-11-27"
     }
   ],
+  "imagene": [
+    {
+      "name": "OI Suite",
+      "type": "Oncology research platform",
+      "summary": "Imagene AI’s CanvOI-powered platform lets oncology researchers use pathology images and linked molecular and clinical data to explore biomarker hypotheses and develop predictive models.",
+      "features": [
+        "No-code tools for training and interpreting models on labeled study cohorts",
+        "Real-world data can supplement cohort analysis",
+        "Supports research into biomarkers, treatment response and prognosis"
+      ],
+      "sources": [
+        { "label": "Official OI Suite overview", "url": "https://imagene-ai.com/oi-suite/" },
+        { "label": "OI Suite Discovery Program", "url": "https://imagene-ai.com/oi-suite/discovery/" }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "pathomiq": [
+    {
+      "name": "PATHOMIQ_AS",
+      "type": "Active surveillance decision-support model",
+      "summary": "An AI model studied in patients with low- or intermediate-risk prostate cancer on active surveillance. Its multimodal version combines biopsy histology, PSA and other clinical data to estimate risks such as progression and grade reclassification.",
+      "sources": [
+        { "label": "PATHOMIQ prostate portfolio", "url": "https://pathomiq.com/prostate/" }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "PATHOMIQ_PRAD",
+      "type": "Prostate cancer prognostic model",
+      "summary": "Analyzes digitized H&E prostatectomy slides to estimate the risk of biochemical recurrence and metastasis. An independent blinded study evaluated the model in a radical prostatectomy cohort.",
+      "sources": [
+        { "label": "PATHOMIQ_PRAD product page", "url": "https://pathomiq.com/product/" },
+        { "label": "Independent validation study", "url": "https://pubmed.ncbi.nlm.nih.gov/40532127/" }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Prolaris + PATHOMIQ AI Test",
+      "type": "Myriad Genetics prostate cancer test",
+      "date": "2026-05-26",
+      "dateLabel": "Launch announced",
+      "summary": "Sold by Myriad Genetics as the Prolaris + AI Test. It combines clinical and pathological factors, the Prolaris Cell Cycle Risk molecular score and a PATHOMIQ digital pathology score from H&E prostate biopsy images.",
+      "features": [
+        "The image-derived score estimates the likelihood of a higher Gleason score at a future biopsy to inform active surveillance discussions"
+      ],
+      "sources": [
+        { "label": "Myriad Prolaris + AI test overview", "url": "https://myriad.com/urology/prolaris-genomic-test-clinical-evidence/" },
+        { "label": "PATHOMIQ integration announcement", "url": "https://pathomiq.com/pathomiq-ai-technology-integrated-into-myriad-genetics-new-prolaris-ai-test/" }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "recursion": [
     {
       "name": "Recursion OS",
@@ -2910,6 +2963,8 @@ const COMPANY_PRODUCTS = {
 COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
 // Proscia distributes this Mindpeak app through its Concentriq AI portfolio.
 COMPANY_PRODUCTS.proscia.push(COMPANY_PRODUCTS.mindpeak[0]);
+// Myriad sells the Prolaris test that integrates PATHOMIQ’s pathology score.
+COMPANY_PRODUCTS.myriad = [COMPANY_PRODUCTS.pathomiq[2]];
 
 // Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
 const LAB_PUBLICATIONS = {
@@ -3056,7 +3111,7 @@ const C = [
  ["ataraxis","Ataraxis AI","startup","New York, US","Private","NYU spin-out building AI tests for cancer: the Kestrel and Falcon pathology foundation models and Ataraxis Breast, a prognostic and predictive test for breast cancer.","https://ataraxis.ai","fm prog breast multi wsi"],
  ["modella","Modella AI","company","Boston, US","Acquired by AstraZeneca (January 2026)","Multimodal and agentic AI for pathology, including the PathChat copilot.","https://www.modella.ai","fm vlm multi bio wsi"],
  ["stratipath","Stratipath","startup","Stockholm, Sweden","Private","Karolinska spin-out; Stratipath Breast grades breast-cancer risk from routine H&E.","https://www.stratipath.com","prog breast wsi"],
- ["imagene","Imagene AI","startup","Miami, US","Private","AI pathology assays that infer biomarkers from H&E biopsy slides for patient stratification and companion diagnostics, offered as its OI suite (OI Discover, OI Predict and OI CDx).","https://imagene-ai.com","mol fm wsi lung"],
+ ["imagene","Imagene AI","startup","Miami, US","Private","Develops pathology AI for biomarker discovery, molecular profiling and companion diagnostic development. Its CanvOI foundation model powers the OI Suite research platform.","https://imagene-ai.com","mol fm wsi lung"],
  ["octopath","Octopath AI","startup","London, UK","Private (research use only)","Cell-level AI for digital pathology: counts, classifies and scores cells on slides. Its Kraken model drives H&E tools for tumour cellularity, immune cells and mitoses, and its Nemo model scores ER/PR, HER2, PD-L1 and Ki67 on IHC. Works with UCL, UCLH and the Institute of Cancer Research.","https://octopath.ai","dx ihc tme fm wsi"],
  ["pictor","Pictor Labs","startup","Los Angeles, US","Private","AI virtual staining that generates stains digitally from unstained tissue.","https://pictorlabs.ai","vstain wsi"],
  ["sophont","Sophont","startup","Sacramento, California, US","Private (seed stage)","Medical AI lab founded in 2025 by Tanishq Abraham and Paul Scotti, building open multimodal foundation models. Released the open pathology model OpenMidnight and, in 2026, Holon-S1, which predicts gene expression from routine tissue slides.","https://sophont.med","fm open stx mol wsi"],
