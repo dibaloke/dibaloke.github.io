@@ -49,7 +49,7 @@
   .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
   .chip b { font-weight: 400; color: var(--faint); font-variant-numeric: tabular-nums; }
   .chip:hover { color: var(--hema); }
-  .chip[aria-pressed="false"] { color: var(--faint); } .chip[aria-pressed="false"] i { background: transparent; box-shadow: inset 0 0 0 1.3px var(--faint); }
+  .legend.filtering .chip[aria-pressed="false"] { color: var(--faint); } .legend.filtering .chip[aria-pressed="false"] i { background: transparent; box-shadow: inset 0 0 0 1.3px var(--faint); }
   .keys { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11.5px; line-height: 1.55; }
   .keys span { white-space: nowrap; margin-right: 12px; } .keys svg { vertical-align: middle; margin-right: 6px; }
   .keys div { margin-top: 5px; max-width: 40ch; }
@@ -241,7 +241,7 @@
     <button class='btn' id='reset' title='Reset view'>Reset</button>
   </div>
   <div class='rail' id='rail' aria-label='Layers shown'></div>
-  <div class='legend' id='legend' aria-label='Organization types'></div>
+  <div class='legend' id='legend' role='group' aria-label='Filter by organization type'></div>
   <div class='time' id='time'>
     <button class='play' id='play' aria-label='Play timeline' title='Play the timeline'>▶</button>
     <span class='tick'>2010</span>
@@ -1927,6 +1927,891 @@ const COMPANY_PRODUCTS = {
       "checked": "2026-11-27"
     }
   ],
+  "sectra": [
+    {
+      "name": "Sectra UniView",
+      "type": "Enterprise image viewer",
+      "summary": "A browser-based viewer for medical images and related records in the Sectra Enterprise Platform. It gives care teams access to whole-slide pathology images, radiology studies, photographs and documents from one interface.",
+      "sources": [
+        {
+          "label": "Sectra UniView product page",
+          "url": "https://medical.sectra.com/product/sectra-uniview/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Sectra Reporting",
+      "type": "Imaging reporting software",
+      "summary": "Sectra’s built-in reporting solution pairs the image workspace with structured templates, speech recognition and access to clinical context. Sectra describes it for enterprise imaging reporting, including radiology.",
+      "sources": [
+        {
+          "label": "Sectra Reporting product page",
+          "url": "https://medical.sectra.com/product/sectra-reporting/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "roche": [
+    {
+      "name": "navify® Digital Pathology",
+      "type": "Pathology image management system",
+      "summary": "Roche’s software for viewing, organizing and annotating whole-slide images and managing pathology cases. The platform integrates with slide scanners, laboratory systems and compatible image-analysis applications.",
+      "sources": [
+        {
+          "label": "Roche navify product page",
+          "url": "https://navify.roche.com/us/en-us/marketplace/products/navify-digital-pathology"
+        },
+        {
+          "label": "Roche enterprise pathology software",
+          "url": "https://diagnostics.roche.com/global/en/products/product-category/lab-type/pathology-lab/digital-pathology/enterprise-pathology-software.html"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "concertai": [
+    {
+      "name": "CancerLinQ",
+      "type": "Oncology data and practice software",
+      "summary": "ConcertAI’s oncology suite connects electronic health record data with tools for practice analytics, quality measurement and clinical research. Its clinical tools include trial matching and patient summaries for care teams.",
+      "sources": [
+        {
+          "label": "CancerLinQ Suite",
+          "url": "https://www.concertai.com/cancerlinq-suite"
+        },
+        {
+          "label": "ConcertAI’s 2026 suite update",
+          "url": "https://www.concertai.com/news/concertai-expands-cancerlinq-suite-with-ai-driven-trial-matching-and-contextualized-patient-insights-to-support-oncologists-at-the-point-of-care"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "deepbio": [
+    {
+      "name": "DeepDx® Viewer",
+      "type": "Whole-slide image viewer",
+      "summary": "Deep Bio’s viewer displays digital pathology slides and the results of its DeepDx image-analysis tools.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepDx® Prostate – CNB",
+      "type": "Prostate core-needle biopsy analysis",
+      "summary": "Analyzes H&E-stained prostate core-needle biopsies for cancer detection, tumor measurement and Gleason grading.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepDx® Prostate – RP",
+      "type": "Prostatectomy analysis",
+      "summary": "Analyzes digitized radical prostatectomy specimens to identify and quantify prostate cancer regions.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepDx® Prostate – TURP",
+      "type": "Prostate resection analysis",
+      "summary": "Analyzes slides from transurethral resection of the prostate to highlight suspicious tumor regions.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepDx® Breast – Resection",
+      "type": "Breast resection analysis",
+      "summary": "Analyzes digitized breast resection slides and highlights tissue regions for review.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepDx® Breast – SLNB",
+      "type": "Sentinel lymph node analysis",
+      "summary": "Analyzes breast cancer sentinel lymph node biopsy slides to help identify regions suspicious for metastasis.",
+      "sources": [
+        {
+          "label": "Deep Bio product catalog",
+          "url": "https://www.deepbio.co.kr/products/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "tribun": [
+    {
+      "name": "CaloPix®",
+      "type": "Pathology image management system",
+      "summary": "A web-based system for managing pathology cases and worklists, viewing whole-slide images and supporting remote consultation. It integrates with laboratory systems and compatible AI applications.",
+      "sources": [
+        {
+          "label": "CaloPix product page",
+          "url": "https://www.tribun.health/calopix"
+        },
+        {
+          "label": "FDA 510(k) record",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K250414"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "pramana": [
+    {
+      "name": "SpectralHT",
+      "type": "High-throughput whole-slide scanner",
+      "summary": "A modular scanning system with multiple optical heads and automated slide handling for high-volume digitization.",
+      "sources": [
+        {
+          "label": "Pramana SpectralHT",
+          "url": "https://www.pramana.ai/spectralht"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "SpectralM / Pramana M",
+      "type": "Desktop whole-slide scanner",
+      "summary": "A compact scanner in Pramana’s Spectral family for labs with lower slide volumes. Evident lists the desktop system as Pramana M.",
+      "sources": [
+        {
+          "label": "Pramana Spectral scanner family",
+          "url": "https://www.pramana.ai/"
+        },
+        {
+          "label": "Evident Pramana M",
+          "url": "https://evidentscientific.com/en/products/slide-scanners/pramana-m"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Pramana POD",
+      "type": "Automated benchtop whole-slide scanner",
+      "summary": "A benchtop scanner with 40× imaging, automated slide handling and built-in image quality checks.",
+      "sources": [
+        {
+          "label": "Evident Pramana POD",
+          "url": "https://evidentscientific.com/en/products/slide-scanners/pramana-pod"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Vista",
+      "type": "Whole-slide viewer and organizer",
+      "summary": "Pramana’s slide-viewing and organization software for digital pathology workflows.",
+      "sources": [
+        {
+          "label": "Pramana Vista product page",
+          "url": "https://www.pramana.ai/vista"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Digital Pathology as a Service",
+      "type": "Slide digitization service",
+      "summary": "A service for digitizing glass slides with Pramana’s scanning infrastructure.",
+      "sources": [
+        {
+          "label": "Pramana service overview",
+          "url": "https://www.pramana.ai/solutions"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "grundium": [
+    {
+      "name": "Ocus® 20",
+      "type": "Whole-slide scanner",
+      "summary": "A compact single-slide scanner with 20× optics for histology and time-sensitive workflows.",
+      "sources": [
+        {
+          "label": "Grundium scanner page",
+          "url": "https://www.grundium.com/scanners/ocus20/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Ocus® 40",
+      "type": "Whole-slide scanner",
+      "summary": "A single-slide scanner with 40× optics for higher-resolution tissue and cytology imaging.",
+      "sources": [
+        {
+          "label": "Grundium scanner page",
+          "url": "https://www.grundium.com/scanners/ocus40/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Ocus® M 20",
+      "type": "Whole-slide scanner",
+      "summary": "The 20× variant of Grundium’s four-slide scanner, with a removable tray for unattended scanning.",
+      "sources": [
+        {
+          "label": "Grundium scanner page",
+          "url": "https://www.grundium.com/scanners/ocus-m-series/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Ocus® M 40",
+      "type": "Whole-slide scanner",
+      "summary": "The 40× variant of Grundium’s four-slide scanner, with a removable tray for unattended scanning.",
+      "sources": [
+        {
+          "label": "Grundium scanner page",
+          "url": "https://www.grundium.com/scanners/ocus-m-series/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Ocus® R",
+      "type": "Whole-slide scanner",
+      "summary": "A robotic whole-slide scanning system for higher-volume labs. Grundium describes configurations with parallel scanning heads and automated slide drawers.",
+      "sources": [
+        {
+          "label": "Grundium scanner page",
+          "url": "https://www.grundium.com/scanners/ocus-r/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "4dpath": [
+    {
+      "name": "QPOR™",
+      "type": "Computational pathology research platform",
+      "summary": "4D Path’s platform analyzes digitized H&E biopsy images to derive tissue signatures under investigation as predictors of treatment response.",
+      "sources": [
+        {
+          "label": "QPOR platform",
+          "url": "https://4dpath.com/platform/"
+        },
+        {
+          "label": "4D Path clinical studies",
+          "url": "https://4dpath.com/clinical-validation/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "panakeia": [
+    {
+      "name": "PANProfiler Breast",
+      "type": "H&E-based breast biomarker profiling",
+      "summary": "Panakeia’s AI tool estimates ER, PR and HER2 status from routine H&E breast cancer slides. Its performance has been studied in a multi-site validation study.",
+      "sources": [
+        {
+          "label": "Panakeia product portfolio",
+          "url": "https://www.panakeia.ai/products"
+        },
+        {
+          "label": "Multi-site validation study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42016302/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "domore": [
+    {
+      "name": "Histotype Px® Colorectal",
+      "type": "Digital prognostic biomarker",
+      "summary": "An AI-based test that analyzes standard H&E slides from resected colorectal tumors to estimate patient prognosis. DoMore lists it as CE-IVD marked.",
+      "sources": [
+        {
+          "label": "Histotype Px Colorectal product page",
+          "url": "https://www.domorediagnostics.com/products"
+        },
+        {
+          "label": "DoMore CE-IVD announcement",
+          "url": "https://www.domorediagnostics.com/news/do-more-diagnostics-achieves-ce-mark-43lh6"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "qritive": [
+    {
+      "name": "Pantheon",
+      "type": "Digital pathology platform",
+      "summary": "Qritive’s workbench for viewing slides, managing cases, sharing work and reviewing AI results in the pathology workflow.",
+      "sources": [
+        {
+          "label": "Pantheon product page",
+          "url": "https://www.qritive.com/pantheon"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "QAi Prostate",
+      "type": "Prostate pathology AI suite",
+      "summary": "Qritive’s suite includes QAi Prostate Dx for detecting and quantifying suspicious tumor regions and QAi Prostate Grade for Gleason assessment.",
+      "sources": [
+        {
+          "label": "QAi Prostate product page",
+          "url": "https://www.qritive.com/qai-prostate"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "QAi Colon Dx",
+      "type": "Colon biopsy image analysis",
+      "summary": "Highlights benign, dysplastic and malignant regions on digitized colon biopsies for pathologist review.",
+      "sources": [
+        {
+          "label": "Qritive AI module catalog",
+          "url": "https://www.qritive.com/other-ai-modules"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "QAi Lymph Node Dx",
+      "type": "Lymph node image analysis",
+      "summary": "Highlights regions of interest on lymph node slides to help pathologists review for macro- and micrometastases.",
+      "sources": [
+        {
+          "label": "Qritive AI module catalog",
+          "url": "https://www.qritive.com/other-ai-modules"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "aiforia": [
+    {
+      "name": "Aiforia® Breast Cancer Suite",
+      "type": "Breast pathology AI suite",
+      "summary": "A suite of image-analysis models for breast cancer pathology, including biomarker quantification on immunohistochemistry slides.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/breast-cancer-ai"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Aiforia® Lung Cancer Suite",
+      "type": "Lung pathology AI suite",
+      "summary": "AI models for lung cancer slide analysis, including PD-L1 expression scoring.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/lung-cancer-ai"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Aiforia® Prostate Cancer Suite",
+      "type": "Prostate pathology AI suite",
+      "summary": "AI models that support identification and assessment of cancer in prostate biopsy slides, including Gleason grading.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/prostate-cancer-ai"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Aiforia® Colon Suite",
+      "type": "Colon pathology AI suite",
+      "summary": "A suite of models for analyzing colon pathology samples, including colorectal cancer biomarker analysis.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/colon-suite"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Colorectal Cancer QuantCRC",
+      "type": "Quantitative colorectal tissue analysis",
+      "summary": "Analyzes H&E-stained colorectal cancer tissue, quantifying tumor morphology and features of the tumor microenvironment.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/quantcrc"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Aiforia® Gastric Suite",
+      "type": "Gastric pathology AI suite",
+      "summary": "A suite of image-analysis models for gastric cancer pathology, including biomarker scoring.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/gastric-ai"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Aiforia® Create",
+      "type": "AI model development software",
+      "summary": "A cloud platform for domain experts to annotate pathology images, train and validate custom deep learning models, and deploy them into supported analysis workflows.",
+      "sources": [
+        {
+          "label": "Aiforia product page",
+          "url": "https://www.aiforia.com/aiforia-create"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "kaiko": [
+    {
+      "name": "kaiko.w",
+      "type": "Clinical AI workspace",
+      "summary": "A conversational assistant for hospital teams. It integrates with hospital systems and supports consultation preparation, guideline research and documentation. Kaiko also describes oncology workflows such as tracking tumors over time.",
+      "sources": [
+        {
+          "label": "kaiko.w product page",
+          "url": "https://w.kaiko.ai/"
+        },
+        {
+          "label": "Kaiko clinical AI workspace",
+          "url": "https://kaiko.ai/clinical-assistant/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "insitro": [
+    {
+      "name": "Virtual Human",
+      "type": "Drug discovery research platform",
+      "summary": "insitro’s internal platform uses human genetics and multimodal patient and cellular data to study disease mechanisms and prioritize potential therapeutic targets.",
+      "sources": [
+        {
+          "label": "insitro platform",
+          "url": "https://www.insitro.com/platform/"
+        },
+        {
+          "label": "insitro research pipeline",
+          "url": "https://www.insitro.com/pipeline/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "TherML",
+      "type": "Therapeutic design research platform",
+      "summary": "insitro’s internal design platform supports research across small molecules, oligonucleotides and biologics.",
+      "sources": [
+        {
+          "label": "insitro TherML overview",
+          "url": "https://www.insitro.com/news/introducing-insitros-therml-rapidly-engineering-the-right-therapeutic-for-the-right-target/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Small Molecule in vivo PK Models",
+      "type": "Pharmacokinetics prediction models",
+      "summary": "Models developed with Eli Lilly for predicting the pharmacokinetic properties of small molecules from their structures. They are available through Lilly TuneLab.",
+      "sources": [
+        {
+          "label": "insitro TuneLab announcement",
+          "url": "https://www.insitro.com/news/insitro-designed-machine-learning-models-for-small-molecule-in-vivo-pharmacokinetic-behavior-prediction-now-available-in-lilly-tunelab/"
+        },
+        {
+          "label": "Lilly TuneLab in vivo PK",
+          "url": "https://tunelab.lilly.com/products/in-vivo-pk/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "biohub": [
+    {
+      "name": "ESMC",
+      "type": "Protein language model",
+      "summary": "ESM Cambrian learns representations of amino acid sequences for research into protein structure and function.",
+      "sources": [
+        {
+          "label": "Biohub’s ESM portfolio",
+          "url": "https://biohub.org/ai-models/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "ESMFold2",
+      "type": "Protein structure prediction model",
+      "summary": "Predicts three-dimensional structures of proteins and protein complexes.",
+      "sources": [
+        {
+          "label": "Biohub’s ESM portfolio",
+          "url": "https://biohub.org/ai-models/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "ESM Atlas",
+      "type": "Protein research resource",
+      "summary": "A reference collection of protein sequences and predicted structures.",
+      "sources": [
+        {
+          "label": "Biohub’s ESM portfolio",
+          "url": "https://biohub.org/ai-models/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "bioptimus": [
+    {
+      "name": "M-Optimus",
+      "type": "Multimodal foundation model",
+      "summary": "Combines histology, molecular measurements and clinical data in a shared representation for research into spatial gene expression, biomarkers and patient outcomes.",
+      "sources": [
+        {
+          "label": "M-Optimus model page",
+          "url": "https://www.bioptimus.com/m-optimus"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "H-Optimus",
+      "type": "Histology foundation model family",
+      "summary": "A family of vision models trained on H&E whole-slide images. H-Optimus-0 and H-Optimus-1 produce embeddings that researchers can use in downstream pathology tasks.",
+      "sources": [
+        {
+          "label": "H-Optimus model family",
+          "url": "https://www.bioptimus.com/h-optimus"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "STELA",
+      "type": "Spatial biology atlas initiative",
+      "summary": "A Bioptimus-led initiative to build a clinically linked atlas combining spatial biology, tissue images, molecular measurements and patient outcomes. The resulting data help train M-Optimus.",
+      "sources": [
+        {
+          "label": "STELA initiative",
+          "url": "https://www.bioptimus.com/stela"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "pathos": [
+    {
+      "name": "PathOS™",
+      "type": "Oncology drug development platform",
+      "summary": "Pathos AI’s internal platform uses multimodal evidence to prioritize oncology therapies and inform clinical development.",
+      "features": [
+        "S",
+        "c",
+        "o",
+        "u",
+        "t",
+        " ",
+        "p",
+        "r",
+        "i",
+        "o",
+        "r",
+        "i",
+        "t",
+        "i",
+        "z",
+        "e",
+        "s",
+        " ",
+        "a",
+        "s",
+        "s",
+        "e",
+        "t",
+        "s",
+        ",",
+        " ",
+        "S",
+        "p",
+        "r",
+        "i",
+        "n",
+        "t",
+        " ",
+        "s",
+        "u",
+        "p",
+        "p",
+        "o",
+        "r",
+        "t",
+        "s",
+        " ",
+        "c",
+        "l",
+        "i",
+        "n",
+        "i",
+        "c",
+        "a",
+        "l",
+        " ",
+        "d",
+        "e",
+        "v",
+        "e",
+        "l",
+        "o",
+        "p",
+        "m",
+        "e",
+        "n",
+        "t",
+        ",",
+        " ",
+        "a",
+        "n",
+        "d",
+        " ",
+        "F",
+        "o",
+        "u",
+        "n",
+        "d",
+        "r",
+        "y",
+        " ",
+        "p",
+        "r",
+        "o",
+        "v",
+        "i",
+        "d",
+        "e",
+        "s",
+        " ",
+        "t",
+        "h",
+        "e",
+        " ",
+        "s",
+        "h",
+        "a",
+        "r",
+        "e",
+        "d",
+        " ",
+        "A",
+        "I",
+        " ",
+        "m",
+        "o",
+        "d",
+        "e",
+        "l",
+        "s",
+        "."
+      ],
+      "sources": [
+        {
+          "label": "PathOS platform",
+          "url": "https://www.pathos.com/platform"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "valar": [
+    {
+      "name": "Vesta Bladder",
+      "type": "Computational pathology test portfolio",
+      "summary": "Valar’s tests for non-muscle-invasive bladder cancer analyze H&E slides. BCGPredict estimates response to BCG therapy, and Risk Stratify estimates recurrence and progression risk.",
+      "sources": [
+        {
+          "label": "Valar Labs Vesta Bladder",
+          "url": "https://valarlabs.com/vesta/bladder"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Vesta Prostate",
+      "type": "Computational pathology test portfolio",
+      "summary": "A portfolio of H&E-based biomarkers for metastatic hormone-sensitive prostate cancer. It includes Risk Stratify, Triplet Predict and ARPI Predict.",
+      "sources": [
+        {
+          "label": "Valar Labs Vesta Prostate",
+          "url": "https://valarlabs.com/vesta/prostate"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Vitara Pancreas ChemoPredict",
+      "type": "Computational pathology test",
+      "summary": "Valar’s H&E-based test evaluates histology from advanced pancreatic cancer biopsies to estimate whether a gemcitabine-based or 5-FU-based regimen may be favored.",
+      "sources": [
+        {
+          "label": "Valar Labs Vitara",
+          "url": "https://valarlabs.com/vitara"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "epredia": [
+    {
+      "name": "SlideMate™",
+      "type": "Microscope slide printer family",
+      "summary": "Epredia’s microscope slide printers label slides at the point of use to support specimen identification and traceability.",
+      "features": [
+        "T",
+        "h",
+        "e",
+        " ",
+        "r",
+        "a",
+        "n",
+        "g",
+        "e",
+        " ",
+        "i",
+        "n",
+        "c",
+        "l",
+        "u",
+        "d",
+        "e",
+        "s",
+        " ",
+        "S",
+        "l",
+        "i",
+        "d",
+        "e",
+        "M",
+        "a",
+        "t",
+        "e",
+        " ",
+        "A",
+        "S",
+        ",",
+        " ",
+        "P",
+        "r",
+        "o",
+        ",",
+        " ",
+        "L",
+        "a",
+        "s",
+        "e",
+        "r",
+        " ",
+        "a",
+        "n",
+        "d",
+        " ",
+        "T",
+        "h",
+        "e",
+        "r",
+        "m",
+        "a",
+        "l",
+        " ",
+        "S",
+        "l",
+        "i",
+        "d",
+        "e",
+        " ",
+        "P",
+        "r",
+        "i",
+        "n",
+        "t",
+        "e",
+        "r",
+        " ",
+        "m",
+        "o",
+        "d",
+        "e",
+        "l",
+        "s",
+        "."
+      ],
+      "sources": [
+        {
+          "label": "Epredia slide printing portfolio",
+          "url": "https://www.epredia.com/products/histology-instruments/slide-printing"
+        },
+        {
+          "label": "SlideMate Thermal Slide Printer announcement",
+          "url": "https://www.epredia.com/news/epredia-launches-slidemate-thermal-transfer-slide-printer"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "recursion": [
+    {
+      "name": "Recursion OS",
+      "type": "AI drug discovery and development platform",
+      "summary": "Recursion’s proprietary platform combines automated lab experiments and machine learning to support drug discovery and development, from identifying targets to planning clinical trials and enrolling participants.",
+      "features": [
+        "Combines cell imaging, molecular data and computational chemistry to study disease and design candidate compounds",
+        "Uses experimental results to update models and guide subsequent research"
+      ],
+      "sources": [
+        { "label": "Official Recursion OS overview", "url": "https://www.recursion.com/platform" },
+        { "label": "Recursion platform FAQ", "url": "https://www.recursion.com/faq" }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "xaira": [
     {
       "name": "X-Cell",
@@ -2061,6 +2946,38 @@ const LAB_PUBLICATIONS = {
       { year: 2023, papers: [
         ["Synthetic whole-slide image tile generation with gene expression profile-infused deep generative models", "Cell Reports Methods", "https://pubmed.ncbi.nlm.nih.gov/37671024/", "RNA-GAN"],
         ["Spatial cellular architecture predicts prognosis in glioblastoma", "Nature Communications", "https://www.nature.com/articles/s41467-023-39933-0", "GBM360"]
+      ] }
+    ]
+  },
+  madabhushi: {
+    catalogUrl: "https://med.emory.edu/departments/radiology/research/research-labs/madabhushi-lab/recent-publications.html",
+    years: [
+      { year: 2026, papers: [
+        ["A comprehensive computational pathology atlas for multi-cancer tumor microenvironment characterization and prognosis prediction", "npj Digital Medicine", "https://www.nature.com/articles/s41746-026-03181-5"],
+        ["Deep-learning triage of three-dimensional pathology datasets for comprehensive and efficient pathologist assessments", "Nature Biomedical Engineering", "https://doi.org/10.1038/s41551-026-01760-1", "TRICARE"],
+        ["A deep learning framework to iDentify prOgnostically releVant cancEr Regions (DOVER) within whole slide histopathology images", "Cancer Letters", "https://doi.org/10.1016/j.canlet.2025.218134", "DOVER"]
+      ] },
+      { year: 2025, papers: [
+        ["Development and Validation of an Artificial Intelligence Digital Pathology Biomarker to Predict Benefit of Long-Term Hormonal Therapy and Radiotherapy in Men With High-Risk Prostate Cancer Across Multiple Phase III Trials", "Journal of Clinical Oncology", "https://doi.org/10.1200/JCO.24.00365"]
+      ] }
+    ]
+  },
+  octopathlab: {
+    catalogUrl: "https://octopath.org/publications.html",
+    years: [
+      { year: 2026, papers: [
+        ["Training-Free Out-of-Distribution Detection for Pathology Whole-Slide Images", "arXiv preprint", "https://arxiv.org/abs/2608.01407", "ZIO"]
+      ] },
+      { year: 2024, papers: [
+        ["Demographic bias in misdiagnosis by computational pathology models", "Nature Medicine", "https://www.nature.com/articles/s41591-024-02885-z"]
+      ] },
+      { year: 2022, papers: [
+        ["Artificial intelligence for multimodal data integration in oncology", "Cancer Cell", "https://doi.org/10.1016/j.ccell.2022.09.012"],
+        ["Pan-cancer integrative histology-genomic analysis via multimodal deep learning", "Cancer Cell", "https://www.sciencedirect.com/science/article/pii/S1535610822003178", "PORPOISE"],
+        ["Federated learning for computational pathology on gigapixel whole slide images", "Medical Image Analysis", "https://www.sciencedirect.com/science/article/pii/S1361841521003431", "HistoFL"]
+      ] },
+      { year: 2021, papers: [
+        ["AI-based pathology predicts origins for cancers of unknown primary", "Nature", "https://doi.org/10.1038/s41586-021-03512-4", "TOAD"]
       ] }
     ]
   },
@@ -2272,7 +3189,7 @@ const C = [
  ["radboud","Radboud Computational Pathology","lab","Radboud University Medical Center","Academic research group","The Computational Pathology Group at Radboud University Medical Center in Nijmegen: develops and validates pathology AI, and ran the PANDA and CAMELYON challenges that set benchmarks for grading and metastasis detection.","https://www.computationalpathologygroup.eu","dx open prostate breast wsi"],
  ["tia","Tissue Image Analytics Centre","center","University of Warwick","Research center","The University of Warwick's centre for computational pathology research. Known for HoVer-Net nuclear segmentation and the open-source TIAToolbox.","https://warwick.ac.uk/tia","open wsi dx tme"],
  ["ai4path","AI4Path Lab","lab","Ohio State University","Academic lab","Khalid Niazi's group at Ohio State: AI for whole-slide pathology, including XMAG, an efficient foundation model trained across magnifications.","","fm wsi"],
- ["madabhushi","Madabhushi Lab","lab","Emory University","Academic lab","Anant Madabhushi's group at Emory and Georgia Tech: imaging biomarkers across pathology and radiology, such as DOVER, which finds the regions of a slide that matter for prognosis.","","prog wsi multi"],
+ ["madabhushi","Madabhushi Lab","lab","Emory University","Academic lab","Anant Madabhushi's group at Emory and Georgia Tech: imaging biomarkers across pathology and radiology, such as DOVER, which finds the regions of a slide that matter for prognosis.","https://med.emory.edu/departments/radiology/research/research-labs/madabhushi-lab/index.html","prog wsi multi"],
  ["atlaslab","Atlas Analytics Lab","lab","Concordia University","Academic lab","Mahdi Hosseini's group at Concordia University in Montreal: self-supervised pathology foundation models, including the patient-level MOOZY (ECCV 2026).","","fm wsi"],
  ["zhihuang","Zhi Huang Lab","lab","University of Pennsylvania","Academic lab","Zhi Huang's group at the University of Pennsylvania: interactive and agentic pathology AI, including VISTA-PATH for segmentation and Pathology-CoT agents that learn from how pathologists read slides.","","vlm wsi fm"],
  ["cooper","Cooper Lab","lab","Northwestern University","Academic lab","Lee Cooper's group: AI for diagnosis, prognosis and treatment-response prediction from whole-slide images, including a breast cancer outcome model, plus open-source software for digital pathology.","","prog open wsi breast tme"],
@@ -2280,7 +3197,7 @@ const C = [
  ["songlab","Song Lab","lab","MD Anderson Cancer Center · Houston, Texas, US","Academic lab","Andrew H. Song leads this computational pathology lab in MD Anderson’s Department of Translational Molecular Pathology and Institute for Data Science in Oncology. The group builds foundation models and AI agents that combine tissue images, spatial omics and clinical reports, including in 3D and longitudinal studies.","https://andrewsong90.github.io/join/","fm multi wsi stx mplex"],
  ["zou","Zou Lab","lab","Stanford University","Academic lab","James Zou's group: PLIP, an early pathology vision–language model trained on images and text shared by pathologists on Twitter, and the Nuclei.io pathology framework.","","vlm fm open wsi"],
  ["swang","Sheng Wang Lab","lab","University of Washington","Academic lab","Sheng Wang's group at the University of Washington: co-developed the Prov-GigaPath whole-slide foundation model and GigaTIME with Microsoft Research and Providence.","","fm wsi vlm"],
- ["haochen","Hao Chen Lab","lab","HKUST, Hong Kong","Academic lab","The Smart Lab at HKUST: the GPFM and mSTAR pathology foundation models and the SmartPath diagnostic system built on them.","","fm multi wsi dx"],
+ ["haochen","SmartX Lab","lab","HKUST, Hong Kong","Academic lab","Hao Chen’s lab at the Hong Kong University of Science and Technology. Its computational pathology work includes the GPFM and mSTAR foundation models and the SmartPath system.","https://hkustsmartlab.github.io/","fm multi wsi dx"],
  ["tan","Tan Lab","lab","Huntsman Cancer Institute","Academic lab","Aik Choon Tan's group at Huntsman Cancer Institute: cancer systems biology and treatment resistance; its GLASS-AI grades and segments lung adenocarcinoma on preclinical slides.","","omics lung dx"],
  ["pan","Pan Lab","lab","Huntsman Cancer Institute","Academic lab","Xiaoxi Pan's group at Huntsman Cancer Institute, University of Utah: computational pathology with spatial omics of the tumor microenvironment, building on the ANORAK lung adenocarcinoma grading model.","","stx tme lung dx wsi"],
  ["broad","Broad Institute","center","Cambridge, Massachusetts, US","Research institute of MIT and Harvard","Genomics research institute whose Cancer Program runs large-scale efforts such as the Cancer Dependency Map (DepMap).","https://www.broadinstitute.org","omics ngs seq drug"],
@@ -2603,7 +3520,7 @@ let W = 0, H = 0, dpr = 1, yaw = .6, pitch = -.18, zoomK = 1, hover = null, sel 
 const layerOff = new Set(); let hotLayer = null, hoverF = null;   // hoverF: the foothold ring under the pointer, if any
 let mode = "cloud", lay = 0, flat = false, mix = 0, morph = null, panX = 0, panY = 0, T = Y1, playing = 0;
 let spinning = !matchMedia("(prefers-reduced-motion: reduce)").matches, glide = null, raf = 0;
-const off = new Set(), CAM = 3.4, calm = matchMedia("(prefers-reduced-motion: reduce)").matches; let drift = 0;
+const selectedKinds = new Set(), CAM = 3.4, calm = matchMedia("(prefers-reduced-motion: reduce)").matches; let drift = 0;
 
 const compactLayout = matchMedia('(max-width: 1150px), (max-height: 500px)');
 let mapBaseScale = 1, mapCenterX = 0, mapCenterY = 0;
@@ -2654,7 +3571,9 @@ function resize() {
   const controls = document.getElementById('map-controls-dialog'); if (!isCompactLayout() && controls.open) controls.close();
   measurePlot(); fitLayers(); fitCamera(); draw();
 }
-const visible = n => !off.has(n.kind) && n.year <= T && !(mode === "layers" && layerOff.has(n.layer.key));
+const kindVisible = kind => !selectedKinds.size || selectedKinds.has(kind);
+const visible = n => kindVisible(n.kind) && n.year <= T && !(mode === "layers" && layerOff.has(n.layer.key));
+const featuredNode = () => selectedKinds.size === 1 && selectedKinds.has("lab") ? byId.mahmood : centerNode;
 function hex(c, a) { const v = parseInt(c.slice(1), 16); return `rgba(${v >> 16},${v >> 8 & 255},${v & 255},${a})`; }
 const depth = z => { const d = .28 + .72 * Math.min(1, Math.max(0, (z + 1) / 2)); return d + (.92 - d) * mix; };
 
@@ -2662,10 +3581,10 @@ let away = false;
 function draw() {
   const moved = zoomK > 1.02 || Math.abs(panX) + Math.abs(panY) > 6; if (moved !== away) { away = moved; document.body.classList.toggle("zoomed", away); }   // zoomed or panned: veil the header and the lists so nothing tangles with their text
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
-  const focus = sel || hover, near = new Set();
+  const focus = sel || hover, featured = featuredNode(), near = new Set();
   if (focus) { near.add(focus); focus.links.forEach(l => { near.add(l.a); near.add(l.b); }); focus.similar.forEach(([m]) => near.add(m)); }
   nodes.forEach(project);
-  const feet = lay > .02 ? also.filter(f => !off.has(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key)) : [];
+  const feet = lay > .02 ? also.filter(f => kindVisible(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key)) : [];
   feet.forEach(f => { f.p[1] = f.layer.y; project(f); f.rr = 4.2 * f.s * Math.max(.85, Math.sqrt(zoomK)); });
   if (lay > .02) { ctx.textBaseline = "alphabetic";
     const P = (x, z, y) => { const o = { p: [x, y, z] }; project(o); return o; }, quad = q => { ctx.beginPath(); q.forEach((o, k) => k ? ctx.lineTo(o.sx, o.sy) : ctx.moveTo(o.sx, o.sy)); ctx.closePath(); };
@@ -2716,19 +3635,19 @@ function draw() {
     ctx.beginPath(); ctx.arc(f.sx, f.sy, f.rr, 0, 6.2832); ctx.fillStyle = on ? hex(col, .3 * lay) : `rgba(250,249,252,${(dim ? .25 : .8) * lay})`; ctx.fill();
     ctx.strokeStyle = hex(col, (dim ? .16 : on ? 1 : .85) * lay); ctx.lineWidth = on ? 1.9 : 1.4; ctx.stroke(); }
   const linked = new Set(); if (focus) focus.links.forEach(l => { if (l.year <= T) { linked.add(l.a); linked.add(l.b); } });   // organizations with a deal or tie to the one that is open: named first, and always
-  labels.sort((a, b) => ((b === focus) - (a === focus)) || (linked.has(b) - linked.has(a)) || ((b === centerNode) - (a === centerNode)) || (b.deg + b.z * 3) - (a.deg + a.z * 3));
+  labels.sort((a, b) => ((b === focus) - (a === focus)) || (linked.has(b) - linked.has(a)) || ((b === featured) - (a === featured)) || (b.deg + b.z * 3) - (a.deg + a.z * 3));
   const boxes = [], over = (p, q) => p[0] < q[0] + q[2] && p[0] + p[2] > q[0] && p[1] < q[1] + q[3] && p[1] + p[3] > q[1];
   if (lay > .5) for (const m of order) { if (focus && !near.has(m)) continue; const q = [m.sx - m.rr - 1, m.sy - m.rr - 1, 2 * m.rr + 2, 2 * m.rr + 2]; q.n = m; boxes.push(q); }   // on the slides a name never covers another dot
   if (lay > .5) for (const f of feet) boxes.push([f.sx - f.rr - 1, f.sy - f.rr - 1, 2 * f.rr + 2, 2 * f.rr + 2]);
   if (lay > .5) for (const Lr of LAYERS) if (!layerOff.has(Lr.key) && Lr.keep) boxes.push(...Lr.keep);
   for (const n of labels) {
-    const strong = n === focus, must = strong || linked.has(n) || n === centerNode;
+    const strong = n === focus, must = strong || linked.has(n) || n === featured;
     ctx.font = `${strong ? 600 : 500} ${isCompactLayout() ? (strong ? 16 : 14) : (strong ? 13 : 11.5)}px "Instrument Sans", "Segoe UI", system-ui, sans-serif`;
     const w = ctx.measureText(n.name).width, mk = (x, y = n.sy) => [x - 2, y - 9, w + 4, 18], clash = q => boxes.some(o => o.n !== n && over(q, o)), offR = n.sx + n.rr + 6 + w > W - 8;
     let bx = n.sx + n.rr + 5, by = n.sy, box = mk(bx);
     if (offR || (lay > .5 && !strong && clash(box))) { const lx = n.sx - n.rr - 5 - w, lb = mk(lx); if (offR || !clash(lb)) { bx = lx; box = lb; } }   // try the other side before giving up
     if (isCompactLayout()) { bx = Math.max(8, Math.min(W - w - 8, bx)); box = mk(bx); }
-    if (n === centerNode && lay > .5 && clash(box)) {
+    if (n === featured && lay > .5 && clash(box)) {
       const x = Math.max(8, Math.min(W - w - 8, n.sx - w / 2));
       for (const offset of [n.rr + 11, -n.rr - 11, n.rr + 27, -n.rr - 27]) {
         const y = n.sy + offset, candidate = mk(x, y);
@@ -2760,10 +3679,11 @@ function faceTo(n) { if (mode !== "cloud") { draw(); return; } const [x, y, z] =
 
 /* ---------- Interaction ---------- */
 function pick(px, py) { let best = null, bz = -9; hoverF = null;
-  if (visible(centerNode) && Math.hypot(centerNode.sx - px, centerNode.sy - py) <= centerNode.rr) return centerNode;
+  const featured = featuredNode();
+  if (visible(featured) && Math.hypot(featured.sx - px, featured.sy - py) <= featured.rr) return featured;
   for (const n of nodes) { if (!visible(n)) continue; const d = Math.hypot(n.sx - px, n.sy - py);
     if (d < Math.max(isCompactLayout() ? 14 : 11, n.rr + 5) && n.z > bz) { bz = n.z; best = n; } }
-  if (!best && lay > .9) for (const f of also) if (!off.has(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key) && Math.hypot(f.sx - px, f.sy - py) < Math.max(isCompactLayout() ? 14 : 10, (f.rr || 4) + 4)) { hoverF = f; return f.n; }   // a ring stands for its organization
+  if (!best && lay > .9) for (const f of also) if (kindVisible(f.n.kind) && f.n.year <= T && !layerOff.has(f.layer.key) && Math.hypot(f.sx - px, f.sy - py) < Math.max(isCompactLayout() ? 14 : 10, (f.rr || 4) + 4)) { hoverF = f; return f.n; }   // a ring stands for its organization
   return best; }
 let drag = null, moved = false, pinch = 0, pendingPick = null; const pts = new Map();
 cv.addEventListener("pointerdown", e => { pendingPick = null; cv.setPointerCapture(e.pointerId); pts.set(e.pointerId, [e.clientX, e.clientY]);
@@ -2853,6 +3773,7 @@ function closeOnBackdrop(dialog) {
 closeOnBackdrop(productsPanel);
 
 function select(n, turn = true) {
+  if (n && !kindVisible(n.kind)) { selectedKinds.add(n.kind); syncKindFilters(); }
   sel = n; if (n && n.year > T) setYear(n.year);
   if (!n) { panel.hidden = true; draw(); kick(); return; }
   const k = KIND[n.kind], kind = { owned: "Ownership", pending: "Pending deal", partner: "Partnership", origin: "Origin", affiliation: "Affiliation", alumni: "Alumni connection" };
@@ -2890,9 +3811,18 @@ function select(n, turn = true) {
 }
 
 const legend = document.getElementById("legend");
+function syncKindFilters() {
+  legend.classList.toggle("filtering", !!selectedKinds.size);
+  legend.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", String(selectedKinds.has(b.dataset.kind))));
+}
 Object.entries(KIND).forEach(([key, k]) => { const b = document.createElement("button"); b.className = "chip"; b.style.setProperty("--c", k.color);
-  b.dataset.kind = key; b.setAttribute("aria-pressed", "true"); b.innerHTML = `<i></i>${k.name} <b>${nodes.filter(n => n.kind === key).length}</b>`;
-  b.onclick = () => { off.has(key) ? off.delete(key) : off.add(key); b.setAttribute("aria-pressed", String(!off.has(key))); if (sel && off.has(sel.kind)) select(null); else draw(); };
+  b.dataset.kind = key; b.setAttribute("aria-pressed", "false"); b.innerHTML = `<i></i>${k.name} <b>${nodes.filter(n => n.kind === key).length}</b>`;
+  b.onclick = () => {
+    selectedKinds.has(key) ? selectedKinds.delete(key) : selectedKinds.add(key);
+    syncKindFilters();
+    if (hover && !kindVisible(hover.kind)) { hover = null; hoverF = null; }
+    if (sel && !kindVisible(sel.kind)) select(null); else draw();
+  };
   legend.appendChild(b); });
 legend.insertAdjacentHTML("beforeend", `<div class="keys">
   <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="#4c466e" stroke-width="1.3"/></svg>owns</span>
@@ -2908,10 +3838,10 @@ document.getElementById("names").innerHTML = nodes.map(n => `<option value="${es
 const search = document.getElementById("search");
 function runSearch(commit) { const q = search.value.trim().toLowerCase(); if (!q) return;
   const hits = nodes.filter(n => n.name.toLowerCase().includes(q)), exact = hits.find(n => n.name.toLowerCase() === q), n = exact || (commit && hits[0]);
-  if (n) { off.delete(n.kind); legend.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(!off.has(c.dataset.kind)))); select(n); } }
+  if (n) select(n); }
 search.addEventListener("input", () => runSearch(false));
 search.addEventListener("keydown", e => { if (e.key === "Enter") runSearch(true); });
-document.getElementById("reset").onclick = () => { search.value = ""; zoomK = 1; panX = panY = 0; pitch = VIEW[mode].pitch; if (mode !== "cloud") yaw = VIEW[mode].yaw; stopPlay(); setYear(Y1); select(null); fitView(); };
+document.getElementById("reset").onclick = () => { search.value = ""; selectedKinds.clear(); syncKindFilters(); zoomK = 1; panX = panY = 0; pitch = VIEW[mode].pitch; if (mode !== "cloud") yaw = VIEW[mode].yaw; stopPlay(); setYear(Y1); select(null); fitView(); };
 document.getElementById("labels").onclick = e => { showAll = !showAll; e.currentTarget.setAttribute("aria-pressed", String(showAll)); draw(); };
 const spinBtn = document.getElementById("spin"); spinBtn.setAttribute("aria-pressed", String(spinning));
 spinBtn.onclick = () => { spinning = !spinning; spinBtn.setAttribute("aria-pressed", String(spinning)); kick(); };
