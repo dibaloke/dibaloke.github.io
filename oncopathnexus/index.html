@@ -510,6 +510,68 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "natera": [
+    {
+      "name": "Signatera™",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "group": "Residual disease monitoring",
+      "type": "Personalized, tumor-informed ctDNA MRD test",
+      "summary": "Detects and tracks circulating tumor DNA for residual disease and recurrence monitoring. Tumor tissue and a matched normal sample inform a personalized assay, followed by serial blood testing for tumor-specific variants.",
+      "sources": [
+        {
+          "label": "Official Signatera overview and workflow",
+          "url": "https://www.natera.com/oncology/signatera-advanced-cancer-detection/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Latitude™",
+      "category": "tissue-free-mrd",
+      "subtype": "tissue-free-mrd",
+      "group": "Residual disease monitoring",
+      "type": "Tissue-free, methylation-based MRD test · Colorectal cancer",
+      "summary": "Blood-based MRD test for colorectal cancer that uses a targeted methylation panel. It assesses residual disease without requiring a tumor tissue sample.",
+      "sources": [
+        {
+          "label": "Official Latitude overview",
+          "url": "https://www.natera.com/oncology/latitude-tissue-free-mrd/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Altera™",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "group": "Tumor profiling",
+      "type": "Comprehensive tumor genomic profiling",
+      "summary": "Combines whole-exome DNA and whole-transcriptome RNA sequencing to characterize tumor alterations and biomarkers, including TMB and MSI. The profile also includes PD-L1 and HER2 assessment by IHC.",
+      "sources": [
+        {
+          "label": "Official Altera genomic profiling overview",
+          "url": "https://www.natera.com/oncology/altera/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Empower™",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "group": "Inherited cancer risk",
+      "type": "Hereditary cancer germline testing",
+      "summary": "Tests genes associated with inherited susceptibility to cancer. Its multi-cancer panels cover genes linked to more than twelve cancer types, supporting hereditary risk assessment and discussions of family history.",
+      "sources": [
+        {
+          "label": "Official Empower hereditary cancer test overview",
+          "url": "https://www.natera.com/oncology/empower-hereditary-cancer-test/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "indica": [
     {
       "name": "HALO®",
@@ -3744,7 +3806,7 @@ const C = [
  ["personalis","Personalis","company","Fremont, US","Tempus agreed to acquire (July 2026)","Cancer genomics company: NeXT Personal, a tumor-informed MRD blood test.","https://www.personalis.com","lbx ngs"],
  ["fmi","Foundation Medicine","company","Boston, US","Roche company","Cancer genomics company: FoundationOne comprehensive genomic profiling for tissue and blood.","https://www.foundationmedicine.com","ngs lbx cdx bio"],
  ["guardant","Guardant Health","company","Palo Alto, US","Public","Liquid biopsy company: Guardant360, Reveal and the Shield screening test.","https://guardanthealth.com","lbx screen ngs"],
- ["natera","Natera","company","Austin, US","Public","Cell-free DNA testing company; in oncology, Signatera tumor-informed MRD testing.","https://www.natera.com","lbx"],
+ ["natera","Natera","company","Austin, US","Public","Genetic testing company with four oncology offerings: Signatera personalized tumor-informed MRD testing, Latitude tissue-free MRD testing for colorectal cancer, Altera tumor genomic profiling, and Empower hereditary cancer testing.","https://www.natera.com","lbx ngs"],
  ["exact","Exact Sciences","company","Madison, US","Abbott company (March 2026)","Cancer screening and diagnostics company: Cologuard screening and Oncotype DX tissue-based genomic tests.","https://www.exactsciences.com","screen prog lbx breast gi"],
  ["caris","Caris Life Sciences","company","Irving, US","Public (Nasdaq: CAI, IPO June 2025)","Molecular profiling company: whole-exome and whole-transcriptome tumor profiling with AI signatures.","https://www.carislifesciences.com","ngs multi rwd lbx"],
  ["neogenomics","NeoGenomics","company","Fort Myers, US","Public","Oncology reference lab spanning pathology, flow, FISH and NGS, with the RaDaR ST MRD test.","https://www.neogenomics.com","lab ngs ihc lbx"],
@@ -4357,6 +4419,9 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "tumor-informed-mrd": ["Tumor-informed MRD testing", "rose", "M3 7h14v12H3z M7 7v12 M10 11h3 M10 15h3 M17 13h3", "M24 11c-1.6 2.7-4 5.4-4 8a4 4 0 1 0 8 0c0-2.6-2.4-5.3-4-8Z M22 19h4 M24 17v4"],
+  "tissue-free-mrd": ["Tissue-free methylation MRD", "red", "M10 4c-2 3.2-5 6.6-5 10a5 5 0 1 0 10 0c0-3.4-3-6.8-5-10Z M10 23v4h17", "M21 6c0 5 7 5 7 10s-7 5-7 10 M28 6c0 5-7 5-7 10s7 5 7 10 M22 9h5 M22 16h5 M22 23h5 M19 5h2"],
+  "hereditary": ["Hereditary cancer testing", "violet", "M5 21h5v6H5z M22 21h5v6h-5z M16 15v3 M7.5 21v-3h17v3", "M11 4c0 4 10 4 10 8 M21 4c0 4-10 4-10 8 M12 5h8 M12 11h8 M14 8h4"],
   "library-prep": ["NGS library preparation", "green", "M4 21h24v6H4z M8 21v-6 M16 21v-6 M24 21v-6 M6 15h4 M14 15h4 M22 15h4", "M12 3h8v4h-8z M14 7v4l2 3 2-3V7 M16 17v1"],
   "somatic-analysis": ["Somatic variant analysis", "blue", "M5 6h22v20H5z M5 11h22 M9 8.5h.1 M12 8.5h.1 M9 15h3 M9 19h3 M9 23h3", "M16 15h7 M16 19h7 M16 23h7 M19 13.5v3 M21 21.5v3"],
   "virtual-brightfield": ["Virtual H&E from brightfield", "rose", "M4 9h24v16H4z M9 9v16 M13 5h10 M18 3v4", "M13 15c2-3 4-2 5 0s4 0 5 3-3 4-5 2-5-1-5-5Z M17 17h.1 M21 18h.1"],
@@ -4504,6 +4569,18 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "tumor-informed-mrd": {
+    "label": "Tumor-informed ctDNA MRD testing",
+    "family": "tests"
+  },
+  "tissue-free-mrd": {
+    "label": "Tissue-free methylation MRD testing",
+    "family": "tests"
+  },
+  "hereditary-cancer": {
+    "label": "Hereditary cancer germline testing",
+    "family": "tests"
+  },
   "quantitative-pathology": {
     "label": "Quantitative tissue image analysis",
     "family": "analysis"
