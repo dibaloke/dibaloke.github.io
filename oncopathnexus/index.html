@@ -511,6 +511,195 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "fmi": [
+    {
+      "name": "FoundationOne® CDx",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "group": "Tumor profiling",
+      "type": "Tissue comprehensive genomic profiling · Companion diagnostic",
+      "summary": "Sequences tumor DNA from solid-tumor tissue to identify cancer-related genomic alterations and biomarkers, including microsatellite instability and tumor mutational burden. Supports therapy selection and clinical trial matching.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® CDx overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-cdx"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "FoundationOne® Liquid CDx",
+      "category": "blood",
+      "subtype": "liquid-biopsy",
+      "group": "Tumor profiling",
+      "type": "Blood-based comprehensive genomic profiling · Companion diagnostic",
+      "summary": "Analyzes circulating cell-free DNA from a blood sample to identify cancer-related alterations and biomarkers in advanced solid tumors. Provides a liquid-biopsy option for therapy selection.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® Liquid CDx overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-liquid-cdx"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "FoundationOne® Heme",
+      "category": "blood",
+      "subtype": "hematology-genomic",
+      "group": "Tumor profiling",
+      "type": "Blood cancer DNA and RNA profiling · Laboratory-developed test",
+      "summary": "Combines DNA and RNA sequencing for hematologic cancers such as leukemia and lymphoma. Detects genomic alterations and fusions using blood, bone marrow, or tissue specimens.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® Heme overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-heme"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "FoundationOne® RNA",
+      "category": "rna-fusion",
+      "subtype": "rna-fusion-profiling",
+      "group": "Tumor profiling",
+      "type": "RNA fusion profiling · Add-on laboratory-developed test",
+      "summary": "Detects cancer-related gene fusions and rearrangements across 318 genes in solid tumors. Available as an add-on to FoundationOne CDx using the same tissue sample.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® RNA overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-rna"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "FoundationOne® MRD",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "group": "Residual disease monitoring",
+      "type": "Tumor-informed ctDNA MRD test · Stage II–III breast cancer",
+      "summary": "Builds a personalized digital PCR assay from structural variants in a tumor specimen, then tests blood for circulating tumor DNA to monitor residual disease and recurrence in stage II–III breast cancer.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® MRD overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-mrd"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "Laboratory-developed test performed by SAGA Diagnostics."
+      ]
+    },
+    {
+      "name": "FoundationOne® Germline",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "group": "Hereditary cancer testing",
+      "type": "50-gene hereditary cancer panel · Laboratory-developed test",
+      "summary": "Tests inherited variants in 50 genes linked to hereditary cancer risk using blood or saliva. Complements tumor profiling with information relevant to patients and their families.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® Germline overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-germline"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "Developed and performed by Fulgent Genetics."
+      ]
+    },
+    {
+      "name": "FoundationOne® Germline More",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "group": "Hereditary cancer testing",
+      "type": "154-gene hereditary cancer panel · Laboratory-developed test",
+      "summary": "Expanded hereditary cancer panel covering the 50 FoundationOne Germline genes plus 104 additional candidate genes, including genes with lower or uncertain cancer risks. Uses blood or saliva.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® Germline More overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-germline"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "Developed and performed by Fulgent Genetics."
+      ]
+    },
+    {
+      "name": "FoundationOne® PGx",
+      "category": "pharmacogenetics",
+      "subtype": "pharmacogenetic-testing",
+      "group": "Additional oncology testing",
+      "type": "Oncology pharmacogenetic testing · Laboratory-developed test",
+      "summary": "Examines inherited variants that can influence drug metabolism, tolerability, and adverse reactions, including DPYD. Provides pharmacogenetic information to support oncology therapy and dosing decisions.",
+      "sources": [
+        {
+          "label": "Official FoundationOne® PGx overview",
+          "url": "https://www.foundationmedicine.com/solution/foundationone-pgx"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "Developed and performed by Fulgent Genetics."
+      ]
+    },
+    {
+      "name": "IHC Testing",
+      "category": "ihc-testing",
+      "subtype": "ihc-biomarker-testing",
+      "group": "Additional oncology testing",
+      "type": "Tissue protein biomarker testing · Immunohistochemistry",
+      "summary": "Portfolio of tissue immunohistochemistry assays that complements genomic profiling. Includes PD-L1, HER2, CLDN18, FOLR1, MET, and mismatch repair biomarkers, with testing selected by tumor type.",
+      "sources": [
+        {
+          "label": "Official IHC Testing overview",
+          "url": "https://www.foundationmedicine.com/solution/ihc-testing"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "delfi": [
+    {
+      "name": "FirstLook™ Lung",
+      "category": "lung-screening",
+      "subtype": "lung-screening-adjunct",
+      "type": "Lung screening adjunct · Laboratory-developed test",
+      "summary": "Blood test that uses AI analysis of cell-free DNA fragmentation patterns to estimate the likelihood of lung cancer detection by low-dose CT in screening-eligible adults.",
+      "features": [
+        "Reports Elevated or Not Elevated results to support low-dose CT screening discussions."
+      ],
+      "sources": [
+        {
+          "label": "Official FirstLook Lung provider overview",
+          "url": "https://delfidiagnostics.com/our-products/firstlooklung-providers/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "DELFI-TF Treatment Monitoring",
+      "category": "fragmentomics-monitoring",
+      "subtype": "ctdna-research-monitoring",
+      "type": "Fragmentomics treatment-response assay · Research service",
+      "summary": "Plasma-based research assay that estimates tumor fraction from genome-wide cell-free DNA fragmentation patterns. Used in oncology drug-development studies to track treatment response across solid tumors without prior mutation profiling.",
+      "features": [
+        "Offered to biopharma partners as a research service."
+      ],
+      "sources": [
+        {
+          "label": "Official DELFI-TF treatment monitoring overview",
+          "url": "https://delfidiagnostics.com/our-products/delfi-tf-treatment-monitoring/"
+        },
+        {
+          "label": "Official DELFI products and research-service status",
+          "url": "https://delfidiagnostics.com/about-us/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
   "castle": [
     {
       "name": "DecisionDx-Melanoma",
@@ -4066,7 +4255,7 @@ const C = [
  ["tempus","Tempus AI","company","Chicago, US","Public (Nasdaq: TEM)","Precision-medicine company combining sequencing, a large multimodal oncology dataset and AI; owns Paige and Ambry Genetics.","https://www.tempus.com","ngs lbx rwd multi fm lab bio"],
  ["ambry","Ambry Genetics","company","Aliso Viejo, California, US","Part of Tempus AI (acquired February 2025)","Genetic testing lab best known for hereditary cancer risk panels; operates as a wholly owned Tempus subsidiary.","https://ambrygen.com","ngs lab breast"],
  ["personalis","Personalis","company","Fremont, US","Tempus agreed to acquire (July 2026)","Cancer genomics company: NeXT Personal, a tumor-informed MRD blood test.","https://www.personalis.com","lbx ngs"],
- ["fmi","Foundation Medicine","company","Boston, US","Roche company","Cancer genomics company: FoundationOne comprehensive genomic profiling for tissue and blood.","https://www.foundationmedicine.com","ngs lbx cdx bio"],
+ ["fmi","Foundation Medicine","company","Boston, US","Roche company","Roche-owned cancer diagnostics company. FoundationOne spans tissue and blood genomic profiling, RNA fusion testing, hereditary cancer testing, pharmacogenetics, and MRD monitoring, alongside tissue IHC biomarker testing.","https://www.foundationmedicine.com","ngs lbx cdx bio"],
  ["guardant","Guardant Health","company","Palo Alto, US","Public","Liquid biopsy company: Guardant360, Reveal and the Shield screening test.","https://guardanthealth.com","lbx screen ngs"],
  ["natera","Natera","company","Austin, US","Public","Genetic testing company with four oncology offerings: Signatera personalized tumor-informed MRD testing, Latitude tissue-free MRD testing for colorectal cancer, Altera tumor genomic profiling, and Empower hereditary cancer testing.","https://www.natera.com","lbx ngs"],
  ["exact","Exact Sciences","company","Madison, US","Abbott company (March 2026)","Cancer screening and diagnostics company: Cologuard screening and Oncotype DX tissue-based genomic tests.","https://www.exactsciences.com","screen prog lbx breast gi"],
@@ -4085,7 +4274,7 @@ const C = [
  ["sophia","SOPHiA GENETICS","company","Switzerland / Boston","Public","Cloud analytics for genomic and multimodal oncology data.","https://www.sophiagenetics.com","ngs multi"],
  ["agendia","Agendia","company","Amsterdam / Irvine","Private","Breast-cancer genomics company: the MammaPrint and BluePrint tests.","https://agendia.com","prog breast ngs"],
  ["castle","Castle Biosciences","company","Friendswood, US","Public","Diagnostics company with prognostic tests for cutaneous melanoma, cutaneous squamous cell carcinoma, uveal melanoma and Barrett’s esophagus, plus MyPath Melanoma for ambiguous melanocytic lesions.","https://castlebiosciences.com","prog ngs"],
- ["delfi","Delfi Diagnostics","startup","Palo Alto, California, US","Private","Blood tests that read DNA fragmentation patterns with AI: FirstLook Lung for early detection and DELFI-TF for treatment monitoring.","https://delfidiagnostics.com","screen lbx lung"],
+ ["delfi","DELFI Diagnostics","startup","Palo Alto, California, US","Private","Uses AI and cell-free DNA fragmentation patterns for oncology. FirstLook Lung is a clinical blood-test adjunct to low-dose CT screening; DELFI-TF is a research service for treatment-response monitoring in biopharma studies.","https://delfidiagnostics.com","screen lbx lung"],
  ["flatiron","Flatiron Health","company","New York, US","Roche company","Oncology health-technology company: real-world data and the OncoEMR record system.","https://flatiron.com","rwd bio"],
  ["concertai","ConcertAI","startup","Cambridge, US","Private","Oncology real-world data and AI for research and trials.","https://www.concertai.com","rwd bio multi"],
 
@@ -4681,6 +4870,11 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "rna-fusion": ["RNA fusion profiling", "violet", "M5 5v8c0 4 8 4 8 8v6 M27 5v8c0 4-8 4-8 8v6 M8 7h4 M8 11h4 M20 7h4 M20 11h4", "M13 21h6 M13 25h6 M16 16v3 M14 17h4"],
+  "pharmacogenetics": ["Pharmacogenetic drug response", "blue", "M5 4c0 5 9 5 9 10 M14 4c0 5-9 5-9 10 M6 5h7 M6 13h7 M8 9h3", "M16 25l8-8a4 4 0 0 1 6 6l-8 8a4 4 0 0 1-6-6Z M20 21l6 6 M9 17v8h4"],
+  "ihc-testing": ["IHC protein biomarker testing", "amber", "M4 8h24v18H4z M9 8v18 M20 12h5 M20 16h5 M20 20h5", "M13 13a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M13 21a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M15 15v4"],
+  "lung-screening": ["Lung screening blood test", "amber", "M16 4v10 M16 12l-5 5 M16 12l5 5 M11 8c-4 2-7 8-7 14s8 4 9 1V12 M21 8c4 2 7 8 7 14s-8 4-9 1V12", "M7 20h4 M21 20h4 M13 8h6"],
+  "fragmentomics-monitoring": ["Fragmentomics treatment monitoring", "blue", "M5 5v22h23 M9 7h4 M17 7h8 M9 12h8 M21 12h4 M9 17h3 M16 17h9", "M9 24l5-3 5 2 7-5 M23 18h3v3"],
   "gene-expression-risk": ["Gene-expression prognosis", "rose", "M5 6h22v20H5z M9 10h14 M9 14h6 M9 18h6 M9 22h6", "M19 22v-4 M22 22v-7 M25 22v-10"],
   "spatial-risk": ["Spatial biomarker risk assessment", "teal", "M5 6h22v20H5z M9 11h.1 M14 10h.1 M10 17h.1 M22 11h.1 M20 16h.1", "M10 22l5-4 4 2 5-6 M21 14h3v3 M14 14a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z"],
   "molecular-diagnostic": ["Molecular lesion classification", "violet", "M9 5c0 4 8 4 8 8 M17 5c0 4-8 4-8 8 M10 6h6 M10 12h6 M13 13v5 M7 18h14 M7 18v4 M21 18v4", "M4 23h6v5H4z M18 23h6v5h-6z M11 9h4"],
@@ -4843,6 +5037,26 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "rna-fusion-profiling": {
+    "label": "RNA fusion & rearrangement profiling",
+    "family": "tests"
+  },
+  "pharmacogenetic-testing": {
+    "label": "Oncology pharmacogenetic testing",
+    "family": "tests"
+  },
+  "ihc-biomarker-testing": {
+    "label": "IHC protein biomarker testing",
+    "family": "tests"
+  },
+  "lung-screening-adjunct": {
+    "label": "Blood-based lung screening adjuncts",
+    "family": "tests"
+  },
+  "ctdna-research-monitoring": {
+    "label": "ctDNA treatment monitoring for research",
+    "family": "discovery"
+  },
   "cutaneous-melanoma-risk": {
     "label": "Cutaneous melanoma recurrence risk",
     "family": "tests"
