@@ -510,6 +510,90 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "indica": [
+    {
+      "name": "HALO®",
+      "category": "vision",
+      "subtype": "quantitative-pathology",
+      "group": "Research & discovery",
+      "type": "Quantitative pathology image analysis",
+      "summary": "Quantifies cells, tissue morphology and biomarker expression across whole-slide images. Modular tools support brightfield, fluorescence, multiplexed assays and spatial analysis, with interactive links between measurements and tissue images.",
+      "sources": [
+        {
+          "label": "Official HALO overview",
+          "url": "https://indicalab.com/halo/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "HALO AI",
+      "category": "builder",
+      "subtype": "model-development",
+      "group": "Research & discovery",
+      "type": "Trainable pathology AI toolkit",
+      "summary": "Trains deep-learning models from user annotations for tissue classification, nuclear and membrane segmentation, and cell phenotyping. Models integrate with HALO analysis modules and HALO Link.",
+      "sources": [
+        {
+          "label": "Official HALO AI overview",
+          "url": "https://indicalab.com/halo-ai/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "HALO Link",
+      "category": "viewer",
+      "subtype": "research-image-management",
+      "group": "Research & discovery",
+      "type": "Collaborative pathology research image management",
+      "summary": "Organizes pathology images, metadata and analysis results in a browser-based, study-centered workspace. Supports multi-site collaboration, HALO and HALO AI analysis, and integrations with external AI tools.",
+      "sources": [
+        {
+          "label": "Official HALO Link overview",
+          "url": "https://indicalab.com/halo-link/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "HALO AP® 2.5",
+      "category": "workflow",
+      "subtype": "pathology-ims",
+      "group": "Clinical pathology workflows",
+      "type": "Clinical pathology image & case management",
+      "summary": "Manages cases, whole-slide images and diagnostic workflows with LIS/LIMS integration, remote collaboration and integrated image-analysis tools. CE-IVDR marked for diagnostic use in Europe, the UK and Switzerland.",
+      "features": [
+        "HALO AP is for research use in the US; HALO AP Dx has separate primary-diagnosis clearance."
+      ],
+      "sources": [
+        {
+          "label": "Official HALO AP overview",
+          "url": "https://indicalab.com/clinical-products/halo-ap-2/"
+        },
+        {
+          "label": "Official HALO AP and AP Dx use statements",
+          "url": "https://indicalab.com/clinical-products/halo-ap-dx/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "HALO AP Dx",
+      "category": "workflow",
+      "subtype": "pathology-ims",
+      "group": "Clinical pathology workflows",
+      "type": "Primary-diagnosis digital pathology platform",
+      "summary": "Case-based platform for slide review, remote collaboration and anatomic pathology workflows. FDA-cleared for primary diagnosis in the US with the scanner and display combinations specified in its labeling.",
+      "sources": [
+        {
+          "label": "Official HALO AP Dx overview and compatibility",
+          "url": "https://indicalab.com/clinical-products/halo-ap-dx/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "illumina": [
     {
       "name": "TruSight Oncology 500 v2",
@@ -3605,7 +3689,7 @@ const C = [
  ["deepbio","Deep Bio","startup","Seoul, South Korea","Private","Pathology AI company: DeepDx Prostate for detection and Gleason grading, and DeepDx Breast.","https://www.deepbio.co.kr","dx prostate wsi"],
  ["aiforia","Aiforia","company","Helsinki, Finland","Public (Nasdaq First North)","Deep-learning image analysis for clinical and research pathology.","https://www.aiforia.com","dx wsi bio"],
  ["visiopharm","Visiopharm","company","Hørsholm, Denmark","Private","Tissue image-analysis software and AI apps for diagnostics and research.","https://visiopharm.com","ihc dx wsi bio"],
- ["indica","Indica Labs","company","Albuquerque, US","Private","Digital pathology software company: HALO image analysis and the HALO AP platform, widely used in tissue-based research and clinical labs.","https://indicalab.com","ihc wsi bio ims mplex"],
+ ["indica","Indica Labs","company","Albuquerque, US","Private","Digital pathology software company. HALO provides quantitative tissue image analysis, HALO AI supports trainable pathology models, and HALO Link manages research images. HALO AP and HALO AP Dx support case-based pathology workflows.","https://indicalab.com","ihc wsi bio ims mplex"],
  ["primaa","Primaa","startup","Paris, France","Private","AI software that helps pathologists detect cancer biomarkers: Cleo Breast and Cleo Skin.","https://www.primaalab.com","dx breast wsi"],
  ["domore","DoMore Diagnostics","startup","Oslo, Norway","Private","Oslo company built on Oslo University Hospital research: Histotype Px predicts colorectal-cancer outcome from H&E slides.","https://www.domorediagnostics.com","prog gi wsi"],
  ["valar","Valar Labs","startup","Palo Alto, US (clinical lab in Houston)","Private","Histology-based AI tests that predict treatment response: Vesta Bladder and Vesta Prostate.","https://www.valarlabs.com","prog mol wsi"],
@@ -4420,6 +4504,14 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "quantitative-pathology": {
+    "label": "Quantitative tissue image analysis",
+    "family": "analysis"
+  },
+  "research-image-management": {
+    "label": "Research slide management & collaboration",
+    "family": "software"
+  },
   "tissue-cgp-assay": {
     "label": "Tissue CGP research assays",
     "family": "tests"
