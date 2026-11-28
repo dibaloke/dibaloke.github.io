@@ -510,6 +510,162 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "illumina": [
+    {
+      "name": "TruSight Oncology 500 v2",
+      "category": "tissue",
+      "subtype": "tissue-cgp-assay",
+      "group": "Prepare & profile",
+      "type": "Tissue CGP assay · Research use only",
+      "summary": "Profiles DNA and RNA from FFPE tumor tissue with a pan-cancer NGS panel. Covers 523 DNA genes and 55 RNA genes, with variant detection and TMB, MSI and HRD assessment.",
+      "sources": [
+        {
+          "label": "Official TruSight Oncology 500 v2 overview",
+          "url": "https://www.illumina.com/products/by-type/clinical-research-products/trusight-oncology-500.html"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "TruSight Oncology 500 ctDNA v2",
+      "category": "blood",
+      "subtype": "ctdna-cgp-assay",
+      "group": "Prepare & profile",
+      "type": "Plasma ctDNA CGP assay · Research use only",
+      "summary": "Profiles circulating tumor DNA from blood plasma for pan-cancer research. Assesses 523 genes across major DNA variant classes, plus blood-based tumor mutational burden and microsatellite instability.",
+      "sources": [
+        {
+          "label": "Official TruSight Oncology 500 ctDNA v2 overview",
+          "url": "https://www.illumina.com/products/by-type/clinical-research-products/trusight-oncology-500-ctdna.html"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "TSO 500 Library Prep Automation",
+      "category": "library-prep",
+      "subtype": "oncology-library-prep",
+      "group": "Prepare & profile",
+      "type": "Automation-ready oncology library preparation",
+      "summary": "Automates TruSight Oncology 500 tissue and ctDNA library preparation on compatible third-party liquid-handling systems. Illumina provides supported protocols for Hamilton and Beckman Coulter platforms.",
+      "sources": [
+        {
+          "label": "Official library-prep automation and TSO 500 protocols",
+          "url": "https://www.illumina.com/techniques/sequencing/ngs-library-prep/automation.html"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DRAGEN Secondary Analysis",
+      "category": "somatic-analysis",
+      "subtype": "somatic-variant-analysis",
+      "group": "Analyze & interpret",
+      "type": "Somatic sequencing analysis · Research use only",
+      "summary": "Processes tumor-only and tumor–normal sequencing data for precision oncology research. Supports somatic variant calling, FFPE-aware analysis and genomic biomarkers including TMB, MSI and HRD.",
+      "sources": [
+        {
+          "label": "Official DRAGEN secondary analysis overview",
+          "url": "https://www.illumina.com/products/by-type/informatics-products/dragen-secondary-analysis.html"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Illumina Connected Insights",
+      "category": "workflow",
+      "subtype": "somatic-interpretation",
+      "group": "Analyze & interpret",
+      "type": "Somatic variant interpretation & reporting · Research use only",
+      "summary": "Automates tertiary analysis of oncology sequencing results, connecting somatic variants with knowledge sources and supporting variant review and research reporting.",
+      "features": [
+        "Available in selected countries and regions; the current product page states that it is unavailable for sale in the United States."
+      ],
+      "sources": [
+        {
+          "label": "Official Connected Insights product and availability",
+          "url": "https://www.illumina.com/products/by-type/informatics-products/connected-insights.html"
+        },
+        {
+          "label": "Official oncology research brochure",
+          "url": "https://assets.illumina.com/content/dam/illumina/gcs/assembled-assets/marketing-literature/illumina-connected-insights-research-brochure-m-gl-02544/illumina-connected-insights-research-brochure-m-gl-02544.pdf"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
+  "pictor": [
+    {
+      "name": "ClearStain™",
+      "category": "virtual-brightfield",
+      "subtype": "virtual-brightfield",
+      "type": "Virtual H&E generation · Research use only",
+      "summary": "Turns brightfield scans of unstained tissue into virtual H&E images. Supports tumor-area annotation before molecular extraction while preserving the section.",
+      "sources": [
+        {
+          "label": "Official ClearStain description",
+          "url": "https://www.pictorlabs.ai/solutions"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "DeepStain™",
+      "category": "virtual-fluorescence",
+      "subtype": "virtual-fluorescence",
+      "type": "Autofluorescence virtual staining · Research use only",
+      "summary": "Uses one unstained autofluorescence scan to generate several virtual stains, including PanCK, CD45 and Masson’s Trichrome, without extra tissue sections.",
+      "sources": [
+        {
+          "label": "Official DeepStain description",
+          "url": "https://www.pictorlabs.ai/solutions"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "ReStain",
+      "category": "virtual-restaining",
+      "subtype": "virtual-restaining",
+      "type": "H&E-to-special-stain translation · Research use only",
+      "summary": "Generates special-stain and IHC-like images from an existing chemically stained H&E section, allowing additional research views of archived slides.",
+      "sources": [
+        {
+          "label": "Official ReStain description",
+          "url": "https://www.pictorlabs.ai/solutions"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "RetroStain™",
+      "category": "stain-conversion",
+      "subtype": "stain-conversion",
+      "type": "Stain conversion & normalization · Research use only",
+      "summary": "Harmonizes scanner color profiles and converts between staining modalities, including IHC to virtual H&E and multiplex immunofluorescence to IHC-like images.",
+      "sources": [
+        {
+          "label": "Official RetroStain description",
+          "url": "https://www.pictorlabs.ai/solutions"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Tissue Intelligence Platform",
+      "category": "analytics",
+      "subtype": "tissue-phenotyping",
+      "type": "Tissue intelligence platform · Research use only",
+      "summary": "Combines H&E-derived virtual stain panels with clinical, molecular and treatment data for research into tissue features, prognosis and treatment response.",
+      "sources": [
+        {
+          "label": "Official Tissue Intelligence Platform overview",
+          "url": "https://www.pictorlabs.ai/tissue-intelligence-platform"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "genbio": [
     {
       "name": "GenBio-PathFM",
@@ -3443,7 +3599,7 @@ const C = [
  ["stratipath","Stratipath","startup","Stockholm, Sweden","Private","Karolinska spin-out; Stratipath Breast grades breast-cancer risk from routine H&E.","https://www.stratipath.com","prog breast wsi"],
  ["imagene","Imagene AI","startup","Miami, US","Private","Develops pathology AI for biomarker discovery, molecular profiling and companion diagnostic development. Its CanvOI foundation model powers the OI Suite research platform.","https://imagene-ai.com","mol fm wsi lung"],
  ["octopath","Octopath AI","startup","London, UK","Private (research use only)","Cell-level AI for digital pathology: counts, classifies and scores cells on slides. Its Kraken model drives H&E tools for tumour cellularity, immune cells and mitoses, and its Nemo model scores ER/PR, HER2, PD-L1 and Ki67 on IHC. Works with UCL, UCLH and the Institute of Cancer Research.","https://octopath.ai","dx ihc tme fm wsi"],
- ["pictor","Pictor Labs","startup","Los Angeles, US","Private","AI virtual staining that generates stains digitally from unstained tissue.","https://pictorlabs.ai","vstain wsi"],
+ ["pictor","Pictor Labs","startup","Los Angeles, US","Private","AI virtual staining and tissue analysis for pathology research. ClearStain, DeepStain, ReStain and RetroStain cover unstained tissue, existing H&E, and stain conversion. Its Tissue Intelligence Platform combines virtual stain panels with clinical and molecular data for outcome research.","https://pictorlabs.ai","vstain wsi"],
  ["sophont","Sophont","startup","Sacramento, California, US","Private (seed stage)","Medical AI lab founded in 2025 by Tanishq Abraham and Paul Scotti, building open multimodal foundation models. Released the open pathology model OpenMidnight and, in 2026, Holon-S1, which predicts gene expression from routine tissue slides.","https://sophont.med","fm open stx mol wsi"],
  ["mindpeak","Mindpeak","startup","Hamburg, Germany","Private","AI that turns tissue images into quantitative biomarker data: PD-L1, HER2 and breast IHC scoring suites, plus biomarker discovery from H&E slides.","https://www.mindpeak.ai","ihc dx breast wsi"],
  ["deepbio","Deep Bio","startup","Seoul, South Korea","Private","Pathology AI company: DeepDx Prostate for detection and Gleason grading, and DeepDx Breast.","https://www.deepbio.co.kr","dx prostate wsi"],
@@ -3512,7 +3668,7 @@ const C = [
  ["freenome","Freenome","company","Brisbane, California, US","Public (Nasdaq: FRNM, since July 2026)","Blood-based cancer screening using multiomics. Its colorectal cancer test, SimpleScreen CRC, won FDA approval in July 2026 and is sold in the US by Abbott. Went public through a SPAC merger in July 2026.","https://www.freenome.com","screen lbx omics"],
  ["myriad","Myriad Genetics","company","Salt Lake City, US","Public","Genetic testing company: hereditary cancer testing and tumor profiling such as Prolaris and MyChoice.","https://myriad.com","ngs prog prostate breast"],
  ["veracyte","Veracyte","company","South San Francisco, US","Public","Cancer diagnostics company: genomic classifiers on tissue (Decipher Prostate and Bladder, Afirma, Prosigna). Bought Convergent Genomics in September 2026 for UroAmp, its urine-based bladder cancer test.","https://www.veracyte.com","prog prostate ngs"],
- ["illumina","Illumina","company","San Diego, US","Public","The largest maker of DNA sequencers: sequencing platforms and TruSight Oncology assays.","https://www.illumina.com","seq ngs"],
+ ["illumina","Illumina","company","San Diego, US","Public","Sequencing and genomic analysis company. Its oncology research workflow includes TruSight Oncology 500 tissue and ctDNA assays, library-prep automation, DRAGEN somatic analysis, and Connected Insights for variant interpretation and reporting.","https://www.illumina.com","seq ngs"],
  ["thermo","Thermo Fisher Scientific","company","Waltham, US","Public","Life-science tools group: Oncomine NGS assays for tumor profiling. Its former anatomical pathology business was sold in 2019 and became Epredia.","https://www.thermofisher.com","seq ngs"],
  ["qiagen","Qiagen","company","Venlo, Netherlands","Public","Molecular diagnostics company: sample prep, companion-diagnostic assays and bioinformatics.","https://www.qiagen.com","seq cdx ngs"],
  ["labcorp","Labcorp","company","Burlington, US","Public","Large clinical lab with oncology and anatomic-pathology services.","https://www.labcorp.com","lab ngs bio"],
@@ -4117,6 +4273,12 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "library-prep": ["NGS library preparation", "green", "M4 21h24v6H4z M8 21v-6 M16 21v-6 M24 21v-6 M6 15h4 M14 15h4 M22 15h4", "M12 3h8v4h-8z M14 7v4l2 3 2-3V7 M16 17v1"],
+  "somatic-analysis": ["Somatic variant analysis", "blue", "M5 6h22v20H5z M5 11h22 M9 8.5h.1 M12 8.5h.1 M9 15h3 M9 19h3 M9 23h3", "M16 15h7 M16 19h7 M16 23h7 M19 13.5v3 M21 21.5v3"],
+  "virtual-brightfield": ["Virtual H&E from brightfield", "rose", "M4 9h24v16H4z M9 9v16 M13 5h10 M18 3v4", "M13 15c2-3 4-2 5 0s4 0 5 3-3 4-5 2-5-1-5-5Z M17 17h.1 M21 18h.1"],
+  "virtual-fluorescence": ["Autofluorescence virtual stains", "violet", "M4 10h21v16H4z M8 6h20v16 M8 10v16", "M14 13v8 M10 17h8 M11.2 14.2l5.6 5.6 M11.2 19.8l5.6-5.6 M21 15h.1 M21 22h.1"],
+  "virtual-restaining": ["Virtual restaining from H&E", "teal", "M4 7h10v18H4z M18 7h10v18H18z M7 11h4 M7 15h4 M21 11h4 M21 15h4", "M11 20c3-4 7-4 10 0 M18.5 17.5 21 20l-2.5 2.5"],
+  "stain-conversion": ["Stain conversion and harmonization", "blue", "M4 6h10v20H4z M18 6h10v20H18z M7 10h4 M21 10h4", "M7 15h4 M7 19h4 M21 15h4 M21 19h4 M14 13h4 M14 22h4"],
   tissue: [
     "Tissue profiling", "teal",
     "M4.5 8.5h23v15h-23z M9 9v14 M23 11.5h2 M23 14h2",
@@ -4258,6 +4420,46 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "tissue-cgp-assay": {
+    "label": "Tissue CGP research assays",
+    "family": "tests"
+  },
+  "ctdna-cgp-assay": {
+    "label": "ctDNA CGP research assays",
+    "family": "tests"
+  },
+  "oncology-library-prep": {
+    "label": "Oncology library-prep automation",
+    "family": "discovery"
+  },
+  "somatic-variant-analysis": {
+    "label": "Somatic variant calling & biomarkers",
+    "family": "software"
+  },
+  "somatic-interpretation": {
+    "label": "Oncology variant interpretation & reporting",
+    "family": "software"
+  },
+  "virtual-brightfield": {
+    "label": "Virtual H&E · Unstained brightfield",
+    "family": "analysis"
+  },
+  "virtual-fluorescence": {
+    "label": "Virtual stains · Autofluorescence",
+    "family": "analysis"
+  },
+  "virtual-restaining": {
+    "label": "Virtual restaining · H&E input",
+    "family": "analysis"
+  },
+  "stain-conversion": {
+    "label": "Stain conversion & color normalization",
+    "family": "analysis"
+  },
+  "tissue-phenotyping": {
+    "label": "Tissue phenotyping & signatures",
+    "family": "analysis"
+  },
   "spatial-foundation": {
     "label": "Spatial transcriptomics foundation models",
     "family": "models"
