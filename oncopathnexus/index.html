@@ -510,6 +510,113 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "techcyte": [
+    {
+      "name": "Fusion AP",
+      "category": "workflow",
+      "subtype": "pathology-ims",
+      "group": "Anatomic pathology & cytology",
+      "type": "Anatomic pathology workspace · Research use only in the US",
+      "summary": "Browser-based platform combining whole-slide images, case worklists, reporting, collaboration and integrated AI. Connects with laboratory information systems and supports multiple anatomic pathology workflows.",
+      "sources": [
+        {
+          "label": "Official Fusion AP overview",
+          "url": "https://techcyte.com/products/fusion-ap/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Techcyte SureView® Cervical Cytology System",
+      "category": "cytology",
+      "subtype": "cervical-cytology",
+      "group": "Anatomic pathology & cytology",
+      "type": "AI-assisted cervical cytology · Research use only in the US",
+      "summary": "Analyzes digitized SurePath or ThinPrep Pap slides and presents potentially atypical cells and organisms for cytotechnologist or pathologist review. Integrates AI-assisted classification, slide viewing and LIS reporting.",
+      "sources": [
+        {
+          "label": "Official SureView cervical cytology overview",
+          "url": "https://techcyte.com/products/techcyte-sureview-cervical-cytology-system/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Fusion Frozen Section Suite",
+      "category": "frozen-section",
+      "subtype": "frozen-section-workflow",
+      "group": "Anatomic pathology & cytology",
+      "type": "Frozen-section review workflow · Research use only in the US",
+      "summary": "Connects slide scanning, remote pathologist review and intraoperative reporting. Includes consultation tools and an operating-room view that lets surgeons follow review progress and access reports.",
+      "sources": [
+        {
+          "label": "Official Fusion Frozen Section Suite overview",
+          "url": "https://techcyte.com/products/frozen-section/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Fusion Organ Donation Suite",
+      "category": "renal-biopsy",
+      "subtype": "transplant-biopsy",
+      "group": "Anatomic pathology & cytology",
+      "type": "AI-assisted kidney biopsy assessment · Research use only in the US",
+      "summary": "Identifies and counts glomeruli and vascular structures in digitized kidney frozen sections for pathologist confirmation. Supports biopsy reporting and sharing findings with transplant surgeons.",
+      "sources": [
+        {
+          "label": "Official Fusion Organ Donation Suite overview",
+          "url": "https://techcyte.com/products/fusion-organ-donation-suite/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Fusion Hematology Suite",
+      "category": "blood-cell-analysis",
+      "subtype": "blood-cell-morphology",
+      "group": "Clinical pathology microscopy",
+      "type": "AI-assisted blood differential · Research use only in the US",
+      "summary": "Pre-classifies white blood cells, red blood cells and platelets on digitized blood smears. Presents cells and potential abnormalities for technologist review through a web-based workflow.",
+      "sources": [
+        {
+          "label": "Official Fusion Hematology Suite and Automated Blood Differential overview",
+          "url": "https://techcyte.com/products/fusion-hematology-suite/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Fusion Bacteriology Suite",
+      "category": "bacterial-microscopy",
+      "subtype": "bacterial-microscopy",
+      "group": "Clinical pathology microscopy",
+      "type": "AI-assisted Gram stain analysis · Research use only in the US",
+      "summary": "Locates and pre-classifies bacteria, cells and yeast in Gram-stained slide images. Supports technologist confirmation, semi-quantitative assessment and LIS reporting, including a bacterial-vaginosis workflow.",
+      "sources": [
+        {
+          "label": "Official Fusion Bacteriology Suite overview",
+          "url": "https://techcyte.com/products/fusion-bacteriology-suite/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "Fusion Parasitology Suite",
+      "category": "parasite-microscopy",
+      "subtype": "parasite-microscopy",
+      "group": "Clinical pathology microscopy",
+      "type": "AI-assisted parasite screening · Research use only in the US",
+      "summary": "Finds and pre-classifies parasites and other objects in fecal slide images for technologist review. Includes wet-mount iodine, Trichrome and modified acid-fast workflows.",
+      "sources": [
+        {
+          "label": "Official Fusion Parasitology Suite overview",
+          "url": "https://techcyte.com/products/fusion-parasitology-suite/"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "natera": [
     {
       "name": "Signatera™",
@@ -3780,7 +3887,7 @@ const C = [
  ["pramana","Pramana","company","Cambridge, US","Part of Evident (acquired August 2025)","Modular whole-slide scanners (SpectralHT, SpectralM) and at-scale slide digitization.","https://pramana.ai","scan ims dx"],
  ["evident","Evident","company","Waltham, Massachusetts, US","Bain Capital portfolio company","Microscopy and imaging company, formerly Olympus's Scientific Solutions business, which was separated from Olympus in 2022. Bought the slide-scanner maker Pramana in August 2025 to build out its digital pathology line.","https://evidentscientific.com","scan"],
  ["clarapath","Clarapath","startup","Hawthorne, New York, US","Private","SectionStar robotics that automate tissue sectioning.","https://www.clarapath.com","histo"],
- ["techcyte","Techcyte","startup","Orem, Utah, US","Private","Cloud digital-diagnostics platform with AI for anatomic and clinical pathology (Techcyte Fusion); building a digital pathology platform with Mayo Clinic.","https://techcyte.com","ims dx"],
+ ["techcyte","Techcyte","startup","Orem, Utah, US","Private","Developer of the Techcyte Fusion digital pathology platform. Fusion AP unifies case workflows, images, reporting and AI; SureView supports cervical cytology. Additional human-pathology suites cover frozen sections, kidney transplant biopsies, blood differentials, bacteriology and parasitology. Collaborates with Mayo Clinic on digital pathology.","https://techcyte.com","ims dx"],
  ["gestalt","Gestalt Diagnostics","startup","Spokane, US","Private","PathFlow, a vendor-neutral digital pathology workflow system.","https://www.gestaltdiagnostics.com","ims"],
  ["pathpresenter","PathPresenter","startup","Montville, New Jersey, US","Private","Digital pathology software company built by pathologists: a vendor-neutral image management and workflow platform for clinical care, remote consultation, education and research. Its Clinical Viewer received FDA 510(k) clearance for primary diagnosis in June 2025, paired with Hamamatsu's NanoZoomer S360MD scanner. It began as a free site for pathology education, which the company says has more than 60,000 users.","https://www.pathpresenter.com","ims"],
  ["deciphex","Deciphex","startup","Dublin, Ireland","Private","Digital pathology company founded in 2017. Runs Diagnexia, a network of subspecialty pathologists who read cases digitally, and Patholytix, an AI platform for preclinical safety studies; raised a $32.3M Series C in January 2025. Novartis is an investor.","https://deciphex.com","ims dx bio"],
@@ -4419,6 +4526,12 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "cytology": ["Cervical cytology analysis", "rose", "M5 11V5h6 M21 5h6v6 M5 21v6h6 M21 27h6v-6", "M10 17c-2-6 3-10 8-8s8 7 3 12-10 2-11-4Z M14 14a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M9 23h.1"],
+  "frozen-section": ["Frozen-section workflow", "blue", "M4 9h24v16H4z M9 9v16 M23 13h2 M23 17h2", "M16 12v10 M11.7 14.5l8.6 5 M11.7 19.5l8.6-5 M14.5 13.5 16 15l1.5-1.5 M14.5 20.5 16 19l1.5 1.5"],
+  "renal-biopsy": ["Renal biopsy analysis", "teal", "M20 5c-4-2-11 1-13 7s-1 13 5 15 10-3 9-7-5-3-5-6 7-5 4-9Z", "M11 13a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M11 21h.1 M22 15h5 M24 12l3 3-3 3"],
+  "blood-cell-analysis": ["Blood-cell differential", "red", "M5 11V5h6 M21 5h6v6 M5 21v6h6 M21 27h6v-6", "M8 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M18 13a4 4 0 1 0 8 0 4 4 0 1 0-8 0Z M12 22a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M8 21h.1 M24 23h.1"],
+  "bacterial-microscopy": ["Bacterial microscopy", "teal", "M5 11V5h6 M21 5h6v6 M5 21v6h6 M21 27h6v-6", "M10 10a2 2 0 0 1 3 0l4 4a2 2 0 0 1-3 3l-4-4a2 2 0 0 1 0-3Z M20 9h.1 M23 13h.1 M10 22h.1 M17 22h6 M17 19h6 M20 17v7"],
+  "parasite-microscopy": ["Parasite microscopy", "amber", "M5 11V5h6 M21 5h6v6 M5 21v6h6 M21 27h6v-6", "M12 8c-5 3-3 11 2 15s12-3 9-8-6 2-9-1 3-4 1-6-2-1-3 0Z M18 19h.1"],
   "tumor-informed-mrd": ["Tumor-informed MRD testing", "rose", "M3 7h14v12H3z M7 7v12 M10 11h3 M10 15h3 M17 13h3", "M24 11c-1.6 2.7-4 5.4-4 8a4 4 0 1 0 8 0c0-2.6-2.4-5.3-4-8Z M22 19h4 M24 17v4"],
   "tissue-free-mrd": ["Tissue-free methylation MRD", "red", "M10 4c-2 3.2-5 6.6-5 10a5 5 0 1 0 10 0c0-3.4-3-6.8-5-10Z M10 23v4h17", "M21 6c0 5 7 5 7 10s-7 5-7 10 M28 6c0 5-7 5-7 10s7 5 7 10 M22 9h5 M22 16h5 M22 23h5 M19 5h2"],
   "hereditary": ["Hereditary cancer testing", "violet", "M5 21h5v6H5z M22 21h5v6h-5z M16 15v3 M7.5 21v-3h17v3", "M11 4c0 4 10 4 10 8 M21 4c0 4-10 4-10 8 M12 5h8 M12 11h8 M14 8h4"],
@@ -4569,6 +4682,30 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "cervical-cytology": {
+    "label": "Cervical cytology screening AI",
+    "family": "analysis"
+  },
+  "frozen-section-workflow": {
+    "label": "Frozen-section review & OR reporting",
+    "family": "software"
+  },
+  "transplant-biopsy": {
+    "label": "Transplant kidney biopsy analysis",
+    "family": "analysis"
+  },
+  "blood-cell-morphology": {
+    "label": "Blood-cell morphology & differential",
+    "family": "analysis"
+  },
+  "bacterial-microscopy": {
+    "label": "Bacteriology & Gram stain analysis",
+    "family": "analysis"
+  },
+  "parasite-microscopy": {
+    "label": "Parasite microscopy & classification",
+    "family": "analysis"
+  },
   "tumor-informed-mrd": {
     "label": "Tumor-informed ctDNA MRD testing",
     "family": "tests"
