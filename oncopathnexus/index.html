@@ -154,7 +154,7 @@
   .product-type { display: block; margin-top: 5px; color: var(--muted); font-size: 14px; line-height: 1.4; }
   .product-card h3, .product-card h4 { margin: 3px 0 0; font: 500 28px/1.2 var(--serif); }
   .product-card p { margin: 12px 0; }
-  .product-card .product-release, .product-card .product-checked { color: var(--muted); font-size: 14px; }
+  .product-card .product-release { color: var(--muted); font-size: 14px; }
   .product-card ul { margin: 16px 0; padding-left: 22px; }
   .product-card li { padding-left: 2px; margin: 10px 0; }
   .product-sources { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 20px; }
@@ -163,7 +163,9 @@
   .products-empty p { margin: 0 0 18px; color: var(--muted); }
   .catalog-toggle, .catalog-back, .catalog-reset { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 11px; border: 1px solid #d2cde1; border-radius: 9px; background: #fcfbfd; color: var(--hema); font: 600 13px/1.2 var(--sans); white-space: nowrap; cursor: pointer; }
   .catalog-toggle:hover, .catalog-back:hover, .catalog-reset:hover { background: #eeebf5; }
-  .catalog-toggle { min-height: 30px; flex: none; padding: 5px 8px; gap: 5px; font-weight: 500; }
+  .catalog-toggle { --catalog-fill: linear-gradient(115deg, #6345bd 0%, #a93087 52%, #12738a 100%); --catalog-shadow: 0 2px 9px #7042a738, inset 0 1px 0 #ffffff40; min-height: 30px; flex: none; padding: 5px 8px; gap: 5px; border-color: #ffffff70; background: var(--catalog-fill); color: #fff; box-shadow: var(--catalog-shadow); font-weight: 600; transition: box-shadow 160ms ease, filter 160ms ease, transform 160ms ease; }
+  .catalog-toggle:hover { --catalog-shadow: 0 4px 15px #7042a74d, 0 1px 5px #12738a26, inset 0 1px 0 #ffffff50; background: var(--catalog-fill); filter: brightness(1.06) saturate(1.08); transform: translateY(-1px); }
+  .catalog-toggle:active { transform: translateY(0); }
   .catalog-toggle svg { width: 14px; height: 14px; }
   .catalog-toggle svg, .catalog-back svg { flex: none; }
   .catalog-back svg { width: 16px; height: 16px; }
@@ -269,10 +271,10 @@
     .catalog-item-row .catalog-product { align-items: flex-start; padding-block: 5px; }
     .catalog-item-mobile .catalog-item-owner { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
     .catalog-item-mobile .catalog-product-family { margin-top: 10px; }
-    .catalog-toggle { position: relative; width: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; }
-    .catalog-toggle::before { content: ''; position: absolute; inset: 4px; border: 1px solid #d2cde1; border-radius: 8px; background: #fcfbfd; }
+    .catalog-toggle { position: relative; width: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+    .catalog-toggle::before { content: ''; position: absolute; inset: 4px; border: 1px solid #ffffff70; border-radius: 8px; background: var(--catalog-fill); box-shadow: var(--catalog-shadow); }
     .catalog-toggle:hover { background: transparent; }
-    .catalog-toggle:hover::before { background: #eeebf5; }
+    .catalog-toggle:hover::before { background: var(--catalog-fill); }
     .catalog-toggle svg { position: relative; width: 16px; height: 16px; }
     .catalog-toggle-label { display: none; }
   }
@@ -5020,7 +5022,6 @@ function openProducts(n, selectedItem) {
         <p>${esc(item.summary)}</p>
         ${item.features && item.features.length ? `<ul>${item.features.map(text => `<li>${esc(text)}</li>`).join('')}</ul>` : ''}
         ${item.sources.length ? `<div class='product-sources'>${item.sources.map(source => `<a href='${esc(source.url)}' target='_blank' rel='noopener noreferrer'>${esc(source.label)}</a>`).join('')}</div>` : ''}
-        ${item.checked ? `<p class='product-checked'>Checked <time datetime='${esc(item.checked)}'>${productDate(item.checked)}</time></p>` : ''}
       </article>`;
   }).join('');
   const content = cards
