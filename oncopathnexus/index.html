@@ -163,17 +163,19 @@
   .products-empty p { margin: 0 0 18px; color: var(--muted); }
   .catalog-toggle, .catalog-back, .catalog-reset { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 11px; border: 1px solid #d2cde1; border-radius: 9px; background: #fcfbfd; color: var(--hema); font: 600 13px/1.2 var(--sans); white-space: nowrap; cursor: pointer; }
   .catalog-toggle:hover, .catalog-back:hover, .catalog-reset:hover { background: #eeebf5; }
-  .catalog-toggle { min-height: 34px; flex: none; }
-  .catalog-toggle svg, .catalog-back svg { width: 16px; height: 16px; flex: none; }
+  .catalog-toggle { min-height: 30px; flex: none; padding: 5px 8px; gap: 5px; font-weight: 500; }
+  .catalog-toggle svg { width: 14px; height: 14px; }
+  .catalog-toggle svg, .catalog-back svg { flex: none; }
+  .catalog-back svg { width: 16px; height: 16px; }
   .catalog { position: fixed; inset: 0; width: 100%; max-width: none; height: var(--app-height, 100dvh); max-height: none; overflow: auto; overscroll-behavior: contain; margin: 0; padding: 0; border: 0; background: #f8f7fb; color: var(--ink); font: 15px/1.5 var(--sans); }
   .catalog-header { background: #fdfcfe; border-bottom: 1px solid var(--line); }
-  .catalog-frame { width: min(1160px, 100%); margin: 0 auto; padding: 28px clamp(14px, 4vw, 32px); }
+  .catalog-frame { width: min(1280px, 100%); margin: 0 auto; padding: 28px clamp(14px, 4vw, 32px); }
   .catalog-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .catalog-title-row h2 { margin: 0; font: 500 clamp(29px, 4vw, 44px)/1.08 var(--serif); letter-spacing: -.025em; }
   .catalog-back { min-height: 44px; }
   .catalog-filters { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .8fr) auto; gap: 12px; align-items: end; margin-top: 25px; }
   .catalog-field { display: grid; gap: 5px; min-width: 0; }
-  .catalog-field label { color: var(--muted); font-size: 13px; font-weight: 600; }
+  .catalog-field label { color: var(--muted); font-size: 14px; font-weight: 600; }
   .catalog-filters input, .catalog-filters select { min-width: 0; width: 100%; height: 44px; padding: 0 10px; border: 1px solid #d2cde1; border-radius: 8px; background: #fff; color: var(--ink); font: 16px/1.2 var(--sans); }
   .catalog-reset { min-height: 44px; }
   .catalog-results { padding-top: 18px; }
@@ -204,16 +206,55 @@
   .catalog-product .product-art svg { width: 23px; height: 23px; }
   .catalog-product .product-art-detail { animation: none; }
   .catalog-product-name { display: block; font-weight: 600; }
-  .catalog-product-type { display: block; color: var(--product-ink); font-size: 12.5px; }
+  .catalog-product-type { display: block; margin-top: 3px; color: var(--product-ink); font-size: 14px; line-height: 1.4; }
   .catalog-empty { padding: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--muted); }
+  .catalog-description { margin: 12px 0 0; color: var(--muted); font-size: 16px; }
+  .catalog-families { display: flex; gap: 7px; overflow-x: auto; padding: 4px 2px 7px; margin: 21px -2px 0; scrollbar-width: thin; }
+  .catalog-family { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: none; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--muted); font: 500 14px/1.3 var(--sans); cursor: pointer; }
+  .catalog-family[aria-pressed='true'] { background: #4c4396; border-color: #4c4396; color: #fff; }
+  .catalog-family:hover { border-color: #8277ba; }
+  .catalog-family-count { padding: 1px 5px; border-radius: 4px; background: #8e84b51a; font-size: 12px; font-variant-numeric: tabular-nums; }
+  .catalog-family[aria-pressed='true'] .catalog-family-count { background: #ffffff26; }
+  .catalog-filters { margin-top: 16px; }
+  .catalog-filters select { appearance: none; padding-right: 32px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236d6884' stroke-width='1.5'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E") no-repeat right 10px center / 16px; }
+  .catalog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .catalog-view { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 10px; background: #eeebf5; }
+  .catalog-view button { min-height: 38px; padding: 6px 14px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font: 600 14px/1.3 var(--sans); cursor: pointer; }
+  .catalog-view button[aria-pressed='true'] { background: #fff; color: var(--hema); box-shadow: 0 1px 3px #231e3c12; }
+  .catalog-count { margin: 0; font-size: 14px; }
+  .catalog-expand { min-height: 44px; padding: 6px 0; border: 0; background: none; color: var(--hema); font: 500 14px/1.4 var(--sans); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .catalog-type-tag { font-size: 13px; padding: 4px 7px; }
+  .catalog-group-title { margin: 18px 0 8px; color: var(--hema); font-size: 14px; font-weight: 600; }
+  .catalog-group-title span { margin-left: 6px; color: var(--muted); font-size: 12px; font-weight: 400; }
+  .catalog-product > span:last-child { min-width: 0; }
+  .catalog-product-family { display: block; color: var(--muted); font-size: 12px; font-weight: 500; }
+  .catalog-item-row { border-top: 1px solid var(--line); }
+  .catalog-item-row:hover { background: #fbfaff; }
+  .catalog-item-row td, .catalog-item-row th { vertical-align: top; }
+  .catalog-item-row .catalog-product { padding: 0; min-height: 44px; border: 0; background: transparent; }
+  .catalog-item-col { width: 28%; }
+  .catalog-owner-col { width: 17%; }
+  .catalog-class-col { width: 25%; }
+  .catalog-item-owner { font-size: 14px; font-weight: 500; }
+  .catalog-item-summary { color: var(--muted); font-size: 14px; line-height: 1.55; }
+  .catalog-item-summary span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .catalog-item-mobile { display: none; }
+  .product-taxonomy { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; }
   @media (max-width: 680px) {
     .catalog-frame { padding-block: 18px; }
     .catalog-title-row { gap: 9px; align-items: flex-start; }
     .catalog-back { padding-inline: 8px; }
-    .catalog-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+    .catalog-description { font-size: 14px; }
+    .catalog-families { margin-top: 15px; }
+    .catalog-family { padding-inline: 10px; }
+    .catalog-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
     .catalog-field { grid-column: span 2; }
     .catalog-filter-search { grid-column: span 3; }
     .catalog-reset { grid-column: 4; grid-row: 1; }
+    .catalog-toolbar { gap: 7px 10px; }
+    .catalog-view { order: 0; }
+    .catalog-expand { order: 1; }
+    .catalog-count { width: 100%; order: 2; }
     .catalog-company-col { width: auto; }
     .catalog-type-col { display: none; }
     .catalog-number-col { width: 70px; }
@@ -222,6 +263,27 @@
     .catalog-mobile-preview { display: block; padding: 0 0 3px 22px; }
     .catalog-details td { padding: 0 10px 10px; }
     .catalog-product-list { grid-template-columns: 1fr; }
+    .catalog-item-col { width: 100%; }
+    .catalog-owner-col, .catalog-class-col, .catalog-summary-col { display: none; }
+    .catalog-item-mobile { display: block; }
+    .catalog-item-row .catalog-product { align-items: flex-start; padding-block: 5px; }
+    .catalog-item-mobile .catalog-item-owner { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .catalog-item-mobile .catalog-product-family { margin-top: 10px; }
+    .catalog-toggle { position: relative; width: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+    .catalog-toggle::before { content: ''; position: absolute; inset: 4px; border: 1px solid #d2cde1; border-radius: 8px; background: #fcfbfd; }
+    .catalog-toggle:hover { background: transparent; }
+    .catalog-toggle:hover::before { background: #eeebf5; }
+    .catalog-toggle svg { position: relative; width: 16px; height: 16px; }
+    .catalog-toggle-label { display: none; }
+  }
+  @media (max-width: 420px) {
+    .catalog-filter-search, .catalog-field:has(#catalog-type) { grid-column: 1 / -1; }
+    .catalog-field:has(#catalog-sort) { grid-column: span 3; }
+    .catalog-reset { grid-column: 4; grid-row: 3; }
+    .catalog-view { width: 100%; }
+    .catalog-view button { flex: 1; }
+    .catalog-count { width: auto; order: 1; }
+    .catalog-expand { order: 2; }
   }
   .publications-catalog, .publication-list a { color: var(--hema); text-underline-offset: 3px; overflow-wrap: anywhere; }
   .publications-catalog { display: inline-block; margin: 8px 0 2px; }
@@ -325,9 +387,9 @@
 <div class='map-search'>
   <input id='search' type='search' aria-label='Find an organization' placeholder='Find an organization' autocomplete='off' list='names'>
   <datalist id='names'></datalist>
-  <button id='catalog-toggle' class='catalog-toggle' type='button' aria-haspopup='dialog' aria-controls='product-catalog'>
+  <button id='catalog-toggle' class='catalog-toggle' type='button' aria-label='Product table' title='Product table' aria-haspopup='dialog' aria-controls='product-catalog'>
     <svg viewBox='0 0 20 20' fill='none' stroke='currentColor' stroke-width='1.5' aria-hidden='true'><rect x='2.5' y='4' width='15' height='12' rx='2'/><path d='M2.5 8.5h15M2.5 12h15M8.5 8.5V16'/></svg>
-    Product table
+    <span class='catalog-toggle-label'>Products</span>
   </button>
 </div>
 <div id='map-controls' class='map-controls'>
@@ -361,20 +423,22 @@
   <header class='catalog-header'>
     <div class='catalog-frame'>
       <div class='catalog-title-row'>
-        <h2 id='catalog-title'>Products by company</h2>
+        <h2 id='catalog-title'>Models &amp; products</h2>
         <button id='catalog-close' class='catalog-back' type='button' autofocus>
           <svg viewBox='0 0 20 20' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m8 5-5 5 5 5M3 10h14'/></svg>
           Back to map
         </button>
       </div>
+      <p class='catalog-description'>Explore tests, models, software and equipment by their specific purpose.</p>
+      <div id='catalog-families' class='catalog-families' role='group' aria-label='Product category'></div>
       <div class='catalog-filters'>
         <div class='catalog-field catalog-filter-search'>
           <label for='catalog-search'>Search</label>
-          <input id='catalog-search' type='search' placeholder='Company or product' autocomplete='off'>
+          <input id='catalog-search' type='search' placeholder='Company, product or purpose' autocomplete='off'>
         </div>
         <div class='catalog-field'>
-          <label for='catalog-type'>Product type</label>
-          <select id='catalog-type'><option value=''>All types</option></select>
+          <label for='catalog-type'>Specific type</label>
+          <select id='catalog-type'><option value=''>All specific types</option></select>
         </div>
         <div class='catalog-field'>
           <label for='catalog-sort'>Sort by</label>
@@ -389,10 +453,17 @@
     </div>
   </header>
   <div class='catalog-frame catalog-results'>
-    <p id='catalog-count' class='catalog-count' role='status'></p>
+    <div class='catalog-toolbar'>
+      <div id='catalog-view' class='catalog-view' role='group' aria-label='Table view'>
+        <button type='button' data-view='company' aria-pressed='true'>By company</button>
+        <button type='button' data-view='product' aria-pressed='false'>All products</button>
+      </div>
+      <p id='catalog-count' class='catalog-count' role='status'></p>
+      <button id='catalog-expand' class='catalog-expand' type='button'>Expand all</button>
+    </div>
     <div id='catalog-table-wrap' class='catalog-table-wrap'>
       <table aria-label='Company products'>
-        <thead>
+        <thead id='catalog-columns'>
           <tr>
             <th scope='col' class='catalog-company-col'>Company</th>
             <th scope='col' class='catalog-preview-cell'>Models &amp; products</th>
@@ -403,7 +474,7 @@
         <tbody id='catalog-rows'></tbody>
       </table>
     </div>
-    <p id='catalog-empty' class='catalog-empty' hidden>No companies match these filters.</p>
+    <p id='catalog-empty' class='catalog-empty' hidden>No products match these filters. Try another search or reset the filters.</p>
   </div>
 </dialog>
 
@@ -439,10 +510,77 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "genbio": [
+    {
+      "name": "GenBio-PathFM",
+      "category": "foundation",
+      "subtype": "pathology-vision",
+      "type": "Histopathology foundation model · Research",
+      "date": "2026-03-17",
+      "dateLabel": "Announced",
+      "summary": "A vision foundation model trained on public H&E whole-slide images. It learns tissue representations for downstream computational pathology research, with evaluations covering cancer subtyping, grading and prediction of gene expression from histology.",
+      "features": [
+        "Training selects informative image tiles from public whole-slide collections",
+        "Research evaluations include THUNDER, HEST and PathoROB benchmarks"
+      ],
+      "sources": [
+        {
+          "label": "Official GenBio-PathFM overview",
+          "url": "https://genbio.ai/genbio-pathfm/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "AIDO.Tissue",
+      "category": "spatial",
+      "subtype": "spatial-foundation",
+      "type": "Spatial transcriptomics foundation model · Research",
+      "date": "2026-03-26",
+      "dateLabel": "Overview published",
+      "summary": "Learns representations from spatial gene-expression data by considering each cell together with its neighboring cells. The framework supports research into cell identity and tissue organization, including cellular niches in disease microenvironments.",
+      "features": [
+        "Uses measured gene expression and spatial neighborhoods as input",
+        "Evaluated for cell-type classification, niche prediction and cell-density estimation"
+      ],
+      "sources": [
+        {
+          "label": "Official AIDO.Tissue overview",
+          "url": "https://genbio.ai/aido-tissue/"
+        }
+      ],
+      "checked": "2026-11-27"
+    },
+    {
+      "name": "AIDO Cell",
+      "category": "molecular",
+      "subtype": "virtual-cell",
+      "type": "Virtual-cell research simulator · Closed alpha",
+      "date": "2026-08-18",
+      "dateLabel": "Announced",
+      "summary": "A virtual-cell world model for simulating how biological interventions affect cells across molecular and cellular scales. Researchers can run sequential interventions and query predicted experimental readouts from a shared simulated cell state.",
+      "features": [
+        "Research benchmarks include genetic and small-molecule perturbation responses",
+        "Available through a closed-alpha waitlist; distinct from the earlier single-cell model now named GB.Cell"
+      ],
+      "sources": [
+        {
+          "label": "Official AIDO Cell announcement",
+          "url": "https://genbio.ai/aido-cell-simulator/"
+        },
+        {
+          "label": "Official research overview and model naming",
+          "url": "https://github.com/genbio-ai/Research-Overview"
+        }
+      ],
+      "checked": "2026-11-27"
+    }
+  ],
   "noetik": [
     {
       "name": "TARIO-2",
       "category": "foundation",
+      "subtype": "spatial-transcriptomics",
       "type": "Foundation model",
       "date": "2026-04-17",
       "dateLabel": "Research report",
@@ -463,6 +601,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "OCTO",
       "category": "multimodal",
+      "subtype": "pathology-multiomic",
       "type": "Multimodal research model",
       "date": "2024-07-16",
       "dateLabel": "Technical report",
@@ -485,6 +624,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus Lens",
       "category": "research",
+      "subtype": "research-workspace",
       "type": "Research platform",
       "date": "2026-05-31",
       "dateLabel": "Platform update",
@@ -509,6 +649,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "tempusverse",
       "category": "analytics",
+      "subtype": "analytics-code",
       "type": "R analytics package suite",
       "summary": "An R package suite used in Tempus Lens Workspaces to analyze multimodal cancer data. It provides reusable tools built around Tempus data structures and research workflows.",
       "features": [
@@ -531,6 +672,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus One",
       "category": "assistant",
+      "subtype": "clinical-assistant",
       "type": "Generative AI assistant",
       "summary": "An AI assistant for provider and research workflows, available through Tempus Hub and EHR integrations, with research tools in Lens. It helps users retrieve and explore relevant Tempus information.",
       "features": [
@@ -549,6 +691,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus Hub",
       "category": "workflow",
+      "subtype": "test-workflow",
       "type": "Clinical workflow platform",
       "summary": "A platform for ordering Tempus tests, tracking samples and results, and reviewing patient information. It brings molecular reports, therapy updates and Tempus One into a shared workflow.",
       "features": [
@@ -566,6 +709,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus Next",
       "category": "workflow",
+      "subtype": "care-pathways",
+      "additionalSubtypes": ["trial-matching"],
       "type": "Care pathway and trial platform",
       "summary": "An AI-enabled platform that helps care teams identify patients who may need a guideline-based next step and helps research teams find potential trial candidates.",
       "features": [
@@ -583,6 +728,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus Pixel",
       "category": "vision",
+      "subtype": "radiology",
       "type": "Radiology analysis platform",
       "summary": "A family of imaging tools for radiologists and oncologists, supporting lesion measurement, longitudinal tracking and reporting. Applications include therapy-response evaluation, lung, breast, prostate and cardiac imaging.",
       "features": [
@@ -600,6 +746,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus TIME",
       "category": "service",
+      "subtype": "trial-matching",
       "type": "Clinical trial matching program",
       "summary": "A clinical-trial network and service that combines AI-assisted patient matching with clinical-team review and just-in-time site activation.",
       "features": [
@@ -617,6 +764,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus xT CDx & xR",
       "category": "tissue",
+      "subtype": "tissue-genomic",
       "type": "Tissue DNA and RNA tests",
       "summary": "Complementary molecular profiling tests: xT CDx analyzes a 648-gene DNA panel from solid-tumor tissue, while xR provides whole-transcriptome RNA sequencing for fusion and splicing analysis.",
       "features": [
@@ -634,6 +782,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus xF / xF+",
       "category": "blood",
+      "subtype": "liquid-biopsy",
       "type": "Liquid-biopsy tests",
       "summary": "Blood-based circulating tumor DNA tests for molecular profiling. xF covers 105 genes and xF+ covers 523 genes to identify cancer-associated alterations and resistance mutations.",
       "features": [
@@ -651,6 +800,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Tempus xM",
       "category": "monitoring",
+      "subtype": "residual-disease",
       "type": "MRD and monitoring portfolio",
       "summary": "A portfolio of blood-based tests for minimal residual disease, recurrence and treatment-response monitoring, with both tumor-naive and tumor-informed approaches.",
       "features": [
@@ -668,6 +818,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "HRD, IPS, TO & PurIST",
       "category": "biomarker",
+      "subtype": "molecular-signatures",
       "type": "Algorithmic test portfolio",
       "summary": "Tests that derive additional tumor information from molecular data, including DNA-repair deficiency, immune-related prognosis, likely tumor origin and pancreatic-cancer subtype.",
       "features": [
@@ -685,6 +836,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Virchow & PRISM",
       "category": "foundation",
+      "subtype": "pathology-vision",
+      "additionalSubtypes": ["pathology-vlm"],
       "type": "Pathology foundation-model families",
       "summary": "Developed by Paige and now part of Tempus, these model families represent tissue morphology and connect slide images with pathology reports for research applications.",
       "features": [
@@ -703,6 +856,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige Predict",
       "category": "biomarker",
+      "subtype": "he-biomarkers",
       "type": "Research biomarker-prediction application",
       "summary": "An AI application that estimates biomarker status from routine H&E whole-slide images. It supports research sample screening, cohort enrichment and prioritization for confirmatory testing.",
       "features": [
@@ -722,6 +876,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Project Quine",
       "category": "research",
+      "subtype": "research-agent",
       "type": "Experimental research system",
       "date": "2026-09-29",
       "dateLabel": "Project announcement",
@@ -748,6 +903,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Project Ex Vivo",
       "category": "service",
+      "subtype": "drug-discovery",
       "type": "Research collaboration",
       "summary": "A joint Microsoft–Broad cancer research collaboration, supported by Dana-Farber. It combines AI, single-cell and spatial data, and laboratory models to investigate cancer cell states and potential therapeutic vulnerabilities.",
       "features": [
@@ -768,6 +924,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "K Pro",
       "category": "agent",
+      "subtype": "research-agent",
       "type": "Agentic AI platform for biopharma research",
       "date": "2025-10-16",
       "dateLabel": "Launch announcement",
@@ -786,6 +943,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MOSAIC",
       "category": "dataset",
+      "subtype": "biological-atlas",
       "type": "Spatial multiomics atlas",
       "date": "2023-06-01",
       "dateLabel": "Project announcement",
@@ -812,6 +970,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "RlapsRisk BC",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "AI prognostic test",
       "summary": "Profiles recurrence risk in early ER+/HER2− breast cancer using digitized H&E slides and clinical information.",
       "features": [
@@ -830,6 +989,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MSIntuit CRC",
       "category": "screening",
+      "subtype": "he-biomarkers",
       "type": "AI biomarker-screening test",
       "summary": "Analyzes digitized colorectal-cancer H&E slides to screen for microsatellite-stable phenotypes and support MSI testing workflows.",
       "features": [
@@ -850,6 +1010,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Pitt-GPT-Plus",
       "category": "agent",
+      "subtype": "research-agent",
       "type": "Local multi-agent AI framework",
       "summary": "A CPACE framework for institution-specific expert chatbots using locally hosted language models. It combines retrieval from institution-approved information with multiple AI agents and output cross-checking.",
       "features": [
@@ -872,6 +1033,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "WSI Genie",
       "category": "builder",
+      "subtype": "model-development",
       "type": "Automated machine-learning framework",
       "summary": "CPACE’s automated machine-learning framework for whole-slide pathology images, supporting image-based model development and validation.",
       "features": [
@@ -893,6 +1055,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Report Genie",
       "category": "workflow",
+      "subtype": "reporting",
       "type": "Hybrid report-generation tool",
       "summary": "A CPACE tool combining rule-based logic and a large language model to generate diagnostic reports.",
       "features": [],
@@ -909,6 +1072,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MI Cancer Seek",
       "category": "tissue",
+      "subtype": "tissue-genomic",
       "group": "Tissue Profiling",
       "type": "Solid tumor molecular profiling assay",
       "date": "2024-11-05",
@@ -923,6 +1087,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MI Clarity",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
+      "additionalSubtypes": ["treatment-response"],
       "group": "Tissue Profiling",
       "type": "AI breast cancer recurrence test",
       "date": "2026-05-05",
@@ -937,6 +1103,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MI Profile",
       "category": "tissue",
+      "subtype": "tissue-genomic",
       "group": "Tissue Profiling",
       "type": "Tumor DNA, RNA and protein profiling",
       "summary": "Profiles DNA, RNA and selected protein biomarkers from solid tumor tissue. It combines whole-exome and whole-transcriptome sequencing with techniques such as immunohistochemistry.",
@@ -947,6 +1114,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MI Tumor Seek Hybrid",
       "category": "tissue",
+      "subtype": "tissue-genomic",
       "group": "Tissue Profiling",
       "type": "Laboratory-developed tissue sequencing test",
       "summary": "Combines whole-exome DNA sequencing and whole-transcriptome RNA sequencing from tumor tissue to report molecular alterations and signatures.",
@@ -957,6 +1125,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Caris Assure",
       "category": "blood",
+      "subtype": "liquid-biopsy",
       "group": "Blood Profiling",
       "type": "Liquid biopsy for molecular profiling",
       "summary": "Analyzes circulating DNA and RNA with matched white blood cells from a blood sample. The matched analysis helps distinguish tumor-derived findings from inherited variants and clonal hematopoiesis.",
@@ -966,6 +1135,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Caris ChromoSeq",
       "category": "blood",
+      "subtype": "hematology-genomic",
       "group": "Blood Profiling",
       "type": "Whole-genome sequencing for myeloid malignancies",
       "summary": "Analyzes peripheral blood or bone marrow aspirate in diagnosed or suspected myeloid malignancies. It reports structural variants, copy-number changes and mutations for diagnosis and risk assessment.",
@@ -975,6 +1145,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Caris Detect",
       "category": "screening",
+      "subtype": "early-detection",
       "group": "Blood Profiling",
       "type": "Multi-cancer early detection blood test",
       "date": "2026-07-01",
@@ -989,6 +1160,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Caris GPSai",
       "category": "biomarker",
+      "subtype": "molecular-signatures",
       "group": "AI Signatures",
       "type": "Tumor origin prediction",
       "summary": "Compares a tumor’s DNA and RNA profile with reference cancer signatures to help identify its tissue of origin, including in cancers of unknown primary.",
@@ -998,6 +1170,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Caris FOLFIRSTai",
       "category": "response",
+      "subtype": "treatment-response",
       "group": "AI Signatures",
       "type": "Chemotherapy benefit prediction",
       "summary": "Uses molecular profiling data to estimate relative benefit from starting with FOLFOX or FOLFIRI, each with bevacizumab, in eligible patients with metastatic colorectal cancer.",
@@ -1009,6 +1182,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Kraken",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "H&E pathology foundation model",
       "date": "2026-10-23",
       "dateLabel": "Kraken-1 update",
@@ -1027,6 +1201,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Nemo",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Immunohistochemistry foundation model",
       "summary": "Detects and classifies cells on IHC whole-slide images and estimates stain positivity and intensity at the cell level. It underlies Octopath’s ER/PR, HER2, PD-L1 and Ki67 scoring applications.",
       "features": ["Research access is available by request through Octopath AI"],
@@ -1041,6 +1216,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Stratipath Breast",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "H&E prognostic risk profiling",
       "date": "2026-06-16",
       "dateLabel": "CE-IVDR announcement",
@@ -1060,6 +1236,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Nucleai Insight",
       "category": "service",
+      "subtype": "spatial-services",
       "type": "Translational research service",
       "summary": "Measures spatial tissue features across H&E, IHC and other imaging modalities, then studies how those features relate to outcomes in a sponsor’s cohort.",
       "features": [
@@ -1075,6 +1252,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Nucleai Select",
       "category": "service",
+      "subtype": "spatial-services",
       "type": "Clinical trial biomarker development service",
       "summary": "Builds scoring algorithms for validated spatial biomarkers and integrates them into sponsor trial workflows. The assays can support trial screening, selection or enrichment.",
       "features": [
@@ -1091,6 +1269,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Prostate Test (Biopsy)",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
+      "additionalSubtypes": ["treatment-response"],
       "type": "Laboratory-developed test · Localized prostate cancer",
       "summary": "Combines digitized prostate biopsy images and clinical data to estimate long-term outcomes in localized prostate cancer. For eligible patients being considered for radiation, it can estimate potential benefit from adding short-term androgen deprivation therapy.",
       "features": ["Available through Artera’s clinical laboratory"],
@@ -1109,6 +1289,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Breast Cancer Test",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
+      "additionalSubtypes": ["treatment-response"],
       "type": "Laboratory-developed test · Early-stage breast cancer",
       "summary": "Uses digitized tumor resection slides and clinical information to estimate distant metastasis risk in early-stage HR-positive, HER2-negative invasive breast cancer. Artera also reports evidence for chemotherapy benefit prediction in a defined cohort.",
       "features": ["Available through Artera’s clinical laboratory after tumor resection"],
@@ -1127,6 +1309,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Prostate Test (Post-RP)",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
+      "additionalSubtypes": ["treatment-response"],
       "type": "Laboratory-developed test · Post-prostatectomy recurrence",
       "date": "2025-12-09",
       "dateLabel": "Commercial launch",
@@ -1146,6 +1330,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Prostate Test (mHSPC)",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "Laboratory-developed test · Metastatic prostate cancer",
       "date": "2026-06-04",
       "dateLabel": "Clinical availability announced",
@@ -1166,6 +1351,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Prostate",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "Prognostic software · FDA De Novo authorization",
       "date": "2025-07-31",
       "dateLabel": "FDA decision",
@@ -1185,6 +1371,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ArteraAI Breast",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "Prognostic software · FDA 510(k) clearance",
       "date": "2026-05-04",
       "dateLabel": "FDA decision",
@@ -1206,6 +1393,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige Prostate Suite",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "AI applications for prostate biopsy review",
       "date": "2021-09-21",
       "dateLabel": "Detect De Novo authorization",
@@ -1229,6 +1417,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige OmniScreen",
       "category": "biomarker",
+      "subtype": "he-biomarkers",
       "type": "H&E biomarker prescreening",
       "summary": "Predicts molecular biomarker status from routine H&E slides. Paige lists it for prescreening research cohorts and characterizing archived tissue collections.",
       "features": ["The prescreening panel covers roughly 1,600 biomarkers across 505 genes"],
@@ -1247,6 +1436,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige Breast Suite",
       "category": "vision",
+      "subtype": "breast-pathology",
+      "additionalSubtypes": ["lymph-node"],
       "type": "Breast pathology AI applications",
       "summary": "Analyzes H&E slides from breast biopsies, excisions and lymph nodes. Modules highlight suspicious regions, identify mitotic figures and flag possible lymph node metastases.",
       "features": [
@@ -1268,6 +1459,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige GI Suite",
       "category": "vision",
+      "subtype": "gi-pathology",
+      "additionalSubtypes": ["he-biomarkers"],
       "type": "Gastrointestinal pathology AI applications",
       "summary": "Includes GI Detect & Subtype for highlighting and classifying lesions, Colon Detect for flagging suspicious colorectal regions, and Colon MSI for predicting MSI-H or mismatch repair deficiency.",
       "features": ["Tempus lists GI Detect & Subtype under its limited research feedback release"],
@@ -1286,6 +1479,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige PanCancer Detect",
       "category": "screening",
+      "subtype": "pancancer-screening",
       "type": "Research use only · Tissue screening",
       "summary": "Highlights areas suspicious for cancer in biopsy and resection slides across multiple tissue types. Tempus lists it for research prescreening and second review.",
       "sources": [
@@ -1299,6 +1493,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige IMS",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Digital pathology image management system",
       "summary": "A cloud-based system for reviewing whole-slide images and organizing pathology cases. It includes the FullFocus viewer, FullFolio case management and a marketplace for third-party AI applications.",
       "features": ["FullFocus received FDA 510(k) clearance for its specified intended use and scanner configurations"],
@@ -1317,6 +1512,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige Alba",
       "category": "assistant",
+      "subtype": "pathology-copilot",
       "type": "Research use only · Pathology copilot",
       "summary": "A copilot designed to bring pathology images, radiology and clinical context into one workflow. Paige describes voice and text controls for querying information and launching supported analysis tools.",
       "sources": [
@@ -1334,6 +1530,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Paige Predict",
       "category": "biomarker",
+      "subtype": "he-biomarkers",
       "type": "Biomarker prediction and tissue optimization",
       "summary": "Tempus offers Paige Predict research applications for estimating biomarker status and forecasting nucleic acid yield from H&E slides. The estimates can help prioritize samples for confirmatory testing or identify tissue at risk of sequencing failure.",
       "sources": [
@@ -1353,6 +1550,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Outpost",
       "category": "agent",
+      "subtype": "enterprise-agent",
       "type": "Internal agent platform",
       "date": "2026-10-01",
       "dateLabel": "Engineering post",
@@ -1373,6 +1571,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PLUTO-4",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Pathology foundation-model family",
       "date": "2025-11-04",
       "dateLabel": "Research publication",
@@ -1397,6 +1596,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "AISight",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Research image-management platform",
       "summary": "A cloud-native platform for managing pathology cases, images and research workflows. It combines slide review, image analysis and integrated AI applications.",
       "features": [
@@ -1419,6 +1619,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathExplore",
       "category": "spatial",
+      "subtype": "spatial-tme",
       "type": "Tumor microenvironment research panel",
       "date": "2023-04-04",
       "dateLabel": "Launch announcement",
@@ -1445,6 +1646,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "TRACE",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Toxicologic pathology foundation model",
       "summary": "A vision encoder trained on preclinical tissue data. It converts whole-slide pathology images into representations used by Tremont’s downstream models.",
       "features": [
@@ -1463,6 +1665,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ToxScribe",
       "category": "multimodal",
+      "subtype": "pathology-vlm",
       "type": "Toxicologic pathology vision-language model",
       "summary": "A model trained across toxicology species and magnifications to describe tissue morphology. It accepts image regions or whole slides and describes findings, their location and severity.",
       "features": [
@@ -1483,6 +1686,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Kestrel",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Digital pathology foundation model",
       "summary": "Ataraxis’s first pan-cancer pathology foundation model learns morphological features from cancer tissue images. Its representations support downstream models for patient outcomes and treatment response.",
       "features": [
@@ -1500,6 +1704,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Falcon",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Digital pathology foundation model",
       "summary": "A larger successor to Kestrel that learns morphological representations from unlabeled pathology images. Ataraxis evaluated it on survival, mutation-classification and biomarker-classification tasks across multiple cancers.",
       "features": [
@@ -1519,6 +1724,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Hawk",
       "category": "foundation",
+      "subtype": "foundation-unspecified",
       "type": "Foundation model · Upcoming",
       "summary": "An upcoming addition to Ataraxis AI’s foundation-model lineup.",
       "features": [],
@@ -1527,6 +1733,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ataraxis Tau",
       "category": "predictive",
+      "subtype": "causal-treatment",
       "type": "Causal AI framework",
       "summary": "Estimates individualized treatment effects from real-world data while adjusting for treatment-assignment bias. Its first clinical application, Ataraxis Breast CTX, estimates chemotherapy benefit in HR+/HER2− breast cancer.",
       "features": [
@@ -1548,6 +1755,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ataraxis Breast NEO",
       "category": "response",
+      "subtype": "treatment-response",
       "type": "Neoadjuvant-response test",
       "summary": "Combines routine H&E pathology images with clinical information to estimate the probability of pathological complete response after neoadjuvant therapy in stage I–III breast cancer.",
       "features": [
@@ -1571,6 +1779,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "MORPHEUS",
       "category": "spatial",
+      "subtype": "spatial-transcriptomics",
       "type": "Transcriptome-prediction research model",
       "summary": "Estimates gene-expression patterns from H&E biopsy images, creating a virtual molecular portrait used by Ataraxis Breast NEO to predict neoadjuvant treatment response.",
       "features": [
@@ -1593,6 +1802,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Judith",
       "category": "agent",
+      "subtype": "research-agent",
       "type": "Research AI agent",
       "summary": "An AI agent that turns natural-language task descriptions into biomedical image-analysis workflows. It supports building and interpreting models for pathology datasets using multimodal generative AI and foundation models.",
       "features": [
@@ -1615,6 +1825,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathChat 2",
       "category": "assistant",
+      "subtype": "pathology-copilot",
       "type": "Multimodal pathology copilot",
       "summary": "A generative AI model that combines pathology images and text for interactive research and education. It supports conversations using multiple high-resolution images through a slide viewer.",
       "features": [
@@ -1633,6 +1844,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathChat DX",
       "category": "assistant",
+      "subtype": "pathology-copilot",
       "type": "Investigational pathology AI copilot",
       "date": "2025-01-28",
       "dateLabel": "Designation announced",
@@ -1663,6 +1875,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "HETA",
       "category": "spatial",
+      "subtype": "spatial-tme",
       "type": "Spatial H&E analysis platform",
       "date": "2026-11-18",
       "dateLabel": "Platform update",
@@ -1687,6 +1900,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathoSearch",
       "category": "vision",
+      "subtype": "visual-search",
       "type": "Visual pathology search tool · Early access",
       "date": "2026-09-12",
       "dateLabel": "Early-access announcement",
@@ -1710,6 +1924,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "OpenTME v2.0",
       "category": "dataset",
+      "subtype": "biological-atlas",
       "type": "Spatial pathology research dataset",
       "date": "2026-11-23",
       "dateLabel": "Version 2.0 announcement",
@@ -1734,6 +1949,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Atlas 2",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Pathology vision foundation model family",
       "date": "2026-01-13",
       "dateLabel": "Research announcement",
@@ -1759,6 +1975,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "EXAONE Path 2.5",
       "category": "multimodal",
+      "subtype": "pathology-multiomic",
       "type": "Multimodal pathology foundation model",
       "date": "2025-12-16",
       "dateLabel": "Research preprint",
@@ -1782,6 +1999,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "EXAONE Path 2.0",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Pathology foundation model",
       "summary": "Learns features from small regions of pathology slides using supervision from whole-slide labels. LG evaluated these features on ten slide-level biomarker prediction tasks.",
       "features": [
@@ -1799,6 +2017,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "EXAONE Path EGFR and MSI",
       "category": "biomarker",
+      "subtype": "he-biomarkers",
       "type": "Biomarker prediction research models",
       "summary": "Task-specific models for studying biomarker prediction from pathology images. EXAONE Path 2.0 rev EGFR estimates EGFR mutation status. EXAONE Path MSI addresses microsatellite instability.",
       "sources": [
@@ -1812,96 +2031,13 @@ const COMPANY_PRODUCTS = {
         }
       ],
       "checked": "2026-11-26"
-    },
-    {
-      "name": "EXAONE 4.5",
-      "category": "multimodal",
-      "type": "Vision-language model",
-      "date": "2026-04-09",
-      "dateLabel": "Model release",
-      "summary": "A 33-billion-parameter vision-language model that processes images and text, including documents with complex layouts. It is LG AI Research’s first vision-language model with downloadable weights.",
-      "features": [
-        "Weights are available under the EXAONE AI Model License Agreement 1.2 - NC"
-      ],
-      "sources": [
-        {
-          "label": "Official release and documentation",
-          "url": "https://github.com/LG-AI-EXAONE/EXAONE-4.5"
-        },
-        {
-          "label": "Model card and weights",
-          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B"
-        }
-      ],
-      "checked": "2026-11-26"
-    },
-    {
-      "name": "K-EXAONE 2.5",
-      "category": "language",
-      "type": "Hosted language model",
-      "date": "2026-11-09",
-      "dateLabel": "API launch",
-      "summary": "A Korean and English language model with emphasis on Korean understanding and generation. The hosted API supports chat, tool calling and structured outputs.",
-      "features": [
-        "Available through the EXAONE API Platform under its noncommercial terms"
-      ],
-      "sources": [
-        {
-          "label": "Official model and API documentation",
-          "url": "https://docs.exaone.ai/en/docs/models"
-        },
-        {
-          "label": "API launch announcement",
-          "url": "https://www.lgresearch.ai/news/view?seq=755"
-        }
-      ],
-      "checked": "2026-11-26"
-    },
-    {
-      "name": "K-EXAONE 2.0",
-      "category": "language",
-      "type": "Multilingual language and reasoning model",
-      "date": "2026-07-31",
-      "dateLabel": "Model release",
-      "summary": "A mixture-of-experts language model for multilingual text generation, reasoning and tool use. The flagship model has 750 billion parameters and activates about 37 billion per token.",
-      "features": [
-        "Downloadable weights under Apache 2.0"
-      ],
-      "sources": [
-        {
-          "label": "Official release announcement",
-          "url": "https://www.lgresearch.ai/news/view?seq=678"
-        },
-        {
-          "label": "Model card and weights",
-          "url": "https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B"
-        }
-      ],
-      "checked": "2026-11-26"
-    },
-    {
-      "name": "EXAONE Deep",
-      "category": "language",
-      "type": "Reasoning language model family",
-      "date": "2025-03-18",
-      "dateLabel": "Model release",
-      "summary": "A family of reasoning models evaluated on mathematics, coding and science tasks. The release includes 2.4B, 7.8B and 32B versions.",
-      "features": [
-        "Weights are available under the EXAONE AI Model License Agreement 1.1 - NC"
-      ],
-      "sources": [
-        {
-          "label": "Official EXAONE Deep repository",
-          "url": "https://github.com/LG-AI-EXAONE/EXAONE-Deep"
-        }
-      ],
-      "checked": "2026-11-26"
     }
   ],
   "zhihuang": [
     {
       "name": "TissueLab",
       "category": "agent",
+      "subtype": "research-agent",
       "type": "Agentic medical image analysis platform",
       "date": "2025-09-29",
       "dateLabel": "Initial release",
@@ -1926,6 +2062,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Pathology-CoT",
       "category": "multimodal",
+      "subtype": "pathology-vlm",
       "type": "Whole-slide reasoning research framework",
       "date": "2026-07-24",
       "dateLabel": "Journal publication",
@@ -1949,6 +2086,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathCowork",
       "category": "assistant",
+      "subtype": "pathology-copilot",
       "type": "Pathology copilot research framework",
       "date": "2026-10-29",
       "dateLabel": "Research preprint",
@@ -1974,6 +2112,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Lunit SCOPE IO",
       "category": "spatial",
+      "subtype": "spatial-tme",
       "type": "Spatial immuno-oncology analysis software",
       "summary": "Analyzes H&E whole-slide images to quantify immune-cell distribution and tissue features in the tumor microenvironment for biomarker discovery and immunotherapy research.",
       "features": [
@@ -1998,6 +2137,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "nanopath",
       "category": "builder",
+      "subtype": "model-development",
       "type": "Open-source training framework and challenge",
       "summary": "A framework for training and evaluating small pathology foundation models on image tiles from The Cancer Genome Atlas. The reference workflow runs in about an hour on one H100 GPU.",
       "features": [
@@ -2019,6 +2159,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "OpenMidnight 1.1",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Open-source pathology foundation model",
       "summary": "Developed by MedARC and Sophont, OpenMidnight 1.1 refines Kaiko’s Midnight model using approximately 12,000 public whole-slide images from The Cancer Genome Atlas. It converts histology tiles into features for downstream research tasks.",
       "features": [
@@ -2040,6 +2181,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Holon-S1",
       "category": "spatial",
+      "subtype": "spatial-transcriptomics",
       "type": "Spatial gene-expression research model",
       "date": "2026-10-13",
       "dateLabel": "Technical report",
@@ -2065,6 +2207,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Discovery",
       "category": "vision",
+      "subtype": "model-development",
       "type": "Research use only · Tissue image analysis",
       "date": "2022-03-02",
       "dateLabel": "Announced",
@@ -2082,6 +2225,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "CE-IVD APPs",
       "category": "biomarker",
+      "subtype": "ihc-scoring",
+      "additionalSubtypes": ["lymph-node"],
       "type": "Diagnostic decision-support software",
       "summary": "Visiopharm’s Insight portfolio of image analysis apps for in vitro diagnostic decision support in the EU and UK.",
       "features": [
@@ -2098,6 +2243,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Qualitopix",
       "category": "quality",
+      "subtype": "stain-quality",
       "type": "IHC staining quality assurance",
       "summary": "Quantifies stain intensity on scanned control slides containing standardized reference material. Labs can track the consistency of immunohistochemistry staining across runs and investigate flagged changes.",
       "features": [
@@ -2112,6 +2258,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Phenoplex™",
       "category": "spatial",
+      "subtype": "spatial-tme",
       "type": "Research use only · Spatial biology software",
       "date": "2022-11-01",
       "dateLabel": "Announced",
@@ -2131,6 +2278,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Concentriq",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Digital pathology platform",
       "date": "2026-06-17",
       "dateLabel": "Fifth generation introduced",
@@ -2152,6 +2300,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Mindpeak Pan Tumor H&E, PeakDissect",
       "category": "vision",
+      "subtype": "tissue-dissection",
       "type": "Research use only · H&E image analysis",
       "summary": "Detects and quantifies tumor regions in H&E whole-slide images across solid tumor types. The peakDissect workflow uses this analysis to propose tissue regions for macrodissection before genomic sequencing.",
       "features": [
@@ -2169,6 +2318,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Sectra UniView",
       "category": "viewer",
+      "subtype": "image-viewer",
       "type": "Enterprise image viewer",
       "summary": "A browser-based viewer for medical images and related records in the Sectra Enterprise Platform. It gives care teams access to whole-slide pathology images, radiology studies, photographs and documents from one interface.",
       "sources": [
@@ -2182,6 +2332,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Sectra Reporting",
       "category": "workflow",
+      "subtype": "reporting",
       "type": "Imaging reporting software",
       "summary": "Sectra’s built-in reporting solution pairs the image workspace with structured templates, speech recognition and access to clinical context. Sectra describes it for enterprise imaging reporting, including radiology.",
       "sources": [
@@ -2197,6 +2348,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "navify® Digital Pathology",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Pathology image management system",
       "summary": "Roche’s software for viewing, organizing and annotating whole-slide images and managing pathology cases. The platform integrates with slide scanners, laboratory systems and compatible image-analysis applications.",
       "sources": [
@@ -2216,6 +2368,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "CancerLinQ",
       "category": "workflow",
+      "subtype": "care-pathways",
       "type": "Oncology data and practice software",
       "summary": "ConcertAI’s oncology suite connects electronic health record data with tools for practice analytics, quality measurement and clinical research. Its clinical tools include trial matching and patient summaries for care teams.",
       "sources": [
@@ -2235,6 +2388,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Viewer",
       "category": "viewer",
+      "subtype": "image-viewer",
       "type": "Whole-slide image viewer",
       "summary": "Deep Bio’s viewer displays digital pathology slides and the results of its DeepDx image-analysis tools.",
       "sources": [
@@ -2248,6 +2402,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Prostate – CNB",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "Prostate core-needle biopsy analysis",
       "summary": "Analyzes H&E-stained prostate core-needle biopsies for cancer detection, tumor measurement and Gleason grading.",
       "sources": [
@@ -2261,6 +2416,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Prostate – RP",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "Prostatectomy analysis",
       "summary": "Analyzes digitized radical prostatectomy specimens to identify and quantify prostate cancer regions.",
       "sources": [
@@ -2274,6 +2430,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Prostate – TURP",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "Prostate resection analysis",
       "summary": "Analyzes slides from transurethral resection of the prostate to highlight suspicious tumor regions.",
       "sources": [
@@ -2287,6 +2444,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Breast – Resection",
       "category": "vision",
+      "subtype": "breast-pathology",
       "type": "Breast resection analysis",
       "summary": "Analyzes digitized breast resection slides and highlights tissue regions for review.",
       "sources": [
@@ -2300,6 +2458,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "DeepDx® Breast – SLNB",
       "category": "vision",
+      "subtype": "lymph-node",
       "type": "Sentinel lymph node analysis",
       "summary": "Analyzes breast cancer sentinel lymph node biopsy slides to help identify regions suspicious for metastasis.",
       "sources": [
@@ -2315,6 +2474,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "CaloPix®",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Pathology image management system",
       "summary": "A web-based system for managing pathology cases and worklists, viewing whole-slide images and supporting remote consultation. It integrates with laboratory systems and compatible AI applications.",
       "sources": [
@@ -2334,6 +2494,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "SpectralHT",
       "category": "scanner",
+      "subtype": "automated-scanner",
       "type": "High-throughput whole-slide scanner",
       "summary": "A modular scanning system with multiple optical heads and automated slide handling for high-volume digitization.",
       "sources": [
@@ -2347,6 +2508,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "SpectralM / Pramana M",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Desktop whole-slide scanner",
       "summary": "A compact scanner in Pramana’s Spectral family for labs with lower slide volumes. Evident lists the desktop system as Pramana M.",
       "sources": [
@@ -2364,6 +2526,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Pramana POD",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Automated benchtop whole-slide scanner",
       "summary": "A benchtop scanner with 40× imaging, automated slide handling and built-in image quality checks.",
       "sources": [
@@ -2377,6 +2540,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Vista",
       "category": "viewer",
+      "subtype": "image-viewer",
       "type": "Whole-slide viewer and organizer",
       "summary": "Pramana’s slide-viewing and organization software for digital pathology workflows.",
       "sources": [
@@ -2390,6 +2554,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Digital Pathology as a Service",
       "category": "service",
+      "subtype": "slide-digitization",
       "type": "Slide digitization service",
       "summary": "A service for digitizing glass slides with Pramana’s scanning infrastructure.",
       "sources": [
@@ -2405,6 +2570,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ocus® 20",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Whole-slide scanner",
       "summary": "A compact single-slide scanner with 20× optics for histology and time-sensitive workflows.",
       "sources": [
@@ -2418,6 +2584,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ocus® 40",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Whole-slide scanner",
       "summary": "A single-slide scanner with 40× optics for higher-resolution tissue and cytology imaging.",
       "sources": [
@@ -2431,6 +2598,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ocus® M 20",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Whole-slide scanner",
       "summary": "The 20× variant of Grundium’s four-slide scanner, with a removable tray for unattended scanning.",
       "sources": [
@@ -2444,6 +2612,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ocus® M 40",
       "category": "scanner",
+      "subtype": "desktop-scanner",
       "type": "Whole-slide scanner",
       "summary": "The 40× variant of Grundium’s four-slide scanner, with a removable tray for unattended scanning.",
       "sources": [
@@ -2457,6 +2626,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Ocus® R",
       "category": "scanner",
+      "subtype": "automated-scanner",
       "type": "Whole-slide scanner",
       "summary": "A robotic whole-slide scanning system for higher-volume labs. Grundium describes configurations with parallel scanning heads and automated slide drawers.",
       "sources": [
@@ -2472,6 +2642,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "QPOR™",
       "category": "predictive",
+      "subtype": "patient-outcome",
       "type": "Computational pathology research platform",
       "summary": "4D Path’s platform analyzes digitized H&E biopsy images to derive tissue signatures under investigation as predictors of treatment response.",
       "sources": [
@@ -2491,6 +2662,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PANProfiler Breast",
       "category": "biomarker",
+      "subtype": "he-biomarkers",
       "type": "H&E-based breast biomarker profiling",
       "summary": "Panakeia’s AI tool estimates ER, PR and HER2 status from routine H&E breast cancer slides. Its performance has been studied in a multi-site validation study.",
       "sources": [
@@ -2510,6 +2682,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Histotype Px® Colorectal",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "Digital prognostic biomarker",
       "summary": "An AI-based test that analyzes standard H&E slides from resected colorectal tumors to estimate patient prognosis. DoMore lists it as CE-IVD marked.",
       "sources": [
@@ -2529,6 +2702,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Pantheon",
       "category": "viewer",
+      "subtype": "pathology-ims",
       "type": "Digital pathology platform",
       "summary": "Qritive’s workbench for viewing slides, managing cases, sharing work and reviewing AI results in the pathology workflow.",
       "sources": [
@@ -2542,6 +2716,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "QAi Prostate",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "Prostate pathology AI suite",
       "summary": "Qritive’s suite includes QAi Prostate Dx for detecting and quantifying suspicious tumor regions and QAi Prostate Grade for Gleason assessment.",
       "sources": [
@@ -2555,6 +2730,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "QAi Colon Dx",
       "category": "vision",
+      "subtype": "gi-pathology",
       "type": "Colon biopsy image analysis",
       "summary": "Highlights benign, dysplastic and malignant regions on digitized colon biopsies for pathologist review.",
       "sources": [
@@ -2568,6 +2744,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "QAi Lymph Node Dx",
       "category": "vision",
+      "subtype": "lymph-node",
       "type": "Lymph node image analysis",
       "summary": "Highlights regions of interest on lymph node slides to help pathologists review for macro- and micrometastases.",
       "sources": [
@@ -2583,6 +2760,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Breast Cancer Suite",
       "category": "vision",
+      "subtype": "breast-pathology",
+      "additionalSubtypes": ["ihc-scoring"],
       "type": "Breast pathology AI suite",
       "summary": "A suite of image-analysis models for breast cancer pathology, including biomarker quantification on immunohistochemistry slides.",
       "sources": [
@@ -2596,6 +2775,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Lung Cancer Suite",
       "category": "vision",
+      "subtype": "ihc-scoring",
       "type": "Lung pathology AI suite",
       "summary": "AI models for lung cancer slide analysis, including PD-L1 expression scoring.",
       "sources": [
@@ -2609,6 +2789,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Prostate Cancer Suite",
       "category": "vision",
+      "subtype": "prostate-pathology",
       "type": "Prostate pathology AI suite",
       "summary": "AI models that support identification and assessment of cancer in prostate biopsy slides, including Gleason grading.",
       "sources": [
@@ -2622,6 +2803,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Colon Suite",
       "category": "vision",
+      "subtype": "gi-pathology",
       "type": "Colon pathology AI suite",
       "summary": "A suite of models for analyzing colon pathology samples, including colorectal cancer biomarker analysis.",
       "sources": [
@@ -2635,6 +2817,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Colorectal Cancer QuantCRC",
       "category": "spatial",
+      "subtype": "spatial-tme",
       "type": "Quantitative colorectal tissue analysis",
       "summary": "Analyzes H&E-stained colorectal cancer tissue, quantifying tumor morphology and features of the tumor microenvironment.",
       "sources": [
@@ -2648,6 +2831,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Gastric Suite",
       "category": "vision",
+      "subtype": "gi-pathology",
+      "additionalSubtypes": ["ihc-scoring"],
       "type": "Gastric pathology AI suite",
       "summary": "A suite of image-analysis models for gastric cancer pathology, including biomarker scoring.",
       "sources": [
@@ -2661,6 +2846,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Aiforia® Create",
       "category": "builder",
+      "subtype": "model-development",
       "type": "AI model development software",
       "summary": "A cloud platform for domain experts to annotate pathology images, train and validate custom deep learning models, and deploy them into supported analysis workflows.",
       "sources": [
@@ -2676,6 +2862,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "kaiko.w",
       "category": "assistant",
+      "subtype": "clinical-assistant",
       "type": "Clinical AI workspace",
       "summary": "A conversational assistant for hospital teams. It integrates with hospital systems and supports consultation preparation, guideline research and documentation. Kaiko also describes oncology workflows such as tracking tumors over time.",
       "sources": [
@@ -2695,6 +2882,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Virtual Human",
       "category": "research",
+      "subtype": "drug-discovery",
       "type": "Drug discovery research platform",
       "summary": "insitro’s internal platform uses human genetics and multimodal patient and cellular data to study disease mechanisms and prioritize potential therapeutic targets.",
       "sources": [
@@ -2712,6 +2900,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "TherML",
       "category": "molecular",
+      "subtype": "therapeutic-design",
       "type": "Therapeutic design research platform",
       "summary": "insitro’s internal design platform supports research across small molecules, oligonucleotides and biologics.",
       "sources": [
@@ -2725,6 +2914,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Small Molecule in vivo PK Models",
       "category": "predictive",
+      "subtype": "pharmacokinetic",
       "type": "Pharmacokinetics prediction models",
       "summary": "Models developed with Eli Lilly for predicting the pharmacokinetic properties of small molecules from their structures. They are available through Lilly TuneLab.",
       "sources": [
@@ -2744,6 +2934,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ESMC",
       "category": "molecular",
+      "subtype": "protein-language",
       "type": "Protein language model",
       "summary": "ESM Cambrian learns representations of amino acid sequences for research into protein structure and function.",
       "sources": [
@@ -2757,6 +2948,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ESMFold2",
       "category": "molecular",
+      "subtype": "protein-structure",
       "type": "Protein structure prediction model",
       "summary": "Predicts three-dimensional structures of proteins and protein complexes.",
       "sources": [
@@ -2770,6 +2962,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "ESM Atlas",
       "category": "dataset",
+      "subtype": "biological-atlas",
       "type": "Protein research resource",
       "summary": "A reference collection of protein sequences and predicted structures.",
       "sources": [
@@ -2785,6 +2978,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "M-Optimus",
       "category": "multimodal",
+      "subtype": "pathology-multiomic",
       "type": "Multimodal foundation model",
       "summary": "Combines histology, molecular measurements and clinical data in a shared representation for research into spatial gene expression, biomarkers and patient outcomes.",
       "sources": [
@@ -2798,6 +2992,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "H-Optimus",
       "category": "foundation",
+      "subtype": "pathology-vision",
       "type": "Histology foundation model family",
       "summary": "A family of vision models trained on H&E whole-slide images. H-Optimus-0 and H-Optimus-1 produce embeddings that researchers can use in downstream pathology tasks.",
       "sources": [
@@ -2811,6 +3006,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "STELA",
       "category": "dataset",
+      "subtype": "biological-atlas",
       "type": "Spatial biology atlas initiative",
       "summary": "A Bioptimus-led initiative to build a clinically linked atlas combining spatial biology, tissue images, molecular measurements and patient outcomes. The resulting data help train M-Optimus.",
       "sources": [
@@ -2826,6 +3022,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PathOS™",
       "category": "research",
+      "subtype": "drug-discovery",
       "type": "Oncology drug development platform",
       "summary": "Pathos AI’s internal platform uses multimodal evidence to prioritize oncology therapies and inform clinical development.",
       "features": [
@@ -2844,6 +3041,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Vesta Bladder",
       "category": "response",
+      "subtype": "treatment-response",
+      "additionalSubtypes": ["prognostic-risk"],
       "type": "Computational pathology test portfolio",
       "summary": "Valar’s tests for non-muscle-invasive bladder cancer analyze H&E slides. BCGPredict estimates response to BCG therapy, and Risk Stratify estimates recurrence and progression risk.",
       "sources": [
@@ -2857,6 +3056,8 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Vesta Prostate",
       "category": "response",
+      "subtype": "treatment-response",
+      "additionalSubtypes": ["prognostic-risk"],
       "type": "Computational pathology test portfolio",
       "summary": "A portfolio of H&E-based biomarkers for metastatic hormone-sensitive prostate cancer. It includes Risk Stratify, Triplet Predict and ARPI Predict.",
       "sources": [
@@ -2870,6 +3071,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Vitara Pancreas ChemoPredict",
       "category": "response",
+      "subtype": "treatment-response",
       "type": "Computational pathology test",
       "summary": "Valar’s H&E-based test evaluates histology from advanced pancreatic cancer biopsies to estimate whether a gemcitabine-based or 5-FU-based regimen may be favored.",
       "sources": [
@@ -2885,6 +3087,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "SlideMate™",
       "category": "equipment",
+      "subtype": "slide-printer",
       "type": "Microscope slide printer family",
       "summary": "Epredia’s microscope slide printers label slides at the point of use to support specimen identification and traceability.",
       "features": [
@@ -2907,6 +3110,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "OI Suite",
       "category": "research",
+      "subtype": "research-workspace",
       "type": "Oncology research platform",
       "summary": "Imagene AI’s CanvOI-powered platform lets oncology researchers use pathology images and linked molecular and clinical data to explore biomarker hypotheses and develop predictive models.",
       "features": [
@@ -2925,6 +3129,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PATHOMIQ_AS",
       "category": "prognosis",
+      "subtype": "patient-outcome",
       "type": "Active surveillance decision-support model",
       "summary": "An AI model studied in patients with low- or intermediate-risk prostate cancer on active surveillance. Its multimodal version combines biopsy histology, PSA and other clinical data to estimate risks such as progression and grade reclassification.",
       "sources": [
@@ -2935,6 +3140,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "PATHOMIQ_PRAD",
       "category": "prognosis",
+      "subtype": "patient-outcome",
       "type": "Prostate cancer prognostic model",
       "summary": "Analyzes digitized H&E prostatectomy slides to estimate the risk of biochemical recurrence and metastasis. An independent blinded study evaluated the model in a radical prostatectomy cohort.",
       "sources": [
@@ -2946,6 +3152,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Prolaris + PATHOMIQ AI Test",
       "category": "prognosis",
+      "subtype": "prognostic-risk",
       "type": "Myriad Genetics prostate cancer test",
       "date": "2026-05-26",
       "dateLabel": "Launch announced",
@@ -2964,6 +3171,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "Recursion OS",
       "category": "research",
+      "subtype": "drug-discovery",
       "type": "AI drug discovery and development platform",
       "summary": "Recursion’s proprietary platform combines automated lab experiments and machine learning to support drug discovery and development, from identifying targets to planning clinical trials and enrolling participants.",
       "features": [
@@ -2981,6 +3189,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "X-Cell",
       "category": "molecular",
+      "subtype": "virtual-cell",
       "type": "Virtual-cell research model",
       "summary": "A diffusion language model that predicts how genetic perturbations change gene expression across cellular contexts. It supports Xaira’s research into disease mechanisms and potential therapeutic targets.",
       "features": [
@@ -3005,6 +3214,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "X-Patient",
       "category": "predictive",
+      "subtype": "patient-outcome",
       "type": "Patient-stratification research model",
       "summary": "An internal AI model designed to distinguish molecular, cellular and tissue-level differences between patients with apparently similar diseases. It helps Xaira identify potential responder populations for its therapeutic programs.",
       "features": [
@@ -3026,6 +3236,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "X-Design",
       "category": "molecular",
+      "subtype": "therapeutic-design",
       "type": "Generative molecular-design platform",
       "summary": "Designs new therapeutic molecules for complex targets, with a current focus on antibodies and proteins. It forms part of Xaira’s drug-discovery research platform.",
       "features": [
@@ -3042,6 +3253,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "X-Scientist",
       "category": "agent",
+      "subtype": "research-agent",
       "type": "Agentic research platform",
       "summary": "Connects language models, scientific tools, Xaira’s datasets and biological models to support drug-discovery research.",
       "features": [
@@ -3061,6 +3273,7 @@ const COMPANY_PRODUCTS = {
     {
       "name": "X-Automate",
       "category": "equipment",
+      "subtype": "lab-automation",
       "type": "Laboratory automation platform",
       "summary": "Xaira’s physical experimentation layer, combining high-throughput automation and AI robotics to execute and measure wet-lab experiments.",
       "features": [
@@ -3319,6 +3532,7 @@ const C = [
  ["noetik","Noetik","startup","South San Francisco, US","Private","Trains foundation models on spatial tumor data to guide cancer therapeutics.","https://www.noetik.ai","drug stx fm tme"],
  ["isomorphic","Isomorphic Labs","company","London, UK","Alphabet company (spun out of DeepMind, 2021)","AI-driven drug discovery built on its drug design engine (IsoDDE); co-released AlphaFold 3 with Google DeepMind. Partners include Novartis, Eli Lilly, Johnson & Johnson and, since November 2026, Merck on an oncology target. A general drug-discovery company, not oncology-specific.","https://www.isomorphiclabs.com","drug omics"],
  ["xaira","Xaira Therapeutics","startup","South San Francisco, US","Private","AI drug discovery and development company that launched in April 2024 with more than $1 billion in committed funding. Builds models for protein and antibody design and a virtual cell model, X-Cell (March 2026), trained on its own genome-wide perturbation datasets, and develops its own medicines; an October 2026 job posting describes an oncology portfolio moving from discovery into the clinic. A general drug-discovery company, not oncology-specific.","https://www.xaira.com","drug omics"],
+ ["genbio","GenBio AI","startup","Palo Alto, US","Private","Biological AI company developing models across molecular, cellular and tissue scales. Its pathology and oncology research offerings include GenBio-PathFM for histology, AIDO.Tissue for spatial transcriptomics, and the AIDO Cell virtual-cell simulator.","https://genbio.ai/","fm wsi omics multi drug"],
  ["genentech","Genentech","company","South San Francisco, US","Roche company","Roche's US research and oncology arm, with a large computational sciences group.","https://www.gene.com","tx drug"],
  ["bioslife","Bios Life","startup","Boston, US","Private (emerged from stealth August 2026 with $25M seed)","AI-native cancer surveillance company building a virtual clinic for cancer survivors and people at high risk, around a continuously updated digital twin of each person's genomic, clinical and lifestyle data.","https://www.bioslife.ai","screen multi omics"],
  ["omanta","Omanta","startup","San Francisco, US","Private (Y Combinator, founded 2026)","A personalized research lab built around a single patient: combines the full medical record and personal genomics with AI to work on complex cancer cases.","https://omanta.com","omics ngs"],
@@ -3522,13 +3736,15 @@ const LAYERS = [
   { key: "pm",   name: "Precision medicine & data",     note: "Multimodal platforms, real-world data, reference labs and the cancer centers and hospitals that combine the signals for a patient",
     ids: "tempus caris bostongene sophia aevius bioslife neogenomics labcorp quest flatiron concertai danafarber moffitt mdanderson msk mayo mgh ucla nyu weillcornell sinai cedars" },
   { key: "tx",   name: "Therapeutics & drug discovery", note: "Pharma and AI-driven discovery that turn those signals into treatments",
-    ids: "pathos recursion insitro noetik isomorphic xaira genentech roche az jnj merck bms gilead daiichi takeda pfizer gsk sanofi bayer dags bards novartis lilly abbvie amgen" }
+    ids: "pathos recursion insitro noetik isomorphic xaira genbio genentech roche az jnj merck bms gilead daiichi takeda pfizer gsk sanofi bayer dags bards novartis lilly abbvie amgen" }
 ];
 
 
 // Some organizations work on more than one layer. Each keeps one home (above), chosen by what the organization is; ALSO lists its footholds on other layers
 // as [id, layer, what it does there], every one taken from the organization's own card. They are drawn as rings on those slides.
 const ALSO = [
+  ["genbio","ai","GenBio-PathFM histopathology foundation model"],
+  ["genbio","sp","AIDO.Tissue spatial transcriptomics foundation model"],
   ["weillcornell","ai","Computational and Systems Pathology; language-model tools developed with Dana-Farber (2024)"],
   ["roche", "hw", "Roche Tissue Diagnostics (Ventana)"],
   ["roche", "dp", "navify Digital Pathology, with an open environment for third-party AI"],
@@ -4032,6 +4248,233 @@ const PRODUCT_ART = {
     "M9.5 15.6v4.2H18 M14 12.2h8.5v4.2 M2.7 12.2H5 M27 19.8h2.3"
   ]
 };
+// Descriptive product taxonomy, separate from the artwork categories.
+const PRODUCT_FAMILIES = {
+  "tests": "Tests & risk assessment",
+  "models": "AI & foundation models",
+  "analysis": "Pathology & imaging AI",
+  "software": "Clinical & lab software",
+  "discovery": "Research & drug discovery",
+  "hardware": "Lab hardware & digitization"
+};
+const PRODUCT_SUBTYPES = {
+  "spatial-foundation": {
+    "label": "Spatial transcriptomics foundation models",
+    "family": "models"
+  },
+  "tissue-genomic": {
+    "label": "Tissue genomic profiling",
+    "family": "tests"
+  },
+  "liquid-biopsy": {
+    "label": "Liquid biopsy profiling",
+    "family": "tests"
+  },
+  "hematology-genomic": {
+    "label": "Blood cancer genomics",
+    "family": "tests"
+  },
+  "early-detection": {
+    "label": "Multi-cancer early detection",
+    "family": "tests"
+  },
+  "residual-disease": {
+    "label": "MRD & recurrence monitoring",
+    "family": "tests"
+  },
+  "prognostic-risk": {
+    "label": "Prognosis & recurrence risk",
+    "family": "tests"
+  },
+  "treatment-response": {
+    "label": "Treatment benefit & response",
+    "family": "tests"
+  },
+  "molecular-signatures": {
+    "label": "Molecular classification & signatures",
+    "family": "tests"
+  },
+  "pathology-vision": {
+    "label": "Pathology vision foundation models",
+    "family": "models"
+  },
+  "pathology-vlm": {
+    "label": "Pathology vision-language models",
+    "family": "models"
+  },
+  "pathology-multiomic": {
+    "label": "Pathology multiomic models",
+    "family": "models"
+  },
+  "foundation-unspecified": {
+    "label": "Foundation models · Unspecified modality",
+    "family": "models"
+  },
+  "protein-language": {
+    "label": "Protein language models",
+    "family": "models"
+  },
+  "protein-structure": {
+    "label": "Protein structure prediction",
+    "family": "models"
+  },
+  "virtual-cell": {
+    "label": "Virtual cells & perturbation models",
+    "family": "models"
+  },
+  "causal-treatment": {
+    "label": "Causal treatment-effect models",
+    "family": "models"
+  },
+  "patient-outcome": {
+    "label": "Patient stratification & outcome models",
+    "family": "models"
+  },
+  "pharmacokinetic": {
+    "label": "Pharmacokinetic prediction",
+    "family": "models"
+  },
+  "spatial-transcriptomics": {
+    "label": "Spatial gene-expression prediction",
+    "family": "models"
+  },
+  "prostate-pathology": {
+    "label": "Prostate detection & grading",
+    "family": "analysis"
+  },
+  "breast-pathology": {
+    "label": "Breast tissue analysis",
+    "family": "analysis"
+  },
+  "gi-pathology": {
+    "label": "Gastrointestinal tissue analysis",
+    "family": "analysis"
+  },
+  "lymph-node": {
+    "label": "Lymph node metastasis review",
+    "family": "analysis"
+  },
+  "pancancer-screening": {
+    "label": "Pan-cancer tissue screening",
+    "family": "analysis"
+  },
+  "ihc-scoring": {
+    "label": "IHC biomarker scoring",
+    "family": "analysis"
+  },
+  "he-biomarkers": {
+    "label": "H&E biomarker prediction",
+    "family": "analysis"
+  },
+  "spatial-tme": {
+    "label": "Spatial tissue & TME analysis",
+    "family": "analysis"
+  },
+  "tissue-dissection": {
+    "label": "Tumor mapping & macrodissection",
+    "family": "analysis"
+  },
+  "visual-search": {
+    "label": "Similar-case image search",
+    "family": "analysis"
+  },
+  "radiology": {
+    "label": "Radiology image analysis",
+    "family": "analysis"
+  },
+  "pathology-ims": {
+    "label": "Pathology image & case management",
+    "family": "software"
+  },
+  "image-viewer": {
+    "label": "Slide & medical image viewers",
+    "family": "software"
+  },
+  "reporting": {
+    "label": "Structured & AI-assisted reporting",
+    "family": "software"
+  },
+  "clinical-assistant": {
+    "label": "Clinical AI assistants",
+    "family": "software"
+  },
+  "pathology-copilot": {
+    "label": "Pathology AI copilots",
+    "family": "software"
+  },
+  "test-workflow": {
+    "label": "Test ordering & results",
+    "family": "software"
+  },
+  "care-pathways": {
+    "label": "Care pathways & practice analytics",
+    "family": "software"
+  },
+  "stain-quality": {
+    "label": "IHC staining quality control",
+    "family": "software"
+  },
+  "enterprise-agent": {
+    "label": "Internal enterprise AI agents",
+    "family": "software"
+  },
+  "research-workspace": {
+    "label": "Multimodal research workspaces",
+    "family": "discovery"
+  },
+  "analytics-code": {
+    "label": "Scientific analytics packages",
+    "family": "discovery"
+  },
+  "trial-matching": {
+    "label": "Clinical trial matching",
+    "family": "discovery"
+  },
+  "research-agent": {
+    "label": "Agentic biomedical workflows",
+    "family": "discovery"
+  },
+  "model-development": {
+    "label": "Pathology model development",
+    "family": "discovery"
+  },
+  "biological-atlas": {
+    "label": "Biological datasets & atlases",
+    "family": "discovery"
+  },
+  "drug-discovery": {
+    "label": "Drug discovery & development",
+    "family": "discovery"
+  },
+  "therapeutic-design": {
+    "label": "Therapeutic molecule design",
+    "family": "discovery"
+  },
+  "spatial-services": {
+    "label": "Spatial biomarker research services",
+    "family": "discovery"
+  },
+  "desktop-scanner": {
+    "label": "Desktop & benchtop scanners",
+    "family": "hardware"
+  },
+  "automated-scanner": {
+    "label": "High-throughput slide scanners",
+    "family": "hardware"
+  },
+  "slide-printer": {
+    "label": "Slide labeling & printing",
+    "family": "hardware"
+  },
+  "lab-automation": {
+    "label": "Wet-lab automation & robotics",
+    "family": "hardware"
+  },
+  "slide-digitization": {
+    "label": "Slide digitization services",
+    "family": "hardware"
+  }
+};
 function productIllustration([, , outline, detail]) {
   return `<span class='product-art' aria-hidden='true'>
     <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' focusable='false'>
@@ -4043,12 +4486,14 @@ function productIllustration([, , outline, detail]) {
 function productCardHeading(item, heading) {
   const art = PRODUCT_ART[item.category];
   if (!art) return `<span class='product-type'>${esc(item.type)}</span><${heading}>${esc(item.name)}</${heading}>`;
-  const [label, tone] = art;
+  const [, tone] = art;
+  const label = productTypeLabel(item);
   return `<header class='product-card-heading product-tone' data-category='${esc(item.category)}' data-tone='${tone}'>
     ${productIllustration(art)}
     <div class='product-card-title'>
-      <span class='product-category'>${esc(label)}</span>
+      <span class='product-category'>${esc(productFamilyLabel(item))}</span>
       <${heading}>${esc(item.name)}</${heading}>
+      <span class='product-taxonomy'>${esc(label)}</span>
       ${item.type.toLowerCase() !== label.toLowerCase() ? `<span class='product-type'>${esc(item.type)}</span>` : ''}
     </div>
   </header>`;
@@ -4076,61 +4521,125 @@ function openProducts(n, selectedItem) {
   openResourcePanel(n, 'Models & products', 'Close models and products', content);
 }
 
-// The company table uses the same records and detail panel as the map.
+// Company and product views share records, taxonomy, and the existing detail panel.
 const catalogCompanies = nodes.filter(n => ['company', 'startup'].includes(n.kind) && COMPANY_PRODUCTS[n.id]?.length);
+const catalogEntries = catalogCompanies.flatMap(n => COMPANY_PRODUCTS[n.id].map((item, index) => ({ n, item, index })));
 const catalogExpanded = new Set();
+let catalogFamily = '';
+let catalogView = 'company';
+let catalogVisibleCompanies = [];
 const catalogSearch = document.getElementById('catalog-search');
 const catalogType = document.getElementById('catalog-type');
 const catalogSort = document.getElementById('catalog-sort');
 const catalogRows = document.getElementById('catalog-rows');
+const catalogColumns = document.getElementById('catalog-columns');
 const catalogCount = document.getElementById('catalog-count');
 const catalogTableWrap = document.getElementById('catalog-table-wrap');
 const catalogEmpty = document.getElementById('catalog-empty');
+const catalogFamilies = document.getElementById('catalog-families');
+const catalogExpand = document.getElementById('catalog-expand');
 const compactCatalog = matchMedia('(max-width: 680px)');
 const companyNameOrder = new Intl.Collator(undefined, { sensitivity: 'base' });
-const catalogTypes = new Set(catalogCompanies.flatMap(n => COMPANY_PRODUCTS[n.id].map(item => item.category)));
-for (const [key, [label]] of Object.entries(PRODUCT_ART)) {
-  if (catalogTypes.has(key)) catalogType.add(new Option(label, key));
-}
 const searchText = value => value.toLowerCase().normalize('NFKD').replace(/\p{Diacritic}/gu, '');
+const productSubtypes = item => [item.subtype, ...(item.additionalSubtypes || [])];
+const productFamilies = item => [...new Set(productSubtypes(item).map(key => PRODUCT_SUBTYPES[key].family))];
+const productTypeLabel = item => productSubtypes(item).map(key => PRODUCT_SUBTYPES[key].label).join(' · ');
+const productFamilyLabel = item => productFamilies(item).map(key => PRODUCT_FAMILIES[key]).join(' · ');
+const FAMILY_TONES = { tests: 'rose', models: 'violet', analysis: 'teal', software: 'blue', discovery: 'green', hardware: 'slate' };
 const catalogChevron = `<svg class='catalog-chevron' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m6 3.5 4.5 4.5L6 12.5'/></svg>`;
-function renderCatalog() {
+const FAMILY_NAV_LABELS = { tests: 'Tests & risk', models: 'AI models', analysis: 'Pathology AI', software: 'Clinical software', discovery: 'Research & discovery', hardware: 'Hardware' };
+catalogFamilies.innerHTML = [['', 'All categories'], ...Object.entries(FAMILY_NAV_LABELS)].map(([key, label]) =>
+  `<button class='catalog-family' type='button' data-family='${key}' aria-pressed='${!key}'><span>${esc(label)}</span><span class='catalog-family-count' aria-hidden='true'></span></button>`
+).join('');
+function catalogSearchEntries() {
   const terms = searchText(catalogSearch.value).trim().split(/\s+/).filter(Boolean);
-  const category = catalogType.value;
-  const rows = catalogCompanies.map(n => {
-    const items = COMPANY_PRODUCTS[n.id].map((item, index) => ({ item, index })).filter(({ item }) => {
-      if (category && item.category !== category) return false;
-      const text = searchText([n.name, item.name, item.type, PRODUCT_ART[item.category]?.[0], item.group, item.summary].join(' '));
-      return terms.every(term => text.includes(term));
-    });
-    return { n, items };
-  }).filter(({ items }) => items.length);
+  return catalogEntries.filter(({ n, item }) => {
+    const text = searchText([n.name, item.name, item.type, productTypeLabel(item), productFamilyLabel(item), item.group, item.summary, ...(item.features || [])].join(' '));
+    return terms.every(term => text.includes(term));
+  });
+}
+function updateCatalogFacets(searched) {
+  for (const button of catalogFamilies.querySelectorAll('button')) {
+    const key = button.dataset.family;
+    const count = searched.filter(({ item }) => !key || productFamilies(item).includes(key)).length;
+    button.setAttribute('aria-pressed', String(catalogFamily === key));
+    button.querySelector('.catalog-family-count').textContent = count;
+  }
+  const selected = catalogType.value;
+  const allTypes = new Set(catalogEntries.flatMap(({ item }) => productSubtypes(item)));
+  catalogType.replaceChildren(new Option('All specific types', ''));
+  for (const [family, label] of Object.entries(PRODUCT_FAMILIES)) {
+    if (catalogFamily && family !== catalogFamily) continue;
+    const group = document.createElement('optgroup');
+    group.label = label;
+    const types = Object.entries(PRODUCT_SUBTYPES).filter(([key, type]) => type.family === family && allTypes.has(key));
+    types.sort((a, b) => companyNameOrder.compare(a[1].label, b[1].label));
+    for (const [key, type] of types) {
+      const count = searched.filter(({ item }) => productSubtypes(item).includes(key)).length;
+      const option = new Option(`${type.label} (${count})`, key);
+      option.disabled = !count && key !== selected;
+      group.append(option);
+    }
+    if (group.children.length) catalogType.append(group);
+  }
+  if ([...catalogType.options].some(option => option.value === selected)) catalogType.value = selected;
+}
+function catalogClassification(item) {
+  return `<span class='catalog-product-family'>${esc(productFamilyLabel(item))}</span><span class='catalog-product-type'>${esc(productTypeLabel(item))}</span>`;
+}
+function catalogProductButton({ n, item, index }, inList = false) {
+  const art = PRODUCT_ART[item.category];
+  return `<button class='catalog-product product-tone' type='button' data-company='${n.id}' data-product='${index}' data-tone='${art?.[1] || 'slate'}' aria-haspopup='dialog'>
+    ${art ? productIllustration(art) : ''}
+    <span><span class='catalog-product-name'>${esc(item.name)}</span>
+    ${inList ? `<span class='catalog-product-type'>${esc(productTypeLabel(item))}</span>` : `<span class='catalog-item-mobile'><span class='catalog-item-owner'>${esc(n.name)}</span>${catalogClassification(item)}</span>`}</span>
+  </button>`;
+}
+function renderCatalog() {
+  const searched = catalogSearchEntries();
+  updateCatalogFacets(searched);
+  const entries = searched.filter(({ item }) => (!catalogFamily || productFamilies(item).includes(catalogFamily)) && (!catalogType.value || productSubtypes(item).includes(catalogType.value)));
+  const rows = catalogCompanies.map(n => ({ n, entries: entries.filter(entry => entry.n === n) })).filter(row => row.entries.length);
   const order = catalogSort.value;
   rows.sort((a, b) => {
     const names = companyNameOrder.compare(a.n.name, b.n.name);
-    if (order === 'count') return b.items.length - a.items.length || names;
+    if (order === 'count') return b.entries.length - a.entries.length || names;
     return order === 'name-desc' ? -names : names;
   });
-  const total = rows.reduce((sum, row) => sum + row.items.length, 0);
-  catalogCount.textContent = `${rows.length} ${rows.length === 1 ? 'company' : 'companies'} · ${total} ${total === 1 ? 'product' : 'products'}`;
-  catalogTableWrap.hidden = !rows.length;
-  catalogEmpty.hidden = !!rows.length;
+  catalogVisibleCompanies = rows.map(({ n }) => n.id);
+  catalogCount.textContent = `${rows.length} ${rows.length === 1 ? 'company' : 'companies'} · ${entries.length} ${entries.length === 1 ? 'listing' : 'listings'}`;
+  catalogTableWrap.hidden = !entries.length;
+  catalogEmpty.hidden = !!entries.length;
+  catalogExpand.hidden = catalogView !== 'company' || !entries.length;
+  updateCatalogExpandLabel();
+  if (catalogView === 'product') {
+    catalogColumns.innerHTML = `<tr><th scope='col' class='catalog-item-col'>Product</th><th scope='col' class='catalog-owner-col'>Company</th><th scope='col' class='catalog-class-col'>Category &amp; specific type</th><th scope='col' class='catalog-summary-col'>What it does</th></tr>`;
+    entries.sort((a, b) => {
+      const products = companyNameOrder.compare(a.item.name, b.item.name);
+      if (order === 'name') return companyNameOrder.compare(a.n.name, b.n.name) || products;
+      if (order === 'type') return companyNameOrder.compare(productTypeLabel(a.item), productTypeLabel(b.item)) || products;
+      return products || companyNameOrder.compare(a.n.name, b.n.name);
+    });
+    catalogRows.innerHTML = entries.map(entry => `<tr class='catalog-item-row'>
+      <th scope='row'>${catalogProductButton(entry)}</th>
+      <td class='catalog-owner-col catalog-item-owner'>${esc(entry.n.name)}</td>
+      <td class='catalog-class-col'>${catalogClassification(entry.item)}</td>
+      <td class='catalog-summary-col catalog-item-summary'><span>${esc(entry.item.summary)}</span></td>
+    </tr>`).join('');
+    return;
+  }
+  catalogColumns.innerHTML = `<tr><th scope='col' class='catalog-company-col'>Company</th><th scope='col' class='catalog-preview-cell'>Models &amp; products</th><th scope='col' class='catalog-types catalog-type-col'>Categories</th><th scope='col' class='catalog-number catalog-number-col'>Count</th></tr>`;
   const detailColumns = compactCatalog.matches ? 2 : 4;
-  catalogRows.innerHTML = rows.map(({ n, items }) => {
+  catalogRows.innerHTML = rows.map(({ n, entries }) => {
     const expanded = catalogExpanded.has(n.id);
-    const previewNames = items.slice(0, 2).map(({ item }) => esc(item.name)).join(' · ');
-    const preview = previewNames + (items.length > 2 ? ` <span class='catalog-more'>+${items.length - 2} more</span>` : '');
-    const categories = new Set(items.map(({ item }) => item.category));
-    const tags = [...categories].map(key => {
-      const [label, tone] = PRODUCT_ART[key] || ['Other', 'slate'];
-      return `<span class='catalog-type-tag product-tone' data-tone='${tone}'>${esc(label)}</span>`;
-    }).join('');
-    const details = items.map(({ item, index }) => {
-      const art = PRODUCT_ART[item.category];
-      return `<li><button class='catalog-product product-tone' type='button' data-company='${n.id}' data-product='${index}' data-tone='${art?.[1] || 'slate'}' aria-haspopup='dialog'>
-        ${art ? productIllustration(art) : ''}
-        <span><span class='catalog-product-name'>${esc(item.name)}</span><span class='catalog-product-type'>${esc(item.type)}</span></span>
-      </button></li>`;
+    const previewNames = entries.slice(0, 2).map(({ item }) => esc(item.name)).join(' · ');
+    const preview = previewNames + (entries.length > 2 ? ` <span class='catalog-more'>+${entries.length - 2} more</span>` : '');
+    const families = new Set(entries.flatMap(({ item }) => productFamilies(item)));
+    const tags = [...families].map(key => `<span class='catalog-type-tag product-tone' data-tone='${FAMILY_TONES[key]}'>${esc(PRODUCT_FAMILIES[key])}</span>`).join('');
+    const details = Object.entries(PRODUCT_FAMILIES).map(([key, label]) => {
+      const group = entries.filter(({ item }) => (catalogFamily || PRODUCT_SUBTYPES[item.subtype].family) === key);
+      if (!group.length) return '';
+      return `<h3 class='catalog-group-title'>${esc(label)}<span>${group.length}</span></h3><ul class='catalog-product-list' aria-label='${esc(n.name)} ${esc(label)}'>${group.map(entry => `<li>${catalogProductButton(entry, true)}</li>`).join('')}</ul>`;
     }).join('');
     return `<tr class='catalog-company-row'>
       <th scope='row'>
@@ -4139,16 +4648,17 @@ function renderCatalog() {
       </th>
       <td class='catalog-preview catalog-preview-cell'>${preview}</td>
       <td class='catalog-types'><div class='catalog-tags'>${tags}</div></td>
-      <td class='catalog-number'>${items.length}</td>
+      <td class='catalog-number'>${entries.length}</td>
     </tr>
-    <tr class='catalog-details' id='catalog-detail-${n.id}'${expanded ? '' : ' hidden'}><td colspan='${detailColumns}'>
-      <ul class='catalog-product-list' aria-label="Products from ${esc(n.name)}">${details}</ul>
-    </td></tr>`;
+    <tr class='catalog-details' id='catalog-detail-${n.id}'${expanded ? '' : ' hidden'}><td colspan='${detailColumns}'>${details}</td></tr>`;
   }).join('');
 }
+function updateCatalogExpandLabel() {
+  const allExpanded = catalogVisibleCompanies.length && catalogVisibleCompanies.every(id => catalogExpanded.has(id));
+  catalogExpand.textContent = allExpanded ? 'Collapse all' : 'Expand all';
+}
 compactCatalog.addEventListener('change', () => {
-  const detailColumns = compactCatalog.matches ? 2 : 4;
-  catalogRows.querySelectorAll('.catalog-details td').forEach(cell => { cell.colSpan = detailColumns; });
+  catalogRows.querySelectorAll('.catalog-details td').forEach(cell => { cell.colSpan = compactCatalog.matches ? 2 : 4; });
 });
 catalogRows.addEventListener('click', event => {
   const button = event.target.closest('button[data-company]');
@@ -4162,15 +4672,37 @@ catalogRows.addEventListener('click', event => {
   if (expanded) catalogExpanded.add(company); else catalogExpanded.delete(company);
   button.setAttribute('aria-expanded', String(expanded));
   document.getElementById(button.getAttribute('aria-controls')).hidden = !expanded;
+  updateCatalogExpandLabel();
 });
+catalogFamilies.addEventListener('click', event => {
+  const button = event.target.closest('button[data-family]');
+  if (!button) return;
+  catalogFamily = button.dataset.family;
+  renderCatalog();
+});
+document.getElementById('catalog-view').addEventListener('click', event => {
+  const button = event.target.closest('button[data-view]');
+  if (!button || catalogView === button.dataset.view) return;
+  catalogView = button.dataset.view;
+  document.querySelectorAll('#catalog-view button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  const sorts = catalogView === 'company' ? [['name', 'Company A–Z'], ['name-desc', 'Company Z–A'], ['count', 'Most products']] : [['product', 'Product A–Z'], ['name', 'Company A–Z'], ['type', 'Specific type A–Z']];
+  catalogSort.replaceChildren(...sorts.map(([value, label]) => new Option(label, value)));
+  renderCatalog();
+});
+catalogExpand.onclick = () => {
+  const expand = !catalogVisibleCompanies.every(id => catalogExpanded.has(id));
+  catalogVisibleCompanies.forEach(id => { if (expand) catalogExpanded.add(id); else catalogExpanded.delete(id); });
+  renderCatalog();
+};
 catalogSearch.addEventListener('input', renderCatalog);
 catalogType.addEventListener('change', renderCatalog);
 catalogSort.addEventListener('change', renderCatalog);
 document.getElementById('catalog-reset').onclick = () => {
-  catalogSearch.value = catalogType.value = '';
-  catalogSort.value = 'name';
+  catalogSearch.value = catalogType.value = catalogFamily = '';
+  catalogSort.value = catalogView === 'company' ? 'name' : 'product';
   catalogExpanded.clear();
   renderCatalog();
+  catalogFamilies.scrollLeft = 0;
 };
 document.getElementById('catalog-toggle').onclick = () => {
   stopPlay();
