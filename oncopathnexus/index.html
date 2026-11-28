@@ -210,7 +210,7 @@
   .catalog-product-type { display: block; margin-top: 3px; color: var(--product-ink); font-size: 14px; line-height: 1.4; }
   .catalog-empty { padding: 24px; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--muted); }
   .catalog-description { margin: 12px 0 0; color: var(--muted); font-size: 16px; }
-  .catalog-families { display: flex; gap: 7px; overflow-x: auto; padding: 4px 2px 7px; margin: 21px -2px 0; scrollbar-width: thin; }
+  .catalog-families { display: flex; gap: 6px; overflow-x: auto; padding: 4px 2px 7px; margin: 21px -2px 0; scrollbar-width: thin; }
   .catalog-family { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: none; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--muted); font: 500 14px/1.3 var(--sans); cursor: pointer; }
   .catalog-family[aria-pressed='true'] { background: #4c4396; border-color: #4c4396; color: #fff; }
   .catalog-family:hover { border-color: #8277ba; }
@@ -430,7 +430,7 @@
           Back to map
         </button>
       </div>
-      <p class='catalog-description'>Explore tests, models, software and equipment by their specific purpose.</p>
+      <p class='catalog-description'>Explore tests, models, software, equipment and cancer medicines by their specific purpose.</p>
       <div id='catalog-families' class='catalog-families' role='group' aria-label='Product category'></div>
       <div class='catalog-filters'>
         <div class='catalog-field catalog-filter-search'>
@@ -511,6 +511,3146 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "az": [
+    {
+      "name": "TAGRISSO® (osimertinib)",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "EGFR tyrosine kinase inhibitor · Oncology medicine",
+      "summary": "Oral targeted therapy for selected EGFR-mutated non-small cell lung cancers. Inhibits EGFR signaling in molecularly selected tumors.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official TAGRISSO® (osimertinib) information",
+          "url": "https://medicalinformation.astrazeneca-us.com/prescribing-information/tagrisso.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "IMFINZI® (durvalumab)",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "PD-L1 checkpoint inhibitor · Oncology medicine",
+      "summary": "Antibody immunotherapy that blocks PD-L1. Used in defined treatment settings across lung cancer and several other solid tumors.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official IMFINZI® (durvalumab) information",
+          "url": "https://medicalinformation.astrazeneca-us.com/prescribing-information/imfinzi.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "ENHERTU® (trastuzumab deruxtecan)",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "HER2-directed antibody–drug conjugate · Oncology medicine",
+      "summary": "Links a HER2-directed antibody to a topoisomerase I inhibitor payload for selected HER2-expressing or HER2-mutated cancers. Jointly developed and commercialized with Daiichi Sankyo.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official ENHERTU® (trastuzumab deruxtecan) information",
+          "url": "https://medicalinformation.astrazeneca-us.com/prescribing-information/enhertu.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "DATROWAY® (datopotamab deruxtecan)",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "TROP2-directed antibody–drug conjugate · Oncology medicine",
+      "summary": "TROP2-targeted antibody carrying a topoisomerase I inhibitor payload. Used in specified breast and EGFR-mutated lung cancer settings; developed with Daiichi Sankyo.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official DATROWAY® (datopotamab deruxtecan) information",
+          "url": "https://medicalinformation.astrazeneca-us.com/prescribing-information/datroway.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "merck": [
+    {
+      "name": "KEYTRUDA® (pembrolizumab)",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "PD-1 checkpoint inhibitor · Oncology medicine",
+      "summary": "Antibody immunotherapy that blocks PD-1. Used alone or in combination in defined cancer settings, with biomarker-based selection required for some indications.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official KEYTRUDA® (pembrolizumab) information",
+          "url": "https://www.merck.com/product/usa/pi_circulars/k/keytruda/keytruda_pi.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "WELIREG® (belzutifan)",
+      "category": "hif2-inhibitor",
+      "subtype": "hif2-inhibitor",
+      "type": "HIF-2α inhibitor · Oncology medicine",
+      "summary": "Oral targeted medicine that inhibits hypoxia-inducible factor 2 alpha. Used in specified renal cell carcinoma and von Hippel–Lindau-associated tumor settings.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official WELIREG® (belzutifan) information",
+          "url": "https://www.welireghcp.com/"
+        },
+        {
+          "label": "Merck mechanism and oncology overview",
+          "url": "https://www.merck.com/research/product-pipeline/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "LYNPARZA® (olaparib)",
+      "category": "parp-inhibitor",
+      "subtype": "parp-inhibitor",
+      "type": "PARP inhibitor · Oncology medicine",
+      "summary": "Oral PARP inhibitor for selected ovarian, breast, pancreatic, and prostate cancer settings. Developed and commercialized through Merck’s collaboration with AstraZeneca.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official LYNPARZA® (olaparib) information",
+          "url": "https://www.lynparza.com/"
+        },
+        {
+          "label": "Merck development and mechanism overview",
+          "url": "https://www.merck.com/research/product-pipeline/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "lilly": [
+    {
+      "name": "Verzenio® (abemaciclib)",
+      "category": "cdk46-inhibitor",
+      "subtype": "cdk46-inhibitor",
+      "type": "CDK4/6 inhibitor · Oncology medicine",
+      "summary": "Oral inhibitor of cyclin-dependent kinases 4 and 6. Used in defined hormone receptor-positive, HER2-negative early or advanced breast cancer settings.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official Verzenio® (abemaciclib) information",
+          "url": "https://uspl.lilly.com/verzenio/verzenio.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Retevmo® (selpercatinib)",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "RET kinase inhibitor · Oncology medicine",
+      "summary": "Oral targeted therapy for selected RET-altered cancers, including RET fusion-positive lung and thyroid cancers and RET-mutated medullary thyroid cancer.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official Retevmo® (selpercatinib) information",
+          "url": "https://uspl.lilly.com/retevmo/retevmo.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Jaypirca® (pirtobrutinib)",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "Noncovalent BTK inhibitor · Oncology medicine",
+      "summary": "Oral noncovalent Bruton tyrosine kinase inhibitor used in specified chronic lymphocytic leukemia, small lymphocytic lymphoma, and mantle cell lymphoma settings.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official Jaypirca® (pirtobrutinib) information",
+          "url": "https://uspl.lilly.com/jaypirca/jaypirca.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "abbvie": [
+    {
+      "name": "EMRELIS™ (telisotuzumab vedotin)",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "c-Met-directed antibody–drug conjugate · Oncology medicine",
+      "summary": "Antibody–drug conjugate for previously treated advanced non-squamous non-small cell lung cancer with high c-Met protein overexpression. Tissue IHC testing identifies the relevant biomarker.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official EMRELIS™ (telisotuzumab vedotin) information",
+          "url": "https://www.emrelis.com/"
+        },
+        {
+          "label": "Official prescribing information and mechanism",
+          "url": "https://www.rxabbvie.com/content/dam/rxabbvie/pdf/emrelis_pi.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "VENCLEXTA® (venetoclax)",
+      "category": "bcl2-inhibitor",
+      "subtype": "bcl2-inhibitor",
+      "type": "BCL-2 inhibitor · Oncology medicine",
+      "summary": "Oral BCL-2 inhibitor used in defined chronic lymphocytic leukemia, small lymphocytic lymphoma, and acute myeloid leukemia treatment settings. Developed with Roche/Genentech.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official VENCLEXTA® (venetoclax) information",
+          "url": "https://www.venclexta.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "EPKINLY® (epcoritamab)",
+      "category": "bispecific-antibody",
+      "subtype": "bispecific-antibody",
+      "type": "CD20×CD3 bispecific antibody · Oncology medicine",
+      "summary": "T-cell-engaging bispecific antibody for specified relapsed or refractory B-cell lymphomas, including diffuse large B-cell and follicular lymphoma. Co-developed by AbbVie and Genmab.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official EPKINLY® (epcoritamab) information",
+          "url": "https://www.epkinly.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "amgen": [
+    {
+      "name": "LUMAKRAS® (sotorasib)",
+      "category": "kras-inhibitor",
+      "subtype": "kras-inhibitor",
+      "type": "KRAS G12C inhibitor · Oncology medicine",
+      "summary": "Oral small molecule targeting KRAS G12C. Used in selected KRAS G12C-mutated non-small cell lung cancer and colorectal cancer treatment settings.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official LUMAKRAS® (sotorasib) information",
+          "url": "https://www.amgen.com/products"
+        },
+        {
+          "label": "Official mechanism and oncology portfolio",
+          "url": "https://www.amgenpipeline.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BLINCYTO® (blinatumomab)",
+      "category": "bispecific-antibody",
+      "subtype": "bispecific-antibody",
+      "type": "CD19×CD3 bispecific T-cell engager · Oncology medicine",
+      "summary": "Bispecific T-cell engager for defined CD19-positive B-cell precursor acute lymphoblastic leukemia settings. Brings CD3-positive T cells into contact with CD19-positive target cells.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official BLINCYTO® (blinatumomab) information",
+          "url": "https://www.blincytohcp.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "IMDELLTRA® (tarlatamab)",
+      "category": "bispecific-antibody",
+      "subtype": "bispecific-antibody",
+      "type": "DLL3×CD3 bispecific T-cell engager · Oncology medicine",
+      "summary": "DLL3-directed T-cell engager for extensive-stage small cell lung cancer after disease progression on or after platinum-based chemotherapy. Connects DLL3-positive tumor cells with CD3-positive T cells.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official IMDELLTRA® (tarlatamab) information",
+          "url": "https://www.imdelltrahcp.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "jnj": [
+    {
+      "name": "BALVERSA® (erdafitinib)",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "FGFR kinase inhibitor · Oncology medicine",
+      "summary": "Oral targeted therapy for selected advanced urothelial cancers with susceptible FGFR alterations after prior systemic treatment. Molecular testing identifies eligible tumors.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official BALVERSA® (erdafitinib) information",
+          "url": "https://www.balversa.com/about-balversa/how-balversa-works/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CARVYKTI® (ciltacabtagene autoleucel)",
+      "category": "car-t-cell-therapy",
+      "subtype": "car-t-cell-therapy",
+      "type": "BCMA-directed CAR-T cell therapy · Oncology medicine",
+      "summary": "Personalized cell therapy made from a patient’s own genetically modified T cells to recognize BCMA on myeloma cells. Developed with Legend Biotech for specified relapsed or refractory multiple myeloma settings.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official CARVYKTI® (ciltacabtagene autoleucel) information",
+          "url": "https://www.carvykti.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "RYBREVANT® / RYBREVANT FASPRO™",
+      "category": "bispecific-antibody",
+      "subtype": "bispecific-antibody",
+      "type": "EGFR×MET bispecific antibody · Oncology medicine",
+      "summary": "Amivantamab antibody therapy offered as an infusion or subcutaneous formulation. Used in specified EGFR-altered lung cancer settings; the FASPRO formulation also has a defined head and neck cancer indication.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official RYBREVANT® / RYBREVANT FASPRO™ information",
+          "url": "https://www.rybrevant.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "DARZALEX® / DARZALEX FASPRO®",
+      "category": "therapeutic-antibody",
+      "subtype": "therapeutic-antibody",
+      "type": "CD38-directed antibody · Oncology medicine",
+      "summary": "Daratumumab-based antibody treatments for specified multiple myeloma settings. Available as an intravenous infusion and a subcutaneous formulation with hyaluronidase.",
+      "group": "Selected oncology medicines",
+      "sources": [
+        {
+          "label": "Official DARZALEX® / DARZALEX FASPRO® information",
+          "url": "https://www.darzalex.com/about/what-are-darzalex-darzalex-faspro/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "histai": [
+    {
+      "name": "Hibou-B",
+      "category": "foundation",
+      "subtype": "pathology-vision",
+      "type": "Pathology vision foundation model · Research model",
+      "summary": "Base-size vision transformer that extracts representations from pathology image patches for downstream computational pathology research. Released with downloadable model weights.",
+      "sources": [
+        {
+          "label": "Official Hibou-B overview",
+          "url": "https://hist.ai/news/hibou-foundation-model/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Hibou-L",
+      "category": "foundation",
+      "subtype": "pathology-vision",
+      "type": "Pathology vision foundation model · Research model",
+      "summary": "Larger Hibou model for extracting histology image features and adapting to downstream pathology tasks such as classification, grading, and biomarker research.",
+      "sources": [
+        {
+          "label": "Official Hibou-L overview",
+          "url": "https://hist.ai/news/hibou-foundation-model/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CellDX",
+      "category": "viewer",
+      "subtype": "research-image-management",
+      "type": "Cloud digital pathology platform",
+      "summary": "Cloud workspace for viewing, storing, annotating, and sharing whole-slide images. Combines collaborative slide workflows with access to pathology data and integrated AI analysis.",
+      "sources": [
+        {
+          "label": "Official CellDX overview",
+          "url": "https://hist.ai/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AI Autopilot",
+      "category": "builder",
+      "subtype": "model-development",
+      "type": "Agent-assisted pathology model development",
+      "summary": "Tools for building and deploying custom pathology classifiers through an AI agent. Handles cohort creation, model selection, cloud training, monitoring, and deployment into CellDX.",
+      "sources": [
+        {
+          "label": "Official AI Autopilot overview",
+          "url": "https://hist.ai/ai-autopilot/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Data Hub",
+      "category": "dataset",
+      "subtype": "biological-atlas",
+      "type": "Curated pathology image dataset marketplace",
+      "summary": "Searchable collection of de-identified whole-slide images covering tissue types, stains, and disease states, including cancer. Supports cohort selection and image licensing for AI research and development.",
+      "sources": [
+        {
+          "label": "Official Data Hub overview",
+          "url": "https://hist.ai/data-hub/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "ibex": [
+    {
+      "name": "Ibex Prostate",
+      "category": "vision",
+      "subtype": "prostate-pathology",
+      "type": "Prostate tissue detection and grading AI",
+      "summary": "Assists pathologists reviewing prostate biopsies with cancer detection, grading, and identification of clinically relevant tissue features in digital slides.",
+      "sources": [
+        {
+          "label": "Official Ibex Prostate overview",
+          "url": "https://ibex-ai.com/ibex-prostate/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Breast H&E",
+      "category": "vision",
+      "subtype": "breast-pathology",
+      "type": "Breast H&E analysis AI",
+      "summary": "Detects and highlights breast tissue morphologies in biopsies and excisions, including invasive carcinoma, in situ disease, microinvasion, and other findings for pathologist review.",
+      "sources": [
+        {
+          "label": "Official Ibex Breast H&E overview",
+          "url": "https://ibex-ai.com/breast/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Breast HER2",
+      "category": "biomarker",
+      "subtype": "her2-ihc-scoring",
+      "type": "HER2 immunohistochemistry scoring AI",
+      "summary": "Identifies invasive tumor and classifies tumor-cell staining patterns to support HER2 scoring, with visualization of cell classifications and staining percentages.",
+      "sources": [
+        {
+          "label": "Official Ibex Breast HER2 overview",
+          "url": "https://ibex-ai.com/breast/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Breast ER/PR",
+      "category": "biomarker",
+      "subtype": "er-pr-ihc-scoring",
+      "type": "Hormone receptor immunohistochemistry scoring AI",
+      "summary": "Quantifies estrogen and progesterone receptor staining in invasive breast tumor cells, with cell-level staining classifications and calculated expression scores.",
+      "sources": [
+        {
+          "label": "Official Ibex Breast ER/PR overview",
+          "url": "https://ibex-ai.com/breast/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Breast Ki67",
+      "category": "biomarker",
+      "subtype": "ki67-ihc-scoring",
+      "type": "Ki67 immunohistochemistry scoring AI",
+      "summary": "Quantifies Ki67 staining in invasive breast tumor cells to support proliferation assessment, with interactive tumor contours and cell-level visualizations.",
+      "sources": [
+        {
+          "label": "Official Ibex Breast Ki67 overview",
+          "url": "https://ibex-ai.com/breast/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Lymph Node",
+      "category": "vision",
+      "subtype": "lymph-node",
+      "type": "Lymph node metastasis detection AI",
+      "summary": "Highlights suspected metastatic cancer in lymph node slides to assist pathologists searching for small deposits and reviewing metastatic disease.",
+      "sources": [
+        {
+          "label": "Official Ibex Lymph Node overview",
+          "url": "https://ibex-ai.com/breast/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ibex Gastric",
+      "category": "vision",
+      "subtype": "gi-pathology",
+      "type": "Gastric biopsy analysis AI",
+      "summary": "Assists gastric biopsy review by highlighting cancer and other relevant pathological findings, including dysplasia and regions suspicious for H. pylori.",
+      "sources": [
+        {
+          "label": "Official Ibex Gastric overview",
+          "url": "https://ibex-ai.com/gastric/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "primaa": [
+    {
+      "name": "Cleo Breast",
+      "category": "vision",
+      "subtype": "breast-pathology",
+      "type": "Breast tissue analysis AI",
+      "summary": "Supports breast biopsy and excision review with detection of invasive and in situ carcinoma, mitotic activity, calcifications, and lymph node metastases. Findings are reviewed by pathologists.",
+      "sources": [
+        {
+          "label": "Official Cleo Breast overview",
+          "url": "https://primaalab.com/solution/cleo-breast-ai-solution-to-detect-breast-cancer/"
+        }
+      ],
+      "checked": "2026-11-28",
+      "additionalSubtypes": [
+        "lymph-node"
+      ]
+    },
+    {
+      "name": "Cleo Skin",
+      "category": "vision",
+      "subtype": "skin-pathology",
+      "type": "Skin tissue analysis AI",
+      "summary": "Assists review of skin lesions including melanoma, nevus, squamous cell carcinoma, and basal cell carcinoma. Provides lesion and margin measurements plus mitosis detection for pathologist review.",
+      "sources": [
+        {
+          "label": "Official Cleo Skin overview",
+          "url": "https://primaalab.com/solution/cleo-skin-ai-solution-for-skin-cancer/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "aira": [
+    {
+      "name": "AIRAProstate",
+      "category": "vision",
+      "subtype": "prostate-pathology",
+      "type": "Prostate morphology analysis AI · Research use",
+      "summary": "Analyzes prostate core biopsies and prostatectomy slides for Gleason patterns, ISUP grade groups, and additional tissue features. Provides slide review tools and quantification for research workflows.",
+      "sources": [
+        {
+          "label": "Official AIRAProstate overview",
+          "url": "https://www.airamatrix.com/products/airaprostate"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AIRAStrat",
+      "category": "predictive",
+      "subtype": "patient-outcome",
+      "type": "Prostate cancer risk prediction AI · Research use",
+      "summary": "Combines pathology and other modalities to study prostate cancer risk at biopsy and after prostatectomy. Predicts outcomes including upgrading, biochemical recurrence, metastasis, and metastasis-free survival.",
+      "sources": [
+        {
+          "label": "Official AIRAStrat overview",
+          "url": "https://www.airamatrix.com/products/airastrat"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AIRAPredict",
+      "category": "biomarker",
+      "subtype": "he-biomarkers",
+      "type": "H&E molecular marker prediction AI · Research use",
+      "summary": "Predicts molecular alterations from routine H&E prostate tissue images, including PTEN deletion, ERG fusion, and BRCA2-related findings, with image-based explanations.",
+      "sources": [
+        {
+          "label": "Official AIRAPredict overview",
+          "url": "https://www.airamatrix.com/products/airapredict"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AIRAQc",
+      "category": "quality",
+      "subtype": "slide-quality-control",
+      "type": "Whole-slide image quality-control AI",
+      "summary": "Identifies and quantifies slide-processing and scanning artifacts, including folds, air bubbles, pen marks, and out-of-focus regions. Flags slides for reprocessing or rescanning using configurable thresholds.",
+      "sources": [
+        {
+          "label": "Official AIRAQc overview",
+          "url": "https://www.airamatrix.com/products/airaqc"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AIRATox",
+      "category": "research",
+      "subtype": "preclinical-pathology",
+      "type": "Toxicologic pathology analysis AI · Research use",
+      "summary": "Supports nonclinical safety studies with whole-slide artifact detection, tissue triage, abnormality quantification, annotations, and reporting.",
+      "sources": [
+        {
+          "label": "Official AIRATox overview",
+          "url": "https://www.airamatrix.com/products/airatox"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AIRADHI",
+      "category": "workflow",
+      "subtype": "research-image-management",
+      "type": "Preclinical pathology image and study management",
+      "summary": "Browser-based image management system for whole-slide images, study metadata, and analysis results. Supports annotations, image comparisons, reporting, and controlled collaboration for preclinical studies.",
+      "sources": [
+        {
+          "label": "Official AIRADHI overview",
+          "url": "https://www.airamatrix.com/products/airadhi"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "pathtools": [
+    {
+      "name": "PathTools",
+      "category": "vision",
+      "subtype": "prostate-pathology",
+      "type": "AI-assisted prostate grading platform",
+      "summary": "Maps gland-level Gleason patterns on digitized prostate biopsy slides with heatmaps and contours to support pathologist review.",
+      "sources": [
+        {
+          "label": "Official PathTools platform overview",
+          "url": "https://pathtools.ai/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "precisedx": [
+    {
+      "name": "PreciseBreast®",
+      "category": "prognosis",
+      "subtype": "prognostic-risk",
+      "type": "AI-based breast cancer recurrence risk test",
+      "summary": "Combines AI-derived histologic grade from breast tissue images with clinical factors to stratify early-stage breast cancer recurrence risk. Uses the company's OncoIntelligence platform.",
+      "sources": [
+        {
+          "label": "Official PreciseBreast® overview",
+          "url": "https://www.precisedx.ai/precisebreast"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "gestalt": [
+    {
+      "name": "PathFlow®",
+      "category": "workflow",
+      "subtype": "pathology-ims",
+      "type": "Digital pathology image and case management",
+      "summary": "Vendor-neutral platform for whole-slide image and case management, LIS integration, digital review, and AI integration. Includes clinical pathology, education, and research modules.",
+      "sources": [
+        {
+          "label": "Official PathFlow® overview",
+          "url": "https://gestaltdiagnostics.com/pathflow/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PathCloud®",
+      "category": "viewer",
+      "subtype": "image-viewer",
+      "type": "Cloud pathology slide sharing",
+      "summary": "Web-based platform for storing, viewing, organizing, and sharing whole-slide images with colleagues and external partners. Supports entry into collaborative digital pathology workflows.",
+      "sources": [
+        {
+          "label": "Official PathCloud® overview",
+          "url": "https://gestaltdiagnostics.com/pathcloud/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Public Health Reporting (ELR / ePath)",
+      "category": "workflow",
+      "subtype": "cancer-registry-reporting",
+      "type": "Cancer registry and electronic pathology reporting service",
+      "summary": "Automates laboratory and pathology reporting to public health agencies and cancer registries through an interface within Gestalt's Health Data Cloud.",
+      "sources": [
+        {
+          "label": "Official Public Health Reporting (ELR / ePath) overview",
+          "url": "https://gestaltdiagnostics.com/elr/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "pathpresenter": [
+    {
+      "name": "PathPresenter Clinical Viewer",
+      "category": "viewer",
+      "subtype": "pathology-ims",
+      "type": "Clinical pathology viewing and workflow software",
+      "summary": "Combines whole-slide image viewing with clinical case management and sign-out workflows. Integrates scanners, storage, laboratory systems, and AI tools within the PathPresenter platform.",
+      "sources": [
+        {
+          "label": "Official PathPresenter Clinical Viewer overview",
+          "url": "https://www.pathpresenter.com/clinical-care/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "ConsultConnect",
+      "category": "workflow",
+      "subtype": "telepathology",
+      "type": "Remote pathology second-opinion platform",
+      "summary": "Cloud portal for receiving, viewing, and reporting second-opinion pathology cases from referring institutions. Includes tools for onboarding referring hospitals and managing consultation workflows.",
+      "sources": [
+        {
+          "label": "Official ConsultConnect overview",
+          "url": "https://www.pathpresenter.com/consultconnect/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PathPresenter Education",
+      "category": "viewer",
+      "subtype": "pathology-education",
+      "type": "Enterprise digital pathology education platform",
+      "summary": "Institution-branded platform for managing digital pathology teaching content, whole-slide images, curricula, presentations, user groups, and assessments.",
+      "sources": [
+        {
+          "label": "Official PathPresenter Education overview",
+          "url": "https://www.pathpresenter.com/education/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PathPresenter Biobanking / Research",
+      "category": "dataset",
+      "subtype": "research-image-management",
+      "type": "Pathology biorepository and research module",
+      "summary": "Helps institutions organize, search, and share pathology imaging data and associated metadata for biomedical research and biorepository collaborations.",
+      "sources": [
+        {
+          "label": "Official PathPresenter Biobanking / Research overview",
+          "url": "https://www.pathpresenter.com/research/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PathPresenter Public",
+      "category": "viewer",
+      "subtype": "pathology-education",
+      "type": "Public digital pathology education platform",
+      "summary": "Freemium platform for creating, viewing, annotating, and sharing pathology teaching cases and presentations with interactive whole-slide images.",
+      "sources": [
+        {
+          "label": "Official PathPresenter Public overview",
+          "url": "https://www.pathpresenter.com/public/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "deciphex": [
+    {
+      "name": "Diagnexia",
+      "category": "service",
+      "subtype": "diagnostic-pathology-services",
+      "type": "Digital diagnostic pathology service",
+      "summary": "Provides access to subspecialist pathologists for primary reporting and second opinions through a digital case-referral and reporting workflow.",
+      "sources": [
+        {
+          "label": "Official Diagnexia overview",
+          "url": "https://www.diagnexia.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Patholytix",
+      "category": "workflow",
+      "subtype": "research-image-management",
+      "type": "Pharmaceutical research pathology platform",
+      "summary": "Image management and collaboration platform for experimental, toxicologic, and translational pathology. Organizes whole-slide data, study review, annotations, and integrated AI across research teams.",
+      "sources": [
+        {
+          "label": "Official Patholytix overview",
+          "url": "https://www.patholytix.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Patholytix Foresight",
+      "category": "research",
+      "subtype": "preclinical-pathology",
+      "type": "Toxicologic pathology decision-support AI · Research use",
+      "summary": "Integrates AI classifiers into Patholytix to assist review of nonclinical safety studies, including finding and assessing tissue abnormalities in whole-slide images.",
+      "sources": [
+        {
+          "label": "Official Patholytix Foresight overview",
+          "url": "https://www.patholytix.com/resources/introducing-foresight-a-unique-decision-support-ai-tool-for-the-bench-toxicologic-pathologist"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Patholytix Research Services",
+      "category": "service",
+      "subtype": "pathology-research-services",
+      "type": "Translational and clinical trial pathology services",
+      "summary": "Combines subspecialist pathology review, quantitative tissue analysis, and AI-supported workflows for biomarker research and clinical trial tissue studies. Formerly Diagnexia Analytix.",
+      "sources": [
+        {
+          "label": "Official Patholytix Research Services overview",
+          "url": "https://www.patholytixrs.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CipherX",
+      "category": "foundation",
+      "subtype": "pathology-ai-engine",
+      "type": "Integrated pathology AI engine",
+      "summary": "Combines pathology foundation models with named tissue-structure representations for analysis and digital biomarker development. Delivered through Diagnexia, Patholytix, and research services rather than as a standalone licensed product.",
+      "sources": [
+        {
+          "label": "Official CipherX overview",
+          "url": "https://www.deciphex.com/news/deciphex-launches-cipherx"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "fujifilm": [
+    {
+      "name": "Synapse® Pathology",
+      "category": "workflow",
+      "subtype": "pathology-ims",
+      "type": "Digital pathology image and workflow management",
+      "summary": "Digital pathology platform, formerly Dynamyx, for managing, viewing, and sharing whole-slide images. Connects pathology review and collaboration with enterprise imaging and integrated AI workflows.",
+      "sources": [
+        {
+          "label": "Official Synapse® Pathology overview",
+          "url": "https://healthcaresolutions-us.fujifilm.com/products/enterprise-imaging/synapse-pathology/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "ambry": [
+    {
+      "name": "CancerNext®",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "type": "Multigene hereditary cancer panel",
+      "summary": "Tests inherited variants in genes associated with hereditary cancer syndromes to support cancer-risk assessment, management, and evaluation of relatives. Can be paired with +RNAinsight.",
+      "sources": [
+        {
+          "label": "Official CancerNext® overview",
+          "url": "https://ambrygen.com/providers/genetic-testing/1/oncology/cancernext"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CancerNext-Expanded®",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "type": "Expanded hereditary cancer panel",
+      "summary": "Expanded multigene panel for inherited cancer predisposition, covering a broader set of cancer-associated genes than CancerNext. Offers paired DNA and RNA testing with +RNAinsight.",
+      "sources": [
+        {
+          "label": "Official CancerNext-Expanded® overview",
+          "url": "https://ambrygen.com/genetic-testing/cancernext-expanded-r"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "+RNAinsight®",
+      "category": "hereditary",
+      "subtype": "hereditary-rna-analysis",
+      "type": "Hereditary cancer RNA analysis · DNA-panel add-on",
+      "summary": "Adds functional RNA evidence to eligible hereditary cancer DNA panels. Helps identify and interpret splicing effects and deep intronic variants that can be difficult to resolve from DNA testing alone.",
+      "sources": [
+        {
+          "label": "Official +RNAinsight® overview",
+          "url": "https://ambrygen.com/providers/rna-insight"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "personalis": [
+    {
+      "name": "NeXT Personal® Dx",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD and monitoring test",
+      "summary": "Uses tumor and matched-normal whole-genome sequencing to design a personalized blood-based assay for molecular residual disease, recurrence monitoring, and treatment-response assessment in solid tumors.",
+      "sources": [
+        {
+          "label": "Official NeXT Personal® Dx overview",
+          "url": "https://www.personalis.com/for-clinicians/next-personal-dx/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NeXT Dx®",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Tumor-normal comprehensive genomic profiling test",
+      "summary": "Combines whole-exome DNA and whole-transcriptome RNA sequencing with matched-normal analysis for solid tumors. Reports genomic alterations, RNA fusions, and biomarkers relevant to therapy selection and clinical trials.",
+      "sources": [
+        {
+          "label": "Official NeXT Dx® overview",
+          "url": "https://www.personalis.com/for-clinicians/next-dx/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "ImmunoID NeXT®",
+      "category": "biomarker",
+      "subtype": "immunogenomics-research",
+      "type": "Tumor immunogenomics profiling · Biopharma research platform",
+      "summary": "Combines tumor exome and transcriptome sequencing with analytics for biomarker research. Characterizes tumor mutations, immune repertoires, neoantigens, and the tumor microenvironment for drug-development studies and clinical trials.",
+      "sources": [
+        {
+          "label": "Official ImmunoID NeXT® overview",
+          "url": "https://www.personalis.com/for-biopharma/immunoid-next/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "guardant": [
+    {
+      "name": "Guardant360® Liquid CDx",
+      "category": "blood",
+      "subtype": "liquid-biopsy",
+      "type": "Blood-based comprehensive genomic profiling · Companion diagnostic",
+      "summary": "Profiles cancer-associated genomic alterations in circulating cell-free DNA from blood to support therapy selection in advanced solid tumors. Includes companion-diagnostic indications and additional professional-service biomarker reporting.",
+      "sources": [
+        {
+          "label": "Official Guardant360® Liquid CDx overview",
+          "url": "https://www.guardantcomplete.com/hcp/solutions/guardant360-liquid-cdx"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Guardant360® Tissue",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Tissue multiomic profiling · Laboratory-developed test",
+      "summary": "Profiles DNA, RNA, and epigenomic features from tumor tissue for treatment selection in advanced solid tumors. Includes genomic biomarkers, with optional IHC and hereditary cancer testing.",
+      "sources": [
+        {
+          "label": "Official Guardant360® Tissue overview",
+          "url": "https://www.guardantcomplete.com/hcp/solutions/guardant360-tissue"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Guardant Reveal®",
+      "category": "tissue-free-mrd",
+      "subtype": "tissue-free-mrd",
+      "type": "Tissue-free ctDNA MRD and response monitoring test",
+      "summary": "Uses blood-based methylation analysis to detect and quantify circulating tumor DNA without a prior tumor specimen. Supports residual-disease detection, recurrence surveillance, and therapy-response monitoring.",
+      "sources": [
+        {
+          "label": "Official Guardant Reveal® overview",
+          "url": "https://www.guardantcomplete.com/hcp/solutions/guardant-reveal"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Guardant Reveal® Ultra",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD test",
+      "summary": "Personalized MRD assay incorporating genomic alterations identified in a patient’s tumor. Adds a tumor-informed option alongside Guardant Reveal’s tissue-free monitoring approach. Launched in November 2026.",
+      "sources": [
+        {
+          "label": "Official Guardant Reveal® Ultra overview",
+          "url": "https://investors.guardanthealth.com/press-releases/press-releases/2026/Guardant-Health-Launches-Guardant-Reveal-Ultra-to-Deliver-Leading-Sensitivity-in-MRD-Testing/default.aspx"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Shield™",
+      "category": "colorectal-screening",
+      "subtype": "colorectal-blood-screening",
+      "type": "Blood-based colorectal cancer screening test",
+      "summary": "Prescription blood test that screens for colorectal cancer in adults aged 45 and older at average risk. Analyzes cell-free DNA signals associated with colorectal cancer.",
+      "sources": [
+        {
+          "label": "Official Shield™ overview",
+          "url": "https://shieldbloodtest.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "exact": [
+    {
+      "name": "Cologuard Plus®",
+      "category": "colorectal-screening",
+      "subtype": "colorectal-stool-screening",
+      "type": "Stool DNA and hemoglobin colorectal screening test",
+      "summary": "At-home stool test combining molecular markers and hemoglobin detection to screen for colorectal cancer and advanced precancerous lesions in average-risk adults aged 45 and older.",
+      "sources": [
+        {
+          "label": "Official Cologuard Plus® overview",
+          "url": "https://www.exactsciences.com/cancer-testing/cologuard-plus"
+        },
+        {
+          "label": "Official Cologuard Plus biomarkers and indications",
+          "url": "https://www.cologuardhcp.com/resources/faq"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Cancerguard®",
+      "category": "screening",
+      "subtype": "early-detection",
+      "type": "Multi-cancer early detection blood test",
+      "summary": "Prescription blood test designed to identify cancer-associated signals across multiple cancer types and subtypes in people without symptoms. Complements established screening programs.",
+      "sources": [
+        {
+          "label": "Official Cancerguard® overview",
+          "url": "https://www.exactsciences.com/cancer-testing/cancerguard-mced"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Oncotype DX Breast Recurrence Score®",
+      "category": "gene-expression-risk",
+      "subtype": "breast-genomic-recurrence",
+      "type": "Breast cancer genomic recurrence and chemotherapy-benefit test",
+      "summary": "Measures expression of 21 genes in tumor tissue to estimate distant recurrence risk and chemotherapy benefit in hormone receptor-positive, HER2-negative early-stage breast cancer.",
+      "sources": [
+        {
+          "label": "Official Oncotype DX Breast Recurrence Score® overview",
+          "url": "https://www.exactsciences.com/cancer-testing/oncotype-dx-breast-recurrence-score-invasive-ductal"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Oncodetect®",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD and monitoring test",
+      "summary": "Uses a patient-specific tumor profile to look for circulating tumor DNA in blood during or after treatment. Supports molecular residual disease assessment and monitoring across solid tumors.",
+      "sources": [
+        {
+          "label": "Official Oncodetect® overview",
+          "url": "https://www.exactsciences.com/cancer-testing/oncodetect-ctdna-test"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "OncoExTra®",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Tumor-normal comprehensive genomic profiling test",
+      "summary": "Uses whole-exome DNA and whole-transcriptome RNA sequencing with matched-normal analysis to identify therapy-relevant alterations in advanced solid tumors. Optional IHC testing can provide additional tissue biomarker information.",
+      "sources": [
+        {
+          "label": "Official OncoExTra® overview",
+          "url": "https://www.exactsciences.com/cancer-testing/oncoextra-late-stage-treatment"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "neogenomics": [
+    {
+      "name": "RaDaR® ST",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD test",
+      "summary": "Personalized blood-based assay that tracks tumor-specific variants to detect molecular residual disease and monitor recurrence or treatment response across multiple solid tumor types.",
+      "sources": [
+        {
+          "label": "Official RaDaR® ST overview",
+          "url": "https://www.neogenomics.com/providers/oncology-solutions/radarst-mrd"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NEO | PanTracer Pro",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Tissue DNA/RNA profiling with tumor-directed ancillary testing",
+      "summary": "Combines a 517-gene solid-tumor DNA/RNA panel with cancer-type-directed IHC and ancillary tests. Includes ovarian tumor HRD assessment to support therapy selection and trial matching.",
+      "sources": [
+        {
+          "label": "Official NEO | PanTracer Pro overview",
+          "url": "https://www.neogenomics.com/providers/oncology-solutions/pantracer-portfolio"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NEO | PanTracer LBx",
+      "category": "blood",
+      "subtype": "liquid-biopsy",
+      "type": "Blood-based comprehensive genomic profiling test",
+      "summary": "Profiles circulating tumor DNA across 514 genes for advanced solid tumors. Provides a liquid-biopsy option when tissue is limited, inadequate, or unavailable.",
+      "sources": [
+        {
+          "label": "Official NEO | PanTracer LBx overview",
+          "url": "https://www.neogenomics.com/providers/oncology-solutions/pantracer-portfolio"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Neo Comprehensive® – Heme Cancers",
+      "category": "blood",
+      "subtype": "hematology-genomic",
+      "type": "Hematologic malignancy DNA/RNA profiling test",
+      "summary": "Detects DNA and RNA alterations in genes associated with myeloid and lymphoid malignancies. Provides molecular information for diagnosis, prognosis, and treatment planning in blood cancers.",
+      "sources": [
+        {
+          "label": "Official Neo Comprehensive® – Heme Cancers overview",
+          "url": "https://www.neogenomics.com/providers/oncology-solutions/hematological-cancer"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "grail": [
+    {
+      "name": "Galleri®",
+      "category": "screening",
+      "subtype": "early-detection",
+      "type": "Multi-cancer early detection blood test",
+      "summary": "Analyzes cell-free DNA methylation patterns in blood to look for a shared cancer signal and predict the likely tissue of origin when a signal is detected. Intended to complement recommended cancer screening.",
+      "sources": [
+        {
+          "label": "Official Galleri® overview",
+          "url": "https://www.galleri.com/hcp/faqs"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "freenome": [
+    {
+      "name": "SimpleScreen™ CRC",
+      "category": "colorectal-screening",
+      "subtype": "colorectal-blood-screening",
+      "type": "Blood-based colorectal cancer screening test",
+      "summary": "Detects colorectal cancer-associated cell-free DNA signals from a blood sample in average-risk adults aged 45 and older. Developed by Freenome and commercially offered in the United States through Abbott.",
+      "sources": [
+        {
+          "label": "Official SimpleScreen™ CRC overview",
+          "url": "https://www.freenome.com/newsroom/fda-approves-freenomes-simplescreen-crc/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "SimpleScreen™ Lung",
+      "category": "lung-screening",
+      "subtype": "lung-blood-screening",
+      "type": "Protein-based lung cancer screening · Laboratory-developed test",
+      "summary": "Protein-based blood test for adults aged 50–80 with a substantial smoking history who are not participating in guideline-recommended lung screening. Launched in October 2026; distinct from Freenome’s investigational multiomics lung test.",
+      "sources": [
+        {
+          "label": "Official SimpleScreen™ Lung overview",
+          "url": "https://www.freenome.com/newsroom/freenome-launches-simplescreen-lung-test/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "myriad": [
+    {
+      "name": "MyRisk® Hereditary Cancer Test",
+      "category": "hereditary",
+      "subtype": "hereditary-cancer",
+      "type": "Multigene hereditary cancer test",
+      "summary": "Evaluates inherited cancer-associated variants to inform hereditary risk assessment, screening, and treatment considerations. Uses DNA sequencing with targeted RNA follow-up for eligible uncertain variants to support interpretation.",
+      "sources": [
+        {
+          "label": "Official MyRisk® Hereditary Cancer Test overview",
+          "url": "https://myriad.com/genetic-tests/myrisk-germline-test/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MyChoice® CDx",
+      "category": "hrd-testing",
+      "subtype": "hrd-companion-testing",
+      "type": "Ovarian cancer HRD companion diagnostic test",
+      "summary": "Assesses tumor BRCA1/2 variants and genomic instability to determine homologous recombination deficiency status in ovarian cancer, supporting selection for specified PARP-inhibitor therapies.",
+      "sources": [
+        {
+          "label": "Official MyChoice® CDx overview",
+          "url": "https://myriad.com/genetic-tests/mychoicecdx-tumor-test/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BRACAnalysis CDx®",
+      "category": "hereditary",
+      "subtype": "germline-companion-diagnostic",
+      "type": "Germline BRCA1/2 companion diagnostic test",
+      "summary": "Tests inherited BRCA1 and BRCA2 variants to help identify patients who may qualify for specified PARP-inhibitor treatments in relevant cancer indications.",
+      "sources": [
+        {
+          "label": "Official BRACAnalysis CDx® overview",
+          "url": "https://myriad.com/genetic-tests/bracanalysiscdx-germline-test/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Precise Tumor®",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Solid-tumor DNA/RNA comprehensive genomic profiling test",
+      "summary": "Combines DNA and RNA sequencing to identify actionable tumor variants, fusions, and immuno-oncology biomarkers. Supports therapy selection and clinical trial considerations across solid cancers.",
+      "sources": [
+        {
+          "label": "Official Precise Tumor® overview",
+          "url": "https://myriad.com/genetic-tests/precise-tumor/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Precise MRD®",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Whole-genome-informed ctDNA MRD and monitoring test",
+      "summary": "Uses whole-genome sequencing to create a personalized tumor-informed assay for circulating tumor DNA. Supports residual-disease assessment, surveillance, and treatment-response monitoring across solid tumor settings.",
+      "sources": [
+        {
+          "label": "Official Precise MRD® overview",
+          "url": "https://myriad.com/oncology/precise-mrd-test/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "veracyte": [
+    {
+      "name": "Decipher Prostate Genomic Classifier",
+      "category": "gene-expression-risk",
+      "subtype": "prostate-genomic-risk",
+      "type": "Prostate cancer gene-expression risk test",
+      "summary": "Measures 22 genes in prostate tumor tissue to characterize tumor aggressiveness and estimate metastasis or disease-progression risk. Supports risk stratification alongside clinical and pathology findings.",
+      "sources": [
+        {
+          "label": "Official Decipher Prostate Genomic Classifier overview",
+          "url": "https://www.veracyte.com/tests/decipher-prostate/providers/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Decipher Bladder Genomic Classifier",
+      "category": "molecular-diagnostic",
+      "subtype": "bladder-molecular-subtyping",
+      "type": "Bladder cancer gene-expression subtyping test",
+      "summary": "Analyzes bladder tumor tissue to classify molecular subtypes, including luminal and non-luminal biology. Provides information that can support treatment planning in non-muscle-invasive and muscle-invasive bladder cancer.",
+      "sources": [
+        {
+          "label": "Official Decipher Bladder Genomic Classifier overview",
+          "url": "https://www.veracyte.com/tests/decipher-bladder/providers/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Afirma Genomic Sequencing Classifier",
+      "category": "thyroid-testing",
+      "subtype": "thyroid-nodule-classifier",
+      "type": "Thyroid nodule RNA classifier",
+      "summary": "Analyzes RNA from thyroid fine-needle aspiration samples to classify indeterminate nodules as benign or suspicious. Additional molecular findings can inform management of suspicious or malignant nodules.",
+      "sources": [
+        {
+          "label": "Official Afirma Genomic Sequencing Classifier overview",
+          "url": "https://www.veracyte.com/tests/afirma-thyroid/providers/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Prosigna Breast Risk of Recurrence Test",
+      "category": "gene-expression-risk",
+      "subtype": "breast-genomic-recurrence",
+      "type": "Breast cancer gene-expression recurrence-risk test",
+      "summary": "Uses the PAM50 gene-expression classifier with clinical and pathology information to report intrinsic breast cancer subtype and recurrence-risk information for treatment planning.",
+      "sources": [
+        {
+          "label": "Official Prosigna Breast Risk of Recurrence Test overview",
+          "url": "https://www.veracyte.com/tests/prosigna-breast/providers/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "TrueMRD Monitoring Test for MIBC",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD test · Muscle-invasive bladder cancer",
+      "summary": "Uses whole-genome sequencing of tumor and matched-normal material to create a personalized signature, then monitors blood for circulating tumor DNA following definitive treatment for muscle-invasive bladder cancer.",
+      "sources": [
+        {
+          "label": "Official TrueMRD Monitoring Test for MIBC overview",
+          "url": "https://www.veracyte.com/tests/truemrd-mibc/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "agendia": [
+    {
+      "name": "MammaPrint®",
+      "category": "gene-expression-risk",
+      "subtype": "breast-genomic-recurrence",
+      "type": "Breast cancer 70-gene recurrence-risk test",
+      "summary": "Analyzes gene expression in breast tumor tissue to estimate recurrence risk in early-stage disease. Provides genomic risk information to support adjuvant treatment discussions alongside clinical and pathology findings.",
+      "sources": [
+        {
+          "label": "Official MammaPrint® overview",
+          "url": "https://agendia.com/mammaprint/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BluePrint®",
+      "category": "molecular-diagnostic",
+      "subtype": "breast-molecular-subtyping",
+      "type": "Breast cancer 80-gene molecular subtyping test",
+      "summary": "Uses gene expression in breast tumor tissue to classify luminal, HER2-type, or basal-type biology. Complements recurrence-risk testing with information about the pathways driving tumor growth.",
+      "sources": [
+        {
+          "label": "Official BluePrint® overview",
+          "url": "https://agendia.com/blueprint/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "leica": [
+    {
+      "name": "Aperio GT Elite",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "High-throughput whole-slide scanner · Research use",
+      "summary": "Automated slide scanner for large digital pathology research workflows. SmartScan adjusts slide-level scanning decisions, with continuous rack loading and optional Aperio iQC image quality control.",
+      "sources": [
+        {
+          "label": "Official Aperio GT Elite overview",
+          "url": "https://www.leicabiosystems.com/us/digital-pathology/scan/elite/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Aperio GT 450 DX",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Clinical whole-slide imaging system",
+      "summary": "High-capacity slide scanner for clinical digital pathology. Generates whole-slide images for on-screen review and integrates with image management workflows, with SVS and native DICOM output options.",
+      "sources": [
+        {
+          "label": "Official Aperio GT 450 DX overview",
+          "url": "https://www.leicabiosystems.com/us/digital-pathology/scan/aperio-gt-450-dx/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BOND-PRIME",
+      "category": "staining-instrument",
+      "subtype": "ihc-ish-staining",
+      "type": "Automated IHC and ISH staining platform",
+      "summary": "Automates immunohistochemistry and in situ hybridization in diagnostic pathology. Supports continuous loading of individual slides, batches, and urgent cases with automated reagent handling.",
+      "sources": [
+        {
+          "label": "Official BOND-PRIME overview",
+          "url": "https://www.leicabiosystems.com/us/ihc-ish/ihc-ish-instruments/bond-prime/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BOND RX",
+      "category": "staining-instrument",
+      "subtype": "research-multiplex-staining",
+      "type": "Multiplex tissue staining instrument · Research use",
+      "summary": "Automates research IHC, ISH, FISH, and multiplex staining with customizable protocols and open reagent support. Helps investigate tissue biomarkers and cellular relationships while preserving morphology.",
+      "sources": [
+        {
+          "label": "Official BOND RX overview",
+          "url": "https://www.leicabiosystems.com/us/ihc-ish/ihc-ish-instruments/bond-rx/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "HistoCore PELORIS 3",
+      "category": "tissue-processing",
+      "subtype": "histology-processing",
+      "type": "Automated tissue processor",
+      "summary": "Dual-retort system for preparing tissue specimens for paraffin embedding. Supports routine and rapid processing protocols, reagent management, and specimen tracking in histology laboratories.",
+      "sources": [
+        {
+          "label": "Official HistoCore PELORIS 3 overview",
+          "url": "https://www.leicabiosystems.com/us/histology-equipment/tissue-processors/histocore-peloris-3/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Aperio eSlide Manager",
+      "category": "viewer",
+      "subtype": "pathology-ims",
+      "type": "Digital pathology image management software",
+      "summary": "Organizes and shares digital slides across single-site and multi-site pathology environments. Includes viewing options, laboratory information system integration, access controls, and dedicated research and biopharma workflows.",
+      "sources": [
+        {
+          "label": "Official Aperio eSlide Manager overview",
+          "url": "https://www.leicabiosystems.com/us/digital-pathology/manage/aperio-eslide-manager/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "philips": [
+    {
+      "name": "IntelliSite Pathology Solution",
+      "category": "viewer",
+      "subtype": "pathology-ims",
+      "type": "Integrated digital pathology system",
+      "summary": "Combines pathology scanners, image management software, and workflow tools for reviewing and sharing whole-slide images. Supports digital case review, collaboration, and integration with laboratory information systems.",
+      "sources": [
+        {
+          "label": "Official IntelliSite Pathology Solution overview",
+          "url": "https://www.usa.philips.com/healthcare/digital-pathology"
+        }
+      ],
+      "checked": "2026-11-28",
+      "additionalSubtypes": [
+        "automated-scanner"
+      ]
+    },
+    {
+      "name": "IntelliSite Image Management System",
+      "category": "viewer",
+      "subtype": "pathology-ims",
+      "type": "Pathology image and case management software",
+      "summary": "Manages whole-slide and gross images, case lists, annotations, and image archives. Connects with laboratory information systems and supports collaboration across sites, with configurable local and cloud storage options.",
+      "sources": [
+        {
+          "label": "Official IntelliSite Image Management System overview",
+          "url": "https://www.usa.philips.com/healthcare/product/FDP0912/intellisite-image-management-system"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Pathology Scanner SGi60 / SGi300",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "DICOM whole-slide scanners · Research use in the US",
+      "summary": "Slide scanner family with 60-slide and 300-slide configurations. Adds native DICOM JPEG and JPEG XL output to support interoperable digital pathology workflows.",
+      "sources": [
+        {
+          "label": "Official Pathology Scanner SGi60 / SGi300 overview",
+          "url": "https://www.usa.philips.com/healthcare/digital-pathology/digital-pathology-scanners"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "For research use only in the United States; availability differs by market."
+      ]
+    }
+  ],
+  "hamamatsu": [
+    {
+      "name": "NanoZoomer S20MD",
+      "category": "scanner",
+      "subtype": "desktop-scanner",
+      "type": "Compact clinical slide scanner",
+      "summary": "Benchtop whole-slide imaging system for digitizing stained surgical pathology slides. Provides a compact scanning option within the NanoZoomer medical scanner portfolio.",
+      "sources": [
+        {
+          "label": "Official NanoZoomer S20MD overview",
+          "url": "https://www.hamamatsu.com/us/en/product/life-science-and-medical-systems/digital-slide-scanner-for-medical/C16300-01MD.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NanoZoomer S360MD",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "High-capacity clinical slide scanner",
+      "summary": "Automates the conversion of stained pathology slides into digital whole-slide images for review within supported clinical imaging workflows.",
+      "sources": [
+        {
+          "label": "Official NanoZoomer S360MD overview",
+          "url": "https://www.hamamatsu.com/us/en/product/life-science-and-medical-systems/digital-slide-scanner-for-medical/C13220-01MD.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NanoZoomer S540MD",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "High-throughput clinical slide scanner",
+      "summary": "High-capacity NanoZoomer system for digitizing surgical pathology slides in larger-volume laboratory workflows.",
+      "sources": [
+        {
+          "label": "Official NanoZoomer S540MD overview",
+          "url": "https://www.hamamatsu.com/us/en/product/life-science-and-medical-systems/digital-slide-scanner-for-medical/C17400-01MD.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "NDP.view2 / NDP.view2 Plus",
+      "category": "viewer",
+      "subtype": "image-viewer",
+      "type": "Whole-slide image viewing software · Research use",
+      "summary": "Software for navigating, annotating, and comparing digital pathology slides. NDP.view2 supports Hamamatsu slide formats; the Plus edition adds support for additional vendors’ image formats.",
+      "sources": [
+        {
+          "label": "Official NDP.view2 / NDP.view2 Plus overview",
+          "url": "https://www.hamamatsu.com/us/en/product/life-science-and-medical-systems/digital-slide-scanner/U12388-01.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "3dhistech": [
+    {
+      "name": "Pannoramic 1000",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Large-scale whole-slide scanner · Research use",
+      "summary": "High-throughput whole-slide imaging platform for large research laboratories. Supports automated loading, barcode workflows, multilayer scanning, and integration with slide management systems.",
+      "sources": [
+        {
+          "label": "Official Pannoramic 1000 overview",
+          "url": "https://www.3dhistech.com/scanners/pannoramic-1000-digital-scanner/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Pannoramic 250 FLASH III",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Brightfield and fluorescence slide scanner · Research use",
+      "summary": "Automates whole-slide imaging for pathology research with brightfield and fluorescence configurations. Connects scanning with slide management and quantitative analysis software.",
+      "sources": [
+        {
+          "label": "Official Pannoramic 250 FLASH III overview",
+          "url": "https://www.3dhistech.com/scanners/pannoramic-250-flash-iii-digital-scanner/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "SlideCenter",
+      "category": "viewer",
+      "subtype": "research-image-management",
+      "type": "Digital slide storage and collaboration platform",
+      "summary": "Stores, manages, and shares whole-slide images. Connects with 3DHISTECH viewers and workflow tools to support browser-based access and collaborative digital pathology.",
+      "sources": [
+        {
+          "label": "Official SlideCenter overview",
+          "url": "https://www.3dhistech.com/software/slidecenter/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "WebViewer",
+      "category": "viewer",
+      "subtype": "image-viewer",
+      "type": "Browser-based digital slide viewer",
+      "summary": "Enables digital slide review in a browser through SlideCenter. Provides zooming, annotation, rotation, and fluorescence channel controls for viewing and sharing scanned pathology images.",
+      "sources": [
+        {
+          "label": "Official WebViewer overview",
+          "url": "https://www.3dhistech.com/software/webviewer/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "QuantCenter",
+      "category": "vision",
+      "subtype": "quantitative-pathology",
+      "type": "Quantitative pathology image analysis · Research use",
+      "summary": "Modular whole-slide analysis software for tissue classification, cell detection, IHC quantification, and FISH signal analysis. Includes trainable pattern recognition and deep learning segmentation modules.",
+      "sources": [
+        {
+          "label": "Official QuantCenter overview",
+          "url": "https://www.3dhistech.com/software/quantcenter/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "agilent": [
+    {
+      "name": "Dako Omnis family",
+      "category": "staining-instrument",
+      "subtype": "ihc-ish-staining",
+      "type": "Automated IHC and ISH staining instruments",
+      "summary": "Automated staining platform for pathology IHC and ISH workflows, including compatible pharmDx assays and reagents. Supports case-oriented processing in diagnostic laboratories.",
+      "sources": [
+        {
+          "label": "Official Dako Omnis family overview",
+          "url": "https://www.agilent.com/en/product/dako-omnis-solution-for-ihc-ish"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PD-L1 IHC 22C3 pharmDx",
+      "category": "ihc-testing",
+      "subtype": "ihc-biomarker-testing",
+      "type": "PD-L1 immunohistochemistry assay",
+      "summary": "Detects PD-L1 protein in specified formalin-fixed, paraffin-embedded cancer tissues. Assay configurations run on Autostainer Link 48 or Dako Omnis and support biomarker-guided oncology treatment assessment.",
+      "sources": [
+        {
+          "label": "Official PD-L1 IHC 22C3 pharmDx overview",
+          "url": "https://www.agilent.com/en/product/pharmdx/pd-l1-ihc-22c3-pharmdx"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "HercepTest™ mAb pharmDx (Dako Omnis)",
+      "category": "ihc-testing",
+      "subtype": "ihc-biomarker-testing",
+      "type": "HER2 immunohistochemistry assay",
+      "summary": "Assesses HER2 protein overexpression in breast cancer tissue using the DG44 antibody on Dako Omnis. Provides biomarker information when trastuzumab treatment is being considered.",
+      "sources": [
+        {
+          "label": "Official HercepTest™ mAb pharmDx (Dako Omnis) overview",
+          "url": "https://www.agilent.com/en/product/pharmdx/herceptest-kits/herceptest-mab-pharmdx-dako-omnis-1324550"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MMR IHC Panel pharmDx (Dako Omnis)",
+      "category": "ihc-testing",
+      "subtype": "ihc-biomarker-testing",
+      "type": "Mismatch repair immunohistochemistry panel",
+      "summary": "Assesses MLH1, PMS2, MSH2, and MSH6 protein expression in colorectal cancer tissue. Helps identify mismatch repair deficiency for biomarker-guided immunotherapy assessment.",
+      "sources": [
+        {
+          "label": "Official MMR IHC Panel pharmDx (Dako Omnis) overview",
+          "url": "https://www.agilent.com/about/newsroom/presrel/2025/02sep-ca25027.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "sakura": [
+    {
+      "name": "Tissue-Tek Xpress® x120",
+      "category": "tissue-processing",
+      "subtype": "histology-processing",
+      "type": "Continuous rapid tissue processor",
+      "summary": "Automates tissue processing with continuous loading to prepare specimens for embedding. Designed to standardize histology preparation and support sustained laboratory throughput.",
+      "sources": [
+        {
+          "label": "Official Tissue-Tek Xpress® x120 overview",
+          "url": "https://www.sakura-finetek.com/en/products/instruments-tissue-processing-en/xpress-x120/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Tissue-Tek AutoTEC® a120",
+      "category": "tissue-embedding",
+      "subtype": "tissue-embedding",
+      "type": "Automated tissue embedding system",
+      "summary": "Automates paraffin embedding of processed tissue using compatible cassettes. Supports continuous loading, specimen integrity, barcode tracking, and laboratory information system connectivity.",
+      "sources": [
+        {
+          "label": "Official Tissue-Tek AutoTEC® a120 overview",
+          "url": "https://www.sakura-finetek.com/en/products/instruments-embedding-en/autotec-a120/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Tissue-Tek AutoSection®",
+      "category": "microtomy",
+      "subtype": "automated-microtomy",
+      "type": "Automated microtome",
+      "summary": "Automates tissue-block alignment, trimming, and programmable sectioning. Creates thin sections from embedded tissue blocks for downstream staining and pathology review.",
+      "sources": [
+        {
+          "label": "Official Tissue-Tek AutoSection® overview",
+          "url": "https://www.sakura-finetek.com/en/products/instruments-microtomy-en/autosection/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Tissue-Tek Prisma® Plus",
+      "category": "staining-instrument",
+      "subtype": "routine-slide-staining",
+      "type": "Automated routine slide stainer",
+      "summary": "Automates routine histology slide staining, including H&E workflows. Integrates with Tissue-Tek Film or Glas g2 coverslippers to connect staining, drying, and coverslipping.",
+      "sources": [
+        {
+          "label": "Official Tissue-Tek Prisma® Plus overview",
+          "url": "https://www.sakura-finetek.com/en/products/instruments-staining-en/prisma-plus/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Tissue-Tek Film®",
+      "category": "coverslipping",
+      "subtype": "slide-coverslipping",
+      "type": "Automated film coverslipper",
+      "summary": "Applies protective coverslipping film to stained histology slides. Connects with the Tissue-Tek Prisma Plus to support an automated staining-to-coverslipping workflow.",
+      "sources": [
+        {
+          "label": "Official Tissue-Tek Film® overview",
+          "url": "https://www.sakura-finetek.com/en/products/instruments-coverslipping-en/film/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "evident": [
+    {
+      "name": "SLIDEVIEW™ VS200",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Multimodal whole-slide scanner · Research configurations",
+      "summary": "Digitizes tissue slides using brightfield, fluorescence, and other imaging modes. Supports cancer research and specialized digital pathology, with configurable objectives, slide sizes, and automated batch scanning.",
+      "sources": [
+        {
+          "label": "Official SLIDEVIEW™ VS200 overview",
+          "url": "https://evidentscientific.com/en/products/slide-scanners/vs200"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "SLIDEVIEW™ VS-M1",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Brightfield pathology scanner · Japan",
+      "summary": "Dedicated scanner for brightfield imaging of histology and cytology samples. Supports single-plane and Z-stack capture, digital slide organization, and sharing within pathology networks.",
+      "sources": [
+        {
+          "label": "Official SLIDEVIEW™ VS-M1 overview",
+          "url": "https://evidentscientific.com/en/products/slide-scanners/vs-m1"
+        }
+      ],
+      "checked": "2026-11-28",
+      "features": [
+        "The manufacturer lists VS-M1J availability in Japan."
+      ]
+    }
+  ],
+  "abbott": [
+    {
+      "name": "Vysis® ALK Break Apart FISH Probe Kit",
+      "category": "fish-testing",
+      "subtype": "fish-biomarker-testing",
+      "type": "ALK rearrangement FISH assay",
+      "summary": "Detects rearrangements involving ALK in formalin-fixed, paraffin-embedded non-small cell lung cancer tissue. Provides a tissue biomarker assay for assessment alongside clinical and pathology findings.",
+      "sources": [
+        {
+          "label": "Official Vysis® ALK Break Apart FISH Probe Kit overview",
+          "url": "https://www.molecular.abbott/us/en/oncology/vysis-alk-break-apart-fish-probe-kit"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PathVysion® HER-2 DNA Probe Kit",
+      "category": "fish-testing",
+      "subtype": "fish-biomarker-testing",
+      "type": "HER2 amplification FISH assay",
+      "summary": "Detects HER2 gene amplification in breast cancer tissue using fluorescence in situ hybridization. Assesses HER2 status at the DNA level to complement clinical and pathology information.",
+      "sources": [
+        {
+          "label": "Official PathVysion® HER-2 DNA Probe Kit overview",
+          "url": "https://www.molecular.abbott/us/en/oncology/pathvysion-her-2-dna-probe-kit"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "UroVysion® Bladder Cancer Kit",
+      "category": "fish-testing",
+      "subtype": "urine-cytogenetic-testing",
+      "type": "Urine FISH assay for bladder cancer assessment",
+      "summary": "Detects specified chromosome abnormalities in urine cells. Used alongside standard diagnostic procedures to aid assessment of suspected bladder cancer and monitoring for recurrence.",
+      "sources": [
+        {
+          "label": "Official UroVysion® Bladder Cancer Kit overview",
+          "url": "https://www.molecular.abbott/us/en/oncology/urovysion-bladder-cancer-kit"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "danaher": [
+    {
+      "name": "Aperio GT 450 DX (Leica Biosystems)",
+      "category": "scanner",
+      "subtype": "automated-scanner",
+      "type": "Clinical slide scanner · Leica Biosystems portfolio",
+      "summary": "Offered by Danaher subsidiary Leica Biosystems. Automates digital whole-slide imaging for clinical pathology, with high-capacity slide handling and output for image management workflows.",
+      "sources": [
+        {
+          "label": "Official Aperio GT 450 DX (Leica Biosystems) overview",
+          "url": "https://www.leicabiosystems.com/us/digital-pathology/scan/aperio-gt-450-dx/"
+        },
+        {
+          "label": "Danaher ownership of Leica Biosystems",
+          "url": "https://danaher.com/our-businesses/diagnostics/leica-biosystems"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BOND-PRIME (Leica Biosystems)",
+      "category": "staining-instrument",
+      "subtype": "ihc-ish-staining",
+      "type": "IHC and ISH stainer · Leica Biosystems portfolio",
+      "summary": "Offered by Danaher subsidiary Leica Biosystems. Automates diagnostic tissue staining with support for continuously loaded individual slides, batches, and urgent pathology cases.",
+      "sources": [
+        {
+          "label": "Official BOND-PRIME (Leica Biosystems) overview",
+          "url": "https://www.leicabiosystems.com/us/ihc-ish/ihc-ish-instruments/bond-prime/"
+        },
+        {
+          "label": "Danaher ownership of Leica Biosystems",
+          "url": "https://danaher.com/our-businesses/diagnostics/leica-biosystems"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "genentech": [
+    {
+      "name": "Tecentriq®",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "PD-L1 checkpoint inhibitor · Atezolizumab",
+      "summary": "Antibody immunotherapy that blocks PD-L1. Used in selected cancer settings, including non-small cell and small cell lung cancer, with indications that depend on tumor type and biomarkers.",
+      "sources": [
+        {
+          "label": "Official Tecentriq® information",
+          "url": "https://www.gene.com/patients/medicines/tecentriq"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Phesgo®",
+      "category": "therapeutic-antibody",
+      "subtype": "therapeutic-antibody",
+      "type": "HER2-targeted antibody combination · Subcutaneous formulation",
+      "summary": "Fixed-dose combination of pertuzumab, trastuzumab, and hyaluronidase for subcutaneous administration in HER2-positive breast cancer. Combines two HER2-targeted antibodies in one formulation.",
+      "sources": [
+        {
+          "label": "Official Phesgo® information",
+          "url": "https://www.gene.com/patients/medicines/phesgo"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Polivy®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "CD79b-directed antibody–drug conjugate · Polatuzumab vedotin",
+      "summary": "Links a CD79b-targeting antibody to a microtubule-disrupting payload. Used in combination regimens for selected diffuse large B-cell and high-grade B-cell lymphomas.",
+      "sources": [
+        {
+          "label": "Official Polivy® information",
+          "url": "https://www.gene.com/patients/medicines/polivy"
+        },
+        {
+          "label": "Official Polivy prescribing information",
+          "url": "https://www.gene.com/download/pdf/polivy_prescribing.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "bms": [
+    {
+      "name": "Opdivo®",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "PD-1 checkpoint inhibitor · Nivolumab",
+      "summary": "PD-1-blocking antibody immunotherapy used across multiple cancers, including melanoma, lung cancer, and kidney cancer. May be used alone or in combinations according to the cancer setting.",
+      "sources": [
+        {
+          "label": "Official Opdivo® information",
+          "url": "https://www.bms.com/medicines/all-medicines.html"
+        },
+        {
+          "label": "Official Opdivo product website",
+          "url": "https://www.opdivo.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Yervoy®",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "CTLA-4 checkpoint inhibitor · Ipilimumab",
+      "summary": "Antibody immunotherapy that blocks CTLA-4. Used in melanoma and in combinations with nivolumab for selected other cancers, including lung and kidney cancers.",
+      "sources": [
+        {
+          "label": "Official Yervoy® information",
+          "url": "https://www.bms.com/medicines/all-medicines.html"
+        },
+        {
+          "label": "Official Yervoy prescribing information",
+          "url": "https://www.bms.com/assets/packageinserts/pi/pi_yervoy.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Breyanzi®",
+      "category": "car-t-cell-therapy",
+      "subtype": "car-t-cell-therapy",
+      "type": "CD19-directed CAR T-cell therapy · Lisocabtagene maraleucel",
+      "summary": "Personalized cellular immunotherapy made by engineering a patient’s T cells to recognize CD19. Used for selected relapsed or refractory B-cell lymphomas and leukemias.",
+      "sources": [
+        {
+          "label": "Official Breyanzi® information",
+          "url": "https://www.bms.com/medicines/all-medicines.html"
+        },
+        {
+          "label": "Official Breyanzi prescribing information",
+          "url": "https://packageinserts.bms.com/pi/pi_breyanzi.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "gilead": [
+    {
+      "name": "Trodelvy®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "Trop-2-directed antibody–drug conjugate · Sacituzumab govitecan",
+      "summary": "Links a Trop-2-targeting antibody to a topoisomerase inhibitor payload. Used in selected advanced breast cancer settings, including triple-negative and hormone receptor-positive, HER2-negative disease.",
+      "sources": [
+        {
+          "label": "Official Trodelvy® information",
+          "url": "https://www.gilead.com/medicines"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Yescarta®",
+      "category": "car-t-cell-therapy",
+      "subtype": "car-t-cell-therapy",
+      "type": "CD19-directed CAR T-cell therapy · Axicabtagene ciloleucel",
+      "summary": "Kite cell therapy made from a patient’s own T cells and engineered to target CD19. Used in selected relapsed or refractory large B-cell and follicular lymphomas.",
+      "sources": [
+        {
+          "label": "Official Yescarta® information",
+          "url": "https://www.kitepharma.com/-/media/files/pdfs/medicines/oncology/yescarta/yescarta-pi.pdf"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Tecartus®",
+      "category": "car-t-cell-therapy",
+      "subtype": "car-t-cell-therapy",
+      "type": "CD19-directed CAR T-cell therapy · Brexucabtagene autoleucel",
+      "summary": "Kite cellular immunotherapy that modifies a patient’s T cells to recognize CD19. Used in selected relapsed or refractory mantle cell lymphoma and B-cell acute lymphoblastic leukemia.",
+      "sources": [
+        {
+          "label": "Official Tecartus® information",
+          "url": "https://www.kitepharma.com/news/press-releases/2026/11/gilead-and-kite-advance-leadership-with-new-data-across-pipeline-and-portfolio-at-ash-2026"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "daiichi": [
+    {
+      "name": "Enhertu®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "HER2-directed antibody–drug conjugate · Trastuzumab deruxtecan",
+      "summary": "HER2-targeting antibody linked to a topoisomerase inhibitor payload. Used in selected HER2-defined cancer settings, including breast and gastric cancers. Jointly developed and commercialized with AstraZeneca outside Japan.",
+      "sources": [
+        {
+          "label": "Official Enhertu® information",
+          "url": "https://daiichisankyo.us/products"
+        },
+        {
+          "label": "Official Enhertu product information",
+          "url": "https://www.enhertuhcp.com/en/breast"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Datroway®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "Trop-2-directed antibody–drug conjugate · Datopotamab deruxtecan",
+      "summary": "Trop-2-targeting antibody linked to a topoisomerase inhibitor payload. Used in selected advanced breast and EGFR-mutated lung cancer settings. Jointly developed and commercialized with AstraZeneca outside Japan.",
+      "sources": [
+        {
+          "label": "Official Datroway® information",
+          "url": "https://daiichisankyo.us/products"
+        },
+        {
+          "label": "Official Datroway lung and breast cancer information",
+          "url": "https://daiichisankyo.us/press-releases/-/article/datroway-approved-in-the-us-as-first-trop2-directed-therapy-for-patients-with-previously-treated-advanced-egfr-mutated-non-small-cell-lung-cancer"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Vanflyta®",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "FLT3 kinase inhibitor · Quizartinib",
+      "summary": "Oral FLT3 inhibitor used with chemotherapy and as maintenance in selected patients with newly diagnosed FLT3-ITD-positive acute myeloid leukemia.",
+      "sources": [
+        {
+          "label": "Official Vanflyta® information",
+          "url": "https://www.vanflytahcp.com/en"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "takeda": [
+    {
+      "name": "Alunbrig®",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "ALK kinase inhibitor · Brigatinib",
+      "summary": "Oral targeted medicine that inhibits ALK signaling in ALK-positive metastatic non-small cell lung cancer.",
+      "sources": [
+        {
+          "label": "Official Alunbrig® information",
+          "url": "https://www.alunbrig.com/hcp/about"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Fruzaqla®",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "VEGFR kinase inhibitor · Fruquintinib",
+      "summary": "Oral inhibitor of VEGFR-1, VEGFR-2, and VEGFR-3 used in previously treated metastatic colorectal cancer. Targets signaling involved in tumor blood-vessel formation.",
+      "sources": [
+        {
+          "label": "Official Fruzaqla® information",
+          "url": "https://www.fruzaqlahcp.com/mechanism-of-action"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Ninlaro®",
+      "category": "proteasome-inhibitor",
+      "subtype": "proteasome-inhibitor",
+      "type": "Proteasome inhibitor · Ixazomib",
+      "summary": "Oral proteasome inhibitor used in combination with lenalidomide and dexamethasone for multiple myeloma after prior therapy.",
+      "sources": [
+        {
+          "label": "Official Ninlaro® information",
+          "url": "https://www.ninlarohcp.com/mechanism-of-action"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "pfizer": [
+    {
+      "name": "Ibrance®",
+      "category": "cdk46-inhibitor",
+      "subtype": "cdk46-inhibitor",
+      "type": "CDK4/6 inhibitor · Palbociclib",
+      "summary": "Oral inhibitor of CDK4 and CDK6 used in combination regimens for selected hormone receptor-positive breast cancer settings. Targets proteins that regulate cell-cycle progression.",
+      "sources": [
+        {
+          "label": "Official Ibrance® information",
+          "url": "https://www.pfizermedical.com/ibrance"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Padcev®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "Nectin-4-directed antibody–drug conjugate · Enfortumab vedotin",
+      "summary": "Links a Nectin-4-targeting antibody to a microtubule inhibitor payload for selected urothelial cancer settings. Jointly developed and commercialized with Astellas.",
+      "sources": [
+        {
+          "label": "Official Padcev® information",
+          "url": "https://www.pfizermedical.com/padcev"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Adcetris®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "CD30-directed antibody–drug conjugate · Brentuximab vedotin",
+      "summary": "CD30-targeting antibody linked to a microtubule inhibitor payload. Used in selected lymphomas, including classical Hodgkin lymphoma and CD30-expressing T-cell lymphomas.",
+      "sources": [
+        {
+          "label": "Official Adcetris® information",
+          "url": "https://www.pfizermedical.com/adcetris"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "gsk": [
+    {
+      "name": "Jemperli®",
+      "category": "checkpoint-immunotherapy",
+      "subtype": "checkpoint-immunotherapy",
+      "type": "PD-1 checkpoint inhibitor · Dostarlimab",
+      "summary": "PD-1-blocking antibody immunotherapy used in advanced or recurrent endometrial cancer and selected mismatch repair-deficient solid tumor settings.",
+      "sources": [
+        {
+          "label": "Official Jemperli® information",
+          "url": "https://www.jemperlihcp.com/"
+        },
+        {
+          "label": "Official GSK oncology product portfolio",
+          "url": "https://gskusmedicalaffairs.com/pipeline-and-products/oncology-products/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Zejula®",
+      "category": "parp-inhibitor",
+      "subtype": "parp-inhibitor",
+      "type": "PARP inhibitor · Niraparib",
+      "summary": "Oral PARP inhibitor used as maintenance treatment in selected advanced ovarian, fallopian tube, and primary peritoneal cancers after response to platinum-based chemotherapy.",
+      "sources": [
+        {
+          "label": "Official Zejula® information",
+          "url": "https://zejulahcp.com/dosing/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Blenrep®",
+      "category": "antibody-drug-conjugate",
+      "subtype": "antibody-drug-conjugate",
+      "type": "BCMA-directed antibody–drug conjugate · Belantamab mafodotin",
+      "summary": "BCMA-targeting antibody linked to a microtubule-disrupting payload. Used with bortezomib and dexamethasone in selected relapsed or refractory multiple myeloma.",
+      "sources": [
+        {
+          "label": "Official Blenrep® information",
+          "url": "https://www.blenrephcp.com/about-blenrep/how-blenrep-works/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "sanofi": [
+    {
+      "name": "Sarclisa®",
+      "category": "therapeutic-antibody",
+      "subtype": "therapeutic-antibody",
+      "type": "CD38-directed antibody · Isatuximab",
+      "summary": "Intravenous CD38-targeting antibody used in combination regimens for selected multiple myeloma settings.",
+      "sources": [
+        {
+          "label": "Official Sarclisa® information",
+          "url": "https://www.sanofimarketaccess.com/products/specialty-care/sarclisa"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Sarclisa Escena™",
+      "category": "therapeutic-antibody",
+      "subtype": "therapeutic-antibody",
+      "type": "CD38-directed antibody · Subcutaneous isatuximab formulation",
+      "summary": "Subcutaneous formulation of isatuximab delivered through an on-body injector. Used with combination regimens for multiple myeloma, extending the Sarclisa portfolio beyond intravenous administration.",
+      "sources": [
+        {
+          "label": "Official Sarclisa Escena™ information",
+          "url": "https://www.news.sanofi.us/2026-07-10-Sanofis-subcutaneous-Sarclisa-Escena-approved-in-the-US-as-first-anticancer-treatment-administered-via-on-body-injector"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Jevtana®",
+      "category": "taxane-chemotherapy",
+      "subtype": "taxane-chemotherapy",
+      "type": "Taxane chemotherapy · Cabazitaxel",
+      "summary": "Microtubule-targeting chemotherapy used with prednisone for metastatic castration-resistant prostate cancer after a docetaxel-containing regimen.",
+      "sources": [
+        {
+          "label": "Official Jevtana® information",
+          "url": "https://pro.campus.sanofi/us/products/jevtana/taxane"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "bayer": [
+    {
+      "name": "Nubeqa®",
+      "category": "endocrine-therapy",
+      "subtype": "endocrine-therapy",
+      "type": "Androgen receptor inhibitor · Darolutamide",
+      "summary": "Oral androgen receptor inhibitor used in selected non-metastatic castration-resistant and metastatic castration-sensitive prostate cancer settings.",
+      "sources": [
+        {
+          "label": "Official Nubeqa® information",
+          "url": "https://oncology.medicalaffairs.bayer.com/product-information"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Vitrakvi®",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "TRK kinase inhibitor · Larotrectinib",
+      "summary": "Oral TRK inhibitor for selected adult and pediatric solid tumors with an NTRK gene fusion. Illustrates a biomarker-defined, tumor-agnostic targeted therapy.",
+      "sources": [
+        {
+          "label": "Official Vitrakvi® information",
+          "url": "https://oncology.medicalaffairs.bayer.com/product-information"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Xofigo®",
+      "category": "alpha-emitting-radiopharmaceutical",
+      "subtype": "alpha-emitting-radiopharmaceutical",
+      "type": "Bone-targeting alpha radiopharmaceutical · Radium-223 dichloride",
+      "summary": "Alpha-emitting radioactive medicine used for selected castration-resistant prostate cancer with symptomatic bone metastases and no known visceral metastatic disease.",
+      "sources": [
+        {
+          "label": "Official Xofigo® information",
+          "url": "https://oncology.medicalaffairs.bayer.com/product-information"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "novartis": [
+    {
+      "name": "Kisqali®",
+      "category": "cdk46-inhibitor",
+      "subtype": "cdk46-inhibitor",
+      "type": "CDK4/6 inhibitor · Ribociclib",
+      "summary": "Oral inhibitor of CDK4 and CDK6 used with endocrine therapy for selected hormone receptor-positive, HER2-negative early and advanced breast cancer settings.",
+      "sources": [
+        {
+          "label": "Official Kisqali® information",
+          "url": "https://www.kisqali-hcp.com/early-breast-cancer/natalee-trial/patient-eligibility"
+        },
+        {
+          "label": "Official Novartis product portfolio",
+          "url": "https://www.novartis.com/us-en/about/products"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Pluvicto®",
+      "category": "radioligand-therapy",
+      "subtype": "radioligand-therapy",
+      "type": "PSMA-targeted radioligand therapy · Lutetium-177",
+      "summary": "Combines a PSMA-binding molecule with lutetium-177 to deliver radiation to PSMA-expressing cancer cells. Used in selected PSMA-positive metastatic prostate cancer settings.",
+      "sources": [
+        {
+          "label": "Official Pluvicto® information",
+          "url": "https://www.pluvicto-hcp.com/psma-positive-mcrpc/pluvicto-and-psma"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Scemblix®",
+      "category": "kinase-inhibitor",
+      "subtype": "kinase-inhibitor",
+      "type": "ABL myristoyl-pocket inhibitor · Asciminib",
+      "summary": "Oral BCR::ABL1 kinase inhibitor that binds the ABL myristoyl pocket. Used in selected Philadelphia chromosome-positive chronic myeloid leukemia settings.",
+      "sources": [
+        {
+          "label": "Official Scemblix® information",
+          "url": "https://www.scemblix-hcp.com/frequently-asked-questions"
+        },
+        {
+          "label": "Official Novartis product portfolio",
+          "url": "https://www.novartis.com/us-en/about/products"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "thermo": [
+    {
+      "name": "Oncomine™ Dx Express Test",
+      "category": "tissue",
+      "subtype": "ngs-companion-diagnostics",
+      "type": "Targeted oncology NGS assay · In vitro diagnostic",
+      "summary": "Automated targeted sequencing assay for solid-tumor mutation profiling on the Genexus Dx workflow. Regional versions support tumor-tissue profiling and, where labeled, plasma analysis; companion diagnostic indications depend on the local test version.",
+      "sources": [
+        {
+          "label": "Official Oncomine™ Dx Express Test overview",
+          "url": "https://www.thermofisher.com/us/en/home/clinical/diagnostic-development/oncomine-ngs-pharma.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Oncomine™ Dx Target Test",
+      "category": "molecular",
+      "subtype": "ngs-companion-diagnostics",
+      "type": "Targeted oncology NGS assay · Companion diagnostic",
+      "summary": "Tests DNA and RNA from tumor tissue for cancer-related mutations and fusions to support biomarker-directed therapy selection. Specific companion diagnostic uses depend on tumor type, biomarker, and regional labeling.",
+      "sources": [
+        {
+          "label": "Official Oncomine™ Dx Target Test overview",
+          "url": "https://www.thermofisher.com/us/en/home/clinical/diagnostic-development/oncomine-ngs-pharma.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Oncomine™ Comprehensive Assay Plus",
+      "category": "tissue",
+      "subtype": "tissue-cgp-assay",
+      "type": "Tissue comprehensive genomic profiling assay · Research use",
+      "summary": "DNA and RNA sequencing panel for broad genomic profiling of FFPE solid-tumor samples. Covers multiple alteration classes and cancer biomarkers, including tumor mutational burden, microsatellite instability, and homologous recombination deficiency.",
+      "sources": [
+        {
+          "label": "Official Oncomine™ Comprehensive Assay Plus overview",
+          "url": "https://www.thermofisher.com/us/en/home/clinical/preclinical-companion-diagnostic-development/oncomine-oncology/oncomine-cancer-research-panel-workflow/oncomine-comprehensive-assay-plus.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "qiagen": [
+    {
+      "name": "therascreen® KRAS RGQ PCR Kit",
+      "category": "molecular",
+      "subtype": "pcr-companion-diagnostics",
+      "type": "KRAS mutation testing · Real-time PCR companion diagnostic",
+      "summary": "Detects selected KRAS mutations from tumor DNA using real-time PCR. Provides molecular information for biomarker-directed cancer therapy selection within the assay’s regional intended use.",
+      "sources": [
+        {
+          "label": "Official therascreen® KRAS RGQ PCR Kit overview",
+          "url": "https://www.qiagen.com/gb/products/diagnostics-and-clinical-research/oncology/therascreen-solid-tumor/therascreen-kras-rgq-pcr-kit-ce"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "ipsogen® BCR-ABL1 Mbcr RGQ RT-PCR Kit",
+      "category": "monitoring",
+      "subtype": "leukemia-transcript-monitoring",
+      "type": "BCR-ABL1 molecular monitoring · RT-qPCR assay",
+      "summary": "Quantifies major BCR-ABL1 fusion transcripts relative to ABL1 and converts results to the International Scale. Supports assessment of molecular response in chronic myeloid leukemia.",
+      "sources": [
+        {
+          "label": "Official ipsogen® BCR-ABL1 Mbcr RGQ RT-PCR Kit overview",
+          "url": "https://www.qiagen.com/gb/products/diagnostics-and-clinical-research/oncology/ipsogen-leukemia/ipsogen-bcr-abl1-mbcr-rgq-rt-pcr-kit-ce"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "QCI Interpret for Oncology",
+      "category": "somatic-analysis",
+      "subtype": "somatic-interpretation",
+      "type": "Somatic variant interpretation and reporting software",
+      "summary": "Combines curated clinical evidence with automated workflows to interpret, classify, and report oncology NGS variants. Helps laboratories prepare reports linking cancer biomarkers with therapy and clinical trial information.",
+      "sources": [
+        {
+          "label": "Official QCI Interpret for Oncology overview",
+          "url": "https://www.qiagen.com/en-US/resources/download/brochureAndGuide/qiaseq-ngs-brochure"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "labcorp": [
+    {
+      "name": "OmniSeq® INSIGHT",
+      "category": "tissue",
+      "subtype": "tissue-genomic",
+      "type": "Solid-tumor DNA and RNA comprehensive genomic profiling",
+      "summary": "Profiles genomic alterations and cancer biomarkers from FFPE tumor tissue to support personalized therapy selection. Integrates DNA and RNA sequencing with complementary immune biomarker information in a clinical report.",
+      "sources": [
+        {
+          "label": "Official OmniSeq® INSIGHT overview",
+          "url": "https://www.labcorp.com/oncology/providers/testing-solutions/test-menu/omniseq-insight"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Labcorp Plasma Complete™",
+      "category": "blood",
+      "subtype": "liquid-biopsy",
+      "type": "Blood-based comprehensive genomic profiling",
+      "summary": "Analyzes circulating tumor DNA across 521 genes in advanced solid tumors to identify genomic alterations and biomarkers relevant to therapy selection. Provides plasma-based profiling when tissue testing is difficult or insufficient.",
+      "sources": [
+        {
+          "label": "Official Labcorp Plasma Complete™ overview",
+          "url": "https://www.labcorp.com/oncology/providers/testing-solutions/test-menu/plasma-complete"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Labcorp Plasma Detect Genome MRD",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD test · Whole-genome sequencing",
+      "summary": "Uses tumor-informed whole-genome sequencing to detect circulating tumor DNA in plasma at baseline and monitoring timepoints. The provider portfolio includes a stage III colon cancer application.",
+      "sources": [
+        {
+          "label": "Official Labcorp Plasma Detect Genome MRD overview",
+          "url": "https://www.labcorp.com/oncology/providers/testing-solutions/solid-tumor/mrd"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Labcorp Plasma Detect ID MRD",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA MRD test · Personalized variant panel",
+      "summary": "Uses tumor and matched germline sequencing to create a patient-specific panel of 18–50 variants for blood-based residual disease monitoring. Current provider applications include early-stage breast cancer and non-small cell lung cancer.",
+      "sources": [
+        {
+          "label": "Official Labcorp Plasma Detect ID MRD overview",
+          "url": "https://www.labcorp.com/oncology/providers/testing-solutions/solid-tumor/mrd"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "quest": [
+    {
+      "name": "Haystack MRD®",
+      "category": "tumor-informed-mrd",
+      "subtype": "tumor-informed-mrd",
+      "type": "Tumor-informed ctDNA molecular residual disease test",
+      "summary": "Detects circulating tumor DNA in blood using a personalized tumor-informed assay. Supports residual disease and recurrence assessment in patients with a previous or current solid-tumor cancer diagnosis.",
+      "sources": [
+        {
+          "label": "Official Haystack MRD® overview",
+          "url": "https://www.questdiagnostics.com/healthcare-professionals/about-our-tests/cancer/haystack-mrd"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "LeukoVantage® Myeloid Neoplasm Panels",
+      "category": "blood",
+      "subtype": "hematology-genomic",
+      "type": "Myeloid malignancy genomic profiling panels",
+      "summary": "Next-generation sequencing panels that identify mutations relevant to diagnosis, prognosis, and treatment planning in myeloid neoplasms, including acute myeloid leukemia, myelodysplastic syndromes, and myeloproliferative neoplasms.",
+      "sources": [
+        {
+          "label": "Official LeukoVantage® Myeloid Neoplasm Panels overview",
+          "url": "https://www.questdiagnostics.com/healthcare-professionals/clinical-education-center/faq/faq208"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MelaNodal Predict™",
+      "category": "gene-expression-risk",
+      "subtype": "melanoma-nodal-risk",
+      "type": "Cutaneous melanoma sentinel node risk · Gene-expression test",
+      "summary": "Combines expression of eight target genes with age and Breslow depth from primary melanoma tissue to estimate sentinel lymph node metastasis risk. Provides additional risk information for sentinel lymph node biopsy discussions.",
+      "sources": [
+        {
+          "label": "Official MelaNodal Predict™ overview",
+          "url": "https://intellitestmanager.questdiagnostics.com/home/output/259334"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "bostongene": [
+    {
+      "name": "Tumor Portrait®",
+      "category": "multimodal",
+      "subtype": "tissue-genomic",
+      "type": "Tumor DNA and RNA profiling with microenvironment analysis",
+      "summary": "Integrates tumor DNA, matched normal DNA, and tumor RNA sequencing to characterize cancer biomarkers and the tumor microenvironment in advanced solid tumors. Presents molecular findings and potential treatment options in one report.",
+      "sources": [
+        {
+          "label": "Official Tumor Portrait® overview",
+          "url": "https://bostongene.com/providers/tumor-portrait"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Immune System Profiling",
+      "category": "blood-cell-analysis",
+      "subtype": "blood-immune-profiling",
+      "type": "Blood-based immune cell and transcriptome profiling assay",
+      "summary": "Combines flow cytometry with whole-transcriptome sequencing from blood to describe immune cell composition, functional states, gene expression, and biomarkers relevant to oncology treatment and research.",
+      "sources": [
+        {
+          "label": "Official Immune System Profiling overview",
+          "url": "https://bostongene.com/providers/immunoprofiling"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Immunohistochemistry (IHC) Test",
+      "category": "ihc-testing",
+      "subtype": "ihc-biomarker-testing",
+      "type": "Tissue protein biomarker testing · Immunohistochemistry",
+      "summary": "Provides tissue IHC biomarker assays that complement Tumor Portrait genomic profiling. Includes PD-L1 assessment with tumor proportion and combined positive scoring systems.",
+      "sources": [
+        {
+          "label": "Official Immunohistochemistry (IHC) Test overview",
+          "url": "https://www.bostongene.com/providers/immunohistochemistry-ihc-test"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "sophia": [
+    {
+      "name": "SOPHiA DDM™ for Solid Tumors",
+      "category": "somatic-analysis",
+      "subtype": "somatic-variant-analysis",
+      "type": "Solid-tumor genomic analysis platform",
+      "summary": "Analyzes oncology NGS data to detect, annotate, prioritize, and interpret somatic variants and biomarkers. Supports solid-tumor genomic analysis with configurable reporting workflows; diagnostic availability depends on the specific application.",
+      "sources": [
+        {
+          "label": "Official SOPHiA DDM™ for Solid Tumors overview",
+          "url": "https://www.sophiagenetics.com/sophia-ddm-for-genomics/solid-tumors/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MSK-ACCESS® powered with SOPHiA DDM™",
+      "category": "blood",
+      "subtype": "ctdna-cgp-assay",
+      "type": "Liquid biopsy NGS workflow · Research use",
+      "summary": "Decentralized liquid-biopsy workflow covering 147 cancer-associated genes. Combines assay content developed at Memorial Sloan Kettering with SOPHiA analytics and matched-normal analysis to help distinguish tumor variants from germline and clonal hematopoiesis signals.",
+      "sources": [
+        {
+          "label": "Official MSK-ACCESS® powered with SOPHiA DDM™ overview",
+          "url": "https://www.sophiagenetics.com/sophia-ddm-for-genomics/liquid-biopsy/msk-access/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MSK-IMPACT® Flex powered with SOPHiA DDM™",
+      "category": "tissue",
+      "subtype": "tissue-cgp-assay",
+      "type": "Modular tissue comprehensive genomic profiling workflow · Research use",
+      "summary": "Sample-to-report DNA and RNA profiling workflow for solid-tumor research. Provides modular analysis options for genomic alterations, gene fusions, and cancer biomarkers, with optional homologous recombination deficiency analysis.",
+      "sources": [
+        {
+          "label": "Official MSK-IMPACT® Flex powered with SOPHiA DDM™ overview",
+          "url": "https://www.sophiagenetics.com/sophia-ddm-for-genomics/solid-tumors/cgp/msk-impact-flex-powered-by-sophia-ddm/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "SOPHiA DDM™ Dx HRD Solution",
+      "category": "molecular",
+      "subtype": "hrd-genomic-testing",
+      "type": "Ovarian cancer HRD assessment · NGS assay and analysis",
+      "summary": "Assesses homologous recombination deficiency in ovarian cancer using homologous recombination repair gene analysis and genomic instability information. Offered as a CE-IVD application in specified European markets.",
+      "sources": [
+        {
+          "label": "Official SOPHiA DDM™ Dx HRD Solution overview",
+          "url": "https://www.sophiagenetics.com/sophia-ddm-for-genomics/solid-tumors/hrd/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "flatiron": [
+    {
+      "name": "OncoEMR®",
+      "category": "workflow",
+      "subtype": "oncology-ehr",
+      "type": "Oncology electronic health record",
+      "summary": "Cloud-based electronic health record built for oncology practices. Combines cancer care documentation, treatment workflows, ordering, results, and practice operations in a specialty-focused system.",
+      "sources": [
+        {
+          "label": "Official OncoEMR® overview",
+          "url": "https://flatiron.com/oncology/oncology-ehr"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Flatiron Assist™",
+      "category": "assistant",
+      "subtype": "care-pathways",
+      "type": "Oncology clinical decision support and care pathways",
+      "summary": "EHR-integrated decision support that surfaces guideline-based treatment pathways, practice-preferred regimens, and clinical trial opportunities. Supports treatment ordering, prior authorization documentation, and pathway concordance reporting.",
+      "sources": [
+        {
+          "label": "Official Flatiron Assist™ overview",
+          "url": "https://flatiron.com/oncology/clinical-decision-support"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Flatiron Real-World Data",
+      "category": "dataset",
+      "subtype": "oncology-real-world-data",
+      "type": "Oncology real-world data and evidence services",
+      "summary": "Oncology datasets and evidence-generation services drawn from routine cancer care. Supports research across drug development, including outcomes analysis and studies linking clinical and genomic information.",
+      "sources": [
+        {
+          "label": "Official Flatiron Real-World Data overview",
+          "url": "https://flatiron.com/real-world-evidence"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "isomorphic": [
+    {
+      "name": "IsoDDE",
+      "category": "research",
+      "subtype": "therapeutic-design",
+      "type": "Proprietary AI drug-design engine · Research platform",
+      "summary": "Unified predictive and generative AI system for molecular design and biomolecular interaction modeling. Used in partner drug-discovery programs, including a collaboration with MSD on an oncology target.",
+      "sources": [
+        {
+          "label": "Official IsoDDE overview",
+          "url": "https://www.isomorphiclabs.com/our-tech"
+        },
+        {
+          "label": "Official MSD oncology collaboration",
+          "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-enters-into-a-research-collaboration-with-msd"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "google": [
+    {
+      "name": "Path Foundation",
+      "category": "foundation",
+      "subtype": "pathology-vision",
+      "type": "Pathology image embedding foundation model · Research tool",
+      "summary": "Produces embeddings from digital pathology image patches for downstream research tasks such as tumor detection, grading, biomarker prediction, and similar-image retrieval. Enables classifiers to be trained with smaller labeled datasets.",
+      "sources": [
+        {
+          "label": "Official Path Foundation overview",
+          "url": "https://developers.google.com/health-ai-developer-foundations/path-foundation"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "tenx": [
+    {
+      "name": "Visium HD WT Panel",
+      "category": "spatial-assay",
+      "subtype": "spatial-transcriptomic-assay",
+      "type": "Whole-transcriptome spatial assay · Research use",
+      "summary": "Probe-based spatial gene-expression assay for FFPE and other tissue types. Maps transcriptomic patterns onto tissue morphology to study cell populations, tumor niches, and surrounding stroma.",
+      "sources": [
+        {
+          "label": "Official Visium HD WT Panel overview",
+          "url": "https://www.10xgenomics.com/platforms/visium"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Visium HD 3′",
+      "category": "spatial-assay",
+      "subtype": "spatial-transcriptomic-assay",
+      "type": "Sequencing-based spatial transcriptomics assay · Research use",
+      "summary": "Whole-transcriptome spatial gene-expression assay using poly(A) capture for discovery across species. Preserves the relationship between gene expression and tissue architecture.",
+      "sources": [
+        {
+          "label": "Official Visium HD 3′ overview",
+          "url": "https://www.10xgenomics.com/platforms/visium"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Xenium In Situ",
+      "category": "spatial-instrument",
+      "subtype": "spatial-rna-profiling",
+      "type": "In situ RNA imaging platform · Research use",
+      "summary": "Combines the Xenium Analyzer with gene panels to map RNA in intact tissue at subcellular resolution. Optional protein panels enable same-section RNA and protein measurements for tumor-microenvironment research.",
+      "sources": [
+        {
+          "label": "Official Xenium In Situ overview",
+          "url": "https://www.10xgenomics.com/platforms/xenium"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Space Ranger",
+      "category": "spatial-informatics",
+      "subtype": "spatial-omics-analysis",
+      "type": "Spatial transcriptomics analysis pipelines · Research software",
+      "summary": "Processes Visium sequencing reads together with brightfield or fluorescence tissue images to generate spatial gene-expression outputs. Supports downstream visualization and analysis of tissue-associated molecular patterns.",
+      "sources": [
+        {
+          "label": "Official Space Ranger overview",
+          "url": "https://www.10xgenomics.com/support/software/space-ranger/latest"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Xenium Explorer",
+      "category": "spatial-informatics",
+      "subtype": "spatial-omics-analysis",
+      "type": "Spatial transcriptomics visualization · Research software",
+      "summary": "Desktop software for exploring Xenium transcript locations, cells, gene expression, and optional protein measurements. Supports alignment with same-section H&E or immunofluorescence images for pathology context.",
+      "sources": [
+        {
+          "label": "Official Xenium Explorer overview",
+          "url": "https://www.10xgenomics.com/products/xenium-analysis"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "bruker": [
+    {
+      "name": "GeoMx® Digital Spatial Profiler",
+      "category": "spatial-instrument",
+      "subtype": "spatial-rna-profiling",
+      "type": "Region-based spatial RNA and protein profiling · Research use",
+      "summary": "Profiles RNA and protein in morphology-selected tissue regions, including FFPE samples. Links molecular measurements to tissue compartments for biomarker discovery and translational oncology studies.",
+      "sources": [
+        {
+          "label": "Official GeoMx® Digital Spatial Profiler overview",
+          "url": "https://brukerspatialbiology.com/products/geomx-digital-spatial-profiler/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CosMx® Spatial Molecular Imager",
+      "category": "spatial-instrument",
+      "subtype": "spatial-rna-profiling",
+      "type": "Single-cell spatial multiomics instrument · Research use",
+      "summary": "Images RNA and protein within intact tissue to resolve cell states and their spatial relationships. Supports high-plex molecular characterization of tumor and immune-cell populations.",
+      "sources": [
+        {
+          "label": "Official CosMx® Spatial Molecular Imager overview",
+          "url": "https://brukerspatialbiology.com/products/cosmx-spatial-molecular-imager/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "CellScape® XR",
+      "category": "spatial-instrument",
+      "subtype": "multiplex-spatial-imaging",
+      "type": "Cyclic multiplex fluorescence tissue imaging · Research use",
+      "summary": "Automates high-plex protein imaging with repeated fluorescence imaging cycles. Quantifies cell phenotypes, biomarker expression, and spatial relationships in tissue sections for research.",
+      "sources": [
+        {
+          "label": "Official CellScape® XR overview",
+          "url": "https://brukerspatialbiology.com/products/cellscape-precise-spatial-proteomics/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "AtoMx® Spatial Informatics Platform",
+      "category": "spatial-informatics",
+      "subtype": "spatial-omics-analysis",
+      "type": "Cloud spatial multiomics analysis · Research software",
+      "summary": "Cloud platform for storing, analyzing, visualizing, and sharing spatial multiomics data. Provides configured analysis pipelines and supports custom workflows for studies using Bruker spatial platforms.",
+      "sources": [
+        {
+          "label": "Official AtoMx® Spatial Informatics Platform overview",
+          "url": "https://brukerspatialbiology.com/products/atomx-spatial-informatics-platform/atomx-sip-overview/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "akoya": [
+    {
+      "name": "PhenoCycler®-Fusion 2.0",
+      "category": "spatial-instrument",
+      "subtype": "multiplex-spatial-imaging",
+      "type": "Cyclic multiplex tissue imaging · Research use",
+      "summary": "Akoya platform offered by Quanterix that combines automated fluidics and imaging to measure many protein biomarkers on a tissue section. Used to characterize cellular phenotypes and tumor-immune organization.",
+      "sources": [
+        {
+          "label": "Official PhenoCycler®-Fusion 2.0 overview",
+          "url": "https://www.quanterix.com/phenocycler-fusion-2-0/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PhenoImager® HT 2.0",
+      "category": "spatial-instrument",
+      "subtype": "multiplex-spatial-imaging",
+      "type": "High-throughput multispectral tissue imaging · Research use",
+      "summary": "Akoya whole-slide imaging system offered by Quanterix for multiplex immunofluorescence and brightfield studies. Supports tissue biomarker quantification and spatial-signature development across larger research cohorts.",
+      "sources": [
+        {
+          "label": "Official PhenoImager® HT 2.0 overview",
+          "url": "https://www.quanterix.com/phenoimager-ht-2-0/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "inForm®",
+      "category": "spatial",
+      "subtype": "multiplex-image-analysis",
+      "type": "Multispectral tissue analysis · Research software",
+      "summary": "Akoya tissue-image analysis software, now offered by Quanterix, for processing multimarker studies. Supports tissue segmentation, cell phenotyping, and quantitative assessment of stained tissue images.",
+      "sources": [
+        {
+          "label": "Official inForm® overview",
+          "url": "https://www.quanterix.com/software-data-analysis-solutions/inform-software/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "PhenoCode™ Discovery IO60 Human Protein Panel",
+      "category": "spatial-assay",
+      "subtype": "spatial-protein-assay",
+      "type": "Immuno-oncology spatial protein panel · Research use",
+      "summary": "Human immuno-oncology panel for PhenoCycler-Fusion spatial proteomics. Measures immune and tumor-associated protein markers to characterize cell populations and their organization within tissue.",
+      "sources": [
+        {
+          "label": "Official PhenoCode™ Discovery IO60 Human Protein Panel overview",
+          "url": "https://www.quanterix.com/phenocode-discovery-panels/phenocode-discovery-io60-human-protein-panel/phenocode-discovery-io60-human-protein-panel-product/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "quanterix": [
+    {
+      "name": "Simoa® HD-X Analyzer",
+      "category": "protein-analyzer",
+      "subtype": "ultrasensitive-protein-analysis",
+      "type": "Automated digital immunoassay analyzer · Research use",
+      "summary": "Automated instrument for sensitive measurement of low-abundance protein biomarkers. Supports liquid-biomarker research and drug-development studies, including oncology applications.",
+      "sources": [
+        {
+          "label": "Official Simoa® HD-X Analyzer overview",
+          "url": "https://www.quanterix.com/simoa-hd-x-analyzer/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "SP-X® Imaging and Analysis System",
+      "category": "protein-analyzer",
+      "subtype": "ultrasensitive-protein-analysis",
+      "type": "Multiplex protein biomarker analyzer · Research use",
+      "summary": "Benchtop instrument using Simoa planar-array technology to measure multiple protein biomarkers. Supports biomarker assay development and translational research rather than tissue-slide scanning.",
+      "sources": [
+        {
+          "label": "Official SP-X® Imaging and Analysis System overview",
+          "url": "https://www.quanterix.com/the-sp-x-imaging-and-analysis-system/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "Quanterix® Simoa Accelerator",
+      "category": "service",
+      "subtype": "protein-biomarker-services",
+      "type": "Liquid protein biomarker research service",
+      "summary": "Laboratory service providing biomarker assay development and sample analysis using Simoa technology. Supports oncology and other translational research programs, including clinical-trial biomarker studies.",
+      "sources": [
+        {
+          "label": "Official Quanterix® Simoa Accelerator overview",
+          "url": "https://www.quanterix.com/quanterix-simoa-accelerator/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "vizgen": [
+    {
+      "name": "MERSCOPE Ultra™",
+      "category": "spatial-instrument",
+      "subtype": "spatial-rna-profiling",
+      "type": "MERFISH spatial transcriptomics instrument · Research use",
+      "summary": "Images many RNA targets in intact tissue using MERFISH technology. Supports single-cell and subcellular molecular mapping in FFPE and frozen samples for oncology and other research.",
+      "sources": [
+        {
+          "label": "Official MERSCOPE Ultra™ overview",
+          "url": "https://vizgen.com/merscope-ultra/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MERSCOPE CoMap™",
+      "category": "spatial-assay",
+      "subtype": "spatial-protein-assay",
+      "type": "Same-section RNA and protein assay · Research use",
+      "summary": "Adds multiplex protein detection to MERSCOPE RNA imaging on the same tissue section. Links gene-expression states with protein phenotypes and cellular neighborhoods in tumor-microenvironment studies.",
+      "sources": [
+        {
+          "label": "Official MERSCOPE CoMap™ overview",
+          "url": "https://vizgen.com/products/spatial-proteomics/"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MERSCOPE Vizualizer™",
+      "category": "spatial-informatics",
+      "subtype": "spatial-omics-analysis",
+      "type": "Spatial gene-expression visualization · Research software",
+      "summary": "Software for examining MERSCOPE spatial RNA results, identifying cell populations, and exploring gene-expression patterns in tissue context. Supports visualization and analysis of molecularly defined cellular neighborhoods.",
+      "sources": [
+        {
+          "label": "Official MERSCOPE Vizualizer™ overview",
+          "url": "https://vizgen.com/vizualizer-software/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "biotechne": [
+    {
+      "name": "RNAscope™",
+      "category": "spatial-assay",
+      "subtype": "rna-in-situ-assay",
+      "type": "RNA in situ hybridization assay family · Research use",
+      "summary": "Probe-based assays that visualize RNA within tissue while preserving cellular and anatomical context. Chromogenic and fluorescent workflows support spatial biomarker and tumor-microenvironment research.",
+      "sources": [
+        {
+          "label": "Official RNAscope™ overview",
+          "url": "https://www.bio-techne.com/spatial/reagents/rnascope-ish-technology/rnascope"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "RNAscope™ HiPlex v2",
+      "category": "spatial-assay",
+      "subtype": "rna-in-situ-assay",
+      "type": "Multiplex fluorescent RNA ISH assay · Research use",
+      "summary": "Uses iterative fluorescence detection to visualize multiple RNA targets in tissue, including FFPE samples. Supports spatial confirmation of gene signatures and characterization of heterogeneous cell populations.",
+      "sources": [
+        {
+          "label": "Official RNAscope™ HiPlex v2 overview",
+          "url": "https://www.bio-techne.com/spatial/reagents/rnascope-ish-technology/rnascope/fluorescent-assays/hiplex-manual"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "BaseScope™",
+      "category": "spatial-assay",
+      "subtype": "short-rna-in-situ-assay",
+      "type": "Short RNA and splice-variant ISH assays · Research use",
+      "summary": "Detects short RNA targets, including exon junctions and splice variants, in anatomical context. Enables localized assessment of specific transcript features in tissue-based molecular research.",
+      "sources": [
+        {
+          "label": "Official BaseScope™ overview",
+          "url": "https://www.bio-techne.com/spatial/reagents/rnascope-ish-technology/basescope/manual-ls"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "miRNAscope™",
+      "category": "spatial-assay",
+      "subtype": "short-rna-in-situ-assay",
+      "type": "Small RNA in situ hybridization assays · Research use",
+      "summary": "Visualizes short RNA molecules such as microRNAs and small interfering RNAs within tissue. Supports spatial investigation of RNA regulation and therapeutic oligonucleotide distribution.",
+      "sources": [
+        {
+          "label": "Official miRNAscope™ overview",
+          "url": "https://www.bio-techne.com/spatial/reagents/rnascope-ish-technology/mirnascope"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "standardbio": [
+    {
+      "name": "Hyperion™ XTi Imaging System",
+      "category": "mass-imaging",
+      "subtype": "mass-spatial-imaging",
+      "type": "Imaging mass cytometry tissue instrument · Research use",
+      "summary": "Uses metal-tagged antibodies and mass-based detection to map many protein biomarkers in tissue. Supports spatial immune profiling and tumor-microenvironment research without fluorescence spectral overlap.",
+      "sources": [
+        {
+          "label": "Official Hyperion™ XTi Imaging System overview",
+          "url": "https://standardbio.com/products-services/hyperion-xti-imaging-system/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "miltenyi": [
+    {
+      "name": "MACSima® Platform",
+      "category": "spatial-instrument",
+      "subtype": "multiplex-spatial-imaging",
+      "type": "Automated cyclic fluorescence tissue imaging · Research use",
+      "summary": "Automates repeated staining and imaging to profile many protein markers and RNA targets within a tissue section. Supports characterization of tumor cells, immune populations, and spatial cellular relationships.",
+      "sources": [
+        {
+          "label": "Official MACSima® Platform overview",
+          "url": "https://www.miltenyibiotec.com/US-en/products/macs-imaging-and-spatial-biology/macsima-platform.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "MACS® iQ View – Spatial Biology",
+      "category": "spatial",
+      "subtype": "multiplex-image-analysis",
+      "type": "Multiplex tissue image analysis · Research software",
+      "summary": "Analysis software for large image datasets generated by the MACSima Platform. Helps researchers explore cell phenotypes, marker expression, and tissue organization without writing custom analysis code.",
+      "sources": [
+        {
+          "label": "Official MACS® iQ View – Spatial Biology overview",
+          "url": "https://www.miltenyibiotec.com/US-en/products/macs-imaging-and-spatial-biology/macs-iq-view-software.html"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "ionpath": [
+    {
+      "name": "MIBIscope™",
+      "category": "mass-imaging",
+      "subtype": "mass-spatial-imaging",
+      "type": "Multiplexed ion-beam tissue imaging · Research use",
+      "summary": "Measures metal-tagged protein biomarkers in preserved tissue using ion-beam imaging and mass spectrometry. The platform is manufactured, supported, and developed by Oregon Physics for spatial proteomics research.",
+      "sources": [
+        {
+          "label": "Official MIBIscope™ overview",
+          "url": "https://mibiscope.com/mibiscope-instrument/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
+  "enable": [
+    {
+      "name": "Enable Data Atlas",
+      "category": "dataset",
+      "subtype": "biological-atlas",
+      "type": "Licensable multimodal disease data resource",
+      "summary": "Linked clinical, spatial, cellular, and molecular datasets offered for licensing. Supports oncology discovery, translational studies, and AI-model development using curated patient cohorts and tissue-associated molecular data.",
+      "sources": [
+        {
+          "label": "Official Enable Data Atlas overview",
+          "url": "https://www.enablemedicine.com/"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
   "fmi": [
     {
       "name": "FoundationOne® CDx",
@@ -4047,7 +7187,42 @@ COMPANY_PRODUCTS.msrne.unshift(COMPANY_PRODUCTS.msr[0]);
 // Proscia distributes this Mindpeak app through its Concentriq AI portfolio.
 COMPANY_PRODUCTS.proscia.push(COMPANY_PRODUCTS.mindpeak[0]);
 // Myriad sells the Prolaris test that integrates PATHOMIQ’s pathology score.
-COMPANY_PRODUCTS.myriad = [COMPANY_PRODUCTS.pathomiq[2]];
+COMPANY_PRODUCTS.myriad = [COMPANY_PRODUCTS.pathomiq[2], ...COMPANY_PRODUCTS.myriad];
+
+// Company websites reviewed; no separately named relevant offering found.
+const COMPANY_PRODUCT_REVIEWS = {
+  "aevius": {
+    "status": "no-public-relevant-product",
+    "summary": "The company describes a general patient-intelligence platform under development. Its public website does not identify a named oncology or pathology product.",
+    "sources": [
+      {
+        "label": "Aevius official platform description",
+        "url": "https://aevius.ai/"
+      }
+    ]
+  },
+  "bioslife": {
+    "status": "no-public-relevant-product",
+    "summary": "The company describes a cancer-surveillance platform and virtual clinic with a waitlist. Its public website does not list a separately named model, test, or software product.",
+    "sources": [
+      {
+        "label": "Official Bios Life platform and waitlist",
+        "url": "https://bioslife.ai/"
+      }
+    ]
+  },
+  "omanta": {
+    "status": "no-public-relevant-product",
+    "summary": "The company offers personalized scientific advocacy and molecular research services. Its public website does not list a separately named model, test, or software product.",
+    "sources": [
+      {
+        "label": "Official Omanta service and approach",
+        "url": "https://omanta.com/"
+      }
+    ]
+  }
+};
+
 
 // Selected publications by organization, newest year first. Entries are title, venue, link, and optional project name.
 const LAB_PUBLICATIONS = {
@@ -4870,6 +8045,34 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "kinase-inhibitor": ["Kinase-targeted therapy", "violet", "M8 5l6 3v7l-6 3-6-3V8z M14 12h6 M23 5v7 M20 5h6 M23 12v6 M19 18h8", "M19 23h8 M23 21v6 M5 10l3-2 3 2 M5 13l3 2 3-2"],
+  "checkpoint-immunotherapy": ["Immune checkpoint therapy", "teal", "M3 16a7 7 0 1 0 14 0 7 7 0 1 0-14 0Z M19 16a5 5 0 1 0 10 0 5 5 0 1 0-10 0Z M10 12v8 M6 16h8", "M16 7l5-4 M18 10l6-4 M16 25l5 4 M18 22l6 4"],
+  "antibody-drug-conjugate": ["Antibody–drug conjugate", "rose", "M6 5l10 11L26 5 M10 3l6 7 6-7 M16 16v12 M12 20h8", "M25 12v4 M23 14h4 M24 18l3 2v4l-3 2-3-2v-4z"],
+  "hif2-inhibitor": ["Hypoxia signaling inhibitor", "blue", "M5 16a11 11 0 1 0 22 0 11 11 0 1 0-22 0Z M9 10h4v12H9z M19 10h4v12h-4z", "M13 16h6 M14 13l4 6 M11 6h10 M11 26h10"],
+  "parp-inhibitor": ["DNA-repair inhibitor", "blue", "M7 4c0 6 10 6 10 12s-10 6-10 12 M17 4c0 6-10 6-10 12s10 6 10 12 M8 6h8 M8 14h8 M8 22h8", "M22 11l7 7 M29 11l-7 7 M22 23h7 M25.5 21v4"],
+  "cdk46-inhibitor": ["Cell-cycle inhibitor", "violet", "M16 5a11 11 0 1 0 11 11 M16 5h8v8 M16 16l6-6", "M8 17h10 M13 12v10 M23 21l5 5 M28 21l-5 5"],
+  "bcl2-inhibitor": ["BCL-2 targeted therapy", "rose", "M4 16a11 11 0 1 0 22 0 11 11 0 1 0-22 0Z M9 16a6 6 0 1 0 12 0 6 6 0 1 0-12 0Z", "M19 5l8 8 M27 5l-8 8 M12 16h6 M15 13v6"],
+  "kras-inhibitor": ["KRAS-targeted therapy", "amber", "M16 4l10 6v12l-10 6-10-6V10z M11 12l5-3 5 3v8l-5 3-5-3z", "M4 5l6 6 M3 9l4-4 M21 19l7 7 M28 19l-7 7"],
+  "bispecific-antibody": ["Bispecific antibody engagement", "teal", "M3 16a5 5 0 1 0 10 0 5 5 0 1 0-10 0Z M19 16a5 5 0 1 0 10 0 5 5 0 1 0-10 0Z M13 16h6", "M10 5l6 6 6-6 M13 3l3 4 3-4 M16 11v10 M10 27l6-6 6 6"],
+  "car-t-cell-therapy": ["Engineered CAR-T cell therapy", "green", "M3 16a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z M9 16a4 4 0 1 0 8 0 4 4 0 1 0-8 0Z", "M21 8h5v8 M23 5h6 M25 16v7 M22 23h7 M5 24l3 3 M7 5l-3 3"],
+  "therapeutic-antibody": ["Tumor-targeted antibody", "blue", "M5 6l11 11L27 6 M9 3l7 8 7-8 M16 17v12 M12 21h8", "M3 19h5 M5.5 16.5v5 M25 19h5 M27.5 16.5v5"],
+  "colorectal-screening": ["Colorectal cancer screening", "amber", "M8 5h16a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4h-5v3 M8 5a4 4 0 0 0-4 4v9a4 4 0 0 0 4 4h5V11h10v10h-4", "M8 9h.1 M8 14h.1 M24 9h.1 M24 15h.1 M21 25h3"],
+  "hrd-testing": ["Homologous recombination deficiency testing", "violet", "M6 4c0 5 8 5 8 10 M14 4c0 5-8 5-8 10 M7 5h6 M7 13h6 M9 9h3 M20 18v10 M28 18v10 M20 20h8 M20 26h8", "M19 7l3 3-3 3 M23 7l-3 3 3 3 M14 22h4 M16 20v4"],
+  "thyroid-testing": ["Thyroid nodule molecular testing", "teal", "M14 12c-3-6-10-7-10 0s3 14 9 12l3-5 3 5c6 2 9-5 9-12s-7-6-10 0 M14 8h4 M14 5h4", "M9 14a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M21 18h.1 M15 13h2"],
+  "tissue-processing": ["Tissue processing", "slate", "M5 5h22v23H5z M8 9h16v8H8z M8 22h3 M14 22h3 M20 22h4", "M12 12h8 M12 14h8 M9 24v2 M15 24v2 M22 24v2"],
+  "tissue-embedding": ["Paraffin tissue embedding", "amber", "M5 17h22v10H5z M9 17V9h14v8 M12 4h8", "M12 12h8v3h-8z M9 21h14 M16 4v3"],
+  "staining-instrument": ["Automated tissue staining", "teal", "M5 8h22v20H5z M9 16h14v8H9z M10 8V4h12v4", "M16 10c-1.2 2-2 3-2 4a2 2 0 0 0 4 0c0-1-1-2-2-4Z M12 20h8"],
+  "coverslipping": ["Slide coverslipping", "blue", "M4 17h24v10H4z M8 17v-4h16v4 M10 6h16v4H10z", "M10 21h12 M18 10l-4 3 M12 13h2v-2"],
+  "fish-testing": ["FISH biomarker assay", "violet", "M4 8h24v18H4z M9 8v18 M13 17a5 5 0 1 0 10 0 5 5 0 1 0-10 0Z", "M16 15h.1 M20 18h.1 M16 20h.1 M20 14h.1"],
+  "spatial-assay": ["Spatial molecular assay", "teal", "M4 7h24v19H4z M9 7v19 M12 11h3 M12 15h3 M12 19h3", "M19 11h.1 M24 12h.1 M21 16h.1 M25 20h.1 M18 22h.1"],
+  "mass-imaging": ["Mass-based spatial imaging", "blue", "M4 21h24v6H4z M9 4l7 8 M23 4l-7 8 M16 12v6 M9 24h14", "M16 16l-3 3 M16 16l3 3 M6 17v2 M25 14v5 M28 16v3"],
+  "protein-analyzer": ["Protein biomarker instrument", "rose", "M5 6h22v22H5z M9 10h14v7H9z M9 22h3 M20 22h3", "M12 13h.1 M16 13h.1 M20 13h.1 M15 22h2"],
+  "spatial-informatics": ["Spatial omics analysis", "violet", "M4 5h24v19H4z M10 28h12 M16 24v4", "M9 10h.1 M15 9h.1 M22 12h.1 M12 18h.1 M20 19h.1 M9 10l6-1 7 3-2 7-8-1-3-8"],
+  "endocrine-therapy": ["Hormone receptor therapy", "rose", "M4 16a10 10 0 1 0 20 0 10 10 0 1 0-20 0Z M10 16a4 4 0 1 0 8 0 4 4 0 1 0-8 0Z", "M23 5l6 6 M29 5l-6 6 M11 11h6 M14 8v6 M14 22v6"],
+  "proteasome-inhibitor": ["Proteasome-targeted therapy", "violet", "M9 4h14v24H9z M9 9h14 M9 23h14 M5 12h22 M5 20h22", "M12 13l8 6 M20 13l-8 6 M13 5v3 M19 24v3"],
+  "taxane-chemotherapy": ["Microtubule-targeted chemotherapy", "rose", "M5 6h22 M5 26h22 M8 6v20 M14 6v20 M20 6v20 M26 6v20", "M5 16h24 M18 12l8 8 M26 12l-8 8 M5 11h9 M5 21h9"],
+  "alpha-emitting-radiopharmaceutical": ["Bone-targeting alpha therapy", "amber", "M10 5c-4-3-7 2-4 5l4 3v6l-4 3c-3 3 0 8 4 5l3-3h6l3 3c4 3 7-2 4-5l-4-3v-6l4-3c3-3 0-8-4-5l-3 3h-6z", "M16 13v6 M13 16h6 M8 16h.1 M24 16h.1"],
+  "radioligand-therapy": ["Targeted radioligand therapy", "amber", "M4 16a6 6 0 1 0 12 0 6 6 0 1 0-12 0Z M16 16h5 M23 13l5 3-5 3z", "M24 4v4 M24 24v4 M18 6l3 3 M27 23l3 3 M16 25l4-4 M28 11l3-3"],
   "rna-fusion": ["RNA fusion profiling", "violet", "M5 5v8c0 4 8 4 8 8v6 M27 5v8c0 4-8 4-8 8v6 M8 7h4 M8 11h4 M20 7h4 M20 11h4", "M13 21h6 M13 25h6 M16 16v3 M14 17h4"],
   "pharmacogenetics": ["Pharmacogenetic drug response", "blue", "M5 4c0 5 9 5 9 10 M14 4c0 5-9 5-9 10 M6 5h7 M6 13h7 M8 9h3", "M16 25l8-8a4 4 0 0 1 6 6l-8 8a4 4 0 0 1-6-6Z M20 21l6 6 M9 17v8h4"],
   "ihc-testing": ["IHC protein biomarker testing", "amber", "M4 8h24v18H4z M9 8v18 M20 12h5 M20 16h5 M20 20h5", "M13 13a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M13 21a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M15 15v4"],
@@ -5034,9 +8237,274 @@ const PRODUCT_FAMILIES = {
   "analysis": "Pathology & imaging AI",
   "software": "Clinical & lab software",
   "discovery": "Research & drug discovery",
-  "hardware": "Lab hardware & digitization"
+  "hardware": "Lab hardware & digitization",
+  "therapeutics": "Oncology therapeutics"
 };
 const PRODUCT_SUBTYPES = {
+  "kinase-inhibitor": {
+    "label": "Targeted tyrosine kinase inhibitors",
+    "family": "therapeutics"
+  },
+  "checkpoint-immunotherapy": {
+    "label": "Immune checkpoint inhibitors",
+    "family": "therapeutics"
+  },
+  "antibody-drug-conjugate": {
+    "label": "Antibody–drug conjugates",
+    "family": "therapeutics"
+  },
+  "hif2-inhibitor": {
+    "label": "HIF-2α inhibitors",
+    "family": "therapeutics"
+  },
+  "parp-inhibitor": {
+    "label": "PARP inhibitors",
+    "family": "therapeutics"
+  },
+  "cdk46-inhibitor": {
+    "label": "CDK4/6 inhibitors",
+    "family": "therapeutics"
+  },
+  "bcl2-inhibitor": {
+    "label": "BCL-2 inhibitors",
+    "family": "therapeutics"
+  },
+  "kras-inhibitor": {
+    "label": "KRAS inhibitors",
+    "family": "therapeutics"
+  },
+  "bispecific-antibody": {
+    "label": "Bispecific antibodies & T-cell engagers",
+    "family": "therapeutics"
+  },
+  "car-t-cell-therapy": {
+    "label": "CAR-T cell therapies",
+    "family": "therapeutics"
+  },
+  "therapeutic-antibody": {
+    "label": "Tumor-targeted therapeutic antibodies",
+    "family": "therapeutics"
+  },
+  "skin-pathology": {
+    "label": "Skin cancer detection & measurements",
+    "family": "analysis"
+  },
+  "her2-ihc-scoring": {
+    "label": "HER2 IHC quantification & scoring",
+    "family": "analysis"
+  },
+  "er-pr-ihc-scoring": {
+    "label": "ER & PR IHC quantification",
+    "family": "analysis"
+  },
+  "ki67-ihc-scoring": {
+    "label": "Ki67 proliferation scoring",
+    "family": "analysis"
+  },
+  "slide-quality-control": {
+    "label": "Whole-slide image artifact & quality control",
+    "family": "analysis"
+  },
+  "preclinical-pathology": {
+    "label": "Preclinical toxicologic pathology AI",
+    "family": "analysis"
+  },
+  "telepathology": {
+    "label": "Remote pathology consultation workflows",
+    "family": "software"
+  },
+  "pathology-education": {
+    "label": "Digital pathology teaching & assessment",
+    "family": "software"
+  },
+  "cancer-registry-reporting": {
+    "label": "Cancer registry & public health reporting",
+    "family": "software"
+  },
+  "diagnostic-pathology-services": {
+    "label": "Expert diagnostic pathology services",
+    "family": "tests"
+  },
+  "pathology-research-services": {
+    "label": "Digital pathology research services",
+    "family": "discovery"
+  },
+  "pathology-ai-engine": {
+    "label": "Integrated multi-task pathology AI engines",
+    "family": "analysis"
+  },
+  "hereditary-rna-analysis": {
+    "label": "Hereditary cancer RNA variant analysis",
+    "family": "tests"
+  },
+  "immunogenomics-research": {
+    "label": "Tumor immunogenomics research profiling",
+    "family": "discovery"
+  },
+  "colorectal-blood-screening": {
+    "label": "Blood-based colorectal cancer screening",
+    "family": "tests"
+  },
+  "colorectal-stool-screening": {
+    "label": "Stool-based colorectal cancer screening",
+    "family": "tests"
+  },
+  "breast-genomic-recurrence": {
+    "label": "Breast cancer genomic recurrence risk",
+    "family": "tests"
+  },
+  "lung-blood-screening": {
+    "label": "Blood-based lung cancer screening",
+    "family": "tests"
+  },
+  "hrd-companion-testing": {
+    "label": "HRD companion diagnostic testing",
+    "family": "tests"
+  },
+  "germline-companion-diagnostic": {
+    "label": "Germline companion diagnostic testing",
+    "family": "tests"
+  },
+  "prostate-genomic-risk": {
+    "label": "Prostate cancer genomic progression risk",
+    "family": "tests"
+  },
+  "bladder-molecular-subtyping": {
+    "label": "Bladder cancer molecular subtyping",
+    "family": "tests"
+  },
+  "thyroid-nodule-classifier": {
+    "label": "Thyroid nodule genomic classification",
+    "family": "tests"
+  },
+  "breast-molecular-subtyping": {
+    "label": "Breast cancer molecular subtyping",
+    "family": "tests"
+  },
+  "histology-processing": {
+    "label": "Histology tissue processing",
+    "family": "hardware"
+  },
+  "tissue-embedding": {
+    "label": "Paraffin tissue embedding",
+    "family": "hardware"
+  },
+  "automated-microtomy": {
+    "label": "Automated tissue sectioning",
+    "family": "hardware"
+  },
+  "ihc-ish-staining": {
+    "label": "Diagnostic IHC & ISH staining instruments",
+    "family": "hardware"
+  },
+  "research-multiplex-staining": {
+    "label": "Research multiplex tissue staining",
+    "family": "hardware"
+  },
+  "routine-slide-staining": {
+    "label": "Routine H&E & slide staining",
+    "family": "hardware"
+  },
+  "slide-coverslipping": {
+    "label": "Automated slide coverslipping",
+    "family": "hardware"
+  },
+  "fish-biomarker-testing": {
+    "label": "Tissue FISH biomarker assays",
+    "family": "tests"
+  },
+  "urine-cytogenetic-testing": {
+    "label": "Urine cytogenetic cancer testing",
+    "family": "tests"
+  },
+  "proteasome-inhibitor": {
+    "label": "Proteasome inhibitors",
+    "family": "therapeutics"
+  },
+  "taxane-chemotherapy": {
+    "label": "Taxane chemotherapy",
+    "family": "therapeutics"
+  },
+  "endocrine-therapy": {
+    "label": "Endocrine & androgen receptor therapies",
+    "family": "therapeutics"
+  },
+  "alpha-emitting-radiopharmaceutical": {
+    "label": "Bone-targeting alpha radiopharmaceuticals",
+    "family": "therapeutics"
+  },
+  "radioligand-therapy": {
+    "label": "Targeted radioligand therapies",
+    "family": "therapeutics"
+  },
+  "ngs-companion-diagnostics": {
+    "label": "NGS companion diagnostic assays",
+    "family": "tests"
+  },
+  "pcr-companion-diagnostics": {
+    "label": "PCR companion diagnostic assays",
+    "family": "tests"
+  },
+  "leukemia-transcript-monitoring": {
+    "label": "Leukemia fusion transcript monitoring",
+    "family": "tests"
+  },
+  "melanoma-nodal-risk": {
+    "label": "Melanoma sentinel lymph node risk",
+    "family": "tests"
+  },
+  "blood-immune-profiling": {
+    "label": "Blood immune cell & transcriptome profiling",
+    "family": "tests"
+  },
+  "hrd-genomic-testing": {
+    "label": "Homologous recombination deficiency testing",
+    "family": "tests"
+  },
+  "oncology-ehr": {
+    "label": "Oncology electronic health records",
+    "family": "software"
+  },
+  "oncology-real-world-data": {
+    "label": "Oncology real-world research data",
+    "family": "discovery"
+  },
+  "spatial-rna-profiling": {
+    "label": "Spatial RNA & multiomic profilers",
+    "family": "hardware"
+  },
+  "spatial-transcriptomic-assay": {
+    "label": "Spatial transcriptomic capture assays",
+    "family": "discovery"
+  },
+  "spatial-omics-analysis": {
+    "label": "Spatial omics analysis & visualization",
+    "family": "analysis"
+  },
+  "spatial-protein-assay": {
+    "label": "Multiplex spatial protein assay panels",
+    "family": "discovery"
+  },
+  "rna-in-situ-assay": {
+    "label": "RNA in situ hybridization assays",
+    "family": "discovery"
+  },
+  "short-rna-in-situ-assay": {
+    "label": "Short RNA & splice-variant ISH assays",
+    "family": "discovery"
+  },
+  "mass-spatial-imaging": {
+    "label": "Mass-based spatial protein imaging",
+    "family": "hardware"
+  },
+  "ultrasensitive-protein-analysis": {
+    "label": "Ultrasensitive protein biomarker instruments",
+    "family": "hardware"
+  },
+  "protein-biomarker-services": {
+    "label": "Protein biomarker assay research services",
+    "family": "discovery"
+  },
   "rna-fusion-profiling": {
     "label": "RNA fusion & rearrangement profiling",
     "family": "tests"
@@ -5433,9 +8901,12 @@ function openProducts(n, selectedItem) {
         ${item.sources.length ? `<div class='product-sources'>${item.sources.map(source => `<a href='${esc(source.url)}' target='_blank' rel='noopener noreferrer'>${esc(source.label)}</a>`).join('')}</div>` : ''}
       </article>`;
   }).join('');
+  const review = COMPANY_PRODUCT_REVIEWS[n.id];
   const content = cards
     ? (selectedItem ? '' : `<p class='products-intro'>Selected models and products. Official sources are linked where available.</p>`) + cards
-    : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
+    : review
+      ? `<section class='products-empty'><h3>No named product listed publicly</h3><p>${esc(review.summary)}</p><div class='product-sources'>${review.sources.map(source => `<a href='${esc(source.url)}' target='_blank' rel='noopener noreferrer'>${esc(source.label)}</a>`).join('')}</div></section>`
+      : `<section class='products-empty'><h3>No products listed yet</h3><p>Model and product details for ${esc(n.name)} will be added here.</p>${n.url ? `<a href='${esc(n.url)}' target='_blank' rel='noopener noreferrer'>Visit the official website</a>` : ''}</section>`;
   openResourcePanel(n, 'Models & products', 'Close models and products', content);
 }
 
@@ -5463,9 +8934,9 @@ const productSubtypes = item => [item.subtype, ...(item.additionalSubtypes || []
 const productFamilies = item => [...new Set(productSubtypes(item).map(key => PRODUCT_SUBTYPES[key].family))];
 const productTypeLabel = item => productSubtypes(item).map(key => PRODUCT_SUBTYPES[key].label).join(' · ');
 const productFamilyLabel = item => productFamilies(item).map(key => PRODUCT_FAMILIES[key]).join(' · ');
-const FAMILY_TONES = { tests: 'rose', models: 'violet', analysis: 'teal', software: 'blue', discovery: 'green', hardware: 'slate' };
+const FAMILY_TONES = { tests: 'rose', models: 'violet', analysis: 'teal', software: 'blue', discovery: 'green', hardware: 'slate', therapeutics: 'amber' };
 const catalogChevron = `<svg class='catalog-chevron' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='m6 3.5 4.5 4.5L6 12.5'/></svg>`;
-const FAMILY_NAV_LABELS = { tests: 'Tests & risk', models: 'AI models', analysis: 'Pathology AI', software: 'Clinical software', discovery: 'Research & discovery', hardware: 'Hardware' };
+const FAMILY_NAV_LABELS = { tests: 'Tests & risk', models: 'AI models', analysis: 'Pathology AI', software: 'Clinical software', discovery: 'Research & discovery', hardware: 'Hardware', therapeutics: 'Medicines' };
 catalogFamilies.innerHTML = [['', 'All categories'], ...Object.entries(FAMILY_NAV_LABELS)].map(([key, label]) =>
   `<button class='catalog-family' type='button' data-family='${key}' aria-pressed='${!key}'><span>${esc(label)}</span><span class='catalog-family-count' aria-hidden='true'></span></button>`
 ).join('');
