@@ -512,6 +512,44 @@ const KIND = {
 
 // Selected company models and products. Add dated, source-backed entries by organization ID.
 const COMPANY_PRODUCTS = {
+  "clarapath": [
+    {
+      "name": "SectionStar™",
+      "category": "microtomy",
+      "subtype": "robotic-microtomy",
+      "type": "Automated tissue sectioning & slide transfer",
+      "summary": "Robotic microtomy system that automates tissue-block facing, sectioning, transfer to slides and image-based quality control. Uses tape transfer and barcode matching to preserve specimen traceability.",
+      "features": [
+        "Separate trimming and sectioning microtomes support batch workflows.",
+        "HistoStation stores block, tape and slide images alongside sample records."
+      ],
+      "sources": [
+        {
+          "label": "Official SectionStar overview",
+          "url": "https://www.clarapath.com/products-services/sectionstar"
+        }
+      ],
+      "checked": "2026-11-28"
+    },
+    {
+      "name": "TrimStar Pro™",
+      "category": "block-trimming",
+      "subtype": "block-trimming",
+      "type": "Automated tissue-block facing & trimming",
+      "summary": "Prepares embedded tissue blocks for sectioning with automated trimming and face-finding. Supports preset trim depths, operator control and AI-assisted facing, with run data recorded in HistoStation.",
+      "features": [
+        "Holds up to 72 blocks per run.",
+        "Trimmed blocks can continue to a manual microtome or SectionStar."
+      ],
+      "sources": [
+        {
+          "label": "Official TrimStar Pro overview",
+          "url": "https://www.clarapath.com/products-services/trimstar"
+        }
+      ],
+      "checked": "2026-11-28"
+    }
+  ],
   "techcyte": [
     {
       "name": "Fusion AP",
@@ -3888,7 +3926,7 @@ const C = [
  ["grundium","Grundium","startup","Tampere, Finland","Private","Finnish maker of compact Ocus desktop slide scanners.","https://www.grundium.com","scan"],
  ["pramana","Pramana","company","Cambridge, US","Part of Evident (acquired August 2025)","Modular whole-slide scanners (SpectralHT, SpectralM) and at-scale slide digitization.","https://pramana.ai","scan ims dx"],
  ["evident","Evident","company","Waltham, Massachusetts, US","Bain Capital portfolio company","Microscopy and imaging company, formerly Olympus's Scientific Solutions business, which was separated from Olympus in 2022. Bought the slide-scanner maker Pramana in August 2025 to build out its digital pathology line.","https://evidentscientific.com","scan"],
- ["clarapath","Clarapath","startup","Hawthorne, New York, US","Private","SectionStar robotics that automate tissue sectioning.","https://www.clarapath.com","histo"],
+ ["clarapath","Clarapath","startup","Hawthorne, New York, US","Private","Histology automation company. SectionStar automates tissue sectioning, slide transfer and quality control; TrimStar Pro automates tissue-block facing and trimming before manual or robotic sectioning.","https://www.clarapath.com","histo"],
  ["techcyte","Techcyte","startup","Orem, Utah, US","Private","Developer of the Techcyte Fusion digital pathology platform. Fusion AP unifies case workflows, images, reporting and AI; SureView supports cervical cytology. Additional human-pathology suites cover frozen sections, kidney transplant biopsies, blood differentials, bacteriology and parasitology. Collaborates with Mayo Clinic on digital pathology.","https://techcyte.com","ims dx"],
  ["gestalt","Gestalt Diagnostics","startup","Spokane, US","Private","PathFlow, a vendor-neutral digital pathology workflow system.","https://www.gestaltdiagnostics.com","ims"],
  ["pathpresenter","PathPresenter","startup","Montville, New Jersey, US","Private","Digital pathology software company built by pathologists: a vendor-neutral image management and workflow platform for clinical care, remote consultation, education and research. Its Clinical Viewer received FDA 510(k) clearance for primary diagnosis in June 2025, paired with Hamamatsu's NanoZoomer S360MD scanner. It began as a free site for pathology education, which the company says has more than 60,000 users.","https://www.pathpresenter.com","ims"],
@@ -4528,6 +4566,8 @@ function openResourcePanel(n, label, closeLabel, content) {
 }
 // Product categories use original line art. The second path animates when the panel opens.
 const PRODUCT_ART = {
+  "microtomy": ["Robotic tissue sectioning", "slate", "M5 4h20v24H5z M8 8h9v7H8z M20 8h2 M20 12h2 M8 24h14", "M10 10h5v3h-5z M12.5 15v4 M8 20h14 M18 17l4 3-4 3"],
+  "block-trimming": ["Tissue-block trimming", "amber", "M5 25h22 M7 25v-9h11v9 M10 16V9h6v7 M21 5v16 M18 21h9", "M18 8h8l-5 5 M9 19h7 M10 22h5"],
   "cytology": ["Cervical cytology analysis", "rose", "M5 11V5h6 M21 5h6v6 M5 21v6h6 M21 27h6v-6", "M10 17c-2-6 3-10 8-8s8 7 3 12-10 2-11-4Z M14 14a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z M9 23h.1"],
   "frozen-section": ["Frozen-section workflow", "blue", "M4 9h24v16H4z M9 9v16 M23 13h2 M23 17h2", "M16 12v10 M11.7 14.5l8.6 5 M11.7 19.5l8.6-5 M14.5 13.5 16 15l1.5-1.5 M14.5 20.5 16 19l1.5 1.5"],
   "renal-biopsy": ["Renal biopsy analysis", "teal", "M20 5c-4-2-11 1-13 7s-1 13 5 15 10-3 9-7-5-3-5-6 7-5 4-9Z", "M11 13a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z M11 21h.1 M22 15h5 M24 12l3 3-3 3"],
@@ -4684,6 +4724,14 @@ const PRODUCT_FAMILIES = {
   "hardware": "Lab hardware & digitization"
 };
 const PRODUCT_SUBTYPES = {
+  "robotic-microtomy": {
+    "label": "Robotic microtomy & slide preparation",
+    "family": "hardware"
+  },
+  "block-trimming": {
+    "label": "Tissue-block facing & trimming",
+    "family": "hardware"
+  },
   "cervical-cytology": {
     "label": "Cervical cytology screening AI",
     "family": "analysis"
